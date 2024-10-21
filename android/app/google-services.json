@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "643567490094",
+    "project_id": "italentmind-3b9f7",
+    "storage_bucket": "italentmind-3b9f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643567490094:android:b1c95c633ce9eb9ad8fbbf",
+        "android_client_info": {
+          "package_name": "com.company.italentmind"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVlG3_MzaAgXooO-p0AajyUFYr97sD4MA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
