@@ -566,7 +566,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '23pkwjvi': {
       'en': '* First name',
-      'es': '* Nombre de pila',
+      'es': '* Nombre',
     },
     'r5rbz3er': {
       'en': '* Last name',
