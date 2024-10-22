@@ -837,7 +837,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                             valueOrDefault<String>(
                                                                                               containerUsersRecord.displayName,
                                                                                               'A',
-                                                                                            ).maybeHandleOverflow(maxChars: 1),
+                                                                                            ).maybeHandleOverflow(
+                                                                                              maxChars: 1,
+                                                                                            ),
                                                                                             textAlign: TextAlign.center,
                                                                                             style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                                   fontFamily: 'Readex Pro',
@@ -910,7 +912,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                         valueOrDefault<String>(
                                                                                           rowUsersRecord.displayName,
                                                                                           'A',
-                                                                                        ).maybeHandleOverflow(maxChars: 1),
+                                                                                        ).maybeHandleOverflow(
+                                                                                          maxChars: 1,
+                                                                                        ),
                                                                                         textAlign: TextAlign.center,
                                                                                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                               fontFamily: 'Readex Pro',
@@ -1650,7 +1654,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                               0.0),
                                                                           child:
                                                                               Text(
-                                                                            chat2BussinesItem.lastMessage.maybeHandleOverflow(maxChars: 50),
+                                                                            chat2BussinesItem.lastMessage.maybeHandleOverflow(
+                                                                              maxChars: 50,
+                                                                            ),
                                                                             textAlign:
                                                                                 TextAlign.start,
                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(

@@ -161,9 +161,11 @@ class _MapsAustralianState extends State<MapsAustralian> {
     }
   }
 
-  final google_maps.LatLngBounds australiaBounds = google_maps.LatLngBounds(
-    southwest: google_maps.LatLng(-50.0, 100.0),
-    northeast: google_maps.LatLng(0.0, 180.0),
+  final google_maps.LatLngBounds usaBounds = google_maps.LatLngBounds(
+    southwest:
+        google_maps.LatLng(24.396308, -125.0), // Extremo suroeste (Hawái)
+    northeast:
+        google_maps.LatLng(49.384358, -66.93457), // Extremo noreste (Maine)
   );
 
   double _calculateDistance(
@@ -274,7 +276,6 @@ class _MapsAustralianState extends State<MapsAustralian> {
                         google_maps.BitmapDescriptor.defaultMarkerWithHue(
                             google_maps.BitmapDescriptor.hueViolet),
                     onTap: () {
-                      // Acción al hacer clic en el marcador
                       navigateToProfileInfo(user);
                     },
                   ),
@@ -292,7 +293,6 @@ class _MapsAustralianState extends State<MapsAustralian> {
                       google_maps.BitmapDescriptor.defaultMarkerWithHue(
                           google_maps.BitmapDescriptor.hueViolet),
                   onTap: () {
-                    // Acción al hacer clic en el marcador
                     navigateToProfileInfo(user);
                   },
                 ),
@@ -303,91 +303,58 @@ class _MapsAustralianState extends State<MapsAustralian> {
       }
     }
 
-    // Al finalizar la carga, cambiar el estado para que las próximas cargas sí apliquen filtros
-    if (isFirstLoad) {
-      setState(() {
-        isFirstLoad = false;
-      });
-    }
-
-    return Stack(
-      children: [
-        Container(
-          width: widget.width,
-          height: widget.height,
-          child: google_maps.GoogleMap(
-            initialCameraPosition: google_maps.CameraPosition(
-              target: google_maps.LatLng(-25.2744, 133.7751),
-              zoom: 4,
-            ),
-            onMapCreated: (google_maps.GoogleMapController controller) {
-              mapController = controller;
-              mapController!.moveCamera(
-                google_maps.CameraUpdate.newLatLngBounds(australiaBounds, 0),
-              );
-
-              if (widget.current != null) {
-                mapController!.animateCamera(
-                  google_maps.CameraUpdate.newCameraPosition(
-                    google_maps.CameraPosition(
-                      target: google_maps.LatLng(
-                        widget.current!.latitude,
-                        widget.current!.longitude,
-                      ),
-                      zoom: 14,
-                    ),
-                  ),
-                );
-              }
-            },
-            mapType: google_maps.MapType.normal,
-            myLocationEnabled: true,
-            myLocationButtonEnabled: false,
-            zoomControlsEnabled: false,
-            minMaxZoomPreference: google_maps.MinMaxZoomPreference(4, 10),
-            cameraTargetBounds: google_maps.CameraTargetBounds(australiaBounds),
-            markers: markers,
-            onCameraMove: (google_maps.CameraPosition position) {
-              print('Nivel de zoom actual: ${position.zoom}');
-              if (_lastZoom == null ||
-                  (position.zoom - _lastZoom!).abs() > 0.1) {
-                _lastZoom = position.zoom;
-                int tempNumber = ((10 / position.zoom) * 100.0).toInt();
-                FFAppState().update(() {
-                  FFAppState().zoomFilter = tempNumber;
-                });
-              }
-              if (!australiaBounds.contains(position.target)) {
-                mapController!.moveCamera(
-                  google_maps.CameraUpdate.newLatLngBounds(australiaBounds, 0),
-                );
-              }
-            },
-          ),
+    return Container(
+      width: widget.width,
+      height: widget.height,
+      child: google_maps.GoogleMap(
+        initialCameraPosition: google_maps.CameraPosition(
+          target:
+              google_maps.LatLng(37.0902, -95.7129), // Centro de Estados Unidos
+          zoom: 4,
         ),
-        Positioned(
-          right: 10,
-          top: MediaQuery.of(context).size.height / 2 - 28,
-          child: FloatingActionButton(
-            onPressed: () {
-              if (widget.current != null) {
-                mapController!.animateCamera(
-                  google_maps.CameraUpdate.newCameraPosition(
-                    google_maps.CameraPosition(
-                      target: google_maps.LatLng(
-                        widget.current!.latitude,
-                        widget.current!.longitude,
-                      ),
-                      zoom: 14,
-                    ),
+        onMapCreated: (google_maps.GoogleMapController controller) {
+          mapController = controller;
+          mapController!.moveCamera(
+            google_maps.CameraUpdate.newLatLngBounds(usaBounds, 0),
+          );
+
+          if (widget.current != null) {
+            mapController!.animateCamera(
+              google_maps.CameraUpdate.newCameraPosition(
+                google_maps.CameraPosition(
+                  target: google_maps.LatLng(
+                    widget.current!.latitude,
+                    widget.current!.longitude,
                   ),
-                );
-              }
-            },
-            child: Icon(Icons.my_location),
-          ),
-        ),
-      ],
+                  zoom: 14,
+                ),
+              ),
+            );
+          }
+        },
+        mapType: google_maps.MapType.normal,
+        myLocationEnabled: true,
+        myLocationButtonEnabled: false,
+        zoomControlsEnabled: false,
+        minMaxZoomPreference: google_maps.MinMaxZoomPreference(4, 10),
+        cameraTargetBounds: google_maps.CameraTargetBounds(usaBounds),
+        markers: markers,
+        onCameraMove: (google_maps.CameraPosition position) {
+          print('Nivel de zoom actual: ${position.zoom}');
+          if (_lastZoom == null || (position.zoom - _lastZoom!).abs() > 0.1) {
+            _lastZoom = position.zoom;
+            int tempNumber = ((10 / position.zoom) * 100.0).toInt();
+            FFAppState().update(() {
+              FFAppState().zoomFilter = tempNumber;
+            });
+          }
+          if (!usaBounds.contains(position.target)) {
+            mapController!.moveCamera(
+              google_maps.CameraUpdate.newLatLngBounds(usaBounds, 0),
+            );
+          }
+        },
+      ),
     );
   }
 }

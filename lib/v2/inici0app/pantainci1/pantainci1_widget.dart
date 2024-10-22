@@ -197,6 +197,54 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                       ),
                     ),
                     Align(
+                      alignment: const AlignmentDirectional(0.0, 0.7),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Theme(
+                            data: ThemeData(
+                              checkboxTheme: CheckboxThemeData(
+                                visualDensity: VisualDensity.compact,
+                                materialTapTargetSize:
+                                    MaterialTapTargetSize.shrinkWrap,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(4.0),
+                                ),
+                              ),
+                              unselectedWidgetColor: const Color(0xFF26343E),
+                            ),
+                            child: Checkbox(
+                              value: _model.checkboxValue ??= false,
+                              onChanged: (newValue) async {
+                                safeSetState(
+                                    () => _model.checkboxValue = newValue!);
+                              },
+                              side: const BorderSide(
+                                width: 2,
+                                color: Color(0xFF26343E),
+                              ),
+                              activeColor: const Color(0xFF243163),
+                              checkColor: FlutterFlowTheme.of(context).info,
+                            ),
+                          ),
+                          Text(
+                            FFLocalizations.of(context).getText(
+                              'ryp1ywwv' /* Skip this screen next time */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Montserrat',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Align(
                       alignment: const AlignmentDirectional(0.01, 0.9),
                       child: Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
@@ -245,54 +293,6 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                             borderRadius: BorderRadius.circular(24.0),
                           ),
                         ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.0, 0.7),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Theme(
-                            data: ThemeData(
-                              checkboxTheme: CheckboxThemeData(
-                                visualDensity: VisualDensity.compact,
-                                materialTapTargetSize:
-                                    MaterialTapTargetSize.shrinkWrap,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(4.0),
-                                ),
-                              ),
-                              unselectedWidgetColor: const Color(0xFF26343E),
-                            ),
-                            child: Checkbox(
-                              value: _model.checkboxValue ??= false,
-                              onChanged: (newValue) async {
-                                safeSetState(
-                                    () => _model.checkboxValue = newValue!);
-                              },
-                              side: const BorderSide(
-                                width: 2,
-                                color: Color(0xFF26343E),
-                              ),
-                              activeColor: const Color(0xFF243163),
-                              checkColor: FlutterFlowTheme.of(context).info,
-                            ),
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'ryp1ywwv' /* Skip this screen next time */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Montserrat',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                          ),
-                        ],
                       ),
                     ),
                   ],

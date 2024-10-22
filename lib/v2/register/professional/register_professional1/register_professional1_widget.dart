@@ -392,6 +392,12 @@ class _RegisterProfessional1WidgetState
                                                         letterSpacing: 0.0,
                                                       ),
                                               maxLines: null,
+                                              maxLength: 100,
+                                              buildCounter: (context,
+                                                      {required currentLength,
+                                                      required isFocused,
+                                                      maxLength}) =>
+                                                  null,
                                               keyboardType: TextInputType.name,
                                               validator: _model
                                                   .firstNameTextControllerValidator
@@ -536,6 +542,12 @@ class _RegisterProfessional1WidgetState
                                                         letterSpacing: 0.0,
                                                       ),
                                               maxLines: null,
+                                              maxLength: 100,
+                                              buildCounter: (context,
+                                                      {required currentLength,
+                                                      required isFocused,
+                                                      maxLength}) =>
+                                                  null,
                                               keyboardType: TextInputType.name,
                                               validator: _model
                                                   .lastNameTextControllerValidator
@@ -744,6 +756,12 @@ class _RegisterProfessional1WidgetState
                                                         letterSpacing: 0.0,
                                                       ),
                                                   maxLines: null,
+                                                  maxLength: 100,
+                                                  buildCounter: (context,
+                                                          {required currentLength,
+                                                          required isFocused,
+                                                          maxLength}) =>
+                                                      null,
                                                   validator: _model
                                                       .companyTextControllerValidator
                                                       .asValidator(context),
@@ -928,6 +946,12 @@ class _RegisterProfessional1WidgetState
                                                           letterSpacing: 0.0,
                                                         ),
                                                     maxLines: null,
+                                                    maxLength: 100,
+                                                    buildCounter: (context,
+                                                            {required currentLength,
+                                                            required isFocused,
+                                                            maxLength}) =>
+                                                        null,
                                                     keyboardType: TextInputType
                                                         .emailAddress,
                                                     validator: _model
@@ -1124,6 +1148,12 @@ class _RegisterProfessional1WidgetState
                                                           letterSpacing: 0.0,
                                                         ),
                                                     maxLines: null,
+                                                    maxLength: 100,
+                                                    buildCounter: (context,
+                                                            {required currentLength,
+                                                            required isFocused,
+                                                            maxLength}) =>
+                                                        null,
                                                     keyboardType: TextInputType
                                                         .emailAddress,
                                                     validator: _model

@@ -36,7 +36,9 @@ class RegisterProfessional1Model
       );
     }
 
-    if (!RegExp('^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b).*\$').hasMatch(val)) {
+    if (!RegExp(
+            '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
+        .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
         '8818zy37' /* Please enter a valid name. */,
       );
@@ -55,6 +57,13 @@ class RegisterProfessional1Model
       );
     }
 
+    if (!RegExp(
+            '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
+        .hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        'vxs56bma' /* Please enter a valid name. */,
+      );
+    }
     return null;
   }
 

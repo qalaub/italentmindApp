@@ -1427,6 +1427,12 @@ class _RegisterProfessional2WidgetState
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
+                                                          maxLength: 50,
+                                                          buildCounter: (context,
+                                                                  {required currentLength,
+                                                                  required isFocused,
+                                                                  maxLength}) =>
+                                                              null,
                                                           validator: _model
                                                               .passwordTextControllerValidator
                                                               .asValidator(
@@ -1698,6 +1704,12 @@ class _RegisterProfessional2WidgetState
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
+                                                          maxLength: 50,
+                                                          buildCounter: (context,
+                                                                  {required currentLength,
+                                                                  required isFocused,
+                                                                  maxLength}) =>
+                                                              null,
                                                           validator: _model
                                                               .confirmPasswordTextControllerValidator
                                                               .asValidator(

@@ -24,7 +24,7 @@ class GetSuggestionMapCall {
       params: {
         'input': query,
         'key': api,
-        'components': "country:au",
+        'components': "country:us",
         'types': types,
       },
       returnBody: true,
@@ -61,7 +61,7 @@ class GetSuggestionMapProfesionalCall {
       params: {
         'input': query,
         'key': api,
-        'components': "country:au",
+        'components': "country:us",
       },
       returnBody: true,
       encodeBodyUtf8: false,

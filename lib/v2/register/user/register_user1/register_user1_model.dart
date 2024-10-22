@@ -38,7 +38,9 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
       );
     }
 
-    if (!RegExp('^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b).*\$').hasMatch(val)) {
+    if (!RegExp(
+            '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
+        .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
         'o6oxssdc' /* Please enter a valid name. */,
       );
@@ -57,6 +59,13 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
       );
     }
 
+    if (!RegExp(
+            '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
+        .hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        'vxs56bma' /* Please enter a valid name. */,
+      );
+    }
     return null;
   }
 

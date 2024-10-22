@@ -368,7 +368,8 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                       ?.serviceType.first,
                                                   'service',
                                                 ).maybeHandleOverflow(
-                                                    maxChars: 24),
+                                                  maxChars: 24,
+                                                ),
                                                 minFontSize: 11.0,
                                                 style:
                                                     FlutterFlowTheme.of(context)

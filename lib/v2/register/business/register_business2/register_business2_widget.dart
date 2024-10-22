@@ -1259,6 +1259,12 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
+                                                          maxLength: 40,
+                                                          buildCounter: (context,
+                                                                  {required currentLength,
+                                                                  required isFocused,
+                                                                  maxLength}) =>
+                                                              null,
                                                           validator: _model
                                                               .passwordTextControllerValidator
                                                               .asValidator(
@@ -1530,6 +1536,12 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
+                                                          maxLength: 40,
+                                                          buildCounter: (context,
+                                                                  {required currentLength,
+                                                                  required isFocused,
+                                                                  maxLength}) =>
+                                                              null,
                                                           validator: _model
                                                               .confirmPasswordTextControllerValidator
                                                               .asValidator(

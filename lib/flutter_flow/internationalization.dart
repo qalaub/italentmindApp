@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -76,18 +77,47 @@ class FFLocalizations {
   };
 }
 
+/// Used if the locale is not supported by GlobalMaterialLocalizations.
+class FallbackMaterialLocalizationDelegate
+    extends LocalizationsDelegate<MaterialLocalizations> {
+  const FallbackMaterialLocalizationDelegate();
+
+  @override
+  bool isSupported(Locale locale) => _isSupportedLocale(locale);
+
+  @override
+  Future<MaterialLocalizations> load(Locale locale) async =>
+      SynchronousFuture<MaterialLocalizations>(
+        const DefaultMaterialLocalizations(),
+      );
+
+  @override
+  bool shouldReload(FallbackMaterialLocalizationDelegate old) => false;
+}
+
+/// Used if the locale is not supported by GlobalCupertinoLocalizations.
+class FallbackCupertinoLocalizationDelegate
+    extends LocalizationsDelegate<CupertinoLocalizations> {
+  const FallbackCupertinoLocalizationDelegate();
+
+  @override
+  bool isSupported(Locale locale) => _isSupportedLocale(locale);
+
+  @override
+  Future<CupertinoLocalizations> load(Locale locale) =>
+      SynchronousFuture<CupertinoLocalizations>(
+        const DefaultCupertinoLocalizations(),
+      );
+
+  @override
+  bool shouldReload(FallbackCupertinoLocalizationDelegate old) => false;
+}
+
 class FFLocalizationsDelegate extends LocalizationsDelegate<FFLocalizations> {
   const FFLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) {
-    final language = locale.toString();
-    return FFLocalizations.languages().contains(
-      language.endsWith('_')
-          ? language.substring(0, language.length - 1)
-          : language,
-    );
-  }
+  bool isSupported(Locale locale) => _isSupportedLocale(locale);
 
   @override
   Future<FFLocalizations> load(Locale locale) =>
@@ -103,6 +133,15 @@ Locale createLocale(String language) => language.contains('_')
         scriptCode: language.split('_').last,
       )
     : Locale(language);
+
+bool _isSupportedLocale(Locale locale) {
+  final language = locale.toString();
+  return FFLocalizations.languages().contains(
+    language.endsWith('_')
+        ? language.substring(0, language.length - 1)
+        : language,
+  );
+}
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // HomeSearch
@@ -151,27 +190,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dx3sprmo': {
       'en': 'Support Workers',
-      'es': '',
+      'es': 'Trabajadores de apoyo',
     },
     'zv7t0fli': {
       'en': 'Support Coordinators',
-      'es': '',
+      'es': 'Coordinadores de apoyo',
     },
     '0f4smc8a': {
       'en': 'Recovery Coaches',
-      'es': '',
+      'es': 'Entrenadores de recuperación',
     },
     'gt1j3p2u': {
       'en': 'Therapeutic Supports',
-      'es': '',
+      'es': 'Apoyos terapéuticos',
     },
     'fgbjo5fz': {
       'en': 'Home Maintenance ',
-      'es': '',
+      'es': 'Mantenimiento del hogar',
     },
     'vjtjhw0a': {
       'en': 'Select work days:',
-      'es': '',
+      'es': 'Seleccione días laborables:',
     },
     '482ig40l': {
       'en': 'Monday ',
@@ -245,7 +284,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ecjf911m': {
       'en': 'DD/MM/YYYY',
-      'es': '',
+      'es': 'DD/MM/YYYY',
     },
     'f9r6x7ek': {
       'en': ' ',
@@ -311,6 +350,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
+    'vxs56bma': {
+      'en': 'Please enter a valid name.',
+      'es': 'Por favor ingrese un nombre valido.',
+    },
     'krq0rpao': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
@@ -332,6 +375,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Por favor ingresa un email valido',
     },
     'n8p91h2y': {
+      'en': 'Please choose an option from the dropdown',
+      'es': 'Por favor selecciona una opción',
+    },
+    'bv81mrlb': {
+      'en': 'Field is required',
+      'es': 'Campo necesario',
+    },
+    '1u5g403u': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
@@ -511,39 +562,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'rbzf15sf': {
       'en': 'Create Account',
-      'es': '',
+      'es': 'Crear una cuenta',
     },
     '23pkwjvi': {
       'en': '* First name',
-      'es': '',
+      'es': '* Nombre de pila',
     },
     'r5rbz3er': {
       'en': '* Last name',
-      'es': '',
+      'es': '* Apellido',
     },
     'gaure8n3': {
       'en': '* Company name',
-      'es': '',
+      'es': '* Nombre de empresa',
     },
     '79b773na': {
       'en': '* Email address',
-      'es': '',
+      'es': '* Dirección de correo electrónico',
     },
     'dmo4wwc3': {
       'en': 'This email already has an account, use another email',
-      'es': '',
+      'es': 'Este correo ya tiene una cuenta, utilice otro correo',
     },
     'aezsi4ns': {
       'en': '  * Confirm email address',
-      'es': '',
+      'es': '* Confirmar el correo',
     },
     '9kefs5ox': {
       'en': 'Email has to be the same',
-      'es': '',
+      'es': 'El correo electrónico debe ser el mismo',
     },
     'wvofvg0o': {
       'en': '* Enter your 10-digit mobile number',
-      'es': '',
+      'es': '* Ingrese su número de móvil de 10 dígitos',
     },
     'to5mzzcj': {
       'en': '',
@@ -551,19 +602,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'or0wdiqb': {
       'en': 'Example:  0400345234',
-      'es': '',
+      'es': 'Ejemplo: 0400345234',
     },
     'c98kzcju': {
       'en': '* Select your suburb',
-      'es': '',
+      'es': '*Selecciona tu suburbio',
     },
     'bhn2qp92': {
       'en': 'Select your suburb',
-      'es': '',
+      'es': 'Seleccione su suburbio',
     },
     'awbkrqr6': {
       'en': 'Invalid suburb',
-      'es': '',
+      'es': 'Suburbio no válido',
     },
     '4wfsk31l': {
       'en': ' ',
@@ -571,67 +622,79 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'oj3gamhx': {
       'en': 'Continue',
-      'es': '',
+      'es': 'Continuar',
     },
     'x4wbpr34': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     '8818zy37': {
       'en': 'Please enter a valid name.',
-      'es': '',
+      'es': 'Por favor, introduzca un nombre válido.',
     },
     'vptd1g0e': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'gr573sh4': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
+    },
+    '994d8s30': {
+      'en': 'Please enter a valid name.',
+      'es': 'Por favor ingrese un nombre valido.',
     },
     'nkw7v2an': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'bxhkdo6j': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     '0f63n5nz': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'o8ytua4k': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     '1op1850p': {
       'en': 'Please enter a valid e-mail addres',
-      'es': '',
+      'es': 'Por favor, introduzca una dirección de correo electrónico válida',
     },
     '2168kt8r': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
+    },
+    '9fbw1som': {
+      'en': 'Field is required',
+      'es': 'Campo necesario',
+    },
+    'g5929gef': {
+      'en': 'Please choose an option from the dropdown',
+      'es': 'Por favor selecciona una opción',
     },
     '85fqonhg': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     'dqauy78r': {
       'en': 'Invalid format. Use 0453463465',
-      'es': '',
+      'es': 'Formato no válido. Utilice 0453463465',
     },
     'g09z1o8y': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'x8gtptod': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     'vrjvcogl': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     '0l13b2lg': {
       'en': 'Home',
@@ -642,43 +705,43 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '4u26lcwe': {
       'en': 'Create Account',
-      'es': '',
+      'es': 'Crear una cuenta',
     },
     'zsslqptz': {
       'en': '* Type of service offered',
-      'es': '',
+      'es': '*Tipo de servicio ofrecido',
     },
     'ua7tsib3': {
       'en': 'Support Workers',
-      'es': '',
+      'es': 'Trabajadores de apoyo',
     },
     'yfcb8p6w': {
       'en': 'Support  Coordinators',
-      'es': '',
+      'es': 'Coordinadores de apoyo',
     },
     '6d22dt8n': {
       'en': 'Recovery Coaches',
-      'es': '',
+      'es': 'Entrenadores de recuperación',
     },
     'h3ukg2kf': {
       'en': 'Therapeutic Supports',
-      'es': '',
+      'es': 'Apoyos terapéuticos',
     },
     'dsynxuyb': {
       'en': 'Home Maintenance',
-      'es': '',
+      'es': 'Mantenimiento del hogar',
     },
     '8d5ilpkv': {
       'en': 'Type of service offered',
-      'es': '',
+      'es': 'Tipo de servicio ofrecido',
     },
     'wcvprqgy': {
       'en': 'Search for an item...',
-      'es': '',
+      'es': 'Buscar un artículo...',
     },
     'jgb4phlw': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     'gtb6b50m': {
       'en': ' ',
@@ -686,59 +749,59 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'w37w5rch': {
       'en': 'NDIS registration status',
-      'es': '',
+      'es': 'Estado de registro del NDIS',
     },
     '5qnsc1th': {
       'en': 'Unregistered',
-      'es': '',
+      'es': 'No registrado',
     },
     '4dyh2baf': {
       'en': 'Registered',
-      'es': '',
+      'es': 'Registrado',
     },
     '24muvs17': {
       'en': 'Registered or Unregistered ',
-      'es': '',
+      'es': 'Registrado o no registrado',
     },
     'ieln1je7': {
       'en': 'Search for an item...',
-      'es': '',
+      'es': 'Buscar un artículo...',
     },
     'ghw531k8': {
       'en': 'Enter your NDIS  (XXXXXXXXX)',
-      'es': '',
+      'es': 'Ingrese su NDIS (XXXXXXXXX)',
     },
     '38zuaw29': {
       'en': '* Years of experience',
-      'es': '',
+      'es': '* Años de experiencia',
     },
     'rzh89cig': {
       'en': '* Age',
-      'es': '',
+      'es': '* Edad',
     },
     'acq3q1l8': {
       'en': '18-25 years',
-      'es': '',
+      'es': '18-25 años',
     },
     'fqwdcxzw': {
       'en': '25-40 years',
-      'es': '',
+      'es': '25-40 años',
     },
     'd8ehtmxo': {
       'en': '40-65+ years',
-      'es': '',
+      'es': '40-65+ años',
     },
     '3jub7e58': {
       'en': 'Please select...',
-      'es': '',
+      'es': 'Por favor seleccione...',
     },
     'lf6cgfao': {
       'en': 'Search for an item...',
-      'es': '',
+      'es': 'Buscar un artículo...',
     },
     'qxgseefl': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     '7aownaza': {
       'en': ' ',
@@ -746,11 +809,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7p3lyjh2': {
       'en': '* Password',
-      'es': '',
+      'es': '* Contraseña',
     },
     'my0rtqx3': {
       'en': 'Example:  Carlos123@',
-      'es': '',
+      'es': 'Ejemplo: Carlos123@',
     },
     't1cnviqz': {
       'en': ' ',
@@ -758,11 +821,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '1dwcgec4': {
       'en': '* Password has to be the same',
-      'es': '',
+      'es': '* La contraseña debe ser la misma',
     },
     'equcclqq': {
       'en': 'Example:  Carlos123@',
-      'es': '',
+      'es': 'Ejemplo: Carlos123@',
     },
     'qwk67x3g': {
       'en': ' ',
@@ -770,55 +833,55 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7mkqpzqn': {
       'en': 'I agree to the Italent app\'s privacy policy',
-      'es': '',
+      'es': 'Acepto la política de privacidad de la aplicación Italent',
     },
     '8jeu8yll': {
       'en': 'Please accept T&Cs to create your account',
-      'es': '',
+      'es': 'Acepte los términos y condiciones para crear su cuenta',
     },
     '0m6usrax': {
       'en': 'Continue',
-      'es': '',
+      'es': 'Continuar',
     },
     'bdbf0z8o': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     'esz6jfy4': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'yf1f1z5j': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     'but5z8wm': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'hglxnisf': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     '4mzt8tvu': {
       'en': 'Password: 8+ charts, e.g., Abc123!@',
-      'es': '',
+      'es': 'Contraseña: 8+ gráficos, p. ej., Abc123!@',
     },
     'iawjo2cq': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'pny1i64n': {
       'en': 'Field is required',
-      'es': '',
+      'es': 'Campo necesario',
     },
     'nkeok52c': {
       'en': 'Password: 8+ charts, e.g., Abc123!@',
-      'es': '',
+      'es': 'Contraseña: 8+ gráficos, p. ej., Abc123!@',
     },
     'w7hdplvi': {
       'en': 'Please choose an option from the dropdown',
-      'es': '',
+      'es': 'Por favor selecciona una opción',
     },
     'o48feet5': {
       'en': 'Home',
@@ -1417,6 +1480,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
+    'fmo6uhvw': {
+      'en': 'Please enter a valid name.',
+      'es': 'Por favor ingrese un nombre valido.',
+    },
     'ci7ub1k2': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
@@ -1438,6 +1505,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Por favor, introduzca una dirección de correo válida',
     },
     'ixo6rcuf': {
+      'en': 'Please choose an option from the dropdown',
+      'es': 'Por favor selecciona una opción',
+    },
+    'l3iouyyg': {
+      'en': 'Field is required',
+      'es': 'Campo necesario',
+    },
+    'h3jttvxx': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
@@ -2237,13 +2312,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // pantainci1
   {
-    'ls2neb7x': {
-      'en': 'Continue',
-      'es': 'Continuar',
-    },
     'ryp1ywwv': {
       'en': 'Skip this screen next time',
       'es': 'Omitir esta pantalla la próxima vez',
+    },
+    'ls2neb7x': {
+      'en': 'Continue',
+      'es': 'Continuar',
     },
     '0dgrq10d': {
       'en': 'Home',

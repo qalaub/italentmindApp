@@ -434,6 +434,12 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                 maxLines: null,
+                                                maxLength: 100,
+                                                buildCounter: (context,
+                                                        {required currentLength,
+                                                        required isFocused,
+                                                        maxLength}) =>
+                                                    null,
                                                 keyboardType:
                                                     TextInputType.name,
                                                 validator: _model
@@ -590,6 +596,12 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                 maxLines: null,
+                                                maxLength: 100,
+                                                buildCounter: (context,
+                                                        {required currentLength,
+                                                        required isFocused,
+                                                        maxLength}) =>
+                                                    null,
                                                 keyboardType:
                                                     TextInputType.name,
                                                 validator: _model
@@ -1035,6 +1047,12 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                     maxLines: null,
+                                                    maxLength: 100,
+                                                    buildCounter: (context,
+                                                            {required currentLength,
+                                                            required isFocused,
+                                                            maxLength}) =>
+                                                        null,
                                                     validator: _model
                                                         .emailTextController1Validator
                                                         .asValidator(context),
@@ -1226,6 +1244,12 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                     maxLines: null,
+                                                    maxLength: 100,
+                                                    buildCounter: (context,
+                                                            {required currentLength,
+                                                            required isFocused,
+                                                            maxLength}) =>
+                                                        null,
                                                     validator: _model
                                                         .emailTextController2Validator
                                                         .asValidator(context),

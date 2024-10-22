@@ -664,6 +664,12 @@ class _RegisterProfessional3WidgetState
                                                                       letterSpacing:
                                                                           0.0,
                                                                     ),
+                                                                maxLength: 40,
+                                                                buildCounter: (context,
+                                                                        {required currentLength,
+                                                                        required isFocused,
+                                                                        maxLength}) =>
+                                                                    null,
                                                                 validator: _model
                                                                     .codeTextControllerValidator
                                                                     .asValidator(

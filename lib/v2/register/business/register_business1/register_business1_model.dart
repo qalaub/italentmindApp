@@ -37,7 +37,9 @@ class RegisterBusiness1Model extends FlutterFlowModel<RegisterBusiness1Widget> {
       );
     }
 
-    if (!RegExp('^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b).*\$').hasMatch(val)) {
+    if (!RegExp(
+            '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
+        .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
         'iyq3g3ls' /* Please enter a valid name. */,
       );
@@ -56,6 +58,13 @@ class RegisterBusiness1Model extends FlutterFlowModel<RegisterBusiness1Widget> {
       );
     }
 
+    if (!RegExp(
+            '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
+        .hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        'fmo6uhvw' /* Please enter a valid name. */,
+      );
+    }
     return null;
   }
 

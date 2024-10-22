@@ -846,6 +846,12 @@ Early Intervention */
                                                             color: Colors.black,
                                                             letterSpacing: 0.0,
                                                           ),
+                                                      maxLength: 50,
+                                                      buildCounter: (context,
+                                                              {required currentLength,
+                                                              required isFocused,
+                                                              maxLength}) =>
+                                                          null,
                                                       validator: _model
                                                           .passwordTextControllerValidator
                                                           .asValidator(context),
@@ -1112,6 +1118,12 @@ Early Intervention */
                                                             color: Colors.black,
                                                             letterSpacing: 0.0,
                                                           ),
+                                                      maxLength: 50,
+                                                      buildCounter: (context,
+                                                              {required currentLength,
+                                                              required isFocused,
+                                                              maxLength}) =>
+                                                          null,
                                                       validator: _model
                                                           .confirmPasswordTextControllerValidator
                                                           .asValidator(context),
