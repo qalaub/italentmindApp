@@ -49,7 +49,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: const Color(0xFFBD39BA),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -235,7 +235,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Poppins',
-                                    color: const Color(0xFFDB4B9C),
+                                    color: const Color(0xFF1D69D7),
                                     fontSize: 25.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
@@ -294,7 +294,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                                   16.0, 0.0, 16.0, 0.0),
                               iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: const Color(0xFBDD92DD),
+                              color: const Color(0xFF4963C9),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -320,7 +320,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                 child: Container(
                   height: 73.0,
                   decoration: const BoxDecoration(
-                    color: Color(0xB3B928B8),
+                    color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
                     builder: (context) {

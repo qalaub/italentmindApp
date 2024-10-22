@@ -44,7 +44,7 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFFEEEAEA),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF1D69D7),
+          backgroundColor: const Color(0xFF4963C9),
           iconTheme: const IconThemeData(color: Colors.white),
           automaticallyImplyLeading: true,
           title: Align(

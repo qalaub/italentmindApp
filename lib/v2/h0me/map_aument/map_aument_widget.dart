@@ -132,7 +132,7 @@ class _MapAumentWidgetState extends State<MapAumentWidget> {
                     child: Container(
                       height: 73.0,
                       decoration: const BoxDecoration(
-                        color: Color(0xD7B928B8),
+                        color: Color(0xFF1D69D7),
                       ),
                       alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Builder(

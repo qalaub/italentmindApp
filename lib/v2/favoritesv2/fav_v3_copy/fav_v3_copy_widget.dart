@@ -42,7 +42,7 @@ class _FavV3CopyWidgetState extends State<FavV3CopyWidget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1D69D7),
+        backgroundColor: const Color(0xFF4963C9),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -83,7 +83,7 @@ class _FavV3CopyWidgetState extends State<FavV3CopyWidget> {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: Image.asset(
-                    'assets/images/F0NDer_fav3_(1).png',
+                    'assets/images/fondo-italente_(2).png',
                   ).image,
                 ),
               ),
@@ -151,7 +151,7 @@ class _FavV3CopyWidgetState extends State<FavV3CopyWidget> {
                     child: Container(
                       height: 73.0,
                       decoration: const BoxDecoration(
-                        color: Color(0xD5B928B8),
+                        color: Color(0xFF1D69D7),
                       ),
                       child: Builder(
                         builder: (context) {

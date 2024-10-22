@@ -54,7 +54,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: Image.asset(
-                    'assets/images/escoger-users.png',
+                    'assets/images/fondo-inicio.png',
                   ).image,
                 ),
               ),
@@ -109,7 +109,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                 const Divider(
                                   height: 23.0,
                                   thickness: 2.0,
-                                  color: Color(0xFFF0DFEF),
+                                  color: Color(0xFF4963C9),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -194,7 +194,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                                   ] ??
                                                   []),
                                             ),
-                                            activeColor: const Color(0xFFB928B8),
+                                            activeColor: const Color(0xFF1D69D7),
                                             checkColor:
                                                 FlutterFlowTheme.of(context)
                                                     .info,
@@ -268,7 +268,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: const Color(0xFFB928B8),
+                                      color: const Color(0xFF4963C9),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -299,9 +299,9 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
-                          'assets/images/logoapp.png',
-                          width: 123.0,
-                          height: 113.0,
+                          'assets/images/logo-italente_sinfondo-negro.png',
+                          width: 180.0,
+                          height: 110.0,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -316,7 +316,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                       buttonSize: 40.0,
                       icon: const Icon(
                         Icons.arrow_back_ios_new,
-                        color: Colors.white,
+                        color: Colors.black,
                         size: 24.0,
                       ),
                       onPressed: () async {

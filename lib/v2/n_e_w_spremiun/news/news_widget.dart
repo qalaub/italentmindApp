@@ -45,7 +45,7 @@ class _NewsWidgetState extends State<NewsWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFFE3DEDE),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF1D69D7),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -275,7 +275,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                 child: Container(
                   height: 73.0,
                   decoration: const BoxDecoration(
-                    color: Color(0xB3B928B8),
+                    color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
                     builder: (context) {

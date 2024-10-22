@@ -47,11 +47,11 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
           top: true,
           child: Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFA41414),
+              color: const Color(0xFF4963C9),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
-                  'assets/images/F0NDer_fav3_(1).png',
+                  'assets/images/fondo-italente_(2).png',
                 ).image,
               ),
             ),
@@ -72,10 +72,7 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 100.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                              ),
+                              decoration: const BoxDecoration(),
                               child: Stack(
                                 children: [
                                   Align(
@@ -83,7 +80,7 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(0.0),
                                       child: Image.asset(
-                                        'assets/images/Rectangle_7.png',
+                                        'assets/images/Frame_427320879_(1).png',
                                         width: double.infinity,
                                         height: double.infinity,
                                         fit: BoxFit.none,
@@ -137,7 +134,7 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.6),
+                            alignment: const AlignmentDirectional(0.0, 1.1),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 0.86,
                               height: MediaQuery.sizeOf(context).height * 0.76,
@@ -177,7 +174,7 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                             child: Container(
                               height: 73.0,
                               decoration: const BoxDecoration(
-                                color: Color(0xD5B928B8),
+                                color: Color(0xFF1D69D7),
                               ),
                               child: Builder(
                                 builder: (context) {

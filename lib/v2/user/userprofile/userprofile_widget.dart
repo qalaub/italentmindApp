@@ -67,7 +67,7 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                           width: double.infinity,
                           height: 200.0,
                           decoration: const BoxDecoration(
-                            color: Color(0x31FB8CE2),
+                            color: Color(0xB74963C9),
                           ),
                           child: Stack(
                             children: [
@@ -77,7 +77,7 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                   child: Image.network(
                                     valueOrDefault<String>(
                                       currentUserPhoto,
-                                      'https://i.ibb.co/2qkDLKb/Frame-74.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                     ),
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
@@ -89,7 +89,7 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 decoration: const BoxDecoration(
-                                  color: Color(0x59F428EB),
+                                  color: Color(0xB74963C9),
                                 ),
                                 child: const Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -182,14 +182,18 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                   child: wrapWithModel(
                                     model: _model.accountOptionModel1,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const AccountOptionWidget(
-                                      key: ValueKey('subscription'),
-                                      icon: Icon(
+                                    child: AccountOptionWidget(
+                                      key: const ValueKey('subscription'),
+                                      icon: const Icon(
                                         key: ValueKey('subscription'),
                                         Icons.card_membership_outlined,
                                         size: 30.0,
                                       ),
-                                      text: 'My subscription',
+                                      text: FFLocalizations.of(context)
+                                                  .languageCode ==
+                                              'en'
+                                          ? 'My subscription'
+                                          : 'Mi suscripción',
                                     ),
                                   ),
                                 ),
@@ -259,14 +263,18 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                             child: wrapWithModel(
                               model: _model.accountOptionModel2,
                               updateCallback: () => safeSetState(() {}),
-                              child: const AccountOptionWidget(
-                                key: ValueKey('profile'),
-                                icon: Icon(
+                              child: AccountOptionWidget(
+                                key: const ValueKey('profile'),
+                                icon: const Icon(
                                   key: ValueKey('profile'),
                                   Icons.location_history,
                                   size: 30.0,
                                 ),
-                                text: 'My profile',
+                                text:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? 'My profile'
+                                        : 'Mi perfil',
                               ),
                             ),
                           ),
@@ -328,14 +336,18 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                     child: wrapWithModel(
                                       model: _model.accountOptionModel3,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const AccountOptionWidget(
-                                        key: ValueKey('seeCode'),
-                                        icon: Icon(
+                                      child: AccountOptionWidget(
+                                        key: const ValueKey('seeCode'),
+                                        icon: const Icon(
                                           key: ValueKey('seeCode'),
                                           Icons.password,
                                           size: 30.0,
                                         ),
-                                        text: 'See my code',
+                                        text: FFLocalizations.of(context)
+                                                    .languageCode ==
+                                                'en'
+                                            ? 'See my code'
+                                            : 'Ver mi codigo',
                                       ),
                                     ),
                                   ),
@@ -404,14 +416,18 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                             child: wrapWithModel(
                               model: _model.accountOptionModel4,
                               updateCallback: () => safeSetState(() {}),
-                              child: const AccountOptionWidget(
-                                key: ValueKey('block'),
-                                icon: Icon(
+                              child: AccountOptionWidget(
+                                key: const ValueKey('block'),
+                                icon: const Icon(
                                   key: ValueKey('block'),
                                   Icons.no_accounts,
                                   size: 30.0,
                                 ),
-                                text: 'Blocked list',
+                                text:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? 'Blocked list'
+                                        : 'Lista de bloqueo',
                               ),
                             ),
                           ),
@@ -449,14 +465,18 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                   child: wrapWithModel(
                                     model: _model.accountOptionModel5,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const AccountOptionWidget(
-                                      key: ValueKey('change'),
-                                      icon: Icon(
+                                    child: AccountOptionWidget(
+                                      key: const ValueKey('change'),
+                                      icon: const Icon(
                                         key: ValueKey('change'),
                                         Icons.contact_emergency,
                                         size: 30.0,
                                       ),
-                                      text: 'Change subscription',
+                                      text: FFLocalizations.of(context)
+                                                  .languageCode ==
+                                              'en'
+                                          ? 'Change subscription'
+                                          : 'Cambiar suscripción',
                                     ),
                                   ),
                                 ),
@@ -481,14 +501,18 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                               child: wrapWithModel(
                                 model: _model.accountOptionModel6,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const AccountOptionWidget(
-                                  key: ValueKey('terms'),
-                                  icon: Icon(
+                                child: AccountOptionWidget(
+                                  key: const ValueKey('terms'),
+                                  icon: const Icon(
                                     key: ValueKey('terms'),
                                     Icons.contact_page_outlined,
                                     size: 30.0,
                                   ),
-                                  text: 'Terms and conditions',
+                                  text: FFLocalizations.of(context)
+                                              .languageCode ==
+                                          'en'
+                                      ? 'Terms and conditions'
+                                      : 'Términos y condiciones',
                                 ),
                               ),
                             ),
@@ -805,13 +829,17 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                             child: wrapWithModel(
                               model: _model.accountOptionModel7,
                               updateCallback: () => safeSetState(() {}),
-                              child: const AccountOptionWidget(
-                                key: ValueKey('delete'),
-                                icon: Icon(
+                              child: AccountOptionWidget(
+                                key: const ValueKey('delete'),
+                                icon: const Icon(
                                   key: ValueKey('delete'),
                                   Icons.delete_sweep,
                                 ),
-                                text: 'Delete account',
+                                text:
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? 'Delete account'
+                                        : 'Eliminar cuenta',
                               ),
                             ),
                           ),
@@ -879,7 +907,7 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                 child: Container(
                   height: 73.0,
                   decoration: const BoxDecoration(
-                    color: Color(0xBEB928B8),
+                    color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
                     builder: (context) {

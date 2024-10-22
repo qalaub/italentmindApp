@@ -51,7 +51,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(0.0),
                       child: Image.asset(
-                        'assets/images/escoger-users.png',
+                        'assets/images/fondo-inicio.png',
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         height: MediaQuery.sizeOf(context).height * 1.0,
                         fit: BoxFit.fill,
@@ -69,7 +69,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                           buttonSize: 40.0,
                           icon: const Icon(
                             Icons.arrow_back_ios_new,
-                            color: Colors.white,
+                            color: Colors.black,
                             size: 24.0,
                           ),
                           onPressed: () async {
@@ -86,8 +86,8 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
-                            'assets/images/logoapp.png',
-                            width: 110.0,
+                            'assets/images/logo-italente_sinfondo-negro.png',
+                            width: 180.0,
                             height: 110.0,
                             fit: BoxFit.fitWidth,
                           ),
@@ -130,7 +130,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Montserrat',
-                                              color: const Color(0xFF8E058A),
+                                              color: const Color(0xFF1D69D7),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
@@ -213,7 +213,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.firts
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -263,7 +263,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.firts
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -353,7 +353,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.second
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -403,7 +403,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.second
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -493,7 +493,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.tree
-                                                ? const Color(0xD5B928B8)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -543,7 +543,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.tree
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -633,7 +633,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.four
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -683,7 +683,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.four
-                                                ? const Color(0xB8D41ACF)
+                                                ? const Color(0xFF1D69D7)
                                                 : const Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
@@ -1588,7 +1588,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                             iconPadding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: const Color(0xB8D41ACF),
+                                            color: const Color(0xFF4963C9),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall

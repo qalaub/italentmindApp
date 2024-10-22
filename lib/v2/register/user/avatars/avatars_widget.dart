@@ -1,3 +1,5 @@
+import '/auth/firebase_auth/auth_util.dart';
+import '/backend/backend.dart';
 import '/components/avatar_component_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -5,6 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'avatars_model.dart';
 export 'avatars_model.dart';
 
@@ -35,6 +38,8 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
@@ -165,13 +170,92 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                                   ),
                               );
                               safeSetState(() {});
+                              GoRouter.of(context).prepareAuthEvent();
 
-                              context.pushNamed(
-                                'RegisterUser2',
+                              final user =
+                                  await authManager.createAccountWithEmail(
+                                context,
+                                FFAppState().registerProviderForm.email,
+                                FFAppState().registerProviderForm.password,
+                              );
+                              if (user == null) {
+                                return;
+                              }
+
+                              await UsersRecord.collection
+                                  .doc(user.uid)
+                                  .update({
+                                ...createUsersRecordData(
+                                  firtsName: FFAppState()
+                                      .registerProviderForm
+                                      .firstName,
+                                  lastName: FFAppState()
+                                      .registerProviderForm
+                                      .lastName,
+                                  birthdate: FFAppState()
+                                      .registerProviderForm
+                                      .birthdate,
+                                  suburb:
+                                      FFAppState().registerProviderForm.suburb,
+                                  ndis: FFAppState().registerProviderForm.ndis,
+                                  phoneNumber:
+                                      FFAppState().registerProviderForm.phone,
+                                  email:
+                                      FFAppState().registerProviderForm.email,
+                                  age: FFAppState().registerProviderForm.age,
+                                  years:
+                                      FFAppState().registerProviderForm.years,
+                                  gender:
+                                      FFAppState().registerProviderForm.gender,
+                                  description: FFAppState()
+                                      .registerProviderForm
+                                      .description,
+                                  comapny:
+                                      FFAppState().registerProviderForm.company,
+                                  languagues: '',
+                                  rol: FFAppState().registerProviderForm.rol,
+                                  plan: FFAppState().registerProviderForm.plan,
+                                  photoUrl: FFAppState()
+                                              .registerProviderForm
+                                              .images.isNotEmpty
+                                      ? FFAppState()
+                                          .registerProviderForm
+                                          .images
+                                          .first
+                                      : ' ',
+                                  business: FFAppState()
+                                      .registerProviderForm
+                                      .business,
+                                  paymentDate: getCurrentTimestamp,
+                                  freeTrial: true,
+                                  displayName: '',
+                                ),
+                                ...mapToFirestore(
+                                  {
+                                    'images': FFAppState().imagesUserUpload,
+                                    'serviceType': FFAppState()
+                                        .registerProviderForm
+                                        .serviceType,
+                                    'disabilities': FFAppState()
+                                        .registerProviderForm
+                                        .disabilities,
+                                    'schedule': FFAppState()
+                                        .registerProviderForm
+                                        .schedule,
+                                  },
+                                ),
+                              });
+
+                              FFAppState().authUserFireBase = true;
+
+                              context.goNamedAuth(
+                                'HomeSearch',
+                                context.mounted,
                                 extra: <String, dynamic>{
                                   kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
+                                    duration: Duration(milliseconds: 200),
                                   ),
                                 },
                               );

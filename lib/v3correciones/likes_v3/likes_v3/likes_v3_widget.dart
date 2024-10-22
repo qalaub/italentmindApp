@@ -109,7 +109,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
             width: MediaQuery.sizeOf(context).width * 0.92,
             height: 124.0,
             decoration: BoxDecoration(
-              color: const Color(0xFFF2CCF1),
+              color: const Color(0xFF4963C9),
               borderRadius: BorderRadius.circular(22.0),
               shape: BoxShape.rectangle,
             ),
@@ -170,6 +170,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                         .headlineLarge
                                         .override(
                                           fontFamily: 'Montserrat',
+                                          color: Colors.white,
                                           fontSize: 17.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
@@ -187,7 +188,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                               children: [
                                 const Icon(
                                   FFIcons.ksearch,
-                                  color: Color(0xFF27479B),
+                                  color: Colors.white,
                                   size: 18.0,
                                 ),
                                 Container(
@@ -206,7 +207,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                color: const Color(0xFF27479B),
+                                                color: Colors.white,
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
@@ -219,7 +220,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                           ),
                                           style: GoogleFonts.getFont(
                                             'Montserrat',
-                                            color: Colors.black,
+                                            color: Colors.white,
                                             fontWeight: FontWeight.w500,
                                             fontSize: 14.0,
                                           ),
@@ -229,6 +230,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Montserrat',
+                                            color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),
@@ -246,7 +248,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                               children: [
                                 const Icon(
                                   FFIcons.kubicationplane,
-                                  color: Color(0xFF27479B),
+                                  color: Colors.white,
                                   size: 20.0,
                                 ),
                                 Container(
@@ -265,7 +267,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                color: const Color(0xFF27479B),
+                                                color: Colors.white,
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
@@ -277,7 +279,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                                   _model.newSuburb),
                                           style: GoogleFonts.getFont(
                                             'Montserrat',
-                                            color: Colors.black,
+                                            color: Colors.white,
                                             fontWeight: FontWeight.w500,
                                             fontSize: 14.0,
                                           ),
@@ -287,6 +289,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Montserrat',
+                                            color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),

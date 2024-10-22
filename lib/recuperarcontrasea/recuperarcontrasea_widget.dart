@@ -52,7 +52,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: Image.asset(
-                    'assets/images/escoger-users.png',
+                    'assets/images/fondo-inicio.png',
                   ).image,
                 ),
               ),
@@ -107,7 +107,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                 const Divider(
                                   height: 23.0,
                                   thickness: 2.0,
-                                  color: Color(0xFFF0DFEF),
+                                  color: Color(0xFF4963C9),
                                 ),
                                 Form(
                                   key: _model.formKey,
@@ -137,7 +137,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                             ),
                                         enabledBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFBB33B9),
+                                            color: Color(0xFF1D69D7),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -145,7 +145,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                         ),
                                         focusedBorder: OutlineInputBorder(
                                           borderSide: const BorderSide(
-                                            color: Color(0xFFBB33B9),
+                                            color: Color(0xFF1D69D7),
                                             width: 2.0,
                                           ),
                                           borderRadius:
@@ -220,7 +220,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                       iconPadding:
                                           const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: const Color(0xFFB928B8),
+                                      color: const Color(0xFF4963C9),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -251,9 +251,9 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
-                          'assets/images/logoapp.png',
-                          width: 123.0,
-                          height: 113.0,
+                          'assets/images/logo-italente_sinfondo-negro.png',
+                          width: 180.0,
+                          height: 110.0,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -268,7 +268,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                       buttonSize: 40.0,
                       icon: const Icon(
                         Icons.arrow_back_ios_new,
-                        color: Colors.white,
+                        color: Colors.black,
                         size: 24.0,
                       ),
                       onPressed: () async {

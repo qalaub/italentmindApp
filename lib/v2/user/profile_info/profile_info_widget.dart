@@ -87,7 +87,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
             key: scaffoldKey,
             backgroundColor: Colors.white,
             appBar: AppBar(
-              backgroundColor: const Color(0xFFB928B8),
+              backgroundColor: const Color(0xFF4963C9),
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderRadius: 20.0,
@@ -264,7 +264,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 decoration: const BoxDecoration(
-                                  color: Color(0xDFF428EB),
+                                  color: Color(0xB74963C9),
                                 ),
                                 child: Opacity(
                                   opacity: 0.5,
@@ -277,7 +277,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                           const Duration(milliseconds: 500),
                                       imageUrl: valueOrDefault<String>(
                                         profileInfoUsersRecord.photoUrl,
-                                        'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                       ),
                                       width: double.infinity,
                                       height: double.infinity,
@@ -322,7 +322,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                               const Duration(milliseconds: 500),
                                           imageUrl: valueOrDefault<String>(
                                             profileInfoUsersRecord.photoUrl,
-                                            'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                           ),
                                           width: double.infinity,
                                           height: double.infinity,

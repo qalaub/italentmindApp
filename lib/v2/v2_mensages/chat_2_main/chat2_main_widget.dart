@@ -55,7 +55,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
         key: scaffoldKey,
         backgroundColor: const Color(0xFFF2F2F2),
         appBar: AppBar(
-          backgroundColor: const Color(0xFFBD39BA),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
@@ -135,7 +135,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 100.0,
                                 decoration: const BoxDecoration(
-                                  color: Color(0xFFBD39BA),
+                                  color: Color(0xFF4963C9),
                                 ),
                                 child: Builder(
                                   builder: (context) {
@@ -236,7 +236,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                       String>(
                                                                     columnUsersRecord
                                                                         .photoUrl,
-                                                                    'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                                                   ),
                                                                   width: 44.0,
                                                                   height: 44.0,
@@ -560,7 +560,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                             imageUrl:
                                                                                 valueOrDefault<String>(
                                                                               rowUsersRecord.photoUrl,
-                                                                              'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                                                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                                                             ),
                                                                             width:
                                                                                 44.0,
@@ -1097,7 +1097,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 100.0,
                                 decoration: const BoxDecoration(
-                                  color: Color(0xFFBD39BA),
+                                  color: Color(0xFF4963C9),
                                 ),
                                 child: AuthUserStreamWidget(
                                   builder: (context) => Builder(
@@ -1219,7 +1219,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                         String>(
                                                                       columnUsersRecord
                                                                           .photoUrl,
-                                                                      'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                                                     ),
                                                                     width: 44.0,
                                                                     height:
@@ -1538,7 +1538,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                             valueOrDefault<String>(
                                                                           rowUsersRecord
                                                                               .photoUrl,
-                                                                          'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                                                         ),
                                                                         width:
                                                                             44.0,
@@ -1704,7 +1704,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                   TextSpan(
                                                                                     text: columnUsersRecord.firtsName,
                                                                                     style: const TextStyle(
-                                                                                      color: Color(0xFFBD39BA),
+                                                                                      color: Color(0xFF4963C9),
                                                                                       fontWeight: FontWeight.w500,
                                                                                     ),
                                                                                   )
@@ -1781,7 +1781,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                 child: Container(
                   height: 73.0,
                   decoration: const BoxDecoration(
-                    color: Color(0xD5B928B8),
+                    color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
                     builder: (context) {

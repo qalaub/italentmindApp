@@ -602,11 +602,11 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                         borderRadius: 20.0,
                                         borderWidth: 1.0,
                                         buttonSize: 40.0,
-                                        fillColor: const Color(0x54CE69CE),
+                                        fillColor: const Color(0xFF4963C9),
                                         icon: const Icon(
                                           key: ValueKey('send'),
                                           Icons.send_rounded,
-                                          color: Color(0xFF432C43),
+                                          color: Colors.white,
                                           size: 20.0,
                                         ),
                                         onPressed: () async {

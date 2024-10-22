@@ -223,7 +223,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                     fillColor: Colors.white,
                                     icon: const Icon(
                                       Icons.search_sharp,
-                                      color: Color(0xFFDB00FF),
+                                      color: Color(0xFF1D69D7),
                                       size: 24.0,
                                     ),
                                     onPressed: () {
@@ -467,7 +467,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                             'Keyb3v_${newqueryIndex}_of_${newquery.length}'),
                                         icon: const Icon(
                                           Icons.location_on,
-                                          color: Color(0xFFD26AD2),
+                                          color: Color(0xFF1D69D7),
                                         ),
                                         text: newqueryItem.description,
                                       ),

@@ -1,6 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -1272,109 +1272,9 @@ Early Intervention */
                                                     .updateRegisterProviderFormStruct(
                                                   (e) => e..rol = Roles.user,
                                                 );
-                                                GoRouter.of(context)
-                                                    .prepareAuthEvent();
 
-                                                final user = await authManager
-                                                    .createAccountWithEmail(
-                                                  context,
-                                                  FFAppState()
-                                                      .registerProviderForm
-                                                      .email,
-                                                  FFAppState()
-                                                      .registerProviderForm
-                                                      .password,
-                                                );
-                                                if (user == null) {
-                                                  return;
-                                                }
-
-                                                await UsersRecord.collection
-                                                    .doc(user.uid)
-                                                    .update({
-                                                  ...createUsersRecordData(
-                                                    firtsName: FFAppState()
-                                                        .registerProviderForm
-                                                        .firstName,
-                                                    lastName: FFAppState()
-                                                        .registerProviderForm
-                                                        .lastName,
-                                                    birthdate: FFAppState()
-                                                        .registerProviderForm
-                                                        .birthdate,
-                                                    suburb: FFAppState()
-                                                        .registerProviderForm
-                                                        .suburb,
-                                                    ndis: FFAppState()
-                                                        .registerProviderForm
-                                                        .ndis,
-                                                    phoneNumber: FFAppState()
-                                                        .registerProviderForm
-                                                        .phone,
-                                                    email: FFAppState()
-                                                        .registerProviderForm
-                                                        .email,
-                                                    age: FFAppState()
-                                                        .registerProviderForm
-                                                        .age,
-                                                    years: FFAppState()
-                                                        .registerProviderForm
-                                                        .years,
-                                                    gender: FFAppState()
-                                                        .registerProviderForm
-                                                        .gender,
-                                                    description: FFAppState()
-                                                        .registerProviderForm
-                                                        .description,
-                                                    comapny: FFAppState()
-                                                        .registerProviderForm
-                                                        .company,
-                                                    languagues: '',
-                                                    rol: FFAppState()
-                                                        .registerProviderForm
-                                                        .rol,
-                                                    plan: FFAppState()
-                                                        .registerProviderForm
-                                                        .plan,
-                                                    photoUrl: FFAppState()
-                                                                .registerProviderForm
-                                                                .images.isNotEmpty
-                                                        ? FFAppState()
-                                                            .registerProviderForm
-                                                            .images
-                                                            .first
-                                                        : ' ',
-                                                    business: FFAppState()
-                                                        .registerProviderForm
-                                                        .business,
-                                                    paymentDate:
-                                                        getCurrentTimestamp,
-                                                    freeTrial: true,
-                                                    displayName: '',
-                                                  ),
-                                                  ...mapToFirestore(
-                                                    {
-                                                      'images': FFAppState()
-                                                          .imagesUserUpload,
-                                                      'serviceType': FFAppState()
-                                                          .registerProviderForm
-                                                          .serviceType,
-                                                      'disabilities': FFAppState()
-                                                          .registerProviderForm
-                                                          .disabilities,
-                                                      'schedule': FFAppState()
-                                                          .registerProviderForm
-                                                          .schedule,
-                                                    },
-                                                  ),
-                                                });
-
-                                                FFAppState().authUserFireBase =
-                                                    true;
-
-                                                context.pushNamedAuth(
-                                                  'HomeSearch',
-                                                  context.mounted,
+                                                context.pushNamed(
+                                                  'avatars',
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
                                                         const TransitionInfo(

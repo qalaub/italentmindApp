@@ -1827,7 +1827,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                       );
 
                                                       context.pushNamed(
-                                                        'avatars',
+                                                        'RegisterUser2',
                                                         extra: <String,
                                                             dynamic>{
                                                           kTransitionInfoKey:

@@ -108,7 +108,7 @@ class _ListofcollaboratorsPERFILWidgetState
                   width: 285.0,
                   height: 160.0,
                   decoration: const BoxDecoration(
-                    color: Color(0xFFFFCCF9),
+                    color: Color(0xFF1D69D7),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(12.0),
                       bottomRight: Radius.circular(12.0),
@@ -181,9 +181,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                   child: Container(
                                     width: 139.0,
                                     height: 36.0,
-                                    decoration: const BoxDecoration(
-                                      color: Color(0xFFFFCCF9),
-                                    ),
+                                    decoration: const BoxDecoration(),
                                     child: Text(
                                       functions.upperCaseFirstLetter(
                                           containerUsersRecord.firtsName),
@@ -191,6 +189,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                           .headlineLarge
                                           .override(
                                             fontFamily: 'Montserrat',
+                                            color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -203,9 +202,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                   child: Container(
                                     width: 139.0,
                                     height: 18.0,
-                                    decoration: const BoxDecoration(
-                                      color: Color(0xFFFFCCF9),
-                                    ),
+                                    decoration: const BoxDecoration(),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 2.0, 0.0, 0.0),
@@ -215,6 +212,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Montserrat',
+                                              color: Colors.white,
                                               fontSize: 11.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
@@ -238,9 +236,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                   child: Container(
                                     width: 150.0,
                                     height: 50.0,
-                                    decoration: const BoxDecoration(
-                                      color: Color(0xFFFFCCF9),
-                                    ),
+                                    decoration: const BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -262,7 +258,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                                   child: Icon(
                                                     Icons
                                                         .business_center_outlined,
-                                                    color: Color(0xFF0E70DF),
+                                                    color: Colors.white,
                                                     size: 14.0,
                                                   ),
                                                 ),
@@ -287,7 +283,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                                           .override(
                                                             fontFamily:
                                                                 'Montserrat',
-                                                            color: Colors.black,
+                                                            color: Colors.white,
                                                             fontSize: 11.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
@@ -324,7 +320,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                                             -1.0, 0.0),
                                                     child: Icon(
                                                       Icons.edit_document,
-                                                      color: Color(0xFF0E70DF),
+                                                      color: Colors.white,
                                                       size: 13.0,
                                                     ),
                                                   ),
@@ -356,7 +352,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                                                 fontFamily:
                                                                     'Montserrat',
                                                                 color: Colors
-                                                                    .black,
+                                                                    .white,
                                                                 fontSize: 10.0,
                                                                 letterSpacing:
                                                                     0.0,

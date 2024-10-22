@@ -100,7 +100,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                 width: 285.0,
                 height: 139.0,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFBB3FBB),
+                  color: const Color(0xFF1D69D7),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Row(
@@ -141,7 +141,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                         const Duration(milliseconds: 500),
                                     imageUrl: valueOrDefault<String>(
                                       containerUsersRecord.photoUrl,
-                                      'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                     ),
                                     width: double.infinity,
                                     height: double.infinity,
@@ -242,7 +242,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                               AlignmentDirectional(-1.0, 0.0),
                                           child: Icon(
                                             Icons.business_center_outlined,
-                                            color: Color(0xFF0E70DF),
+                                            color: Colors.white,
                                             size: 14.0,
                                           ),
                                         ),
@@ -331,7 +331,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                                   .fromSTEB(0.0, 0.0, 0.0, 3.0),
                                               child: Icon(
                                                 Icons.edit_document,
-                                                color: Color(0xFF0E70DF),
+                                                color: Colors.white,
                                                 size: 13.0,
                                               ),
                                             ),

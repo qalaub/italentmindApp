@@ -182,7 +182,7 @@ class _ImageUploadWidgetState extends State<ImageUploadWidget> {
                   borderRadius: 20.0,
                   borderWidth: 1.0,
                   buttonSize: 40.0,
-                  fillColor: const Color(0xFFED2AF1),
+                  fillColor: const Color(0xFF1D69D7),
                   icon: const Icon(
                     Icons.close,
                     color: Color(0xFFFFFEFE),

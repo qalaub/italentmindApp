@@ -139,7 +139,7 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFFCE69CE),
+                                  color: const Color(0xFF4963C9),
                                   boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 3.0,
@@ -180,6 +180,7 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                                             .bodyLarge
                                             .override(
                                               fontFamily: 'Readex Pro',
+                                              color: Colors.white,
                                               letterSpacing: 0.0,
                                               lineHeight: 1.5,
                                             ),
@@ -294,7 +295,7 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                     ),
                     Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xFFCE69CE),
+                        color: const Color(0xFF4963C9),
                         boxShadow: const [
                           BoxShadow(
                             blurRadius: 3.0,

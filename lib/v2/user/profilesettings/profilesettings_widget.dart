@@ -71,7 +71,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: const Color(0xFFB928B8),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             key: const ValueKey('back'),
@@ -195,7 +195,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                   .headlineSmall
                                                   .override(
                                                     fontFamily: 'Montserrat',
-                                                    color: const Color(0xFFA62985),
+                                                    color: const Color(0xFF4963C9),
                                                     fontSize: 14.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight:
@@ -232,7 +232,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Montserrat',
-                                            color: const Color(0xFFC14BBC),
+                                            color: const Color(0xFF1D69D7),
                                             fontSize: 15.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
@@ -298,7 +298,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                               borderRadius:
                                                   BorderRadius.circular(12.0),
                                               border: Border.all(
-                                                color: const Color(0xFFC14BBC),
+                                                color: const Color(0xFF1D69D7),
                                                 width: 3.0,
                                               ),
                                             ),
@@ -453,7 +453,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                           0.9, 0.0),
                                                   child: Icon(
                                                     Icons.verified,
-                                                    color: Color(0xFFFF34E7),
+                                                    color: Color(0xFF4963C9),
                                                     size: 24.0,
                                                   ),
                                                 ),
@@ -493,7 +493,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                color: const Color(0xFFC14BBC),
+                                                color: const Color(0xFF1D69D7),
                                                 fontSize: 15.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
@@ -568,7 +568,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                       BorderRadius.circular(
                                                           12.0),
                                                   border: Border.all(
-                                                    color: const Color(0xFFC14BBC),
+                                                    color: const Color(0xFF1D69D7),
                                                     width: 3.0,
                                                   ),
                                                 ),
@@ -867,7 +867,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                color: const Color(0xFFC14BBC),
+                                                color: const Color(0xFF1D69D7),
                                                 fontSize: 15.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
@@ -942,7 +942,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                       BorderRadius.circular(
                                                           12.0),
                                                   border: Border.all(
-                                                    color: const Color(0xFFC14BBC),
+                                                    color: const Color(0xFF1D69D7),
                                                     width: 3.0,
                                                   ),
                                                 ),
@@ -1073,7 +1073,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       .bodyLarge
                                       .override(
                                         fontFamily: 'Montserrat',
-                                        color: const Color(0xFFC14BBC),
+                                        color: const Color(0xFF1D69D7),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -1098,7 +1098,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       color: const Color(0xFFF0F0F0),
                                       borderRadius: BorderRadius.circular(12.0),
                                       border: Border.all(
-                                        color: const Color(0xFFC45ABE),
+                                        color: const Color(0xFF1D69D7),
                                         width: 3.0,
                                       ),
                                     ),
@@ -1255,7 +1255,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                color: const Color(0xFFC14BBC),
+                                                color: const Color(0xFF1D69D7),
                                                 fontSize: 15.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
@@ -1439,7 +1439,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                         iconPadding:
                                             const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: const Color(0xFFB928B8),
+                                        color: const Color(0xFF1D69D7),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -1612,18 +1612,18 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                           ),
                           options: FFButtonOptions(
                             width: 167.0,
-                            height: 57.0,
+                            height: 47.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                12.0, 0.0, 12.0, 0.0),
+                                10.0, 0.0, 10.0, 0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: const Color(0xFFFF6FF7),
+                            color: const Color(0xFF4963C9),
                             textStyle: FlutterFlowTheme.of(context)
                                 .headlineLarge
                                 .override(
                                   fontFamily: 'Montserrat',
                                   color: Colors.white,
-                                  fontSize: 24.0,
+                                  fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,
@@ -1646,7 +1646,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                 child: Container(
                   height: 73.0,
                   decoration: const BoxDecoration(
-                    color: Color(0xB3B928B8),
+                    color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
                     builder: (context) {

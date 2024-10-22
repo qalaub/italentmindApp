@@ -42,7 +42,7 @@ class _FavV2WidgetState extends State<FavV2Widget> {
       key: scaffoldKey,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1D69D7),
+        backgroundColor: const Color(0xFF4963C9),
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
@@ -83,7 +83,7 @@ class _FavV2WidgetState extends State<FavV2Widget> {
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: Image.asset(
-                    'assets/images/F0NDer_fav2_(1).png',
+                    'assets/images/fondo-italente_(2).png',
                   ).image,
                 ),
               ),
@@ -151,7 +151,7 @@ class _FavV2WidgetState extends State<FavV2Widget> {
                     child: Container(
                       height: 69.0,
                       decoration: const BoxDecoration(
-                        color: Color(0xB3B928B8),
+                        color: Color(0xFF1D69D7),
                       ),
                       child: Builder(
                         builder: (context) {

@@ -69,7 +69,7 @@ class _MapbuscarWidgetState extends State<MapbuscarWidget> {
         children: [
           const Icon(
             Icons.location_on,
-            color: Color(0xFFD26AD2),
+            color: Color(0xFF4963C9),
             size: 32.0,
           ),
           Container(

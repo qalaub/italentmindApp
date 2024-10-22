@@ -69,7 +69,7 @@ class _NewNotifcationsWidgetState extends State<NewNotifcationsWidget> {
         return Container(
           height: 100.0,
           decoration: const BoxDecoration(
-            color: Color(0xB2CB93E5),
+            color: Color(0xFF1D69D7),
           ),
           child: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
@@ -155,7 +155,7 @@ class _NewNotifcationsWidgetState extends State<NewNotifcationsWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Montserrat',
-                                            color: Colors.black,
+                                            color: Colors.white,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -182,6 +182,7 @@ class _NewNotifcationsWidgetState extends State<NewNotifcationsWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Montserrat',
+                                        color: Colors.white,
                                         fontSize: 15.0,
                                         letterSpacing: 0.0,
                                       ),

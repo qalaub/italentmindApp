@@ -125,11 +125,11 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                 width: 285.0,
                 height: 139.0,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFBB3FBB),
+                  color: const Color(0xFF1D69D7),
                   boxShadow: const [
                     BoxShadow(
                       blurRadius: 0.0,
-                      color: Color(0xFFF8CBF5),
+                      color: Color(0xFF8BA4FF),
                       offset: Offset(
                         7.0,
                         2.0,
@@ -367,7 +367,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                             thickness: 1.0,
                             indent: 5.0,
                             endIndent: 5.0,
-                            color: Color(0xFFBB3FBB),
+                            color: Colors.white,
                           ),
                         ),
                         Align(
@@ -400,7 +400,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                   .fromSTEB(0.0, 0.0, 0.0, 3.0),
                                               child: Icon(
                                                 FFIcons.kcheck,
-                                                color: Color(0xFF0143A4),
+                                                color: Colors.white,
                                                 size: 13.0,
                                               ),
                                             ),
@@ -454,7 +454,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                   -1.0, 0.0),
                                               child: Icon(
                                                 Icons.business_center_outlined,
-                                                color: Color(0xFF0143A4),
+                                                color: Colors.white,
                                                 size: 14.0,
                                               ),
                                             ),
@@ -548,7 +548,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                   .fromSTEB(0.0, 0.0, 0.0, 3.0),
                                               child: Icon(
                                                 FFIcons.kubication,
-                                                color: Color(0xFF0143A4),
+                                                color: Colors.white,
                                                 size: 13.0,
                                               ),
                                             ),

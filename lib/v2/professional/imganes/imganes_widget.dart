@@ -120,7 +120,7 @@ class _ImganesWidgetState extends State<ImganesWidget> {
                                 dotWidth: 25.0,
                                 dotHeight: 6.0,
                                 dotColor: Color(0x4CFFFFFF),
-                                activeDotColor: Color(0xFFBF079C),
+                                activeDotColor: Color(0xFF1D69D7),
                                 paintStyle: PaintingStyle.fill,
                               ),
                             ),

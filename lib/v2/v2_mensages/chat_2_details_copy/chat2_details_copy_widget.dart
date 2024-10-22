@@ -106,12 +106,7 @@ class _Chat2DetailsCopyWidgetState extends State<Chat2DetailsCopyWidget> {
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 110.0,
                   decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFFC047BB), Color(0xFFCB77C1)],
-                      stops: [0.0, 1.0],
-                      begin: AlignmentDirectional(-1.0, 0.0),
-                      end: AlignmentDirectional(1.0, 0),
-                    ),
+                    color: Color(0xFF4963C9),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
@@ -158,7 +153,7 @@ class _Chat2DetailsCopyWidgetState extends State<Chat2DetailsCopyWidget> {
                                         const Duration(milliseconds: 500),
                                     imageUrl: valueOrDefault<String>(
                                       chat2DetailsCopyUsersRecord.photoUrl,
-                                      'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                     ),
                                     fit: BoxFit.cover,
                                   ),

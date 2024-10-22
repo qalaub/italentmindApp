@@ -84,7 +84,7 @@ class _DescripcionProfesionalWidgetState
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
                                   fontFamily: 'Montserrat',
-                                  color: const Color(0xFFC14BBC),
+                                  color: const Color(0xFF1D69D7),
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
                                 ),
@@ -176,7 +176,7 @@ class _DescripcionProfesionalWidgetState
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Montserrat',
-                                  color: const Color(0xFFC14BBC),
+                                  color: const Color(0xFF1D69D7),
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -275,7 +275,7 @@ class _DescripcionProfesionalWidgetState
                                             AlignmentDirectional(-1.0, 0.0),
                                         child: Icon(
                                           Icons.business_center_outlined,
-                                          color: Color(0xFF0E70DF),
+                                          color: Color(0xFF4963C9),
                                           size: 22.0,
                                         ),
                                       ),
@@ -344,7 +344,7 @@ class _DescripcionProfesionalWidgetState
                                           0.0, 0.0, 0.0, 3.0),
                                       child: Icon(
                                         Icons.edit_document,
-                                        color: Color(0xFF0E70DF),
+                                        color: Color(0xFF4963C9),
                                         size: 22.0,
                                       ),
                                     ),
@@ -391,7 +391,7 @@ Perso... */
                                       0.0, 0.0, 0.0, 3.0),
                                   child: Icon(
                                     Icons.more_time_sharp,
-                                    color: Color(0xFF0E70DF),
+                                    color: Color(0xFF4963C9),
                                     size: 22.0,
                                   ),
                                 ),
@@ -465,7 +465,7 @@ Perso... */
                                             0.0, 0.0, 0.0, 3.0),
                                         child: Icon(
                                           Icons.add_business,
-                                          color: Color(0xFF0E70DF),
+                                          color: Color(0xFF4963C9),
                                           size: 22.0,
                                         ),
                                       ),
@@ -511,7 +511,7 @@ Perso... */
                                           0.0, 0.0, 0.0, 3.0),
                                       child: Icon(
                                         Icons.check_circle,
-                                        color: Color(0xFFE069BF),
+                                        color: Color(0xFF4963C9),
                                         size: 22.0,
                                       ),
                                     ),
@@ -558,7 +558,7 @@ Perso... */
                                       0.0, 0.0, 0.0, 3.0),
                                   child: Icon(
                                     Icons.work_history_sharp,
-                                    color: Color(0xFF0E70DF),
+                                    color: Color(0xFF4963C9),
                                     size: 22.0,
                                   ),
                                 ),
