@@ -762,7 +762,7 @@ class _RegisterPfofesional4WidgetState
                                                               .premiunPrice;
                                                         }
                                                       }(),
-                                                      currency: 'AUD',
+                                                      currency: 'USD',
                                                       customerEmail: FFAppState()
                                                           .registerProviderForm
                                                           .email,
@@ -824,6 +824,8 @@ class _RegisterPfofesional4WidgetState
                                                         }.withoutNulls,
                                                       );
                                                     } else {
+                                                      await widget.businessRef!
+                                                          .delete();
                                                       await authManager
                                                           .deleteUser(context);
                                                     }

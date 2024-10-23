@@ -696,7 +696,7 @@ class _RegisterBusiness4WidgetState extends State<RegisterBusiness4Widget> {
                                                           .premiunPrice;
                                                     }
                                                   }(),
-                                                  currency: 'AUD',
+                                                  currency: 'USD',
                                                   customerEmail: FFAppState()
                                                       .registerProviderForm
                                                       .email,
@@ -753,6 +753,8 @@ class _RegisterBusiness4WidgetState extends State<RegisterBusiness4Widget> {
                                                     }.withoutNulls,
                                                   );
                                                 } else {
+                                                  await currentUserReference!
+                                                      .delete();
                                                   await authManager
                                                       .deleteUser(context);
                                                 }
