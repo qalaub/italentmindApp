@@ -18,7 +18,9 @@ class LoginModel extends FlutterFlowModel<LoginWidget> {
     }
 
     if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
-      return 'Has to be a valid email address.';
+      return FFLocalizations.of(context).getText(
+        'pa1zrth2' /* Has to be a valid email addres... */,
+      );
     }
     return null;
   }

@@ -1399,7 +1399,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                               .showSnackBar(
                                             SnackBar(
                                               content: Text(
-                                                'File must be no larger than 100 MB',
+                                                FFLocalizations.of(context)
+                                                            .languageCode ==
+                                                        'en'
+                                                    ? 'File must be no larger than 100 MB'
+                                                    : 'El archivo no debe pesar más de 100 MB',
                                                 style: TextStyle(
                                                   color: FlutterFlowTheme.of(
                                                           context)
@@ -1595,7 +1599,10 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text(
-                                  'Update success',
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Update success'
+                                      : 'Actualización exitosa',
                                   style: TextStyle(
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,

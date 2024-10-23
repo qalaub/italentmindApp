@@ -284,7 +284,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ecjf911m': {
       'en': 'DD/MM/YYYY',
-      'es': 'DD/MM/YYYY',
+      'es': 'DD/MM/AAAA',
     },
     'f9r6x7ek': {
       'en': ' ',
@@ -339,8 +339,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Campo necesario',
     },
     'o6oxssdc': {
-      'en': 'Please enter a valid name.',
-      'es': 'Por favor ingrese un nombre valido.',
+      'en': 'Please enter a valid name. Special characters are not allowed.',
+      'es':
+          'Por favor, ingrese un nombre válido. No se permiten caracteres especiales.',
     },
     '08dd6dic': {
       'en': 'Please choose an option from the dropdown',
@@ -351,8 +352,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Campo necesario',
     },
     'vxs56bma': {
-      'en': 'Please enter a valid name.',
-      'es': 'Por favor ingrese un nombre valido.',
+      'en': 'Please enter a valid name. Special characters are not allowed.',
+      'es':
+          'Por favor, ingrese un nombre válido. No se permiten caracteres especiales.',
     },
     'krq0rpao': {
       'en': 'Please choose an option from the dropdown',
@@ -629,8 +631,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Campo necesario',
     },
     '8818zy37': {
-      'en': 'Please enter a valid name.',
-      'es': 'Por favor, introduzca un nombre válido.',
+      'en': 'Please enter a valid name. Special characters are not allowed.',
+      'es': 'Please enter a valid name. Special characters are not allowed.',
     },
     'vptd1g0e': {
       'en': 'Please choose an option from the dropdown',
@@ -640,9 +642,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    '994d8s30': {
-      'en': 'Please enter a valid name.',
-      'es': 'Por favor ingrese un nombre valido.',
+    '44sdtdk3': {
+      'en': 'Please enter a valid name. Special characters are not allowed.',
+      'es':
+          'Por favor, ingrese un nombre válido. No se permiten caracteres especiales.',
     },
     'nkw7v2an': {
       'en': 'Please choose an option from the dropdown',
@@ -925,6 +928,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'audraq8t': {
       'en': 'Field is required',
       'es': 'Campo necesario',
+    },
+    'pa1zrth2': {
+      'en': 'Has to be a valid email address.',
+      'es': '',
     },
     'xz5uwsry': {
       'en': 'Please choose an option from the dropdown',
@@ -1469,8 +1476,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Campo necesario',
     },
     'iyq3g3ls': {
-      'en': 'Please enter a valid name.',
-      'es': 'Por favor, introduzca un nombre válido.',
+      'en': 'Please enter a valid name. Special characters are not allowed.',
+      'es':
+          'Por favor, ingrese un nombre válido. No se permiten caracteres especiales.',
     },
     'd2tve3as': {
       'en': 'Please choose an option from the dropdown',
@@ -1480,9 +1488,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    'fmo6uhvw': {
-      'en': 'Please enter a valid name.',
-      'es': 'Por favor ingrese un nombre valido.',
+    '7mmnd2vm': {
+      'en': 'Please enter a valid name. Special characters are not allowed.',
+      'es':
+          'Por favor, ingrese un nombre válido. No se permiten caracteres especiales.',
     },
     'ci7ub1k2': {
       'en': 'Please choose an option from the dropdown',

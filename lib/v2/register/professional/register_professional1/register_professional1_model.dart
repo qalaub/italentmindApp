@@ -40,7 +40,7 @@ class RegisterProfessional1Model
             '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
         .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
-        '8818zy37' /* Please enter a valid name. */,
+        '8818zy37' /* Please enter a valid name. Spe... */,
       );
     }
     return null;
@@ -61,7 +61,7 @@ class RegisterProfessional1Model
             '^(?!.*\\b(?:[Uu]suario|[Pp]erfil)\\b)[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\\s]+\$')
         .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
-        'vxs56bma' /* Please enter a valid name. */,
+        '44sdtdk3' /* Please enter a valid name. Spe... */,
       );
     }
     return null;

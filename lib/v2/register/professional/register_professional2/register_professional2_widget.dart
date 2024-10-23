@@ -1825,7 +1825,7 @@ class _RegisterProfessional2WidgetState
                                                               .transparent,
                                                           onTap: () async {
                                                             await launchURL(
-                                                                'https://icareapp.com.au/privacy-policy');
+                                                                'https://italentmind.com/terminos-y-condiciones/');
                                                           },
                                                           child: Text(
                                                             FFLocalizations.of(
