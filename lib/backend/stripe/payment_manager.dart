@@ -95,14 +95,14 @@ Future<StripePaymentResponse> processStripePayment(
         merchantDisplayName: 'Italentmind',
         googlePay: allowGooglePay
             ? PaymentSheetGooglePay(
-                merchantCountryCode: 'USA',
+                merchantCountryCode: 'US',
                 currencyCode: currency,
                 testEnv: !_isProd,
               )
             : null,
         applePay: isiOS && allowApplePay
             ? const PaymentSheetApplePay(
-                merchantCountryCode: 'USA',
+                merchantCountryCode: 'US',
               )
             : null,
         style: themeStyle,

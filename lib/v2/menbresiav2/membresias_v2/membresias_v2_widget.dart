@@ -73,7 +73,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: Image.asset(
-                  'assets/images/preci-basic.png',
+                  'assets/images/fondo-inicio.png',
                   width: double.infinity,
                   height: MediaQuery.sizeOf(context).height * 1.0,
                   fit: BoxFit.cover,
@@ -1298,7 +1298,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                       24.0, 0.0, 24.0, 0.0),
                                   iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0xFFB928B8),
+                                  color: const Color(0xFF4D87DA),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -1348,7 +1348,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                       },
                       child: const Icon(
                         Icons.chevron_left_outlined,
-                        color: Colors.white,
+                        color: Colors.black,
                         size: 40.0,
                       ),
                     ),
