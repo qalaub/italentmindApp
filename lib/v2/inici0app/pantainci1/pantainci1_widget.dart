@@ -69,6 +69,10 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                             PageView(
                               controller: _model.pageViewController ??=
                                   PageController(initialPage: 0),
+                              onPageChanged: (_) async {
+                                _model.currentIndex =
+                                    _model.pageViewCurrentIndex;
+                              },
                               scrollDirection: Axis.horizontal,
                               children: [
                                 Builder(
@@ -251,7 +255,7 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            if (_model.pageViewCurrentIndex < 2) {
+                            if (_model.currentIndex! < 2) {
                               await _model.pageViewController?.nextPage(
                                 duration: const Duration(milliseconds: 300),
                                 curve: Curves.ease,

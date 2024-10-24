@@ -3,6 +3,10 @@ import 'pantainci1_widget.dart' show Pantainci1Widget;
 import 'package:flutter/material.dart';
 
 class Pantainci1Model extends FlutterFlowModel<Pantainci1Widget> {
+  ///  Local state fields for this page.
+
+  int? currentIndex = 0;
+
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for PageView widget.
