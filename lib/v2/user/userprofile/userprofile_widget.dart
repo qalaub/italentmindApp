@@ -524,7 +524,7 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                             Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
-                                width: MediaQuery.sizeOf(context).width * 0.85,
+                                width: 326.0,
                                 height: 52.0,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFFF3F3F3),

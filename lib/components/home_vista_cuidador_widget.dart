@@ -63,7 +63,7 @@ class _HomeVistaCuidadorWidgetState extends State<HomeVistaCuidadorWidget> {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   image: Image.asset(
-                    'assets/images/Group_97_(3).png',
+                    'assets/images/Group_97_(4).png',
                   ).image,
                 ),
                 borderRadius: const BorderRadius.only(

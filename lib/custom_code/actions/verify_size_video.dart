@@ -15,7 +15,7 @@ import 'dart:io';
 bool verifySizeVideo(FFUploadedFile video) {
   // Define el tamaño mínimo y máximo (en bytes)
   const int minSize = 1 * 1024 * 1024; // 1 MB
-  const int maxSize = 100 * 1024 * 1024; // 100 MB
+  const int maxSize = 100 * 1024 * 1024 * 3; // 100 MB
 
   try {
     // Obtén los datos del archivo como `Uint8List`

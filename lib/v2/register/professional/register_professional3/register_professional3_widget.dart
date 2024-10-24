@@ -246,8 +246,10 @@ class _RegisterProfessional3WidgetState
                                               ),
                                             ),
                                           ),
-                                          if (_model.questionValue ==
-                                              'Use existing company code (This option is for employees of an existing company who wish to create their employee profile)')
+                                          if ((_model.questionValue ==
+                                                  'Use existing company code (This option is for employees of an existing company who wish to create their employee profile)') ||
+                                              (_model.questionValue ==
+                                                  'Utilizar código de empresa existente (Esta opción es para empleados de una empresa existente que desean crear su perfil de empleado)'))
                                             Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -702,8 +704,14 @@ class _RegisterProfessional3WidgetState
                                                           .validate()) {
                                                     return;
                                                   }
-                                                  if (_model.questionValue !=
-                                                      'Use existing company code (This option is for employees of an existing company who wish to create their employee profile)') {
+                                                  if (FFLocalizations.of(
+                                                                  context)
+                                                              .languageCode ==
+                                                          'en'
+                                                      ? (_model.questionValue !=
+                                                          'Use existing company code (This option is for employees of an existing company who wish to create their employee profile)')
+                                                      : (_model.questionValue !=
+                                                          'Utilizar código de empresa existente (Esta opción es para empleados de una empresa existente que desean crear su perfil de empleado)')) {
                                                     context.pushNamed(
                                                         'cuestionario');
                                                   } else {
@@ -751,7 +759,11 @@ class _RegisterProfessional3WidgetState
                                                               .showSnackBar(
                                                             SnackBar(
                                                               content: Text(
-                                                                'The business has 10 professionals',
+                                                                FFLocalizations.of(context)
+                                                                            .languageCode ==
+                                                                        'en'
+                                                                    ? 'The business has 10 professionals'
+                                                                    : 'La empresa cuenta con 10 profesionales',
                                                                 style:
                                                                     TextStyle(
                                                                   color: FlutterFlowTheme.of(
@@ -799,7 +811,12 @@ class _RegisterProfessional3WidgetState
                                                             .showSnackBar(
                                                           SnackBar(
                                                             content: Text(
-                                                              'The code is wrong',
+                                                              FFLocalizations.of(
+                                                                              context)
+                                                                          .languageCode ==
+                                                                      'en'
+                                                                  ? 'The code is wrong'
+                                                                  : 'Código incorrecto',
                                                               style: TextStyle(
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
@@ -821,7 +838,12 @@ class _RegisterProfessional3WidgetState
                                                           .showSnackBar(
                                                         SnackBar(
                                                           content: Text(
-                                                            'Business without code',
+                                                            FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode ==
+                                                                    'en'
+                                                                ? 'Business without code'
+                                                                : 'Empresa sin código',
                                                             style: TextStyle(
                                                               color: FlutterFlowTheme
                                                                       .of(context)

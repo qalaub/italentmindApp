@@ -343,7 +343,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
-                                                  0.541,
+                                                  0.601,
                                           height: 220.0,
                                           decoration: const BoxDecoration(),
                                           child: wrapWithModel(

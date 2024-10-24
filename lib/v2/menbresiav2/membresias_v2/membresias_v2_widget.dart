@@ -233,7 +233,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.84,
-                                      height: 173.0,
+                                      height: 184.0,
                                       decoration: const BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.only(
@@ -607,7 +607,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.84,
-                                    height: 227.0,
+                                    height: 237.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -988,7 +988,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.84,
-                                    height: 313.0,
+                                    height: 333.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,

@@ -1666,10 +1666,16 @@ class _RegisterProfessional1WidgetState
                                                         .validate()) {
                                                   return;
                                                 }
-                                                if (FFAppState()
-                                                        .verifyForm
-                                                        .subur ==
-                                                    true) {
+                                                if ((FFAppState()
+                                                            .verifyForm
+                                                            .subur ==
+                                                        true) &&
+                                                    valueOrDefault<bool>(
+                                                      FFAppState()
+                                                          .verifyForm
+                                                          .same1,
+                                                      false,
+                                                    )) {
                                                   FFAppState()
                                                       .updateRegisterProviderFormStruct(
                                                     (e) => e
