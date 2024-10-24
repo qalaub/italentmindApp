@@ -245,10 +245,10 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.01, 0.9),
+                      alignment: const AlignmentDirectional(0.0, 0.9),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 10.0, 0.0, 10.0),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             if (_model.pageViewCurrentIndex < 2) {
