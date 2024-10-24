@@ -828,7 +828,7 @@ class _RegisterProfessional3WidgetState
                                                                     4000),
                                                             backgroundColor:
                                                                 const Color(
-                                                                    0xFFD239D1),
+                                                                    0xFF4963C9),
                                                           ),
                                                         );
                                                       }
@@ -854,7 +854,7 @@ class _RegisterProfessional3WidgetState
                                                               milliseconds:
                                                                   4000),
                                                           backgroundColor:
-                                                              const Color(0xFFBE39D2),
+                                                              const Color(0xFF4963C9),
                                                         ),
                                                       );
                                                     }

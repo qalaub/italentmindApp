@@ -1968,14 +1968,14 @@ class _RegisterProfessional2WidgetState
                                                   FFAppState()
                                                       .updateVerifyFormStruct(
                                                     (e) => e
-                                                      ..dropdown =
-                                                          valueOrDefault<bool>(
-                                                        _model.serviceTypeValue !=
-                                                                null &&
-                                                            (_model.serviceTypeValue)!
-                                                                .isNotEmpty,
-                                                        false,
-                                                      )
+                                                      ..dropdown = _model
+                                                                      .serviceTypeValue !=
+                                                                  null &&
+                                                              (_model.serviceTypeValue)!
+                                                                  .isNotEmpty
+                                                          ? (_model
+                                                                  .serviceTypeValue!.isNotEmpty)
+                                                          : false
                                                       ..dropdown2 =
                                                           valueOrDefault<bool>(
                                                         _model.ageValue !=

@@ -246,16 +246,38 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                               .toList(),
                                       );
                                       safeSetState(() {});
-
-                                      context.pushNamed(
-                                        'RegisterPfofesional4',
-                                        queryParameters: {
-                                          'businessRef': serializeParam(
-                                            widget.bussinesRef,
-                                            ParamType.DocumentReference,
+                                      if (_model.checkboxGroupValues!.isNotEmpty) {
+                                        context.pushNamed(
+                                          'RegisterPfofesional4',
+                                          queryParameters: {
+                                            'businessRef': serializeParam(
+                                              widget.bussinesRef,
+                                              ParamType.DocumentReference,
+                                            ),
+                                          }.withoutNulls,
+                                        );
+                                      } else {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              FFLocalizations.of(context)
+                                                          .languageCode ==
+                                                      'en'
+                                                  ? 'You must select at least one day'
+                                                  : 'Debes seleccionar al menos un día',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                              ),
+                                            ),
+                                            duration:
+                                                const Duration(milliseconds: 4000),
+                                            backgroundColor: const Color(0xFF4963C9),
                                           ),
-                                        }.withoutNulls,
-                                      );
+                                        );
+                                      }
                                     },
                                     text: FFLocalizations.of(context).getText(
                                       'rv2w3vi2' /* Continue */,
