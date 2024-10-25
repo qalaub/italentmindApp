@@ -1860,7 +1860,15 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                               .verifyForm
                                                               .same ==
                                                           true) &&
-                                                      _model.termsAccept) {
+                                                      _model.termsAccept &&
+                                                      (FFAppState()
+                                                              .verifyForm
+                                                              .dropdown ==
+                                                          true) &&
+                                                      (FFAppState()
+                                                              .verifyForm
+                                                              .dropdown2 ==
+                                                          true)) {
                                                     FFAppState()
                                                         .updateRegisterProviderFormStruct(
                                                       (e) => e

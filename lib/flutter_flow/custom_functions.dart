@@ -404,3 +404,52 @@ String extractStateAndPostalCode(String input) {
 
   return "NSW 2781"; // Manejo de caso si no se cumplen las condiciones
 }
+
+String changeServiceLanguge(
+  String service,
+  String languageCode,
+) {
+// Mapa de traducción de servicios (bidireccional: español e inglés)
+  final Map<String, Map<String, String>> serviceTranslations = {
+    'Trabajadores de apoyo': {
+      'en': 'Support Workers',
+      'es': 'Trabajadores de apoyo'
+    },
+    'Support Workers': {'en': 'Support Workers', 'es': 'Trabajadores de apoyo'},
+    'Mantenimiento del hogar': {
+      'en': 'Home Maintenance',
+      'es': 'Mantenimiento del hogar'
+    },
+    'Home Maintenance': {
+      'en': 'Home Maintenance',
+      'es': 'Mantenimiento del hogar'
+    },
+    'Apoyos terapéuticos': {
+      'en': 'Therapeutic Supports',
+      'es': 'Apoyos terapéuticos'
+    },
+    'Therapeutic Supports': {
+      'en': 'Therapeutic Supports',
+      'es': 'Apoyos terapéuticos'
+    },
+    'Entrenadores de recuperación': {
+      'en': 'Recovery Coaches',
+      'es': 'Entrenadores de recuperación'
+    },
+    'Recovery Coaches': {
+      'en': 'Recovery Coaches',
+      'es': 'Entrenadores de recuperación'
+    },
+    'Coordinadores de apoyo': {
+      'en': 'Support Coordinators',
+      'es': 'Coordinadores de apoyo'
+    },
+    'Support Coordinators': {
+      'en': 'Support Coordinators',
+      'es': 'Coordinadores de apoyo'
+    },
+  };
+
+  // Retorna la traducción o el texto original si no hay coincidencia
+  return serviceTranslations[service]?[languageCode] ?? service;
+}

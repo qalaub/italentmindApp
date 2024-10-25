@@ -346,7 +346,9 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                             child: Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
-                                containerUsersRecord.serviceType.first,
+                                functions.changeServiceLanguge(
+                                    containerUsersRecord.serviceType.first,
+                                    FFLocalizations.of(context).languageCode),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(

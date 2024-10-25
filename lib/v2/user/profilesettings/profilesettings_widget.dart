@@ -1508,8 +1508,15 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
 
                             await currentUserReference!.update({
                               ...createUsersRecordData(
-                                firtsName:
-                                    FFAppState().registerProviderForm.firstName,
+                                firtsName: FFAppState()
+                                                .registerProviderForm
+                                                .firstName !=
+                                            ''
+                                    ? FFAppState()
+                                        .registerProviderForm
+                                        .firstName
+                                    : valueOrDefault(
+                                        currentUserDocument?.firtsName, ''),
                                 languagues: FFAppState()
                                     .registerProviderForm
                                     .languagues,

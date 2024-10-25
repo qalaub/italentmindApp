@@ -496,7 +496,7 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 await launchURL(
-                                    'https://icareapp.com.au/privacy-policy');
+                                    'https://italentmind.com/terminos-y-condiciones/');
                               },
                               child: wrapWithModel(
                                 model: _model.accountOptionModel6,

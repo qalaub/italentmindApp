@@ -246,7 +246,10 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                               .toList(),
                                       );
                                       safeSetState(() {});
-                                      if (_model.checkboxGroupValues!.isNotEmpty) {
+                                      if ((_model.checkboxGroupValues != null &&
+                                              (_model.checkboxGroupValues)!
+                                                  .isNotEmpty) &&
+                                          (_model.checkboxGroupValues!.isNotEmpty)) {
                                         context.pushNamed(
                                           'RegisterPfofesional4',
                                           queryParameters: {

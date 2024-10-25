@@ -196,7 +196,12 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                containerUsersRecord.serviceType.first,
+                                valueOrDefault<String>(
+                                  functions.changeServiceLanguge(
+                                      containerUsersRecord.serviceType.first,
+                                      FFLocalizations.of(context).languageCode),
+                                  'Home',
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
