@@ -55,7 +55,8 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
       safeSetState(() {});
     });
 
-    _model.firstNameTextController ??= TextEditingController();
+    _model.firstNameTextController ??=
+        TextEditingController(text: _model.firstName);
     _model.firstNameFocusNode ??= FocusNode();
 
     _model.lastnameTextController ??= TextEditingController();
@@ -340,6 +341,29 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                     .firstNameTextController,
                                                 focusNode:
                                                     _model.firstNameFocusNode,
+                                                onChanged: (_) =>
+                                                    EasyDebounce.debounce(
+                                                  '_model.firstNameTextController',
+                                                  const Duration(milliseconds: 100),
+                                                  () async {
+                                                    safeSetState(() {
+                                                      _model.firstNameTextController
+                                                              ?.text =
+                                                          functions
+                                                              .transformTextUpper(
+                                                                  _model
+                                                                      .firstNameTextController
+                                                                      .text);
+                                                      _model.firstNameTextController
+                                                              ?.selection =
+                                                          TextSelection.collapsed(
+                                                              offset: _model
+                                                                  .firstNameTextController!
+                                                                  .text
+                                                                  .length);
+                                                    });
+                                                  },
+                                                ),
                                                 autofocus: true,
                                                 textCapitalization:
                                                     TextCapitalization.words,
@@ -358,10 +382,11 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                   hintStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
-                                                          .labelMedium
+                                                          .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Readex Pro',
+                                                                'Montserrat',
+                                                            color: Colors.black,
                                                             letterSpacing: 0.0,
                                                           ),
                                                   errorStyle: FlutterFlowTheme
@@ -390,7 +415,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                   focusedBorder:
                                                       OutlineInputBorder(
                                                     borderSide: const BorderSide(
-                                                      color: Color(0xFF762075),
+                                                      color: Color(0xFF1D69D7),
                                                       width: 0.0,
                                                     ),
                                                     borderRadius:
@@ -502,6 +527,29 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                     .lastnameTextController,
                                                 focusNode:
                                                     _model.lastnameFocusNode,
+                                                onChanged: (_) =>
+                                                    EasyDebounce.debounce(
+                                                  '_model.lastnameTextController',
+                                                  const Duration(milliseconds: 100),
+                                                  () async {
+                                                    safeSetState(() {
+                                                      _model.lastnameTextController
+                                                              ?.text =
+                                                          functions
+                                                              .transformTextUpper(
+                                                                  _model
+                                                                      .lastnameTextController
+                                                                      .text);
+                                                      _model.lastnameTextController
+                                                              ?.selection =
+                                                          TextSelection.collapsed(
+                                                              offset: _model
+                                                                  .lastnameTextController!
+                                                                  .text
+                                                                  .length);
+                                                    });
+                                                  },
+                                                ),
                                                 autofocus: true,
                                                 textCapitalization:
                                                     TextCapitalization.words,
@@ -1301,7 +1349,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'y4chlyob' /* * Enter your 10-digit mobile n... */,
+                                                'y4chlyob' /* * Enter your phone number     ... */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1811,8 +1859,8 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                                       .of(context)
                                                                   .languageCode ==
                                                               'en'
-                                                          ? 'You must be 18 or older'
-                                                          : 'Debes tener 18 años o más';
+                                                          ? 'Allowed age range: 18 to 125 years.'
+                                                          : 'Rango de edad permitido: de 18 a 125 años.';
                                                       FFAppState()
                                                           .updateVerifyFormStruct(
                                                         (e) => e..date = false,
@@ -1820,15 +1868,46 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                       safeSetState(() {});
                                                     }
 
-                                                    if (FFAppState()
-                                                            .verifyForm
-                                                            .subur &&
+                                                    if (functions
+                                                        .validateFormatDate(_model
+                                                            .dateTextController
+                                                            .text)) {
+                                                      FFAppState()
+                                                          .updateVerifyFormStruct(
+                                                        (e) => e..date = true,
+                                                      );
+                                                      safeSetState(() {});
+                                                    } else {
+                                                      _model
+                                                          .dateError = FFLocalizations
+                                                                      .of(context)
+                                                                  .languageCode ==
+                                                              'en'
+                                                          ? 'Invalid date format.'
+                                                          : 'Formato de fecha inválido.';
+                                                      FFAppState()
+                                                          .updateVerifyFormStruct(
+                                                        (e) => e..date = false,
+                                                      );
+                                                      safeSetState(() {});
+                                                    }
+
+                                                    if (FFAppState().verifyForm.subur &&
                                                         FFAppState()
                                                             .verifyForm
                                                             .date &&
                                                         FFAppState()
                                                             .verifyForm
-                                                            .same1) {
+                                                            .same1 &&
+                                                        functions.validateDate(
+                                                            _model
+                                                                .dateTextController
+                                                                .text)! &&
+                                                        functions
+                                                            .validateFormatDate(
+                                                                _model
+                                                                    .dateTextController
+                                                                    .text)) {
                                                       FFAppState().verifyForm =
                                                           FormVerifyStruct();
                                                       FFAppState().counter = 0;

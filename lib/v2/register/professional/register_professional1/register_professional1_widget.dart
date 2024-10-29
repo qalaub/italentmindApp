@@ -305,6 +305,29 @@ class _RegisterProfessional1WidgetState
                                                   .firstNameTextController,
                                               focusNode:
                                                   _model.firstNameFocusNode,
+                                              onChanged: (_) =>
+                                                  EasyDebounce.debounce(
+                                                '_model.firstNameTextController',
+                                                const Duration(milliseconds: 100),
+                                                () async {
+                                                  safeSetState(() {
+                                                    _model.firstNameTextController
+                                                            ?.text =
+                                                        functions
+                                                            .transformTextUpper(
+                                                                _model
+                                                                    .firstNameTextController
+                                                                    .text);
+                                                    _model.firstNameTextController
+                                                            ?.selection =
+                                                        TextSelection.collapsed(
+                                                            offset: _model
+                                                                .firstNameTextController!
+                                                                .text
+                                                                .length);
+                                                  });
+                                                },
+                                              ),
                                               autofocus: true,
                                               textCapitalization:
                                                   TextCapitalization.words,
@@ -455,6 +478,29 @@ class _RegisterProfessional1WidgetState
                                                   _model.lastNameTextController,
                                               focusNode:
                                                   _model.lastNameFocusNode,
+                                              onChanged: (_) =>
+                                                  EasyDebounce.debounce(
+                                                '_model.lastNameTextController',
+                                                const Duration(milliseconds: 100),
+                                                () async {
+                                                  safeSetState(() {
+                                                    _model.lastNameTextController
+                                                            ?.text =
+                                                        functions
+                                                            .transformTextUpper(
+                                                                _model
+                                                                    .lastNameTextController
+                                                                    .text);
+                                                    _model.lastNameTextController
+                                                            ?.selection =
+                                                        TextSelection.collapsed(
+                                                            offset: _model
+                                                                .lastNameTextController!
+                                                                .text
+                                                                .length);
+                                                  });
+                                                },
+                                              ),
                                               autofocus: true,
                                               textCapitalization:
                                                   TextCapitalization.words,
@@ -1207,7 +1253,7 @@ class _RegisterProfessional1WidgetState
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'wvofvg0o' /* * Enter your 10-digit mobile n... */,
+                                                'wvofvg0o' /* * Enter your phone number     ... */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)

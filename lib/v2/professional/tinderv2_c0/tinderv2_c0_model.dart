@@ -21,8 +21,6 @@ class Tinderv2C0Model extends FlutterFlowModel<Tinderv2C0Widget> {
           pageViewController!.page != null
       ? pageViewController!.page!.round()
       : 0;
-  // State field(s) for RatingBar widget.
-  double? ratingBarValue;
   // Model for MembresiaLogo component.
   late MembresiaLogoModel membresiaLogoModel;
 

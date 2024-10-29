@@ -554,20 +554,14 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                             Align(
                                               alignment: const AlignmentDirectional(
                                                   0.0, -0.8),
-                                              child: RatingBar.builder(
-                                                onRatingUpdate: (newValue) =>
-                                                    safeSetState(() =>
-                                                        _model.ratingBarValue =
-                                                            newValue),
+                                              child: RatingBarIndicator(
                                                 itemBuilder: (context, index) =>
                                                     const Icon(
                                                   Icons.star_rounded,
                                                   color: Color(0xFFF9BF11),
                                                 ),
                                                 direction: Axis.horizontal,
-                                                initialRating:
-                                                    _model.ratingBarValue ??=
-                                                        valueOrDefault<double>(
+                                                rating: valueOrDefault<double>(
                                                   functions
                                                       .averagueReviews(
                                                           containerReviewsRecordList
@@ -578,7 +572,6 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                 unratedColor: const Color(0x4D040202),
                                                 itemCount: 5,
                                                 itemSize: 20.0,
-                                                glowColor: const Color(0xFFF9BF11),
                                               ),
                                             ),
                                             Align(

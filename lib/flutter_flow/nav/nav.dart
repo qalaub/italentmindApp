@@ -529,7 +529,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'avatars',
               path: 'avatars',
-              builder: (context, params) => const AvatarsWidget(),
+              builder: (context, params) => AvatarsWidget(
+                isUpdate: params.getParam(
+                  'isUpdate',
+                  ParamType.bool,
+                ),
+              ),
+            ),
+            FFRoute(
+              name: 'Rejectedlist',
+              path: 'rejectedlist',
+              builder: (context, params) => const RejectedlistWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

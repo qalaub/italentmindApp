@@ -534,6 +534,48 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                 ),
                               ),
                             ),
+                            Stack(
+                              children: [
+                                Align(
+                                  alignment: const AlignmentDirectional(0.0, 1.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 16.0, 0.0, 0.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        if (loggedIn) {
+                                          context.pushNamed('Rejectedlist');
+                                        } else {
+                                          context.pushNamed('Login');
+                                        }
+                                      },
+                                      child: Container(
+                                        key: const ValueKey('like'),
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.13,
+                                        height:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.13,
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.asset(
+                                          key: const ValueKey('like'),
+                                          'assets/images/Group_100-2_(1).png',
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,

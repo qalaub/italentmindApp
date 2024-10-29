@@ -307,8 +307,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'El correo debe ser el mismo',
     },
     'y4chlyob': {
-      'en': '* Enter your 10-digit mobile number',
-      'es': '* Ingresa tu número de telefono',
+      'en': '* Enter your phone number          ',
+      'es': '* Ingrese su numero de teléfono',
     },
     'hos25lup': {
       'en': 'Example:  0400345234',
@@ -316,11 +316,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p7bqj01f': {
       'en': '* Select your suburb',
-      'es': '* Selecciona tu ubicación',
+      'es': '* Seleccione su ubicación',
     },
     'iayxow22': {
       'en': 'Select your suburb',
-      'es': 'Selecciona tu ubicación',
+      'es': 'Seleccione su ubicación',
     },
     'srwzpw4c': {
       'en': 'Invalid suburb',
@@ -595,8 +595,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'El correo electrónico debe ser el mismo',
     },
     'wvofvg0o': {
-      'en': '* Enter your 10-digit mobile number',
-      'es': '* Ingrese su número de móvil de 10 dígitos',
+      'en': '* Enter your phone number          ',
+      'es': '* Ingrese su numero de teléfono',
     },
     'to5mzzcj': {
       'en': '',
@@ -608,11 +608,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'c98kzcju': {
       'en': '* Select your suburb',
-      'es': '*Selecciona tu suburbio',
+      'es': '* Seleccione su ubicación',
     },
     'bhn2qp92': {
       'en': 'Select your suburb',
-      'es': 'Seleccione su suburbio',
+      'es': 'Seleccione su ubicación',
     },
     'awbkrqr6': {
       'en': 'Invalid suburb',
@@ -910,11 +910,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Iniciar sesión',
     },
     'a9d781wx': {
-      'en': 'Don\'t have an account?  ',
+      'en': 'Don\'t have an account ?   ',
       'es': '¿No tienes una cuenta?',
     },
     'xf8yq72c': {
-      'en': 'Sign up for Italentmind',
+      'en': ' Sign up for Italentmind',
       'es': 'Regístrate en Italentmind',
     },
     '33ws4vq0': {
@@ -1045,7 +1045,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'You can modify your username with the one you feel  most comfortable with.',
       'es':
-          'Podrás modificar tu nombre de usuario con el que te sientas más cómodo.',
+          'Podrá modificar su nombre de usuario con el que se sienta más cómodo',
     },
     'tr3z56l2': {
       'en': 'Name-user',
@@ -1061,7 +1061,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6fxbv6rp': {
       'en': 'You can modify what your service is offered to participants',
-      'es': 'Puedes modificar el servicio que ofreces a los participantes',
+      'es': 'Puede modificar el servicio que ofrecen a los participantes',
     },
     '1tw37dkq': {
       'en': 'Support Worker',
@@ -1125,7 +1125,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ik5xkalg': {
       'en': 'Select your age group',
-      'es': 'Seleccione su grupo de edad',
+      'es': 'Por favor seleccione su grupo de edad',
     },
     'i3v7yyw1': {
       'en': '18-25 years',
@@ -1147,6 +1147,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Search for an item...',
       'es': 'Buscar un servicio...',
     },
+    '6g93kbrq': {
+      'en': 'Change avatar',
+      'es': 'Descripción',
+    },
+    '8tlx9xox': {
+      'en': 'Change avatar',
+      'es': 'Cambiar avatar',
+    },
     'is91gg3j': {
       'en': 'Description',
       'es': 'Descripción',
@@ -1167,7 +1175,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'In this video you can make a short presentation of yourself, it will help you meet more participants',
       'es':
-          'En este vídeo podrás hacer una pequeña presentación tuya, te ayudará a conocer a más participantes.',
+          'En este video podrá hacer una pequeña presentación suya, le ayudará a conocer a más participantes.',
     },
     'lrgrdhjg': {
       'en': 'Upload video',
@@ -1444,8 +1452,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'El correo electrónico debe ser el mismo',
     },
     'i3w1obqw': {
-      'en': '* Enter your 10-digit mobile number',
-      'es': '* Ingrese su número de móvil de 10 dígitos',
+      'en': '* Enter your phone number          ',
+      'es': '* Ingrese su numero de teléfono',
     },
     'h2ad0juz': {
       'en': 'Example:  0400345234',
@@ -1453,7 +1461,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'rcfnlny4': {
       'en': '* Select your suburb',
-      'es': '*Selecciona tu ubicación',
+      'es': '* Seleccione su ubicación',
     },
     'brjs43vm': {
       'en': 'Select your suburb',
@@ -1769,9 +1777,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ou2ffnab': {
       'en':
-          '*  Tell us more about yourself, include your experience within the disability sector…',
+          '*  Tell us more about yourself, include your experience within the disability sector.',
       'es':
-          '* Cuéntanos más sobre ti, incluye tu experiencia dentro del sector de la discapacidad…',
+          '* Cuéntenos más sobre usted, incluir su experiencia dentro del sector de la discapacidad.',
     },
     'gzss571j': {
       'en': 'Continue',
@@ -1921,7 +1929,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Business profile suitable for companies. Your collaborators will be better positioned.',
       'es':
-          'Perfil empresarial apto para empresas. Tus colaboradores estarán mejor posicionados.',
+          'Perfil empresarial apto para empresas. Sus colaboradores estarán mejor posicionados.',
     },
     'xwq4lgbe': {
       'en': 'Annual',
@@ -2773,6 +2781,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Continuar',
     },
     'k8v60e2k': {
+      'en': 'Home',
+      'es': 'Home',
+    },
+  },
+  // Rejectedlist
+  {
+    'm4mi5bv5': {
+      'en': 'Rejected list',
+      'es': 'Lista de rechazados',
+    },
+    'j4y1hy57': {
       'en': 'Home',
       'es': 'Home',
     },

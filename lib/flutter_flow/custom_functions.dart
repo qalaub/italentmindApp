@@ -200,15 +200,13 @@ bool? validateDate(String dateString) {
     final birthDate = DateTime(year, month, day);
     final now = DateTime.now();
     final adulthoodDate = DateTime(now.year - 18, now.month, now.day);
-    final maxAgeDate = DateTime(now.year - 200, now.month, now.day);
+    final maxAgeDate = DateTime(now.year - 125, now.month, now.day);
 
     if (birthDate.isBefore(adulthoodDate) && birthDate.isAfter(maxAgeDate)) {
       return true; // La persona es mayor de edad y menor de 200 años
     } else if (birthDate.isBefore(maxAgeDate)) {
-      print('Date of birth indicates age over 200 years.');
       return false;
     } else {
-      print('Must be 18+ years old.');
       return false; // La persona no es mayor de edad
     }
   } catch (e) {
@@ -455,4 +453,55 @@ String changeServiceLanguge(
 
   // Retorna la traducción o el texto original si no hay coincidencia
   return serviceTranslations[service]?[languageCode] ?? service;
+}
+
+String transformTextUpper(String text) {
+// Transform text to Upper case first letter in each word
+  if (text.isEmpty) return ''; // Manejo del texto vacío
+
+  List<String> words = text.split(' ');
+  List<String> transformedWords = [];
+
+  for (String word in words) {
+    if (word.isNotEmpty) {
+      // Asegurarse de que la palabra no esté vacía
+      String firstLetter =
+          word[0].toUpperCase(); // Usar word[0] para la primera letra
+      String restOfWord = word.length > 1
+          ? word.substring(1).toLowerCase()
+          : ''; // Manejo de palabras de un solo carácter
+      String transformedWord = firstLetter + restOfWord;
+      transformedWords.add(transformedWord);
+    } else {
+      transformedWords
+          .add(word); // Si la palabra está vacía, agregarla tal cual
+    }
+  }
+
+  return transformedWords.join(' ');
+}
+
+bool validateFormatDate(String dateString) {
+  try {
+    final format = RegExp(r'^(\d{2})/(\d{2})/(\d{4})$');
+    final match = format.firstMatch(dateString);
+
+    if (match == null) {
+      return false; // El formato no coincide
+    }
+
+    final day = int.parse(match.group(1)!);
+    final month = int.parse(match.group(2)!);
+    final year = int.parse(match.group(3)!);
+
+    // Verificar que el día esté entre 1 y 31 y el mes entre 1 y 12
+    if (day < 1 || day > 31 || month < 1 || month > 12) {
+      return false;
+    }
+
+    // No validamos la edad ni la existencia de la fecha exacta
+    return true; // La fecha tiene un formato válido y los días/meses están en el rango correcto
+  } catch (e) {
+    return false; // Manejo de error de formato
+  }
 }

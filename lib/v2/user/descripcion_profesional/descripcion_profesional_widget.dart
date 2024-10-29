@@ -591,7 +591,10 @@ Perso... */
                                           alignment:
                                               const AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
-                                            servicesListItem,
+                                            functions.changeServiceLanguge(
+                                                servicesListItem,
+                                                FFLocalizations.of(context)
+                                                    .languageCode),
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium

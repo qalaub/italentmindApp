@@ -213,6 +213,7 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: SingleChildScrollView(
+                                    controller: _model.columnController1,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -253,6 +254,13 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                               border: Border.all(
                                                 color: const Color(0xFF718CD4),
                                               ),
+                                            ),
+                                            child: ListView(
+                                              padding: EdgeInsets.zero,
+                                              shrinkWrap: true,
+                                              scrollDirection: Axis.vertical,
+                                              controller: _model.scroll1,
+                                              children: const [],
                                             ),
                                           ),
                                         ),
@@ -306,6 +314,29 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                   .firstNameTextController,
                                               focusNode:
                                                   _model.firstNameFocusNode,
+                                              onChanged: (_) =>
+                                                  EasyDebounce.debounce(
+                                                '_model.firstNameTextController',
+                                                const Duration(milliseconds: 100),
+                                                () async {
+                                                  safeSetState(() {
+                                                    _model.firstNameTextController
+                                                            ?.text =
+                                                        functions
+                                                            .transformTextUpper(
+                                                                _model
+                                                                    .firstNameTextController
+                                                                    .text);
+                                                    _model.firstNameTextController
+                                                            ?.selection =
+                                                        TextSelection.collapsed(
+                                                            offset: _model
+                                                                .firstNameTextController!
+                                                                .text
+                                                                .length);
+                                                  });
+                                                },
+                                              ),
                                               autofocus: true,
                                               textCapitalization:
                                                   TextCapitalization.words,
@@ -456,6 +487,29 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                   _model.lastNameTextController,
                                               focusNode:
                                                   _model.lastNameFocusNode,
+                                              onChanged: (_) =>
+                                                  EasyDebounce.debounce(
+                                                '_model.lastNameTextController',
+                                                const Duration(milliseconds: 100),
+                                                () async {
+                                                  safeSetState(() {
+                                                    _model.lastNameTextController
+                                                            ?.text =
+                                                        functions
+                                                            .transformTextUpper(
+                                                                _model
+                                                                    .lastNameTextController
+                                                                    .text);
+                                                    _model.lastNameTextController
+                                                            ?.selection =
+                                                        TextSelection.collapsed(
+                                                            offset: _model
+                                                                .lastNameTextController!
+                                                                .text
+                                                                .length);
+                                                  });
+                                                },
+                                              ),
                                               autofocus: true,
                                               textCapitalization:
                                                   TextCapitalization.words,
@@ -1137,7 +1191,7 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'i3w1obqw' /* * Enter your 10-digit mobile n... */,
+                                                'i3w1obqw' /* * Enter your phone number     ... */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -1602,13 +1656,14 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                 );
                                                 FFAppState().counter = 4;
                                                 safeSetState(() {});
+                                                _model.formvalidate = true;
                                                 if (_model.formKey
                                                             .currentState ==
                                                         null ||
                                                     !_model
                                                         .formKey.currentState!
                                                         .validate()) {
-                                                  return;
+                                                  _model.formvalidate = false;
                                                 }
                                                 if ((FFAppState()
                                                             .verifyForm
@@ -1616,7 +1671,8 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         true) &&
                                                     FFAppState()
                                                         .verifyForm
-                                                        .same1) {
+                                                        .same1 &&
+                                                    _model.formvalidate!) {
                                                   FFAppState()
                                                       .updateRegisterProviderFormStruct(
                                                     (e) => e
@@ -1668,7 +1724,20 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                       ),
                                                     },
                                                   );
+                                                } else {
+                                                  await _model.columnController1
+                                                      ?.animateTo(
+                                                    _model
+                                                        .columnController1!
+                                                        .position
+                                                        .maxScrollExtent,
+                                                    duration: const Duration(
+                                                        milliseconds: 1000),
+                                                    curve: Curves.ease,
+                                                  );
                                                 }
+
+                                                safeSetState(() {});
                                               },
                                               text: FFLocalizations.of(context)
                                                   .getText(
@@ -1725,6 +1794,7 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                     borderRadius: BorderRadius.circular(0.0),
                                   ),
                                   child: SingleChildScrollView(
+                                    controller: _model.columnController2,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -1819,6 +1889,8 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                     ),
                                                   );
                                                 },
+                                                controller:
+                                                    _model.listViewController,
                                               );
                                             },
                                           ),

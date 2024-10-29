@@ -24,6 +24,8 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
 
   String dateError = 'Field is required';
 
+  String? firstName;
+
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();

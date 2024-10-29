@@ -891,7 +891,7 @@ class _RegisterProfessional2WidgetState
                                                     _model.yearsTextController,
                                                 focusNode:
                                                     _model.yearsFocusNode,
-                                                autofocus: true,
+                                                autofocus: false,
                                                 obscureText: false,
                                                 decoration: InputDecoration(
                                                   isDense: true,

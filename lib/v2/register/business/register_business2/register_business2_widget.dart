@@ -1907,6 +1907,12 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
 
                                                     context.pushNamed(
                                                         'RegisterBusiness3');
+                                                  } else {
+                                                    safeSetState(() {
+                                                      _model
+                                                          .passwordTextController
+                                                          ?.text = 'db';
+                                                    });
                                                   }
                                                 },
                                                 text:

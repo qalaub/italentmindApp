@@ -617,7 +617,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     text: FFLocalizations.of(
                                                             context)
                                                         .getText(
-                                                      'a9d781wx' /* Don't have an account?   */,
+                                                      'a9d781wx' /* Don't have an account ?    */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -636,7 +636,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     text: FFLocalizations.of(
                                                             context)
                                                         .getText(
-                                                      'xf8yq72c' /* Sign up for Italentmind */,
+                                                      'xf8yq72c' /*  Sign up for Italentmind */,
                                                     ),
                                                     style: GoogleFonts.getFont(
                                                       'Montserrat',
