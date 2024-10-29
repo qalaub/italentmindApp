@@ -379,7 +379,7 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                                 const AlignmentDirectional(-1.0, 0.0),
                                             child: Container(
                                               width: 161.0,
-                                              height: 24.0,
+                                              height: 36.0,
                                               decoration: const BoxDecoration(),
                                               child: Text(
                                                 valueOrDefault<String>(

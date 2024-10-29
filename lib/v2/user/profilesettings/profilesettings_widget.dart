@@ -728,7 +728,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                           options: List<
                                                               String>.from([
                                                             'Support Workers',
-                                                            'Support  Coordinators',
+                                                            'Support Coordinators',
                                                             'Recovery Coaches',
                                                             'Therapeutic Supports',
                                                             'Home Maintenance'
@@ -742,7 +742,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '0hjjvisv' /* Support  Coordinators */,
+                                                              '0hjjvisv' /* Support Coordinators */,
                                                             ),
                                                             FFLocalizations.of(
                                                                     context)

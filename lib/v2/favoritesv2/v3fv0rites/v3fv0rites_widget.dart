@@ -222,7 +222,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                             thickness: 1.0,
                             indent: 5.0,
                             endIndent: 5.0,
-                            color: Color(0xCCFFFFFF),
+                            color: Color(0xFFA5BBFF),
                           ),
                         ),
                         Align(

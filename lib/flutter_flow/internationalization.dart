@@ -719,7 +719,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Trabajadores de apoyo',
     },
     'yfcb8p6w': {
-      'en': 'Support  Coordinators',
+      'en': 'Support Coordinators',
       'es': 'Coordinadores de apoyo',
     },
     '6d22dt8n': {
@@ -931,7 +931,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'pa1zrth2': {
       'en': 'Has to be a valid email address.',
-      'es': '',
+      'es': 'Debe ser una dirección de correo electrónico válida.',
     },
     'xz5uwsry': {
       'en': 'Please choose an option from the dropdown',
@@ -1096,7 +1096,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Trabajadores de apoyo',
     },
     '0hjjvisv': {
-      'en': 'Support  Coordinators',
+      'en': 'Support Coordinators',
       'es': 'Coordinadores de apoyo',
     },
     '0163gnk2': {
@@ -1565,7 +1565,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Trabajadores de apoyo',
     },
     '21z9x2nr': {
-      'en': 'Support  Coordinators',
+      'en': 'Support Coordinators',
       'es': 'Coordinadores de apoyo',
     },
     '62xdux38': {
@@ -1678,7 +1678,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'wrexpraz': {
       'en': 'I agree to the Italent app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación iCare',
+      'es': 'Acepto la política de privacidad de la aplicación Italent',
     },
     'n9zeysic': {
       'en': 'Please accept T&Cs to create your account',
@@ -2369,7 +2369,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'kmmdrzk7': {
       'en': '* Do you need instant messaging for your team?',
-      'es': '*¿Necesitas mensajería instantánea para tu equipo?',
+      'es': '* ¿Necesitas mensajería instantánea para tu equipo?',
     },
     'k2cu0c4n': {
       'en': 'Yes',
@@ -2429,11 +2429,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'y45s3saf': {
       'en': ' Basic',
-      'es': 'Básico',
+      'es': ' Básico',
     },
     'h6wvrndf': {
       'en': '  plan.',
-      'es': 'plan.',
+      'es': ' plan.',
     },
     'w93n251p': {
       'en': 'Based on your answers, we recommend the Premium plan.',
@@ -2450,15 +2450,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a2h1884j': {
       'en': '\n• Detailed map features to locate service providers',
       'es':
-          '• Funciones de mapas detallados para localizar proveedores de servicios.',
+          '\n• Funciones de mapas detallados para localizar proveedores de servicios.',
     },
     'e1e0cjph': {
       'en': '\n• Customizable team profiles',
-      'es': '• Perfiles de equipo personalizables',
+      'es': '\n• Perfiles de equipo personalizables',
     },
     'omp6fk3x': {
       'en': '\n• Enhanced search visibility for your services',
-      'es': '• Visibilidad de búsqueda mejorada para sus servicios',
+      'es': '\n• Visibilidad de búsqueda mejorada para sus servicios',
     },
     'hsvlye5v': {
       'en': 'Based on your answers, we recommend the Premium plan.',
@@ -2474,11 +2474,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '5l8cbxjy': {
       'en': ' Standar',
-      'es': 'Estándar',
+      'es': ' Estándar',
     },
     '28mt6gpb': {
       'en': ' plan.',
-      'es': 'plan.',
+      'es': ' plan.',
     },
     'd5tnh1u4': {
       'en': 'Based on your answers, we recommend the Premium plan.',
@@ -2495,15 +2495,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'jvjcheen': {
       'en': '\n• Detailed map features to locate service providers',
       'es':
-          '• Funciones de mapas detallados para localizar proveedores de servicios.',
+          '\n• Funciones de mapas detallados para localizar proveedores de servicios.',
     },
     '9qtk8zu5': {
       'en': '\n• Customizable team profiles',
-      'es': '• Perfiles de equipo personalizables',
+      'es': '\n• Perfiles de equipo personalizables',
     },
     '3oy4cnuc': {
       'en': '\n• Enhanced search visibility for your services',
-      'es': '• Visibilidad de búsqueda mejorada para sus servicios',
+      'es': '\n• Visibilidad de búsqueda mejorada para sus servicios',
     },
     'w8hxm7lq': {
       'en': 'Based on your answers, we recommend the Premium plan.',
@@ -2519,11 +2519,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'rajr4igr': {
       'en': ' Premium',
-      'es': 'De primera calidad',
+      'es': ' De primera calidad',
     },
     '7o84rm6d': {
       'en': ' plan.',
-      'es': 'plan.',
+      'es': ' plan.',
     },
     'vlef7pr3': {
       'en': 'Based on your answers, we recommend the Premium plan.',
@@ -2540,15 +2540,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'l4q4czd4': {
       'en': '\n• Detailed map features to locate service providers',
       'es':
-          '• Funciones de mapas detallados para localizar proveedores de servicios.',
+          '\n• Funciones de mapas detallados para localizar proveedores de servicios.',
     },
     'fwhldbmf': {
       'en': '\n• Customizable team profiles',
-      'es': '• Perfiles de equipo personalizables',
+      'es': '\n• Perfiles de equipo personalizables',
     },
     '2pf4y776': {
       'en': '\n• Enhanced search visibility for your services',
-      'es': '• Visibilidad de búsqueda mejorada para sus servicios',
+      'es': '\n• Visibilidad de búsqueda mejorada para sus servicios',
     },
     'p34mjfey': {
       'en': 'Based on your answers, we recommend the Premium plan.',

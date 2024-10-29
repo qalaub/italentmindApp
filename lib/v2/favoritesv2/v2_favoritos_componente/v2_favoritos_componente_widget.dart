@@ -83,25 +83,12 @@ class _V2FavoritosComponenteWidgetState
             width: MediaQuery.sizeOf(context).width * 0.92,
             height: 105.0,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: const Color(0xFF4963C9),
               borderRadius: BorderRadius.circular(22.0),
               shape: BoxShape.rectangle,
             ),
             child: Stack(
               children: [
-                Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(22.0),
-                    child: Image.asset(
-                      'assets/images/Rectangle_5.png',
-                      width: MediaQuery.sizeOf(context).width * 0.95,
-                      height: 105.0,
-                      fit: BoxFit.none,
-                      alignment: const Alignment(0.0, 0.0),
-                    ),
-                  ),
-                ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -116,7 +103,7 @@ class _V2FavoritosComponenteWidgetState
                             fadeInDuration: const Duration(milliseconds: 500),
                             fadeOutDuration: const Duration(milliseconds: 500),
                             imageUrl:
-                                'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                             width: MediaQuery.sizeOf(context).width * 0.18,
                             height: 63.0,
                             fit: BoxFit.fitWidth,
@@ -156,6 +143,7 @@ class _V2FavoritosComponenteWidgetState
                                           .headlineLarge
                                           .override(
                                             fontFamily: 'Montserrat',
+                                            color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,

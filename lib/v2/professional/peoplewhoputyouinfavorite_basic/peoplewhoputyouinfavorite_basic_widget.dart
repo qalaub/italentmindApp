@@ -94,7 +94,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: Image.asset(
-                        'assets/images/F0NDer_fav3_(1).png',
+                        'assets/images/fondo-italente_(2).png',
                       ).image,
                     ),
                   ),

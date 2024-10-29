@@ -1754,8 +1754,13 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                 child: FFButtonWidget(
                                                   key: const ValueKey('continue'),
                                                   onPressed: () async {
-                                                    _model.dateError =
-                                                        'Field is required';
+                                                    _model
+                                                        .dateError = FFLocalizations
+                                                                    .of(context)
+                                                                .languageCode ==
+                                                            'en'
+                                                        ? 'Field is required'
+                                                        : 'El campo es obligatorio';
                                                     FFAppState()
                                                         .updateVerifyFormStruct(
                                                       (e) => e
@@ -1801,8 +1806,13 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                       );
                                                       safeSetState(() {});
                                                     } else {
-                                                      _model.dateError =
-                                                          'You must be 18 or older';
+                                                      _model
+                                                          .dateError = FFLocalizations
+                                                                      .of(context)
+                                                                  .languageCode ==
+                                                              'en'
+                                                          ? 'You must be 18 or older'
+                                                          : 'Debes tener 18 años o más';
                                                       FFAppState()
                                                           .updateVerifyFormStruct(
                                                         (e) => e..date = false,

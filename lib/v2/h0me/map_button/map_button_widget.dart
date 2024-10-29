@@ -351,7 +351,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                 ),
                                 icon: const Icon(
                                   Icons.filter_list_alt,
-                                  color: Color(0xAEDB00FF),
+                                  color: Color(0xFF4963C9),
                                   size: 26.0,
                                 ),
                                 options: FFButtonOptions(

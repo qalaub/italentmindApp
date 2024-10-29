@@ -817,6 +817,7 @@ class _RegisterBusiness3WidgetState extends State<RegisterBusiness3Widget>
                                                       ),
                                                   );
                                                   FFAppState().counter = 4;
+                                                  safeSetState(() {});
                                                   if (_model.formKey
                                                               .currentState ==
                                                           null ||

@@ -628,7 +628,7 @@ Early Intervention */
                                                                         0.0,
                                                                     fontWeight:
                                                                         FontWeight
-                                                                            .w600,
+                                                                            .w500,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -901,7 +901,7 @@ Early Intervention */
                                                                         0.0,
                                                                     fontWeight:
                                                                         FontWeight
-                                                                            .w600,
+                                                                            .w500,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1173,7 +1173,7 @@ Early Intervention */
                                                                         0.0,
                                                                     fontWeight:
                                                                         FontWeight
-                                                                            .w600,
+                                                                            .w500,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1231,21 +1231,16 @@ Early Intervention */
                                           child: FFButtonWidget(
                                             key: const ValueKey('create'),
                                             onPressed: () async {
-                                              if (_model.formKey.currentState ==
-                                                      null ||
-                                                  !_model.formKey.currentState!
-                                                      .validate()) {
-                                                return;
-                                              }
-                                              if (_model.dropDownValue ==
-                                                  null) {
-                                                return;
-                                              }
                                               FFAppState()
                                                   .updateVerifyFormStruct(
                                                 (e) => e
                                                   ..dropdown = _model
-                                                          .dropDownValue!.isNotEmpty
+                                                                  .dropDownValue !=
+                                                              null &&
+                                                          (_model.dropDownValue)!
+                                                              .isNotEmpty
+                                                      ? (_model.dropDownValue!.isNotEmpty)
+                                                      : false
                                                   ..confirm1 = _model.passwordTextController
                                                               .text !=
                                                           ''
@@ -1260,6 +1255,17 @@ Early Intervention */
                                                           .text,
                                               );
                                               FFAppState().counter = 4;
+                                              safeSetState(() {});
+                                              if (_model.formKey.currentState ==
+                                                      null ||
+                                                  !_model.formKey.currentState!
+                                                      .validate()) {
+                                                return;
+                                              }
+                                              if (_model.dropDownValue ==
+                                                  null) {
+                                                return;
+                                              }
                                               FFAppState()
                                                   .updateRegisterProviderFormStruct(
                                                 (e) => e
@@ -1273,10 +1279,15 @@ Early Intervention */
                                                       .dropDownValue!
                                                       .toList(),
                                               );
-                                              if (FFAppState()
-                                                      .verifyForm
-                                                      .same ==
-                                                  true) {
+                                              safeSetState(() {});
+                                              if ((FFAppState()
+                                                          .verifyForm
+                                                          .same ==
+                                                      true) &&
+                                                  (FFAppState()
+                                                          .verifyForm
+                                                          .dropdown ==
+                                                      true)) {
                                                 FFAppState().verifyForm =
                                                     FormVerifyStruct();
                                                 FFAppState().counter = 0;

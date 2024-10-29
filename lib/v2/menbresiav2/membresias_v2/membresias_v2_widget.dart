@@ -988,7 +988,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.84,
-                                    height: 333.0,
+                                    height: 350.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,

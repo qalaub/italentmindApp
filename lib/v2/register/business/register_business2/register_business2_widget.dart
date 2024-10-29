@@ -360,7 +360,15 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                 FormListFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: List<
+                                                                String>.from([
+                                                              'Support Workers',
+                                                              'Support Coordinators',
+                                                              'Recovery Coaches',
+                                                              'Therapeutic Supports',
+                                                              'Home Maintenance'
+                                                            ]),
+                                                            optionLabels: [
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
@@ -369,7 +377,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                '21z9x2nr' /* Support  Coordinators */,
+                                                                '21z9x2nr' /* Support Coordinators */,
                                                               ),
                                                               FFLocalizations.of(
                                                                       context)
@@ -926,9 +934,17 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                             controller: _model
                                                                     .ageValueController ??=
                                                                 FormFieldController<
-                                                                        String>(
-                                                                    null),
-                                                            options: [
+                                                                    String>(
+                                                              _model.ageValue ??=
+                                                                  '',
+                                                            ),
+                                                            options: List<
+                                                                String>.from([
+                                                              '18-25 years',
+                                                              '25-40 years',
+                                                              '40-65+ years'
+                                                            ]),
+                                                            optionLabels: [
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(

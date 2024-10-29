@@ -368,7 +368,15 @@ class _RegisterProfessional2WidgetState
                                                                 FormListFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: List<
+                                                                String>.from([
+                                                              'Support Workers',
+                                                              'Support Coordinators',
+                                                              'Recovery Coaches',
+                                                              'Therapeutic Supports',
+                                                              'Home Maintenance'
+                                                            ]),
+                                                            optionLabels: [
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
@@ -377,7 +385,7 @@ class _RegisterProfessional2WidgetState
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'yfcb8p6w' /* Support  Coordinators */,
+                                                                'yfcb8p6w' /* Support Coordinators */,
                                                               ),
                                                               FFLocalizations.of(
                                                                       context)
@@ -1094,9 +1102,17 @@ class _RegisterProfessional2WidgetState
                                                             controller: _model
                                                                     .ageValueController ??=
                                                                 FormFieldController<
-                                                                        String>(
-                                                                    null),
-                                                            options: [
+                                                                    String>(
+                                                              _model.ageValue ??=
+                                                                  '',
+                                                            ),
+                                                            options: List<
+                                                                String>.from([
+                                                              '18-25 years',
+                                                              '25-40 years',
+                                                              '40-65+ years'
+                                                            ]),
+                                                            optionLabels: [
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(

@@ -143,7 +143,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                     child: Divider(
                                       height: 20.0,
                                       thickness: 2.0,
-                                      color: Color(0xFFF0DFEF),
+                                      color: Color(0xFF718CD4),
                                     ),
                                   ),
                                   Container(
@@ -713,7 +713,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                     thickness: 1.0,
                                     indent: 12.0,
                                     endIndent: 12.0,
-                                    color: Color(0xD8BDB8B8),
+                                    color: Color(0xFF718CD4),
                                   ),
                                   if (_model.showSugguestions)
                                     Container(

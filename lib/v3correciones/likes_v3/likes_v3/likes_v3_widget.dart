@@ -127,7 +127,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                         fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: valueOrDefault<String>(
                           containerUsersRecord?.photoUrl,
-                          'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                         ),
                         width: MediaQuery.sizeOf(context).width * 0.2,
                         height: 59.0,

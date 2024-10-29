@@ -200,16 +200,19 @@ bool? validateDate(String dateString) {
     final birthDate = DateTime(year, month, day);
     final now = DateTime.now();
     final adulthoodDate = DateTime(now.year - 18, now.month, now.day);
+    final maxAgeDate = DateTime(now.year - 200, now.month, now.day);
 
-    if (birthDate.isBefore(adulthoodDate)) {
-      return true; // La persona es mayor de edad
+    if (birthDate.isBefore(adulthoodDate) && birthDate.isAfter(maxAgeDate)) {
+      return true; // La persona es mayor de edad y menor de 200 años
+    } else if (birthDate.isBefore(maxAgeDate)) {
+      print('Date of birth indicates age over 200 years.');
+      return false;
     } else {
-      // Mensaje de error corto
       print('Must be 18+ years old.');
       return false; // La persona no es mayor de edad
     }
   } catch (e) {
-    return false; // Cambié a `false` para manejar casos de error de formato
+    return false; // Manejo de error de formato
   }
 }
 

@@ -176,7 +176,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                         const Duration(milliseconds: 500),
                                     imageUrl: valueOrDefault<String>(
                                       containerUsersRecord.photoUrl,
-                                      'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                     ),
                                     width: double.infinity,
                                     height: double.infinity,

@@ -8,7 +8,7 @@ abstract class FFAppConstants {
   ];
   static const List<String> servicesType = [
     'Support Workers',
-    'Support  Coordinators',
+    'Support Coordinators',
     'Therapeutic Supports',
     'Home Maintenance',
     'Recovery Coaches'

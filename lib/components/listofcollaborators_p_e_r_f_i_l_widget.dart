@@ -201,7 +201,6 @@ class _ListofcollaboratorsPERFILWidgetState
                                   alignment: const AlignmentDirectional(0.05, -0.19),
                                   child: Container(
                                     width: 139.0,
-                                    height: 18.0,
                                     decoration: const BoxDecoration(),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -419,12 +418,15 @@ class _ListofcollaboratorsPERFILWidgetState
 
                                     return Icon(
                                       Icons.check_circle_sharp,
-                                      color: (iconUsersRecord?.plan ==
-                                                  Plan.standar) ||
-                                              (iconUsersRecord?.plan ==
-                                                  Plan.premiun)
-                                          ? const Color(0xFFC325DD)
-                                          : Colors.white,
+                                      color: valueOrDefault<Color>(
+                                        (iconUsersRecord?.plan ==
+                                                    Plan.standar) ||
+                                                (iconUsersRecord?.plan ==
+                                                    Plan.premiun)
+                                            ? Colors.white
+                                            : Colors.white,
+                                        Colors.white,
+                                      ),
                                       size: 16.0,
                                     );
                                   },

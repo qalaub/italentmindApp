@@ -364,9 +364,16 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                   0.0, 0.0),
                                               child: AutoSizeText(
                                                 valueOrDefault<String>(
-                                                  widget.professional
-                                                      ?.serviceType.first,
-                                                  'service',
+                                                  functions
+                                                      .changeServiceLanguge(
+                                                          widget
+                                                              .professional!
+                                                              .serviceType
+                                                              .first,
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .languageCode),
+                                                  'Home',
                                                 ).maybeHandleOverflow(
                                                   maxChars: 24,
                                                 ),

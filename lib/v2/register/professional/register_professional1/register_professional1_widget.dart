@@ -1474,6 +1474,9 @@ class _RegisterProfessional1WidgetState
                                                             },
                                                           ),
                                                           autofocus: false,
+                                                          textCapitalization:
+                                                              TextCapitalization
+                                                                  .words,
                                                           obscureText: false,
                                                           decoration:
                                                               InputDecoration(
