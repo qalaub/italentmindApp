@@ -572,7 +572,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'tiv69x2a' /* (basic membership one month) */,
+                                                  'tiv69x2a' /* (standard membership one month... */,
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)
@@ -953,7 +953,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'a1205doc' /* (basic membership one month) */,
+                                                  'a1205doc' /* (Premium membership one month) */,
                                                 ),
                                                 style: FlutterFlowTheme.of(
                                                         context)

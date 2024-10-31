@@ -505,3 +505,39 @@ bool validateFormatDate(String dateString) {
     return false; // Manejo de error de formato
   }
 }
+
+String changeAge(
+  String ageRange,
+  String languageCode,
+) {
+  // Mapa de traducción de categorías de edad (bidireccional: español e inglés)
+  final Map<String, Map<String, String>> ageCategoryTranslations = {
+    '18-25 years': {
+      'en': 'Young',
+      'es': 'Joven',
+    },
+    '25-40 years': {
+      'en': 'Adult',
+      'es': 'Adulto',
+    },
+    '40-65+ years': {
+      'en': 'Senior',
+      'es': 'Mayor',
+    },
+    'Joven': {
+      'en': 'Young',
+      'es': 'Joven',
+    },
+    'Adulto': {
+      'en': 'Adult',
+      'es': 'Adulto',
+    },
+    'Mayor': {
+      'en': 'Senior',
+      'es': 'Mayor',
+    },
+  };
+
+  // Retorna la traducción o el texto original si no hay coincidencia
+  return ageCategoryTranslations[ageRange]?[languageCode] ?? ageRange;
+}

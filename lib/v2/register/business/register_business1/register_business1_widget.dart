@@ -213,7 +213,7 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: SingleChildScrollView(
-                                    controller: _model.columnController1,
+                                    controller: _model.formC,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -1725,14 +1725,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                     },
                                                   );
                                                 } else {
-                                                  await _model.columnController1
-                                                      ?.animateTo(
-                                                    _model
-                                                        .columnController1!
-                                                        .position
-                                                        .maxScrollExtent,
+                                                  await _model.formC?.animateTo(
+                                                    0,
                                                     duration: const Duration(
-                                                        milliseconds: 1000),
+                                                        milliseconds: 300),
                                                     curve: Curves.ease,
                                                   );
                                                 }
@@ -1794,7 +1790,7 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                     borderRadius: BorderRadius.circular(0.0),
                                   ),
                                   child: SingleChildScrollView(
-                                    controller: _model.columnController2,
+                                    controller: _model.columnController,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [

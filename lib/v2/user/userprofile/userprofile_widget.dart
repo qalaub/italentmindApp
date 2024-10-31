@@ -495,8 +495,11 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                await launchURL(
-                                    'https://italentmind.com/terminos-y-condiciones/');
+                                await launchURL(FFLocalizations.of(context)
+                                            .languageCode ==
+                                        'en'
+                                    ? 'https://italentmind.com/privacy-policies-italentmind-app-en.html/'
+                                    : 'https://italentmind.com/politicas-privacidad-italentmind-app-es.html/');
                               },
                               child: wrapWithModel(
                                 model: _model.accountOptionModel6,

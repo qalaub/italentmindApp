@@ -1340,13 +1340,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mzxzm446': {
       'en': 'Customise your profile, including bio, photos, and videos.',
-      'es': 'Personaliza tu perfil, incluyendo biografía, fotos y vídeos.',
+      'es': 'Personalice su perfil, incluyendo biografía, fotos y videos.',
     },
     'y8k8cofp': {
       'en':
           'Get notified when participants like your profile. Commence service right away.',
       'es':
-          'Recibe una notificación cuando a los participantes les guste tu perfil. Comienza a prestar el servicio de inmediato.',
+          'Reciba una notificación cuando a los participantes les guste su perfil.\nComience a prestar el servicio de inmediato.',
     },
     'xp8xjno7': {
       'en': 'STANDARD',
@@ -1357,8 +1357,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '\$17,99/mensual',
     },
     'tiv69x2a': {
-      'en': '(basic membership one month)',
-      'es': '(membresia basica un mes)',
+      'en': '(standard membership one month)',
+      'es': '(membresia estandar un mes)',
     },
     'p9mfbera': {
       'en':
@@ -1370,13 +1370,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Be seen more quickly by being placed higher on the search list. Customise your profile, including bio, photos, and videos.',
       'es':
-          'Hazte visible más rápidamente al aparecer en una posición más alta en la lista de búsqueda. Personaliza tu perfil, incluyendo biografía, fotos y videos.',
+          'Hágase visible más rápidamente al aparecer en una posición más alta en la lista de búsqueda. Personalice su perfil, incluyendo biografía, fotos y videos.',
     },
     'pllpaatl': {
       'en':
           'Utilise our innovative map feature to see how many participants are in your area',
       'es':
-          'Utilice nuestra innovadora función de mapas para ver cuántos participantes hay en su área',
+          'Utilice nuestra innovadora función de mapas para ver cuántos participantes hay en su área.',
     },
     'm99xfm7y': {
       'en': 'PREMIUM',
@@ -1387,8 +1387,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '\$28,99/mensual',
     },
     'a1205doc': {
-      'en': '(basic membership one month)',
-      'es': '(membresia basica un mes)',
+      'en': '(Premium membership one month)',
+      'es': '(membresia de primera calidad un mes)',
     },
     'nx522rqg': {
       'en':
@@ -1816,7 +1816,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Let’s complete your profile! Upload a photo where your face is clear and visible. Don\'t forget to review before submitting!',
       'es':
-          '¡Completa tu perfil! Sube una foto en la que se vea claramente tu rostro. ¡No olvides revisarla antes de enviarla!',
+          '¡Complete su perfil! Suba una foto en la que se vea claramente su rostro. ¡No olvide revisarla antes de enviarla!',
     },
     'l8jkva1f': {
       'en':
@@ -2019,7 +2019,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Unlock all the power of this mobile tool and enjoy digital experience like never before!',
       'es':
-          '¡Desbloquea todo el poder de esta herramienta móvil y disfruta de una experiencia digital como nunca antes!',
+          '¡Desbloquee todo el poder de esta herramienta móvil y disfrute de una experiencia digital como nunca antes!',
     },
     'bt7u9yc1': {
       'en': '\$',
@@ -2063,7 +2063,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Be seen quicker as you placed higher on the search list. Customise your own profile, including BIO, photos and videos',
       'es':
-          'Hazte visible más rápido al ubicarte en un lugar más alto de la lista de búsqueda. Personaliza tu propio perfil, incluyendo BIO, fotos y videos',
+          'Hágase visible más rápido al ubicarse en un lugar más alto de la lista de búsqueda. Personalice su propio perfil, incluyendo BIO, fotos y videos.',
     },
     'fzlzw425': {
       'en': 'Benefits of Membership',
@@ -2098,7 +2098,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Business profile suitable for companies,\nYour collaborators will be better positioned',
       'es':
-          'Perfil empresarial apto para empresas,\nTus colaboradores estarán mejor posicionados',
+          'Perfil empresarial apto para empresas,\nSus colaboradores estarán mejor posicionados',
     },
     'vrekgyz3': {
       'en': '\$',
@@ -2177,7 +2177,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Unlock all the power of this mobile tool and enjoy digital experience like never before!',
       'es':
-          '¡Desbloquea todo el poder de esta herramienta móvil y disfruta de una experiencia digital como nunca antes!',
+          '¡Desbloquee todo el poder de esta herramienta móvil y disfrute de una experiencia digital como nunca antes!',
     },
     '063z7o2l': {
       'en': '\$',
@@ -2217,7 +2217,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jhc8u0dt': {
       'en': 'Customise your own profile, including BIO, photos and videos',
-      'es': 'Personaliza tu propio perfil, incluyendo BIO, fotos y vídeos.',
+      'es': 'Personalice su propio perfil, incluyendo BIO, fotos y videos.',
     },
     '8ggrn534': {
       'en': 'Benefits of Membership',
@@ -2352,7 +2352,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Let’s complete your profile! Upload a photo where your face is clear and visible. Don\'t forget to review before submitting!',
       'es':
-          '¡Completa tu perfil! Sube una foto en la que se vea claramente tu rostro. ¡No olvides revisarla antes de enviarla!',
+          '¡Complete su perfil! Suba una foto en la que se vea claramente su rostro. ¡No olvide revisarla antes de enviarla!',
     },
     'igyk7a5j': {
       'en':
@@ -2675,11 +2675,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Deleting your account will be permanent, you will lose all your information and access to the current app, keep in mind that this is an irreversible process.',
       'es':
-          'Eliminar tu cuenta será permanente, perderás toda tu información y el acceso a la app actual, ten en cuenta que este es un proceso irreversible.',
+          'Su cuenta será eliminada permanentemente, perderá toda su información y el acceso a la app actual, tenga en cuenta que este es un proceso irreversible.',
     },
     'h2635h5b': {
       'en': '  Are you sure you want to delete your account?',
-      'es': '¿Estás seguro de que deseas eliminar tu cuenta?',
+      'es': ' ¿Esta seguro de que desea eliminar su cuenta?',
     },
     '3yx0ao4g': {
       'en':
@@ -3010,7 +3010,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Experiencia',
     },
     'mxc29prl': {
-      'en': ' years',
+      'en': '  years',
       'es': 'años',
     },
     'po0fsxmt': {

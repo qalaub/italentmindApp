@@ -211,6 +211,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                 child: ListView(
                                   padding: EdgeInsets.zero,
                                   scrollDirection: Axis.vertical,
+                                  controller: _model.listViewController,
                                   children: [
                                     Form(
                                       key: _model.formKey,
@@ -1672,8 +1673,12 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                           highlightColor: Colors
                                                               .transparent,
                                                           onTap: () async {
-                                                            await launchURL(
-                                                                'https://italentmind.com/terminos-y-condiciones/');
+                                                            await launchURL(FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode ==
+                                                                    'en'
+                                                                ? 'https://italentmind.com/privacy-policies-italentmind-app-en.html/'
+                                                                : 'https://italentmind.com/politicas-privacidad-italentmind-app-es.html/');
                                                           },
                                                           child: Text(
                                                             FFLocalizations.of(
@@ -1836,20 +1841,21 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                   );
                                                   FFAppState().counter = 4;
                                                   safeSetState(() {});
+                                                  _model.formV = true;
                                                   if (_model.formKey
                                                               .currentState ==
                                                           null ||
                                                       !_model
                                                           .formKey.currentState!
                                                           .validate()) {
-                                                    return;
+                                                    _model.formV = false;
                                                   }
                                                   if (_model.serviceTypeValue ==
                                                       null) {
-                                                    return;
+                                                    _model.formV = false;
                                                   }
                                                   if (_model.ageValue == null) {
-                                                    return;
+                                                    _model.formV = false;
                                                   }
                                                   FFAppState()
                                                       .updateVerifyFormStruct(
@@ -1884,7 +1890,8 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                       (FFAppState()
                                                               .verifyForm
                                                               .dropdown2 ==
-                                                          true)) {
+                                                          true) &&
+                                                      _model.formV!) {
                                                     FFAppState()
                                                         .updateRegisterProviderFormStruct(
                                                       (e) => e
@@ -1908,12 +1915,17 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                     context.pushNamed(
                                                         'RegisterBusiness3');
                                                   } else {
-                                                    safeSetState(() {
-                                                      _model
-                                                          .passwordTextController
-                                                          ?.text = 'db';
-                                                    });
+                                                    await _model
+                                                        .listViewController
+                                                        ?.animateTo(
+                                                      0,
+                                                      duration: const Duration(
+                                                          milliseconds: 300),
+                                                      curve: Curves.ease,
+                                                    );
                                                   }
+
+                                                  safeSetState(() {});
                                                 },
                                                 text:
                                                     FFLocalizations.of(context)

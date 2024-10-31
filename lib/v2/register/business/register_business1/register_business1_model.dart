@@ -26,8 +26,8 @@ class RegisterBusiness1Model extends FlutterFlowModel<RegisterBusiness1Widget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for Column widget.
-  ScrollController? columnController1;
+  // State field(s) for formC widget.
+  ScrollController? formC;
   // State field(s) for scroll1 widget.
   ScrollController? scroll1;
   // State field(s) for firstName widget.
@@ -142,7 +142,7 @@ class RegisterBusiness1Model extends FlutterFlowModel<RegisterBusiness1Widget> {
   // Stores action output result for [Validate Form] action in Button widget.
   bool? formvalidate;
   // State field(s) for Column widget.
-  ScrollController? columnController2;
+  ScrollController? columnController;
   // State field(s) for ListView widget.
   ScrollController? listViewController;
   // Stores action output result for [Backend Call - API (getPlace)] action in mapbuscar widget.
@@ -150,20 +150,20 @@ class RegisterBusiness1Model extends FlutterFlowModel<RegisterBusiness1Widget> {
 
   @override
   void initState(BuildContext context) {
-    columnController1 = ScrollController();
+    formC = ScrollController();
     scroll1 = ScrollController();
     firstNameTextControllerValidator = _firstNameTextControllerValidator;
     lastNameTextControllerValidator = _lastNameTextControllerValidator;
     companyTextControllerValidator = _companyTextControllerValidator;
     emailTextController1Validator = _emailTextController1Validator;
     phoneTextControllerValidator = _phoneTextControllerValidator;
-    columnController2 = ScrollController();
+    columnController = ScrollController();
     listViewController = ScrollController();
   }
 
   @override
   void dispose() {
-    columnController1?.dispose();
+    formC?.dispose();
     scroll1?.dispose();
     firstNameFocusNode?.dispose();
     firstNameTextController?.dispose();
@@ -186,7 +186,7 @@ class RegisterBusiness1Model extends FlutterFlowModel<RegisterBusiness1Widget> {
     queryFocusNode?.dispose();
     queryTextController?.dispose();
 
-    columnController2?.dispose();
+    columnController?.dispose();
     listViewController?.dispose();
   }
 }

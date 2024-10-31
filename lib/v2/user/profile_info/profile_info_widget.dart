@@ -382,11 +382,14 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                               height: 36.0,
                                               decoration: const BoxDecoration(),
                                               child: Text(
-                                                valueOrDefault<String>(
-                                                  profileInfoUsersRecord
-                                                      .serviceType.first,
-                                                  'telfer psychologist',
-                                                ),
+                                                functions.changeServiceLanguge(
+                                                    valueOrDefault<String>(
+                                                      profileInfoUsersRecord
+                                                          .serviceType.first,
+                                                      'telfer psychologist',
+                                                    ),
+                                                    FFLocalizations.of(context)
+                                                        .languageCode),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineLarge
@@ -408,19 +411,10 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                               height: 19.0,
                                               decoration: const BoxDecoration(),
                                               child: Text(
-                                                () {
-                                                  if (profileInfoUsersRecord
-                                                          .age ==
-                                                      '18-25 years') {
-                                                    return 'Young';
-                                                  } else if (profileInfoUsersRecord
-                                                          .age ==
-                                                      '25-40 years') {
-                                                    return ' Adult';
-                                                  } else {
-                                                    return 'Senior';
-                                                  }
-                                                }(),
+                                                functions.changeAge(
+                                                    profileInfoUsersRecord.age,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineLarge
@@ -463,15 +457,26 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                         updateCallback: () => safeSetState(() {}),
                         child: DescripcionProfesionalWidget(
                           parameter1: profileInfoUsersRecord.description,
-                          parameter2: valueOrDefault<String>(
-                            formatNumber(
-                              profileInfoUsersRecord.years,
-                              formatType: FormatType.custom,
-                              format: '> # years',
-                              locale: '',
-                            ),
-                            '> # years',
-                          ),
+                          parameter2:
+                              FFLocalizations.of(context).languageCode == 'en'
+                                  ? valueOrDefault<String>(
+                                      formatNumber(
+                                        profileInfoUsersRecord.years,
+                                        formatType: FormatType.custom,
+                                        format: '> # years',
+                                        locale: '',
+                                      ),
+                                      '> # years',
+                                    )
+                                  : valueOrDefault<String>(
+                                      formatNumber(
+                                        profileInfoUsersRecord.years,
+                                        formatType: FormatType.custom,
+                                        format: '> # años',
+                                        locale: '',
+                                      ),
+                                      '> # años',
+                                    ),
                           video: valueOrDefault<String>(
                             profileInfoUsersRecord.video,
                             'https://assets.mixkit.co/videos/51585/51585-720.mp4',

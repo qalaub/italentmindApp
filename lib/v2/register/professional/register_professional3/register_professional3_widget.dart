@@ -100,7 +100,7 @@ class _RegisterProfessional3WidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -0.7),
+                              alignment: const AlignmentDirectional(0.0, -0.85),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 6.0, 0.0, 0.0),
@@ -177,7 +177,7 @@ class _RegisterProfessional3WidgetState
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        0.5, 0.0, 0.5, 0.0),
+                                                        0.5, 0.0, 10.5, 0.0),
                                                 child: FlutterFlowRadioButton(
                                                   key: const ValueKey('question'),
                                                   options: [

@@ -195,6 +195,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: SingleChildScrollView(
+                                    controller: _model.formC,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -237,7 +238,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                             decoration: BoxDecoration(
                                               color: const Color(0xFF718CD4),
                                               border: Border.all(
-                                                color: const Color(0xFFF0DFEF),
+                                                color: const Color(0xFF718CD4),
                                               ),
                                             ),
                                           ),
@@ -1218,7 +1219,7 @@ Early Intervention */
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFF718CD4),
                                                 border: Border.all(
-                                                  color: const Color(0xFFF0DFEF),
+                                                  color: const Color(0xFF718CD4),
                                                 ),
                                               ),
                                             ),
@@ -1256,15 +1257,16 @@ Early Intervention */
                                               );
                                               FFAppState().counter = 4;
                                               safeSetState(() {});
+                                              _model.formV = true;
                                               if (_model.formKey.currentState ==
                                                       null ||
                                                   !_model.formKey.currentState!
                                                       .validate()) {
-                                                return;
+                                                _model.formV = false;
                                               }
                                               if (_model.dropDownValue ==
                                                   null) {
-                                                return;
+                                                _model.formV = false;
                                               }
                                               FFAppState()
                                                   .updateRegisterProviderFormStruct(
@@ -1287,7 +1289,8 @@ Early Intervention */
                                                   (FFAppState()
                                                           .verifyForm
                                                           .dropdown ==
-                                                      true)) {
+                                                      true) &&
+                                                  _model.formV!) {
                                                 FFAppState().verifyForm =
                                                     FormVerifyStruct();
                                                 FFAppState().counter = 0;
@@ -1310,7 +1313,16 @@ Early Intervention */
                                                     ),
                                                   },
                                                 );
+                                              } else {
+                                                await _model.formC?.animateTo(
+                                                  0,
+                                                  duration: const Duration(
+                                                      milliseconds: 300),
+                                                  curve: Curves.ease,
+                                                );
                                               }
+
+                                              safeSetState(() {});
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(

@@ -240,6 +240,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: SingleChildScrollView(
+                                    controller: _model.formC,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -282,7 +283,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFF718CD4),
                                                 border: Border.all(
-                                                  color: const Color(0xFFF0DFEF),
+                                                  color: const Color(0xFF718CD4),
                                                 ),
                                               ),
                                             ),
@@ -878,6 +879,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                               key: const ValueKey(
                                                                   'dateError'),
                                                               _model.dateError,
+                                                              maxLines: 2,
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -1770,7 +1772,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                               decoration: BoxDecoration(
                                                 color: const Color(0xFF718CD4),
                                                 border: Border.all(
-                                                  color: const Color(0xFFF0DFEF),
+                                                  color: const Color(0xFF718CD4),
                                                 ),
                                               ),
                                             ),
@@ -1836,24 +1838,10 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                     );
                                                     FFAppState().counter = 4;
                                                     safeSetState(() {});
-                                                    if (_model.formKey
-                                                                .currentState ==
-                                                            null ||
-                                                        !_model.formKey
-                                                            .currentState!
-                                                            .validate()) {
-                                                      return;
-                                                    }
-                                                    if (functions.validateDate(
+                                                    if (!functions.validateDate(
                                                         _model
                                                             .dateTextController
                                                             .text)!) {
-                                                      FFAppState()
-                                                          .updateVerifyFormStruct(
-                                                        (e) => e..date = true,
-                                                      );
-                                                      safeSetState(() {});
-                                                    } else {
                                                       _model
                                                           .dateError = FFLocalizations
                                                                       .of(context)
@@ -1861,37 +1849,55 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                               'en'
                                                           ? 'Allowed age range: 18 to 125 years.'
                                                           : 'Rango de edad permitido: de 18 a 125 años.';
+                                                      safeSetState(() {});
                                                       FFAppState()
                                                           .updateVerifyFormStruct(
                                                         (e) => e..date = false,
                                                       );
                                                       safeSetState(() {});
                                                     }
-
-                                                    if (functions
+                                                    if (!functions
                                                         .validateFormatDate(_model
                                                             .dateTextController
                                                             .text)) {
-                                                      FFAppState()
-                                                          .updateVerifyFormStruct(
-                                                        (e) => e..date = true,
-                                                      );
-                                                      safeSetState(() {});
-                                                    } else {
                                                       _model
                                                           .dateError = FFLocalizations
                                                                       .of(context)
                                                                   .languageCode ==
                                                               'en'
-                                                          ? 'Invalid date format.'
-                                                          : 'Formato de fecha inválido.';
+                                                          ? 'Enter day (1-31) and month (1-12).'
+                                                          : 'Ingrese día (1-31) y mes (1-12).';
+                                                      safeSetState(() {});
                                                       FFAppState()
                                                           .updateVerifyFormStruct(
                                                         (e) => e..date = false,
                                                       );
                                                       safeSetState(() {});
                                                     }
-
+                                                    _model.formV = true;
+                                                    if (_model.formKey
+                                                                .currentState ==
+                                                            null ||
+                                                        !_model.formKey
+                                                            .currentState!
+                                                            .validate()) {
+                                                      _model.formV = false;
+                                                    }
+                                                    FFAppState()
+                                                        .updateVerifyFormStruct(
+                                                      (e) => e
+                                                        ..date = (functions
+                                                                    .validateDate(_model
+                                                                        .dateTextController
+                                                                        .text) ==
+                                                                true) &&
+                                                            (functions.validateFormatDate(
+                                                                    _model
+                                                                        .dateTextController
+                                                                        .text) ==
+                                                                true),
+                                                    );
+                                                    safeSetState(() {});
                                                     if (FFAppState().verifyForm.subur &&
                                                         FFAppState()
                                                             .verifyForm
@@ -1899,15 +1905,10 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                         FFAppState()
                                                             .verifyForm
                                                             .same1 &&
-                                                        functions.validateDate(
-                                                            _model
-                                                                .dateTextController
-                                                                .text)! &&
-                                                        functions
-                                                            .validateFormatDate(
-                                                                _model
-                                                                    .dateTextController
-                                                                    .text)) {
+                                                        FFAppState()
+                                                            .verifyForm
+                                                            .date &&
+                                                        _model.formV!) {
                                                       FFAppState().verifyForm =
                                                           FormVerifyStruct();
                                                       FFAppState().counter = 0;
@@ -1955,7 +1956,17 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                           ),
                                                         },
                                                       );
+                                                    } else {
+                                                      await _model.formC
+                                                          ?.animateTo(
+                                                        0,
+                                                        duration: const Duration(
+                                                            milliseconds: 300),
+                                                        curve: Curves.ease,
+                                                      );
                                                     }
+
+                                                    safeSetState(() {});
                                                   },
                                                   text: FFLocalizations.of(
                                                           context)
@@ -2017,6 +2028,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                     borderRadius: BorderRadius.circular(0.0),
                                   ),
                                   child: SingleChildScrollView(
+                                    controller: _model.columnController,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -2111,6 +2123,8 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                     ),
                                                   );
                                                 },
+                                                controller:
+                                                    _model.listViewController,
                                               );
                                             },
                                           ),

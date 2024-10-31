@@ -212,6 +212,7 @@ class _RegisterProfessional1WidgetState
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: SingleChildScrollView(
+                                    controller: _model.formC,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -1707,13 +1708,14 @@ class _RegisterProfessional1WidgetState
                                                 );
                                                 FFAppState().counter = 4;
                                                 safeSetState(() {});
+                                                _model.formV = true;
                                                 if (_model.formKey
                                                             .currentState ==
                                                         null ||
                                                     !_model
                                                         .formKey.currentState!
                                                         .validate()) {
-                                                  return;
+                                                  _model.formV = false;
                                                 }
                                                 if ((FFAppState()
                                                             .verifyForm
@@ -1724,7 +1726,8 @@ class _RegisterProfessional1WidgetState
                                                           .verifyForm
                                                           .same1,
                                                       false,
-                                                    )) {
+                                                    ) &&
+                                                    _model.formV!) {
                                                   FFAppState()
                                                       .updateRegisterProviderFormStruct(
                                                     (e) => e
@@ -1784,7 +1787,16 @@ class _RegisterProfessional1WidgetState
                                                       ),
                                                     },
                                                   );
+                                                } else {
+                                                  await _model.formC?.animateTo(
+                                                    0,
+                                                    duration: const Duration(
+                                                        milliseconds: 300),
+                                                    curve: Curves.ease,
+                                                  );
                                                 }
+
+                                                safeSetState(() {});
                                               },
                                               text: FFLocalizations.of(context)
                                                   .getText(
@@ -1843,6 +1855,7 @@ class _RegisterProfessional1WidgetState
                                     borderRadius: BorderRadius.circular(0.0),
                                   ),
                                   child: SingleChildScrollView(
+                                    controller: _model.columnController,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -1936,6 +1949,8 @@ class _RegisterProfessional1WidgetState
                                                     ),
                                                   );
                                                 },
+                                                controller:
+                                                    _model.listViewController,
                                               );
                                             },
                                           ),

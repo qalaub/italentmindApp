@@ -14,6 +14,8 @@ class RegisterProfessional2Model
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
+  // State field(s) for ListView widget.
+  ScrollController? listViewController;
   // State field(s) for serviceType widget.
   List<String>? serviceTypeValue;
   FormFieldController<List<String>>? serviceTypeValueController;
@@ -97,9 +99,12 @@ class RegisterProfessional2Model
 
   // State field(s) for terms widget.
   bool? termsValue;
+  // Stores action output result for [Validate Form] action in Button widget.
+  bool? formV;
 
   @override
   void initState(BuildContext context) {
+    listViewController = ScrollController();
     yearsTextControllerValidator = _yearsTextControllerValidator;
     passwordVisibility = false;
     passwordTextControllerValidator = _passwordTextControllerValidator;
@@ -110,6 +115,7 @@ class RegisterProfessional2Model
 
   @override
   void dispose() {
+    listViewController?.dispose();
     ndisFocusNode?.dispose();
     ndisTextController?.dispose();
 
