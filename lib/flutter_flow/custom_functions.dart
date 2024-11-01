@@ -154,14 +154,15 @@ String suguestionPlan(
   bool second,
   bool tree,
   bool four,
+  String lan,
 ) {
-  if (firts) 'Premiun';
-  if (firts && tree) return 'Premiun';
-  if (second && four) return 'Standar';
-  if (four) return 'Standar';
-  if (second) return 'Standar';
-  if (tree) 'Premiun';
-  return 'Basic';
+  if (firts) return lan == 'en' ? 'Premiun' : 'Premiun';
+  if (firts && tree) return lan == 'en' ? 'Premiun' : 'Premiun';
+  if (second && four) return lan == 'en' ? 'Standar' : 'Estandar';
+  if (four) return lan == 'en' ? 'Standar' : 'Estandar';
+  if (second) return lan == 'en' ? 'Standar' : 'Estandar';
+  if (tree) return lan == 'en' ? 'Premiun' : 'Premiun';
+  return lan == 'en' ? 'Basic' : 'Basico';
 }
 
 String emptyString() {
@@ -540,4 +541,28 @@ String changeAge(
 
   // Retorna la traducción o el texto original si no hay coincidencia
   return ageCategoryTranslations[ageRange]?[languageCode] ?? ageRange;
+}
+
+String getTranslateDay(
+  String day,
+  String language,
+) {
+  Map<String, Map<String, String>> translations = {
+    'Monday': {'es': 'Lunes'},
+    'Tuesday': {'es': 'Martes'},
+    'Wednesday': {'es': 'Miércoles'},
+    'Thursday': {'es': 'Jueves'},
+    'Friday': {'es': 'Viernes'},
+    'Saturday': {'es': 'Sábado'},
+    'Sunday': {'es': 'Domingo'},
+    'Lunes': {'en': 'Monday'},
+    'Martes': {'en': 'Tuesday'},
+    'Miércoles': {'en': 'Wednesday'},
+    'Jueves': {'en': 'Thursday'},
+    'Viernes': {'en': 'Friday'},
+    'Sábado': {'en': 'Saturday'},
+    'Domingo': {'en': 'Sunday'},
+  };
+
+  return translations[day]?[language] ?? day;
 }

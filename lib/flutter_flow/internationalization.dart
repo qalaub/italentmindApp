@@ -997,6 +997,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Group Chat',
       'es': 'Chat grupal',
     },
+    'xu3vf04w': {
+      'en': 'No Chats',
+      'es': 'Sin chats',
+    },
+    '226s2ivn': {
+      'en': 'You don\'t have any chats created. ',
+      'es': 'No tiene ningún chat creado.',
+    },
     '211duocj': {
       'en': 'This message is for ',
       'es': 'Este mensaje es para',
@@ -1006,6 +1014,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'This was really great, i\'m so glad that we could  catchup this weekend.',
       'es':
           'Esto fue realmente genial, estoy muy contento de que pudiéramos ponernos al día este fin de semana.',
+    },
+    'fiql1wgj': {
+      'en': 'No Chats',
+      'es': 'Sin chats',
+    },
+    'foup1hq1': {
+      'en': 'You don\'t have any chats created. ',
+      'es': 'No tiene ningún chat creado.',
     },
     'i4r2sseo': {
       'en': 'Messages',
@@ -1165,11 +1181,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p3whjsti': {
       'en': 'Tell us more about yourself',
-      'es': 'Cuéntanos más sobre ti',
+      'es': 'Cuéntenos más sobre usted',
     },
     'f5fml3pk': {
       'en': 'Video of you',
-      'es': 'Video tuyo',
+      'es': 'Vídeo suyo',
     },
     'hen98tgd': {
       'en':
@@ -1233,7 +1249,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'When someone likes your profile,\n a notification will appear here.\nUdgrade to standard',
       'es':
-          'Cuando a alguien le guste tu perfil,\naparecerá una notificación aquí.\nActualizar a estándar',
+          'Cuando a alguien le guste su perfil, aparecerá una notificación aquí.\n Actualizar a estándar',
     },
     'olj1n9no': {
       'en': 'Upgrade Now',
@@ -1908,7 +1924,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'dr3fgq6m': {
       'en': 'Do you accept the terms and conditions?',
-      'es': '¿Aceptas los términos y condiciones?',
+      'es': '¿Acepta los términos y condiciones?',
     },
     'qv8m1lsy': {
       'en': 'Get started Standard',
@@ -1953,7 +1969,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6vyxmbbp': {
       'en': 'Do you accept the terms and conditions?',
-      'es': '¿Aceptas los términos y condiciones?',
+      'es': '¿Acepta los términos y condiciones?',
     },
     'pa4jxn6m': {
       'en': 'Get started Premium',
@@ -1998,7 +2014,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'eedt21sn': {
       'en': 'Do you accept the terms and conditions?',
-      'es': '¿Aceptas los términos y condiciones?',
+      'es': '¿Acepta los términos y condiciones?',
     },
     'fh29go9j': {
       'en': 'Get started Basic',
@@ -2377,7 +2393,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'kmmdrzk7': {
       'en': '* Do you need instant messaging for your team?',
-      'es': '* ¿Necesitas mensajería instantánea para tu equipo?',
+      'es': '* ¿Necesita mensajería instantánea para su equipo?',
     },
     'k2cu0c4n': {
       'en': 'Yes',
@@ -2448,12 +2464,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'En base a tus respuestas te recomendamos el plan Premium.',
     },
     '96e0uyxq': {
-      'en': 'The Premium plan includes:',
-      'es': 'El plan Premium incluye:',
+      'en': 'The Basic plan includes:',
+      'es': 'El plan Basico incluye:',
     },
     'e82w1tm2': {
       'en': '• Instant messaging for your team',
-      'es': '• Mensajería instantánea para tu equipo',
+      'es': '• Mensajería instantánea para su equipo',
     },
     'a2h1884j': {
       'en': '\n• Detailed map features to locate service providers',
@@ -2478,7 +2494,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qj8glsap': {
       'en': 'Based on your answers, we recommend the',
-      'es': 'En base a tus respuestas te recomendamos lo siguiente:',
+      'es': 'En base a sus respuestas le recomendamos lo siguiente:',
     },
     '5l8cbxjy': {
       'en': ' Standar',
@@ -2493,12 +2509,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'En base a tus respuestas te recomendamos el plan Premium.',
     },
     'az3uhu6n': {
-      'en': 'The Premium plan includes:',
-      'es': 'El plan Premium incluye:',
+      'en': 'The Standar plan includes:',
+      'es': 'El plan Estandar incluye:',
     },
     '2b5373wv': {
       'en': '• Instant messaging for your team',
-      'es': '• Mensajería instantánea para tu equipo',
+      'es': '• Mensajería instantánea para su equipo',
     },
     'jvjcheen': {
       'en': '\n• Detailed map features to locate service providers',
@@ -2523,7 +2539,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8eax5b8v': {
       'en': 'Based on your answers, we recommend the',
-      'es': 'En base a tus respuestas te recomendamos lo siguiente:',
+      'es': 'En base a sus respuestas te recomendamos lo siguiente:',
     },
     'rajr4igr': {
       'en': ' Premium',
@@ -2542,8 +2558,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'El plan Premium incluye:',
     },
     'k109xm4v': {
-      'en': '• Instant messaging for your team',
-      'es': '• Mensajería instantánea para tu equipo',
+      'en': '• Instant messaging for your team\n',
+      'es': '• Mensajería instantánea para Su equipo',
     },
     'l4q4czd4': {
       'en': '\n• Detailed map features to locate service providers',
@@ -2774,7 +2790,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ethpzizz': {
       'en': 'Choose your AVATAR',
-      'es': 'Elige tu AVATAR',
+      'es': 'Elija su AVATAR',
     },
     '48nxm60o': {
       'en': 'Continue',
@@ -2937,9 +2953,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Personal calificado y certificado',
     },
     '9x3iutr3': {
-      'en': 'Official ID document, name\n provide your ID correctly',
-      'es':
-          'Documento de identidad oficial, nombre\nproporcione su identificación correctamente',
+      'en': 'Official ID document.',
+      'es': 'Documento de identidad oficial.',
     },
   },
   // DescripcionUser

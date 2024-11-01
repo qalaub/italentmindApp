@@ -370,9 +370,14 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                       .primary,
                                               size: 90.0,
                                             ),
-                                            title: 'No Chats',
-                                            body:
-                                                'You don\'t have any chats created, start a chat by tapping the button in the top right. ',
+                                            title: FFLocalizations.of(context)
+                                                .getText(
+                                              'xu3vf04w' /* No Chats */,
+                                            ),
+                                            body: FFLocalizations.of(context)
+                                                .getText(
+                                              '226s2ivn' /* You don't have any chats creat... */,
+                                            ),
                                           ),
                                         ),
                                       );
@@ -1348,9 +1353,14 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                         .primary,
                                                 size: 90.0,
                                               ),
-                                              title: 'No Chats',
-                                              body:
-                                                  'You don\'t have any chats created, start a chat by tapping the button in the top right. ',
+                                              title: FFLocalizations.of(context)
+                                                  .getText(
+                                                'fiql1wgj' /* No Chats */,
+                                              ),
+                                              body: FFLocalizations.of(context)
+                                                  .getText(
+                                                'foup1hq1' /* You don't have any chats creat... */,
+                                              ),
                                             ),
                                           ),
                                         );

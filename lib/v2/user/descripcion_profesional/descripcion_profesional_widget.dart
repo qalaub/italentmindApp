@@ -424,7 +424,10 @@ Perso... */
                                           alignment:
                                               const AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
-                                            scheduleDaysItem,
+                                            functions.getTranslateDay(
+                                                scheduleDaysItem,
+                                                FFLocalizations.of(context)
+                                                    .languageCode),
                                             textAlign: TextAlign.start,
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -520,9 +523,7 @@ Perso... */
                                     alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        '9x3iutr3' /* Official ID document, name
- pr... */
-                                        ,
+                                        '9x3iutr3' /* Official ID document. */,
                                       ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)

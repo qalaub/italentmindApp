@@ -194,7 +194,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -244,7 +246,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -334,7 +338,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -384,7 +390,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -474,7 +482,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -524,7 +534,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -614,7 +626,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -664,7 +678,9 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                     _model.firts,
                                                     _model.second,
                                                     _model.tree,
-                                                    _model.four);
+                                                    _model.four,
+                                                    FFLocalizations.of(context)
+                                                        .languageCode);
                                             safeSetState(() {});
                                           },
                                           text: FFLocalizations.of(context)
@@ -864,7 +880,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          '96e0uyxq' /* The Premium plan includes: */,
+                                                          '96e0uyxq' /* The Basic plan includes: */,
                                                         ),
                                                         style: FlutterFlowTheme
                                                                 .of(context)
@@ -1120,7 +1136,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                          'az3uhu6n' /* The Premium plan includes: */,
+                                                          'az3uhu6n' /* The Standar plan includes: */,
                                                         ),
                                                         style: FlutterFlowTheme
                                                                 .of(context)
@@ -1498,7 +1514,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 0.0),
                                     child: Row(
-                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
@@ -1572,13 +1588,21 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                           },
                                           text: _model.suguestion != ''
                                               ? functions.concatStrings(
-                                                  'Select',
+                                                  FFLocalizations.of(context)
+                                                              .languageCode ==
+                                                          'en'
+                                                      ? 'Select'
+                                                      : 'Seleccionar',
                                                   functions.concatStrings(
                                                       _model.suguestion,
                                                       'Plan',
                                                       ' '),
                                                   ' ')!
-                                              : 'Select Premium Plan',
+                                              : (FFLocalizations.of(context)
+                                                          .languageCode ==
+                                                      'en'
+                                                  ? 'Select Premium Plan'
+                                                  : 'Seleccionar Plan Premium '),
                                           options: FFButtonOptions(
                                             width: 150.0,
                                             height: 45.0,
