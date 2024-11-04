@@ -177,7 +177,7 @@ class _UserUnlockConfirmWidgetState extends State<UserUnlockConfirmWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Roboto',
-                                    color: const Color(0xFFC14BBC),
+                                    color: const Color(0xFF1D69D7),
                                     fontSize: 16.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,

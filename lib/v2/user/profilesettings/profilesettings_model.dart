@@ -2,7 +2,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
-import '/v2/user/upload_profile_image/upload_profile_image_widget.dart';
+import '/v2/upload_profile_image/upload_profile_image_widget.dart';
 import 'profilesettings_widget.dart' show ProfilesettingsWidget;
 import 'package:flutter/material.dart';
 

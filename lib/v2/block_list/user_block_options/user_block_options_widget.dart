@@ -44,7 +44,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
     return Align(
       alignment: const AlignmentDirectional(1.0, -1.0),
       child: Container(
-        width: 178.0,
+        width: 208.0,
         height: 100.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -72,6 +72,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             InkWell(
               splashColor: Colors.transparent,
@@ -110,7 +111,9 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                           fontWeight: FontWeight.w500,
                         ),
                   ),
-                ].addToStart(const SizedBox(width: 16.0)),
+                ]
+                    .addToStart(const SizedBox(width: 16.0))
+                    .addToEnd(const SizedBox(width: 16.0)),
               ),
             ),
             const Divider(
@@ -149,7 +152,9 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                           fontWeight: FontWeight.w500,
                         ),
                   ),
-                ].addToStart(const SizedBox(width: 16.0)),
+                ]
+                    .addToStart(const SizedBox(width: 16.0))
+                    .addToEnd(const SizedBox(width: 16.0)),
               ),
             ),
           ].addToStart(const SizedBox(height: 16.0)),

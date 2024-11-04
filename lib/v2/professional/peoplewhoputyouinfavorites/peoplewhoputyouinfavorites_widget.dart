@@ -6,7 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
-import '/v3correciones/likes_v3/likes_v3/likes_v3_widget.dart';
+import '/v2/professional/v3correciones/likes_v3/likes_v3/likes_v3_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'peoplewhoputyouinfavorites_model.dart';

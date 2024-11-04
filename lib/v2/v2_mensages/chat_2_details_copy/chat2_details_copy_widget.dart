@@ -75,7 +75,7 @@ class _Chat2DetailsCopyWidgetState extends State<Chat2DetailsCopyWidget> {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: const Color(0xFFC047BB),
+            backgroundColor: const Color(0xFF1D69D7),
             body: Center(
               child: SizedBox(
                 width: 50.0,
@@ -94,7 +94,7 @@ class _Chat2DetailsCopyWidgetState extends State<Chat2DetailsCopyWidget> {
 
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: const Color(0xFFC047BB),
+          backgroundColor: const Color(0xFF1D69D7),
           body: Container(
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -229,7 +229,7 @@ class _Chat2DetailsCopyWidgetState extends State<Chat2DetailsCopyWidget> {
                           alignment: const AlignmentDirectional(1.0, -1.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => Container(
-                              width: MediaQuery.sizeOf(context).width * 0.4,
+                              width: MediaQuery.sizeOf(context).width * 0.505,
                               height: currentUserDocument?.rol == Roles.user
                                   ? 137.0
                                   : 88.0,

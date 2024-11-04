@@ -70,7 +70,7 @@ export '/v2/h0me/map_aument/map_aument_widget.dart' show MapAumentWidget;
 export '/recuperarcontrasea/recuperarcontrasea_widget.dart'
     show RecuperarcontraseaWidget;
 export '/deleteaccount/deleteaccount_widget.dart' show DeleteaccountWidget;
-export '/v3correciones/calendario/cadari0/cadari0_widget.dart'
+export '/v2/professional/v3correciones/calendario/cadari0/cadari0_widget.dart'
     show Cadari0Widget;
 export '/v2/v2_mensages/chat_2_details_copy/chat2_details_copy_widget.dart'
     show Chat2DetailsCopyWidget;

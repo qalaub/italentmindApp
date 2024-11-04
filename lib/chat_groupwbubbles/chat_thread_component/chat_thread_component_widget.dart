@@ -163,9 +163,12 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                           color: FlutterFlowTheme.of(context).primary,
                           size: 90.0,
                         ),
-                        title: 'No Messages',
-                        body:
-                            'You have not sent any messages in this chat yet.',
+                        title: FFLocalizations.of(context).getText(
+                          'ts7tjzm6' /* No Messages */,
+                        ),
+                        body: FFLocalizations.of(context).getText(
+                          'to3q3afl' /* You have not sent any messages... */,
+                        ),
                       );
                     }
 

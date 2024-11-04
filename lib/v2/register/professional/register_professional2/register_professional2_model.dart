@@ -11,6 +11,8 @@ class RegisterProfessional2Model
 
   bool termsAccept = true;
 
+  bool ndisShow = false;
+
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();

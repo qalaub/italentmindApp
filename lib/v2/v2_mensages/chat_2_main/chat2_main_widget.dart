@@ -142,6 +142,18 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                     final chatClip = containerChatsRecordList
                                         .take(4)
                                         .toList()
+                                        .where((e) =>
+                                            ((currentUserDocument?.blockList
+                                                            .toList() ??
+                                                        [])
+                                                    .contains(e.userB) ==
+                                                false) &&
+                                            ((currentUserDocument?.blockList
+                                                            .toList() ??
+                                                        [])
+                                                    .contains(e.userA) ==
+                                                false))
+                                        .toList()
                                         .take(4)
                                         .toList();
 

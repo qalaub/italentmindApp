@@ -123,7 +123,7 @@ class FFAppState extends ChangeNotifier {
     _currentChat = value;
   }
 
-  LatLng? _tempLocation = const LatLng(-26.8357181, 152.963113);
+  LatLng? _tempLocation = const LatLng(38.7945952, -106.5348379);
   LatLng? get tempLocation => _tempLocation;
   set tempLocation(LatLng? value) {
     _tempLocation = value;
@@ -136,7 +136,7 @@ class FFAppState extends ChangeNotifier {
   }
 
   FiltersStruct _filtersPage = FiltersStruct.fromSerializableMap(jsonDecode(
-      '{\"distance\":\"1000000\",\"age\":\"[\\\"40-65+ years\\\",\\\"25-40 years\\\",\\\"18-25 years\\\"]\",\"services\":\"[\\\"Support Workers\\\",\\\"Support  Coordinators\\\",\\\"Therapeutic Supports\\\",\\\"Home Maintenance\\\",\\\"Recovery Coaches\\\"]\",\"schedule\":\"[\\\"Monday\\\",\\\"Tuesday\\\",\\\"Wednesday\\\",\\\"Thursday\\\",\\\"Friday\\\",\\\"Saturday\\\",\\\"Sunday\\\"]\"}'));
+      '{\"distance\":\"1000000\",\"age\":\"[\\\"40-65+ years\\\",\\\"25-40 years\\\",\\\"18-25 years\\\"]\",\"services\":\"[\\\"Support Workers\\\",\\\"Support Coordinators\\\",\\\"Therapeutic Supports\\\",\\\"Home Maintenance\\\",\\\"Recovery Coaches\\\"]\",\"schedule\":\"[\\\"Monday\\\",\\\"Tuesday\\\",\\\"Wednesday\\\",\\\"Thursday\\\",\\\"Friday\\\",\\\"Saturday\\\",\\\"Sunday\\\"]\"}'));
   FiltersStruct get filtersPage => _filtersPage;
   set filtersPage(FiltersStruct value) {
     _filtersPage = value;

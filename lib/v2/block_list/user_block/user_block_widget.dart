@@ -56,12 +56,7 @@ class _UserBlockWidgetState extends State<UserBlockWidget> {
       height: 90.0,
       decoration: BoxDecoration(
         color: widget.background,
-        borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(16.0),
-          bottomRight: Radius.circular(16.0),
-          topLeft: Radius.circular(16.0),
-          topRight: Radius.circular(16.0),
-        ),
+        borderRadius: BorderRadius.circular(0.0),
       ),
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
@@ -156,7 +151,7 @@ class _UserBlockWidgetState extends State<UserBlockWidget> {
                         color: Colors.transparent,
                         child: SizedBox(
                           height: MediaQuery.sizeOf(context).height * 0.2,
-                          width: MediaQuery.sizeOf(context).width * 0.4,
+                          width: MediaQuery.sizeOf(context).width * 0.505,
                           child: UserBlockOptionsWidget(
                             userRef: widget.userRef!,
                           ),

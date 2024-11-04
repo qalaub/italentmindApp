@@ -233,7 +233,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.84,
-                                      height: 214.0,
+                                      height: 223.0,
                                       decoration: const BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.only(
@@ -245,6 +245,8 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                       ),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
                                         children: [
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -283,7 +285,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '3pvi5eqw' /* Connect with a wide range of N... */,
+                                                    '3pvi5eqw' /* Connect with a wide range of s... */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -468,7 +470,8 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                           ),
                                         ]
                                             .divide(const SizedBox(height: 13.0))
-                                            .addToStart(const SizedBox(height: 6.0)),
+                                            .addToStart(const SizedBox(height: 6.0))
+                                            .addToEnd(const SizedBox(height: 6.0)),
                                       ),
                                     ),
                                   ),
@@ -620,6 +623,8 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                     ),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -657,7 +662,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'p9mfbera' /* Connect with a wide range of N... */,
+                                                  'p9mfbera' /* Connect with a wide range of s... */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -851,7 +856,8 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         ),
                                       ]
                                           .divide(const SizedBox(height: 11.0))
-                                          .addToStart(const SizedBox(height: 4.0)),
+                                          .addToStart(const SizedBox(height: 6.0))
+                                          .addToEnd(const SizedBox(height: 6.0)),
                                     ),
                                   ),
                                 ),
@@ -1000,6 +1006,8 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                     ),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -1037,7 +1045,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'nx522rqg' /* List several staff members, in... */,
+                                                  'nx522rqg' /* List multiple staff members, i... */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -1197,7 +1205,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '2yd7q069' /* Get notifications when partici... */,
+                                                    '2yd7q069' /* Receive notifications when par... */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -1217,7 +1225,8 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         ),
                                       ]
                                           .divide(const SizedBox(height: 13.0))
-                                          .addToStart(const SizedBox(height: 4.0)),
+                                          .addToStart(const SizedBox(height: 6.0))
+                                          .addToEnd(const SizedBox(height: 6.0)),
                                     ),
                                   ),
                                 ),

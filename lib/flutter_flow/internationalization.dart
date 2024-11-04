@@ -310,9 +310,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '* Enter your phone number          ',
       'es': '* Ingrese su numero de teléfono',
     },
-    'hos25lup': {
-      'en': 'Example:  0400345234',
-      'es': 'Ejemplo: 0400345234',
+    '398i591j': {
+      'en': 'Example (XXX) XXX-XXXX',
+      'es': 'Ejemplo (XXX) XXX-XXXX',
     },
     'p7bqj01f': {
       'en': '* Select your suburb',
@@ -388,15 +388,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
-    '4thux0tn': {
+    '9fbw1som': {
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    '3mj97r0w': {
-      'en': 'Invalid format. Use 0453463465',
-      'es': 'Formato invalido. Usa 0453463465',
-    },
-    '7h3s721g': {
+    'g5929gef': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
@@ -598,13 +594,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '* Enter your phone number          ',
       'es': '* Ingrese su numero de teléfono',
     },
-    'to5mzzcj': {
-      'en': '',
-      'es': '',
-    },
-    'or0wdiqb': {
-      'en': 'Example:  0400345234',
-      'es': 'Ejemplo: 0400345234',
+    '8g2x0r5t': {
+      'en': 'Example (XXX) XXX-XXXX',
+      'es': 'Ejemplo (XXX) XXX-XXXX',
     },
     'c98kzcju': {
       'en': '* Select your suburb',
@@ -671,25 +663,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
-    '9fbw1som': {
+    'l3iouyyg': {
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    'g5929gef': {
+    'h3jttvxx': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
-    '85fqonhg': {
+    '437stbtz': {
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    'dqauy78r': {
-      'en': 'Invalid format. Use 0453463465',
-      'es': 'Formato no válido. Utilice 0453463465',
-    },
-    'g09z1o8y': {
+    'larmryvu': {
       'en': 'Please choose an option from the dropdown',
-      'es': 'Por favor selecciona una opción',
+      'es': '',
     },
     'x8gtptod': {
       'en': 'Field is required',
@@ -910,12 +898,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Iniciar sesión',
     },
     'a9d781wx': {
-      'en': 'Don\'t have an account ?   ',
-      'es': '¿No tienes una cuenta?',
+      'en': 'Don\'t have an account ? ',
+      'es': ' ¿No tienes una cuenta ? ',
     },
     'xf8yq72c': {
       'en': ' Sign up for Italentmind',
-      'es': 'Regístrate en Italentmind',
+      'es': 'Regístrate en Italentmind ',
     },
     '33ws4vq0': {
       'en': 'Don\'t Have An Account? ',
@@ -1351,8 +1339,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '(membresia basica un mes)',
     },
     '3pvi5eqw': {
-      'en': 'Connect with a wide range of NDIS participants.',
-      'es': 'Conéctese con una amplia gama de participantes del NDIS.',
+      'en': 'Connect with a wide range of support service providers.',
+      'es':
+          'Conéctese con una amplia gama de proveedores de servicios de apoyo.',
     },
     'mzxzm446': {
       'en': 'Customise your profile, including bio, photos, and videos.',
@@ -1378,9 +1367,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p9mfbera': {
       'en':
-          'Connect with a wide range of NDIS participants. Send and receive messages instantly.',
+          'Connect with a wide range of support service providers. Send and receive messages instantly.',
       'es':
-          'Conéctese con una amplia gama de participantes del NDIS. Envíe y reciba mensajes al instante.',
+          'Conéctese con una amplia gama de proveedores de servicios de apoyo. Envíe y reciba mensajes al instante.',
     },
     'lxbjnild': {
       'en':
@@ -1408,9 +1397,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nx522rqg': {
       'en':
-          'List several staff members, including coordinators or support workers, to increase your chances of connecting with NDIS participants. Get access to our map features.',
+          'List multiple staff members, including coordinators or support workers, to increase your chances of connecting with support service providers. Gain access to our map features.',
       'es':
-          'Enumere a varios miembros del personal, incluidos coordinadores o trabajadores de apoyo, para aumentar sus posibilidades de conectarse con los participantes del NDIS. Obtenga acceso a nuestras funciones de mapas.',
+          'Enumere a varios miembros del personal, incluidos coordinadores o trabajadores de apoyo, para aumentar sus posibilidades de conectarse con proveedores de servicios de apoyo. Obtenga acceso a nuestras funciones de mapas.',
     },
     'utda3bnw': {
       'en':
@@ -1420,9 +1409,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2yd7q069': {
       'en':
-          'Get notifications when participants like any of your listed employees. Send and receive messages with NDIS participants regarding your staff members.',
+          'Receive notifications when participants like one of your listed employees. Send and receive messages with support service providers about your staff members.',
       'es':
-          'Reciba notificaciones cuando a los participantes les guste alguno de sus empleados enlistados. Envíe y reciba mensajes con los participantes de NDIS sobre los miembros de su personal.',
+          'Recibir notificaciones cuando a los participantes les gusta alguno de sus empleados enlistados. Envíe y reciba mensajes con los proveedores de servicios de apoyo sobre los miembros de su personal.',
     },
     'xwjba9im': {
       'en': 'Continue',
@@ -1471,9 +1460,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '* Enter your phone number          ',
       'es': '* Ingrese su numero de teléfono',
     },
-    'h2ad0juz': {
-      'en': 'Example:  0400345234',
-      'es': 'Ejemplo: 0400345234',
+    '8t59l3cg': {
+      'en': 'Example (XXX) XXX-XXXX',
+      'es': 'Ejemplo (XXX) XXX-XXXX',
     },
     'rcfnlny4': {
       'en': '* Select your suburb',
@@ -1541,23 +1530,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
-    'l3iouyyg': {
+    'q1569hrn': {
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    'h3jttvxx': {
+    'v9p36n5h': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
-    'rfxj8hek': {
+    '8v5azx26': {
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    '2jnuxtgh': {
-      'en': 'Invalid format. Use 0453463465',
-      'es': 'Formato no válido. Utilice 0453463465',
-    },
-    '5fvdv4ui': {
+    '1a2clxub': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
@@ -2067,9 +2052,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3pyigs17': {
       'en':
-          'Connect with a wide range of NDIS participants, send and receive messages instantly. ',
+          'Connect with a wide range of support service providers. Send and receive messages instantly.',
       'es':
-          'Conéctese con una amplia gama de participantes de NDIS, envíe y reciba mensajes al instante.',
+          'Conéctese con una amplia gama de proveedores de servicios de apoyo. Envíe y reciba mensajes al instante.',
     },
     'cj648e30': {
       'en': 'Benefits of Membership',
@@ -2146,9 +2131,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6kjg63vd': {
       'en':
-          'List several staff members, including coordinators or support workers to increase your chances of connecting with NDIS participants. Get access to our map features.',
+          'List multiple staff members, including coordinators or support workers, to increase your chances of connecting with support service providers. Gain access to our map features.',
       'es':
-          'Enumere varios miembros del personal, incluidos coordinadores o trabajadores de apoyo, para aumentar sus posibilidades de conectarse con los participantes del NDIS. Obtenga acceso a nuestras funciones de mapas.',
+          'Enumere a varios miembros del personal, incluidos coordinadores o trabajadores de apoyo, para aumentar sus posibilidades de conectarse con proveedores de servicios de apoyo. Obtenga acceso a nuestras funciones de mapas.',
     },
     'qfqaiwo9': {
       'en': 'Benefits of Membership',
@@ -2166,9 +2151,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'w0w3w27g': {
       'en':
-          'Get notifications when participants like any of your listed employees. Send and receive messages to NDIS participants regarding your staff members ',
+          'Receive notifications when participants like one of your listed employees. Send and receive messages with support service providers about your staff members.',
       'es':
-          'Reciba notificaciones cuando a los participantes les guste alguno de sus empleados enlistados. Envíe y reciba mensajes a los participantes de NDIS sobre los miembros de su personal.',
+          'Recibir notificaciones cuando a los participantes les gusta alguno de sus empleados enlistados. Envíe y reciba mensajes con los proveedores de servicios de apoyo sobre los miembros de su personal.',
     },
     '2eqv0a3h': {
       'en': 'Return',
@@ -2224,8 +2209,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Beneficios de la membresía',
     },
     'w89wnrfh': {
-      'en': 'Connect with a wide range of NDIS participants ',
-      'es': 'Conéctese con una amplia gama de participantes del NDIS',
+      'en': 'Connect with a wide range of support service providers.',
+      'es':
+          'Conéctese con una amplia gama de proveedores de servicios de apoyo.',
     },
     'tayfat9i': {
       'en': 'Benefits of Membership',
@@ -2683,31 +2669,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Deleteaccount
   {
-    '1yy33put': {
+    'zwnfi8lu': {
       'en': 'Delete account',
       'es': 'Eliminar cuenta',
     },
-    '7yvyyr5i': {
+    'gvkte7gr': {
       'en':
           'Deleting your account will be permanent, you will lose all your information and access to the current app, keep in mind that this is an irreversible process.',
       'es':
           'Su cuenta será eliminada permanentemente, perderá toda su información y el acceso a la app actual, tenga en cuenta que este es un proceso irreversible.',
     },
-    'h2635h5b': {
+    'ryxuog6l': {
       'en': '  Are you sure you want to delete your account?',
       'es': ' ¿Esta seguro de que desea eliminar su cuenta?',
     },
-    '3yx0ao4g': {
+    'uyqrc6lf': {
       'en':
           'Deleting your account will be permanent, you will lose all your information and access to the current app, keep in mind that this is an irreversible process. Are you sure you want to delete your account?',
       'es':
           'Eliminar tu cuenta será permanente, perderás toda tu información y acceso a la aplicación actual, ten en cuenta que este es un proceso irreversible. ¿Estás seguro que deseas eliminar tu cuenta?',
     },
-    '7g1uqvxm': {
+    'k1nsud1z': {
       'en': 'Yes, delete',
       'es': 'Sí, eliminar',
     },
-    '4err20zl': {
+    'ko7qm0pl': {
       'en': 'Cancel',
       'es': 'Cancelar',
     },
@@ -2844,6 +2830,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // chat_ThreadComponent
   {
+    'ts7tjzm6': {
+      'en': 'No Messages',
+      'es': 'No hay mensajes',
+    },
+    'to3q3afl': {
+      'en': 'You have not sent any messages in this chat yet.',
+      'es': 'Aún no ha enviado ningún mensaje en este chat.',
+    },
     'y9zx02b6': {
       'en': 'Start typing here...',
       'es': 'Comience a escribir aquí...',
@@ -3126,11 +3120,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'joz42w7i': {
       'en': 'Experience  ',
-      'es': 'Experiencia',
+      'es': 'Experiencia ',
     },
     '19r7qdvc': {
       'en': ' years',
-      'es': 'años',
+      'es': ' años',
     },
     'rii4rqfs': {
       'en': 'Experience',
@@ -3150,6 +3144,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'klwjpxi0': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
+    },
+  },
+  // Eliminar_mensaje
+  {
+    'mm8yxrkf': {
+      'en': 'ACCOUNT DELETION SUCCESSFUL',
+      'es': 'ELIMINACIÓN DE CUENTA EXITOSA',
+    },
+    'bei0ybwd': {
+      'en':
+          'Your account has been successfully deleted, you will no longer be able to log in with that account, and all account data has been removed.',
+      'es':
+          'Su cuenta ha sido eliminada exitosamente, ya no podrá iniciar sesión con esa cuenta y todos los datos de la cuenta han sido eliminados.',
     },
   },
   // Miscellaneous

@@ -12,7 +12,6 @@ import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 import 'register_user1_model.dart';
@@ -65,11 +64,11 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
     _model.dateTextController ??= TextEditingController();
     _model.dateFocusNode ??= FocusNode();
 
-    _model.emailTextController1 ??= TextEditingController();
-    _model.emailFocusNode1 ??= FocusNode();
+    _model.emailTextController ??= TextEditingController();
+    _model.emailFocusNode ??= FocusNode();
 
-    _model.emailTextController2 ??= TextEditingController();
-    _model.emailFocusNode2 ??= FocusNode();
+    _model.emailCTextController ??= TextEditingController();
+    _model.emailCFocusNode ??= FocusNode();
 
     _model.phoneTextController ??= TextEditingController();
     _model.phoneFocusNode ??= FocusNode();
@@ -977,12 +976,12 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                   child: TextFormField(
                                                     key: const ValueKey('email'),
                                                     controller: _model
-                                                        .emailTextController1,
+                                                        .emailTextController,
                                                     focusNode:
-                                                        _model.emailFocusNode1,
+                                                        _model.emailFocusNode,
                                                     onChanged: (_) =>
                                                         EasyDebounce.debounce(
-                                                      '_model.emailTextController1',
+                                                      '_model.emailTextController',
                                                       const Duration(
                                                           milliseconds: 10),
                                                       () async {
@@ -994,7 +993,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                                       .where(
                                                             'email',
                                                             isEqualTo: _model
-                                                                .emailTextController1
+                                                                .emailTextController
                                                                 .text,
                                                           ),
                                                         );
@@ -1104,7 +1103,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                             maxLength}) =>
                                                         null,
                                                     validator: _model
-                                                        .emailTextController1Validator
+                                                        .emailTextControllerValidator
                                                         .asValidator(context),
                                                   ),
                                                 ),
@@ -1196,9 +1195,9 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                   child: TextFormField(
                                                     key: const ValueKey('email'),
                                                     controller: _model
-                                                        .emailTextController2,
+                                                        .emailCTextController,
                                                     focusNode:
-                                                        _model.emailFocusNode2,
+                                                        _model.emailCFocusNode,
                                                     autofocus: true,
                                                     obscureText: false,
                                                     decoration: InputDecoration(
@@ -1301,7 +1300,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                             maxLength}) =>
                                                         null,
                                                     validator: _model
-                                                        .emailTextController2Validator
+                                                        .emailCTextControllerValidator
                                                         .asValidator(context),
                                                   ),
                                                 ),
@@ -1385,111 +1384,122 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                 topRight: Radius.circular(12.0),
                                               ),
                                             ),
-                                            child: TextFormField(
-                                              key: const ValueKey('phone'),
-                                              controller:
-                                                  _model.phoneTextController,
-                                              focusNode: _model.phoneFocusNode,
-                                              autofocus: true,
-                                              obscureText: false,
-                                              decoration: InputDecoration(
-                                                isDense: true,
-                                                labelStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                hintText:
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                  'hos25lup' /* Example:  0400345234 */,
-                                                ),
-                                                hintStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .labelMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          letterSpacing: 0.0,
-                                                        ),
-                                                errorStyle: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Readex Pro',
+                                            child: Align(
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, -1.0),
+                                              child: TextFormField(
+                                                key: const ValueKey('email'),
+                                                controller:
+                                                    _model.phoneTextController,
+                                                focusNode:
+                                                    _model.phoneFocusNode,
+                                                autofocus: true,
+                                                obscureText: false,
+                                                decoration: InputDecoration(
+                                                  isDense: true,
+                                                  labelStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                  hintText: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    '398i591j' /* Example (XXX) XXX-XXXX */,
+                                                  ),
+                                                  hintStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                  errorStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .error,
+                                                        letterSpacing: 0.0,
+                                                        lineHeight: 1.0,
+                                                      ),
+                                                  enabledBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFF1D69D7),
+                                                      width: 0.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12.0),
+                                                  ),
+                                                  focusedBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: const BorderSide(
+                                                      color: Color(0xFF1D69D7),
+                                                      width: 0.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12.0),
+                                                  ),
+                                                  errorBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
-                                                      letterSpacing: 0.0,
+                                                      width: 0.0,
                                                     ),
-                                                enabledBorder:
-                                                    OutlineInputBorder(
-                                                  borderSide: const BorderSide(
-                                                    color: Color(0xFF1D69D7),
-                                                    width: 0.0,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12.0),
                                                   ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0),
-                                                ),
-                                                focusedBorder:
-                                                    OutlineInputBorder(
-                                                  borderSide: const BorderSide(
-                                                    color: Color(0xFF1D69D7),
-                                                    width: 0.0,
+                                                  focusedErrorBorder:
+                                                      OutlineInputBorder(
+                                                    borderSide: BorderSide(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .error,
+                                                      width: 0.0,
+                                                    ),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            12.0),
                                                   ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0),
                                                 ),
-                                                errorBorder: OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    width: 0.0,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0),
-                                                ),
-                                                focusedErrorBorder:
-                                                    OutlineInputBorder(
-                                                  borderSide: BorderSide(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                    width: 0.0,
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          12.0),
-                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Montserrat',
+                                                          color: Colors.black,
+                                                          letterSpacing: 0.0,
+                                                        ),
+                                                maxLines: null,
+                                                maxLength: 14,
+                                                keyboardType:
+                                                    TextInputType.phone,
+                                                validator: _model
+                                                    .phoneTextControllerValidator
+                                                    .asValidator(context),
+                                                inputFormatters: [
+                                                  _model.phoneMask
+                                                ],
                                               ),
-                                              style:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily:
-                                                            'Montserrat',
-                                                        color: Colors.black,
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                              maxLines: null,
-                                              maxLength: 10,
-                                              keyboardType:
-                                                  TextInputType.number,
-                                              validator: _model
-                                                  .phoneTextControllerValidator
-                                                  .asValidator(context),
-                                              inputFormatters: [
-                                                FilteringTextInputFormatter
-                                                    .allow(RegExp('[0-9]'))
-                                              ],
                                             ),
                                           ),
                                         ),
@@ -1830,10 +1840,10 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                           false,
                                                         )
                                                         ..same1 = _model
-                                                                .emailTextController1
+                                                                .emailTextController
                                                                 .text ==
                                                             _model
-                                                                .emailTextController2
+                                                                .emailCTextController
                                                                 .text,
                                                     );
                                                     FFAppState().counter = 4;
@@ -1936,7 +1946,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                                               .lastnameTextController
                                                               .text
                                                           ..email = _model
-                                                              .emailTextController1
+                                                              .emailTextController
                                                               .text,
                                                       );
 

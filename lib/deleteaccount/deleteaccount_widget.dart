@@ -1,5 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/components/eliminar_mensaje_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -82,192 +83,225 @@ class _DeleteaccountWidgetState extends State<DeleteaccountWidget> {
                                 width: 2.0,
                               ),
                             ),
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 0.0),
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '1yy33put' /* Delete account */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .headlineMedium
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          fontSize: 19.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                  ),
-                                ),
-                                const Divider(
-                                  height: 23.0,
-                                  thickness: 2.0,
-                                  color: Color(0xFF4963C9),
-                                ),
-                                Container(
-                                  decoration: const BoxDecoration(),
-                                  child: RichText(
-                                    textScaler:
-                                        MediaQuery.of(context).textScaler,
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '7yvyyr5i' /* Deleting your account will be ... */,
+                            child: Builder(
+                              builder: (context) {
+                                if (!_model.deleted) {
+                                  return Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 8.0, 0.0, 0.0),
+                                        child: Text(
+                                          FFLocalizations.of(context).getText(
+                                            'zwnfi8lu' /* Delete account */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
+                                              .headlineMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 15.0,
+                                                fontSize: 19.0,
                                                 letterSpacing: 0.0,
-                                                fontWeight: FontWeight.normal,
+                                                fontWeight: FontWeight.w500,
                                               ),
-                                        ),
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'h2635h5b' /*   Are you sure you want to del... */,
-                                          ),
-                                          style: const TextStyle(
-                                            color: Color(0xFF1D69D7),
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        )
-                                      ],
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 15.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.normal,
-                                          ),
-                                    ),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 32.0, 0.0, 0.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(1.0, 1.0),
-                                        child: FFButtonWidget(
-                                          onPressed: () async {
-                                            _model.chats =
-                                                await queryChatsRecordOnce(
-                                              queryBuilder: (chatsRecord) =>
-                                                  chatsRecord.where(
-                                                'users',
-                                                arrayContains:
-                                                    currentUserReference,
-                                              ),
-                                              singleRecord: true,
-                                            ).then((s) => s.firstOrNull);
-                                            unawaited(
-                                              () async {
-                                                await _model.chats!.reference
-                                                    .delete();
-                                              }(),
-                                            );
-                                            unawaited(
-                                              () async {
-                                                await currentUserReference!
-                                                    .delete();
-                                              }(),
-                                            );
-                                            await authManager
-                                                .deleteUser(context);
-
-                                            context.goNamed('Login');
-
-                                            safeSetState(() {});
-                                          },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '7g1uqvxm' /* Yes, delete */,
-                                          ),
-                                          options: FFButtonOptions(
-                                            width: 159.0,
-                                            height: 45.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: Colors.white,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .override(
-                                                      fontFamily: 'Montserrat',
-                                                      color: const Color(0xFF4963C9),
-                                                      letterSpacing: 0.0,
-                                                    ),
-                                            elevation: 3.0,
-                                            borderSide: const BorderSide(
-                                              color: Color(0xFF4963C9),
-                                              width: 1.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(24.0),
-                                          ),
                                         ),
                                       ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(1.0, 1.0),
-                                        child: FFButtonWidget(
-                                          onPressed: () async {
-                                            context.safePop();
-                                          },
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '4err20zl' /* Cancel */,
+                                      const Divider(
+                                        height: 23.0,
+                                        thickness: 2.0,
+                                        color: Color(0xFF4963C9),
+                                      ),
+                                      Container(
+                                        decoration: const BoxDecoration(),
+                                        child: RichText(
+                                          textScaler:
+                                              MediaQuery.of(context).textScaler,
+                                          text: TextSpan(
+                                            children: [
+                                              TextSpan(
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'gvkte7gr' /* Deleting your account will be ... */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Montserrat',
+                                                          fontSize: 15.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.normal,
+                                                        ),
+                                              ),
+                                              TextSpan(
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'ryxuog6l' /*   Are you sure you want to del... */,
+                                                ),
+                                                style: const TextStyle(
+                                                  color: Color(0xFF1D69D7),
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              )
+                                            ],
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  fontSize: 15.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                          options: FFButtonOptions(
-                                            width: 159.0,
-                                            height: 45.0,
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: const Color(0xFF4963C9),
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .override(
-                                                      fontFamily: 'Montserrat',
-                                                      color: Colors.white,
-                                                      letterSpacing: 0.0,
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                      Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 32.0, 0.0, 0.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Align(
+                                              alignment: const AlignmentDirectional(
+                                                  1.0, 1.0),
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  _model.chats =
+                                                      await queryChatsRecordOnce(
+                                                    queryBuilder:
+                                                        (chatsRecord) =>
+                                                            chatsRecord.where(
+                                                      'users',
+                                                      arrayContains:
+                                                          currentUserReference,
                                                     ),
-                                            elevation: 3.0,
-                                            borderSide: const BorderSide(
-                                              width: 1.0,
+                                                    singleRecord: true,
+                                                  ).then((s) => s.firstOrNull);
+                                                  unawaited(
+                                                    () async {
+                                                      await _model
+                                                          .chats!.reference
+                                                          .delete();
+                                                    }(),
+                                                  );
+                                                  await currentUserReference!
+                                                      .delete();
+                                                  await authManager
+                                                      .deleteUser(context);
+                                                  if (!loggedIn) {
+                                                    _model.deleted = true;
+                                                    safeSetState(() {});
+                                                    await Future.delayed(
+                                                        const Duration(
+                                                            milliseconds:
+                                                                8000));
+
+                                                    context.goNamed('Login');
+                                                  }
+
+                                                  safeSetState(() {});
+                                                },
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'k1nsud1z' /* Yes, delete */,
+                                                ),
+                                                options: FFButtonOptions(
+                                                  width: 159.0,
+                                                  height: 45.0,
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 0.0),
+                                                  iconPadding:
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
+                                                  color: Colors.white,
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        color:
+                                                            const Color(0xFF4963C9),
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                  elevation: 3.0,
+                                                  borderSide: const BorderSide(
+                                                    color: Color(0xFF4963C9),
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          24.0),
+                                                ),
+                                              ),
                                             ),
-                                            borderRadius:
-                                                BorderRadius.circular(24.0),
-                                          ),
+                                            Align(
+                                              alignment: const AlignmentDirectional(
+                                                  1.0, 1.0),
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  context.safePop();
+                                                },
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'ko7qm0pl' /* Cancel */,
+                                                ),
+                                                options: FFButtonOptions(
+                                                  width: 159.0,
+                                                  height: 45.0,
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 0.0),
+                                                  iconPadding:
+                                                      const EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
+                                                  color: const Color(0xFF4963C9),
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Montserrat',
+                                                            color: Colors.white,
+                                                            letterSpacing: 0.0,
+                                                          ),
+                                                  elevation: 3.0,
+                                                  borderSide: const BorderSide(
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          24.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ],
-                                  ),
-                                ),
-                              ],
+                                  );
+                                } else {
+                                  return wrapWithModel(
+                                    model: _model.eliminarMensajeModel,
+                                    updateCallback: () => safeSetState(() {}),
+                                    child: const EliminarMensajeWidget(),
+                                  );
+                                }
+                              },
                             ),
                           ),
                         ),

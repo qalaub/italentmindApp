@@ -383,7 +383,7 @@ class _MySubscriptionStandardWidgetState
                                   alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      '3pyigs17' /* Connect with a wide range of N... */,
+                                      '3pyigs17' /* Connect with a wide range of s... */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)

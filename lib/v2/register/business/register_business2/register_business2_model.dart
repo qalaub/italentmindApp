@@ -10,6 +10,8 @@ class RegisterBusiness2Model extends FlutterFlowModel<RegisterBusiness2Widget> {
 
   bool termsAccept = true;
 
+  bool ndisShow = false;
+
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();

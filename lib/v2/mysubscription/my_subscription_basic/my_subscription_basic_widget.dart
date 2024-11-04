@@ -373,7 +373,7 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                     alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
-                                        'w89wnrfh' /* Connect with a wide range of N... */,
+                                        'w89wnrfh' /* Connect with a wide range of s... */,
                                       ),
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)

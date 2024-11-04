@@ -148,13 +148,16 @@ class _BlockListWidgetState extends State<BlockListWidget> {
                                   background: valueOrDefault<Color>(
                                     functions.isOdd(containerVarIndex) == true
                                         ? Colors.white
-                                        : const Color(0xFFDEE8EB),
+                                        : Colors.white,
                                     Colors.white,
                                   ),
                                   username: containerVarItem.firtsName,
                                   service: containerVarItem.rol == Roles.user
                                       ? ' '
-                                      : containerVarItem.serviceType.first,
+                                      : functions.changeServiceLanguge(
+                                          containerVarItem.serviceType.first,
+                                          FFLocalizations.of(context)
+                                              .languageCode),
                                   userRef: containerVarItem.reference,
                                   image: containerVarItem.photoUrl,
                                 );

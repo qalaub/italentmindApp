@@ -321,9 +321,35 @@ bool filterProfessionals(
     return false;
   }
 
+  // Mapa de traducción de días de la semana
+  const Map<String, String> dayTranslations = {
+    'lunes': 'Monday',
+    'martes': 'Tuesday',
+    'miércoles': 'Wednesday',
+    'jueves': 'Thursday',
+    'viernes': 'Friday',
+    'sábado': 'Saturday',
+    'domingo': 'Sunday',
+    'mon': 'Monday',
+    'tue': 'Tuesday',
+    'wed': 'Wednesday',
+    'thu': 'Thursday',
+    'fri': 'Friday',
+    'sat': 'Saturday',
+    'sun': 'Sunday',
+  };
+
+  // Traducir días de user.schedule a inglés, manteniendo la primera letra en mayúscula
+  List<String> translatedSchedule = user.schedule.map((day) {
+    String lowerDay = day.toLowerCase();
+    return dayTranslations[lowerDay] ??
+        day; // Retorna la traducción o el día original
+  }).toList();
+
   // Verificar si el horario del profesional coincide con alguno de los días deseados
-  bool hasValidSchedule = user.schedule.any((day) => schedule.contains(day));
-  if (user.schedule.length > 0) if (!hasValidSchedule) {
+  bool hasValidSchedule =
+      translatedSchedule.any((day) => schedule.contains(day));
+  if (user.schedule.isNotEmpty && !hasValidSchedule) {
     return false;
   }
 

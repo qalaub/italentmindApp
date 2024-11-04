@@ -617,7 +617,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                     text: FFLocalizations.of(
                                                             context)
                                                         .getText(
-                                                      'a9d781wx' /* Don't have an account ?    */,
+                                                      'a9d781wx' /* Don't have an account ?  */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -626,7 +626,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                           fontFamily:
                                                               'Montserrat',
                                                           color: Colors.black,
-                                                          fontSize: 13.0,
+                                                          fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -643,7 +643,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       color: Colors.black,
                                                       fontWeight:
                                                           FontWeight.w600,
-                                                      fontSize: 14.0,
+                                                      fontSize: 13.0,
                                                       decoration: TextDecoration
                                                           .underline,
                                                     ),

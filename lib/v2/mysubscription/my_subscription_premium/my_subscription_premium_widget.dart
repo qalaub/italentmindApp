@@ -383,7 +383,7 @@ class _MySubscriptionPremiumWidgetState
                                   alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      '6kjg63vd' /* List several staff members, in... */,
+                                      '6kjg63vd' /* List multiple staff members, i... */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
@@ -521,7 +521,7 @@ class _MySubscriptionPremiumWidgetState
                                   alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
-                                      'w0w3w27g' /* Get notifications when partici... */,
+                                      'w0w3w27g' /* Receive notifications when par... */,
                                     ),
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)

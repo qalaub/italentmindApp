@@ -340,8 +340,8 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                         Align(
                           alignment: const AlignmentDirectional(0.05, -0.19),
                           child: Container(
-                            width: 160.0,
-                            height: 18.0,
+                            width: 168.0,
+                            height: 32.0,
                             decoration: const BoxDecoration(),
                             child: Align(
                               alignment: const AlignmentDirectional(0.0, 0.0),
@@ -349,6 +349,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                 functions.changeServiceLanguge(
                                     containerUsersRecord.serviceType.first,
                                     FFLocalizations.of(context).languageCode),
+                                textAlign: TextAlign.center,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -363,9 +364,9 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                           ),
                         ),
                         const SizedBox(
-                          width: 160.0,
+                          width: 166.0,
                           child: Divider(
-                            height: 11.0,
+                            height: 8.0,
                             thickness: 1.0,
                             indent: 5.0,
                             endIndent: 5.0,
@@ -418,8 +419,18 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                 containerUsersRecord
                                                                 .ndis !=
                                                             ''
-                                                    ? 'Registered Provider'
-                                                    : 'Unregistered Provider',
+                                                    ? (FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode ==
+                                                            'en'
+                                                        ? 'Registered Provider'
+                                                        : 'Proveedor registrado')
+                                                    : (FFLocalizations.of(
+                                                                    context)
+                                                                .languageCode ==
+                                                            'en'
+                                                        ? 'Unregistered Provider'
+                                                        : 'Proveedor no registrado'),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium

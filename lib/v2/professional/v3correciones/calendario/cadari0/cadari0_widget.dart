@@ -268,7 +268,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                                           .languageCode ==
                                                       'en'
                                                   ? 'You must select at least one day'
-                                                  : 'Debes seleccionar al menos un día',
+                                                  : 'Debe seleccionar por lo menos un día.',
                                               style: TextStyle(
                                                 color:
                                                     FlutterFlowTheme.of(context)

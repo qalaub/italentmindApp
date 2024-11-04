@@ -79,10 +79,10 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
   final dateMask = MaskTextInputFormatter(mask: '##/##/####');
   String? Function(BuildContext, String?)? dateTextControllerValidator;
   // State field(s) for email widget.
-  FocusNode? emailFocusNode1;
-  TextEditingController? emailTextController1;
-  String? Function(BuildContext, String?)? emailTextController1Validator;
-  String? _emailTextController1Validator(BuildContext context, String? val) {
+  FocusNode? emailFocusNode;
+  TextEditingController? emailTextController;
+  String? Function(BuildContext, String?)? emailTextControllerValidator;
+  String? _emailTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         '33ukxv9t' /* Field is required */,
@@ -99,26 +99,27 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
 
   // Stores action output result for [Firestore Query - Query a collection] action in email widget.
   int? emailExists;
-  // State field(s) for email widget.
-  FocusNode? emailFocusNode2;
-  TextEditingController? emailTextController2;
-  String? Function(BuildContext, String?)? emailTextController2Validator;
+  // State field(s) for emailC widget.
+  FocusNode? emailCFocusNode;
+  TextEditingController? emailCTextController;
+  String? Function(BuildContext, String?)? emailCTextControllerValidator;
   // State field(s) for phone widget.
   FocusNode? phoneFocusNode;
   TextEditingController? phoneTextController;
+  final phoneMask = MaskTextInputFormatter(mask: '(###) ###-####');
   String? Function(BuildContext, String?)? phoneTextControllerValidator;
   String? _phoneTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '4thux0tn' /* Field is required */,
+        'bv81mrlb' /* Field is required */,
       );
     }
 
-    if (val.length < 10) {
-      return 'Requires at least 10 characters.';
+    if (val.length < 14) {
+      return 'Requires at least 14 characters.';
     }
-    if (val.length > 10) {
-      return 'Maximum 10 characters allowed, currently ${val.length}.';
+    if (val.length > 14) {
+      return 'Maximum 14 characters allowed, currently ${val.length}.';
     }
 
     return null;
@@ -144,7 +145,7 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
     formC = ScrollController();
     firstNameTextControllerValidator = _firstNameTextControllerValidator;
     lastnameTextControllerValidator = _lastnameTextControllerValidator;
-    emailTextController1Validator = _emailTextController1Validator;
+    emailTextControllerValidator = _emailTextControllerValidator;
     phoneTextControllerValidator = _phoneTextControllerValidator;
     columnController = ScrollController();
     listViewController = ScrollController();
@@ -162,11 +163,11 @@ class RegisterUser1Model extends FlutterFlowModel<RegisterUser1Widget> {
     dateFocusNode?.dispose();
     dateTextController?.dispose();
 
-    emailFocusNode1?.dispose();
-    emailTextController1?.dispose();
+    emailFocusNode?.dispose();
+    emailTextController?.dispose();
 
-    emailFocusNode2?.dispose();
-    emailTextController2?.dispose();
+    emailCFocusNode?.dispose();
+    emailCTextController?.dispose();
 
     phoneFocusNode?.dispose();
     phoneTextController?.dispose();

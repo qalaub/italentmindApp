@@ -4,6 +4,10 @@ import 'register_user2_widget.dart' show RegisterUser2Widget;
 import 'package:flutter/material.dart';
 
 class RegisterUser2Model extends FlutterFlowModel<RegisterUser2Widget> {
+  ///  Local state fields for this page.
+
+  bool ndisShow = false;
+
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();

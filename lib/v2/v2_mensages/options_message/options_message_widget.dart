@@ -47,7 +47,7 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
       alignment: const AlignmentDirectional(1.0, -1.0),
       child: AuthUserStreamWidget(
         builder: (context) => Container(
-          width: MediaQuery.sizeOf(context).width * 0.55,
+          width: MediaQuery.sizeOf(context).width * 0.729,
           height: currentUserDocument?.rol == Roles.user ? 137.0 : 88.0,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -118,7 +118,9 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                             fontWeight: FontWeight.w500,
                           ),
                     ),
-                  ].addToStart(const SizedBox(width: 16.0)),
+                  ]
+                      .addToStart(const SizedBox(width: 16.0))
+                      .addToEnd(const SizedBox(width: 16.0)),
                 ),
               ),
               if (currentUserDocument?.rol == Roles.user)
@@ -149,19 +151,25 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          '7zfllcgm' /* View Profile */,
+                      Align(
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '7zfllcgm' /* View Profile */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Montserrat',
+                                    color: const Color(0xFF0F0E0F),
+                                    fontSize: 18.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Montserrat',
-                              color: const Color(0xFF0F0E0F),
-                              fontSize: 18.0,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.w500,
-                            ),
                       ),
-                    ].addToStart(const SizedBox(width: 16.0)),
+                    ]
+                        .addToStart(const SizedBox(width: 16.0))
+                        .addToEnd(const SizedBox(width: 16.0)),
                   ),
                 ),
               const Divider(
@@ -191,7 +199,7 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                 child: Row(
                   key: const ValueKey('report'),
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
                       FFLocalizations.of(context).getText(
@@ -204,7 +212,9 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                             fontWeight: FontWeight.w500,
                           ),
                     ),
-                  ],
+                  ]
+                      .addToStart(const SizedBox(width: 16.0))
+                      .addToEnd(const SizedBox(width: 16.0)),
                 ),
               ),
             ].addToStart(const SizedBox(height: 16.0)),
