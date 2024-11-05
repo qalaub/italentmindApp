@@ -76,7 +76,7 @@ class _BarradebusquedaWidgetState extends State<BarradebusquedaWidget> {
                       fillColor: Colors.white,
                       icon: const Icon(
                         Icons.arrow_back,
-                        color: Color(0xFFDB00FF),
+                        color: Color(0xFF1D69D7),
                         size: 24.0,
                       ),
                       onPressed: () {
@@ -167,7 +167,7 @@ class _BarradebusquedaWidgetState extends State<BarradebusquedaWidget> {
                     ),
                     icon: const Icon(
                       Icons.filter_list_alt,
-                      color: Color(0xFFDB00FF),
+                      color: Color(0xFF1D69D7),
                       size: 15.0,
                     ),
                     options: FFButtonOptions(

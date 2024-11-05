@@ -209,7 +209,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/images/logo-italente_sinfondo-negro.png',
+                                    'assets/images/logo-pegados.png',
                                     width: 180.0,
                                     height: 100.0,
                                     fit: BoxFit.fitWidth,
@@ -242,6 +242,8 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                     controller: _model.formC,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Align(
                                           alignment:
@@ -291,25 +293,30 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                         Align(
                                           alignment: const AlignmentDirectional(
                                               -0.84, -0.73),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
-                                            child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'm647jg73' /* * First name */,
+                                          child: Container(
+                                            decoration: const BoxDecoration(),
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 15.0, 0.0, 15.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'm647jg73' /* * First name */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Montserrat',
+                                                          color: Colors.black,
+                                                          fontSize: 15.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
                                             ),
                                           ),
                                         ),
@@ -1145,25 +1152,30 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                         Align(
                                           alignment: const AlignmentDirectional(
                                               -0.84, -0.73),
-                                          child: Padding(
-                                            padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
-                                            child: Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                '6374m3tb' /*   * Confirm email address */,
+                                          child: Container(
+                                            decoration: const BoxDecoration(),
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 15.0, 0.0, 15.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '6374m3tb' /*   * Confirm email address */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Montserrat',
+                                                          color: Colors.black,
+                                                          fontSize: 15.0,
+                                                          letterSpacing: 0.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
                                             ),
                                           ),
                                         ),
@@ -1342,7 +1354,7 @@ class _RegisterUser1WidgetState extends State<RegisterUser1Widget>
                                         ),
                                         Align(
                                           alignment: const AlignmentDirectional(
-                                              -0.54, -0.73),
+                                              -0.84, -0.73),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(

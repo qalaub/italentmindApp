@@ -87,10 +87,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
             alignment: const AlignmentDirectional(0.0, -0.99),
             child: AuthUserStreamWidget(
               builder: (context) => FutureBuilder<List<UsersRecord>>(
-                future: queryUsersRecordOnce(
-                  queryBuilder: (usersRecord) =>
-                      usersRecord.orderBy('update_time'),
-                ),
+                future: queryUsersRecordOnce(),
                 builder: (context, snapshot) {
                   // Customize what your widget looks like when it's loading.
                   if (!snapshot.hasData) {

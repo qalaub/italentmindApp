@@ -776,7 +776,7 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: Image.asset(
-                                'assets/images/Group_42_(1).png',
+                                'assets/images/Group_98.png',
                                 width: double.infinity,
                                 height: double.infinity,
                                 fit: BoxFit.cover,

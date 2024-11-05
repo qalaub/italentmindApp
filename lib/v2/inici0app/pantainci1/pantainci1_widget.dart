@@ -28,8 +28,12 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (!FFAppState().showTutorial) {
-        context.goNamed('tinderv2C1');
+      if (FFAppState().deletedUser) {
+        context.goNamed('DeleteaccountSuccess');
+      } else {
+        if (!FFAppState().showTutorial) {
+          context.goNamed('tinderv2C1');
+        }
       }
     });
   }

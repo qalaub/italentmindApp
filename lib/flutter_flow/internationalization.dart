@@ -823,8 +823,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
     '7mkqpzqn': {
-      'en': 'I agree to the Italent app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación Italent',
+      'en': 'I agree to the iTalentMind app\'s privacy policy',
+      'es': 'Acepto la política de privacidad de la aplicación iTalentMind',
     },
     '8jeu8yll': {
       'en': 'Please accept T&Cs to create your account',
@@ -882,8 +882,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Login
   {
     'agbd4cwr': {
-      'en': 'Log in to your Italent account',
-      'es': 'Inicie sesión en su cuenta de italentmind',
+      'en': 'Log in to your iTalentMind account',
+      'es': 'Inicie sesión en su cuenta de iTalentMind',
     },
     'so3hdls2': {
       'en': 'User Name',
@@ -903,7 +903,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'xf8yq72c': {
       'en': ' Sign up for Italentmind',
-      'es': 'Regístrate en Italentmind ',
+      'es': ' Regístrate en Italentmind',
     },
     '33ws4vq0': {
       'en': 'Don\'t Have An Account? ',
@@ -1273,9 +1273,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'a0ekxe2q': {
       'en':
-          'Register a new business profile\n(This option is for any provider or professional that delivers services under the NDIS umbrella, including sole traders and/or companies)',
+          'Register a new business profile (This option is for any provider or professional offering support services, including sole traders and/or companies).',
       'es':
-          'Registrar un nuevo perfil comercial\n(Esta opción es para cualquier proveedor o profesional que preste servicios bajo el paraguas del NDIS, incluidos comerciantes individuales y/o empresas)',
+          'Registra un nuevo perfil de negocio\n(Esta opción es para cualquier proveedor o profesional que ofrezca servicios de apoyo, incluyendo trabajadores independientes y/o empresas).',
     },
     'm9ysesh3': {
       'en':
@@ -1686,8 +1686,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
     'wrexpraz': {
-      'en': 'I agree to the Italent app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación Italent',
+      'en': 'I agree to the iTalentMind app\'s privacy policy',
+      'es': 'Acepto la política de privacidad de la aplicación iTalentMind',
     },
     'n9zeysic': {
       'en': 'Please accept T&Cs to create your account',
@@ -2669,31 +2669,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Deleteaccount
   {
-    'zwnfi8lu': {
+    'p2lgxd7f': {
       'en': 'Delete account',
       'es': 'Eliminar cuenta',
     },
-    'gvkte7gr': {
+    'x6d6bhar': {
       'en':
           'Deleting your account will be permanent, you will lose all your information and access to the current app, keep in mind that this is an irreversible process.',
       'es':
           'Su cuenta será eliminada permanentemente, perderá toda su información y el acceso a la app actual, tenga en cuenta que este es un proceso irreversible.',
     },
-    'ryxuog6l': {
+    'eyhsvphq': {
       'en': '  Are you sure you want to delete your account?',
       'es': ' ¿Esta seguro de que desea eliminar su cuenta?',
     },
-    'uyqrc6lf': {
+    'zrdqn1o7': {
       'en':
           'Deleting your account will be permanent, you will lose all your information and access to the current app, keep in mind that this is an irreversible process. Are you sure you want to delete your account?',
       'es':
           'Eliminar tu cuenta será permanente, perderás toda tu información y acceso a la aplicación actual, ten en cuenta que este es un proceso irreversible. ¿Estás seguro que deseas eliminar tu cuenta?',
     },
-    'k1nsud1z': {
+    'gl23liof': {
       'en': 'Yes, delete',
       'es': 'Sí, eliminar',
     },
-    'ko7qm0pl': {
+    '6qw9g1uf': {
       'en': 'Cancel',
       'es': 'Cancelar',
     },
@@ -3097,7 +3097,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '3blsmgx7': {
       'en': ':  ',
-      'es': ':',
+      'es': ': ',
     },
     '0rovwbhn': {
       'en': 'Therapeut',
@@ -3109,7 +3109,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'd5fsigxw': {
       'en': ':  ',
-      'es': ':',
+      'es': ': ',
     },
     'oil7fmgv': {
       'en': 'Hello World',

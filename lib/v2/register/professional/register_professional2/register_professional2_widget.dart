@@ -186,7 +186,7 @@ class _RegisterProfessional2WidgetState
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/images/logo-italente_sinfondo-negro.png',
+                                    'assets/images/logo-pegados.png',
                                     width: 180.0,
                                     height: 100.0,
                                     fit: BoxFit.fitWidth,
@@ -1867,7 +1867,7 @@ class _RegisterProfessional2WidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '7mkqpzqn' /* I agree to the Italent app's p... */,
+                                                              '7mkqpzqn' /* I agree to the iTalentMind app... */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)

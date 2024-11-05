@@ -123,7 +123,7 @@ class FFAppState extends ChangeNotifier {
     _currentChat = value;
   }
 
-  LatLng? _tempLocation = const LatLng(38.7945952, -106.5348379);
+  LatLng? _tempLocation = const LatLng(41.2033216, -77.1945247);
   LatLng? get tempLocation => _tempLocation;
   set tempLocation(LatLng? value) {
     _tempLocation = value;
@@ -163,6 +163,12 @@ class FFAppState extends ChangeNotifier {
   int get zoomFilter => _zoomFilter;
   set zoomFilter(int value) {
     _zoomFilter = value;
+  }
+
+  bool _deletedUser = false;
+  bool get deletedUser => _deletedUser;
+  set deletedUser(bool value) {
+    _deletedUser = value;
   }
 
   final _userDocQueryManager = FutureRequestManager<UsersRecord>();

@@ -186,7 +186,26 @@ class _MapsAustralianState extends State<MapsAustralian> {
     return degrees * math.pi / 180;
   }
 
+// Función para aplicar filtros
   bool _applyFilters(UsersRecord user) {
+    // Mapa de traducción de días de la semana
+    const Map<String, String> dayTranslations = {
+      'lunes': 'Monday',
+      'martes': 'Tuesday',
+      'miércoles': 'Wednesday',
+      'jueves': 'Thursday',
+      'viernes': 'Friday',
+      'sábado': 'Saturday',
+      'domingo': 'Sunday',
+      'mon': 'Monday',
+      'tue': 'Tuesday',
+      'wed': 'Wednesday',
+      'thu': 'Thursday',
+      'fri': 'Friday',
+      'sat': 'Saturday',
+      'sun': 'Sunday',
+    };
+
     // Si es la primera carga, no aplicar filtros
     if (isFirstLoad) {
       return true;
@@ -202,16 +221,17 @@ class _MapsAustralianState extends State<MapsAustralian> {
         widget.service!.isEmpty ||
         user.serviceType.any((service) => widget.service!.contains(service));
 
-    // Verifica si el usuario cumple con los filtros de idioma
-    bool languageMatch = widget.language == null ||
-        widget.language!.isEmpty ||
-        (user.languagues != null &&
-            user.languagues!.contains(widget.language!));
+    // Traduce el horario del usuario a inglés antes de comparar
+    List<String> translatedSchedule = user.schedule.map((day) {
+      String lowerDay = day.toLowerCase();
+      return dayTranslations[lowerDay] ??
+          day; // Retorna la traducción o el día original
+    }).toList();
 
     // Verifica si el usuario tiene algún día en común con el horario especificado
     bool scheduleMatch = widget.schedule == null ||
         widget.schedule!.isEmpty ||
-        user.schedule.any((day) => widget.schedule!.contains(day));
+        translatedSchedule.any((day) => widget.schedule!.contains(day));
 
     // Si el usuario es profesional, no se aplican los filtros
     if (widget.isProfessional == true) {
@@ -219,7 +239,7 @@ class _MapsAustralianState extends State<MapsAustralian> {
     }
 
     // Retorna verdadero si cumple con alguno de los filtros
-    return ageMatch || serviceMatch || languageMatch || scheduleMatch;
+    return ageMatch || serviceMatch || scheduleMatch;
   }
 
   void navigateToProfileInfo(UsersRecord user) {
@@ -247,16 +267,24 @@ class _MapsAustralianState extends State<MapsAustralian> {
           ),
           icon: currentLocationMarkerIcon ??
               google_maps.BitmapDescriptor.defaultMarkerWithHue(
-                  google_maps.BitmapDescriptor.hueRed),
+                  google_maps.BitmapDescriptor.hueGreen),
         ),
       );
     }
 
+    // Agrega los marcadores de los usuarios
     if (widget.markers != null) {
       for (UsersRecord user in widget.markers!) {
         final LatLng? marker = user.suburb;
+
+        // Verifica que `user.suburb` sea una ubicación válida.
         if (marker != null) {
-          if (_applyFilters(user)) {
+          bool isUserMatching = _applyFilters(user);
+          print(
+              'Usuario ${user.uid} coincide con los filtros: $isUserMatching');
+
+          if (isUserMatching) {
+            // Agrega el marcador solo si está dentro de la distancia, si la distancia es especificada.
             if (widget.distance != null) {
               final double distance = _calculateDistance(
                 widget.current!.latitude,
@@ -264,6 +292,9 @@ class _MapsAustralianState extends State<MapsAustralian> {
                 marker.latitude,
                 marker.longitude,
               );
+              print('Distancia al usuario ${user.uid}: $distance');
+
+              // Verifica que el marcador esté dentro del rango especificado.
               if (distance <= widget.distance!) {
                 markers.add(
                   google_maps.Marker(
@@ -282,6 +313,7 @@ class _MapsAustralianState extends State<MapsAustralian> {
                 );
               }
             } else {
+              // Si no se especifica una distancia, agrega el marcador directamente.
               markers.add(
                 google_maps.Marker(
                   markerId: google_maps.MarkerId(user.uid),
@@ -299,6 +331,8 @@ class _MapsAustralianState extends State<MapsAustralian> {
               );
             }
           }
+        } else {
+          print('El usuario ${user.uid} no tiene una ubicación válida.');
         }
       }
     }
@@ -307,53 +341,15 @@ class _MapsAustralianState extends State<MapsAustralian> {
       width: widget.width,
       height: widget.height,
       child: google_maps.GoogleMap(
-        initialCameraPosition: google_maps.CameraPosition(
-          target:
-              google_maps.LatLng(37.0902, -95.7129), // Centro de Estados Unidos
-          zoom: 4,
-        ),
-        onMapCreated: (google_maps.GoogleMapController controller) {
-          mapController = controller;
-          mapController!.moveCamera(
-            google_maps.CameraUpdate.newLatLngBounds(usaBounds, 0),
-          );
-
-          if (widget.current != null) {
-            mapController!.animateCamera(
-              google_maps.CameraUpdate.newCameraPosition(
-                google_maps.CameraPosition(
-                  target: google_maps.LatLng(
-                    widget.current!.latitude,
-                    widget.current!.longitude,
-                  ),
-                  zoom: 14,
-                ),
-              ),
-            );
-          }
-        },
-        mapType: google_maps.MapType.normal,
-        myLocationEnabled: true,
-        myLocationButtonEnabled: false,
-        zoomControlsEnabled: false,
-        minMaxZoomPreference: google_maps.MinMaxZoomPreference(4, 10),
-        cameraTargetBounds: google_maps.CameraTargetBounds(usaBounds),
+        onMapCreated: (controller) => mapController = controller,
         markers: markers,
-        onCameraMove: (google_maps.CameraPosition position) {
-          print('Nivel de zoom actual: ${position.zoom}');
-          if (_lastZoom == null || (position.zoom - _lastZoom!).abs() > 0.1) {
-            _lastZoom = position.zoom;
-            int tempNumber = ((10 / position.zoom) * 100.0).toInt();
-            FFAppState().update(() {
-              FFAppState().zoomFilter = tempNumber;
-            });
-          }
-          if (!usaBounds.contains(position.target)) {
-            mapController!.moveCamera(
-              google_maps.CameraUpdate.newLatLngBounds(usaBounds, 0),
-            );
-          }
-        },
+        initialCameraPosition: google_maps.CameraPosition(
+          target: widget.current != null
+              ? google_maps.LatLng(
+                  widget.current!.latitude, widget.current!.longitude)
+              : google_maps.LatLng(-33.8688, 151.2093), // Coordenadas de Sídney
+          zoom: _lastZoom ?? 10.0,
+        ),
       ),
     );
   }

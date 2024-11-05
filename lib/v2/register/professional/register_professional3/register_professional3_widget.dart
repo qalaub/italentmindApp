@@ -100,14 +100,14 @@ class _RegisterProfessional3WidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -0.85),
+                              alignment: const AlignmentDirectional(0.0, -0.84),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 6.0, 0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/images/logo-italente_sinfondo-negro.png',
+                                    'assets/images/logo-pegados.png',
                                     width: 180.0,
                                     height: 100.0,
                                     fit: BoxFit.fitWidth,

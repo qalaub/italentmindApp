@@ -106,8 +106,8 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
               : null;
 
           return Container(
-            width: MediaQuery.sizeOf(context).width * 0.92,
-            height: 124.0,
+            width: 300.0,
+            height: 145.0,
             decoration: BoxDecoration(
               color: const Color(0xFF4963C9),
               borderRadius: BorderRadius.circular(22.0),
@@ -119,6 +119,8 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                 Align(
                   alignment: const AlignmentDirectional(0.0, -0.6),
                   child: Container(
+                    width: 63.0,
+                    height: 63.0,
                     decoration: const BoxDecoration(),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
@@ -171,7 +173,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                         .override(
                                           fontFamily: 'Montserrat',
                                           color: Colors.white,
-                                          fontSize: 17.0,
+                                          fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                         ),
@@ -245,6 +247,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                 0.0, 8.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const Icon(
                                   FFIcons.kubicationplane,
@@ -252,6 +255,8 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                   size: 20.0,
                                 ),
                                 Container(
+                                  width: 180.0,
+                                  height: 40.0,
                                   decoration: const BoxDecoration(),
                                   child: RichText(
                                     textScaler:
@@ -290,7 +295,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                           .override(
                                             fontFamily: 'Montserrat',
                                             color: Colors.white,
-                                            fontSize: 16.0,
+                                            fontSize: 14.0,
                                             letterSpacing: 0.0,
                                           ),
                                     ),

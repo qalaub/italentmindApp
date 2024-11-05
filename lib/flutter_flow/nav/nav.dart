@@ -540,6 +540,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Rejectedlist',
               path: 'rejectedlist',
               builder: (context, params) => const RejectedlistWidget(),
+            ),
+            FFRoute(
+              name: 'DeleteaccountSuccess',
+              path: 'deleteaccountSuccess',
+              builder: (context, params) => const DeleteaccountSuccessWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

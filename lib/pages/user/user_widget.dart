@@ -3,6 +3,7 @@ import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:provider/provider.dart';
 import 'user_model.dart';
 export 'user_model.dart';
 
@@ -25,10 +26,14 @@ class _UserWidgetState extends State<UserWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (currentUserDocument?.rol == Roles.user) {
-        context.pushNamed('tinderv2C1');
+      if (FFAppState().deletedUser) {
+        context.goNamed('DeleteaccountSuccess');
       } else {
-        context.pushNamed('HomeSearch');
+        if (currentUserDocument?.rol == Roles.user) {
+          context.pushNamed('tinderv2C1');
+        } else {
+          context.pushNamed('HomeSearch');
+        }
       }
     });
   }
@@ -42,6 +47,8 @@ class _UserWidgetState extends State<UserWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(

@@ -106,7 +106,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/images/logo-italente_sinfondo-negro.png',
+                                    'assets/images/logo-pegados.png',
                                     width: 180.0,
                                     height: 100.0,
                                     fit: BoxFit.cover,
@@ -146,7 +146,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'agbd4cwr' /* Log in to your Italent account */,
+                                              'agbd4cwr' /* Log in to your iTalentMind acc... */,
                                             ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
@@ -602,22 +602,103 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         ),
                                       ),
                                       Flexible(
-                                        child: Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, -0.7),
-                                          child: Container(
-                                            decoration: const BoxDecoration(),
-                                            child: RichText(
-                                              textScaler: MediaQuery.of(context)
-                                                  .textScaler,
-                                              key: const ValueKey('signup'),
-                                              text: TextSpan(
-                                                children: [
-                                                  TextSpan(
-                                                    text: FFLocalizations.of(
-                                                            context)
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Align(
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, -0.7),
+                                              child: Container(
+                                                decoration: const BoxDecoration(),
+                                                child: RichText(
+                                                  textScaler:
+                                                      MediaQuery.of(context)
+                                                          .textScaler,
+                                                  key: const ValueKey('signup'),
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'a9d781wx' /* Don't have an account ?  */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Montserrat',
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12.0,
+                                                              letterSpacing:
+                                                                  0.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500,
+                                                            ),
+                                                      ),
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'xf8yq72c' /*  Sign up for Italentmind */,
+                                                        ),
+                                                        style:
+                                                            GoogleFonts.getFont(
+                                                          'Montserrat',
+                                                          color: Colors.black,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 13.0,
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .underline,
+                                                        ),
+                                                        mouseCursor:
+                                                            SystemMouseCursors
+                                                                .click,
+                                                        recognizer:
+                                                            TapGestureRecognizer()
+                                                              ..onTap =
+                                                                  () async {
+                                                                context.pushNamed(
+                                                                    'Escoger_Usuario');
+                                                              },
+                                                      )
+                                                    ],
+                                                    style: const TextStyle(),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Align(
+                                              alignment: const AlignmentDirectional(
+                                                  0.0, 1.0),
+                                              child: Container(
+                                                decoration: const BoxDecoration(),
+                                                child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    context.pushNamed(
+                                                        'recuperarcontrasea');
+                                                  },
+                                                  child: Text(
+                                                    key: const ValueKey(
+                                                        'forgotPssword'),
+                                                    FFLocalizations.of(context)
                                                         .getText(
-                                                      'a9d781wx' /* Don't have an account ?  */,
+                                                      '50xau5y9' /* Forgot your password */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -625,86 +706,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 12.0,
+                                                          color:
+                                                              const Color(0xFF040404),
+                                                          fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
-                                                              FontWeight.w500,
+                                                              FontWeight.w600,
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .underline,
                                                         ),
                                                   ),
-                                                  TextSpan(
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'xf8yq72c' /*  Sign up for Italentmind */,
-                                                    ),
-                                                    style: GoogleFonts.getFont(
-                                                      'Montserrat',
-                                                      color: Colors.black,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontSize: 13.0,
-                                                      decoration: TextDecoration
-                                                          .underline,
-                                                    ),
-                                                    mouseCursor:
-                                                        SystemMouseCursors
-                                                            .click,
-                                                    recognizer:
-                                                        TapGestureRecognizer()
-                                                          ..onTap = () async {
-                                                            context.pushNamed(
-                                                                'Escoger_Usuario');
-                                                          },
-                                                  )
-                                                ],
-                                                style: const TextStyle(),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 1.0),
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 16.0, 0.0, 16.0),
-                                          child: Container(
-                                            decoration: const BoxDecoration(),
-                                            child: InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                context.pushNamed(
-                                                    'recuperarcontrasea');
-                                              },
-                                              child: Text(
-                                                key: const ValueKey('forgotPssword'),
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  '50xau5y9' /* Forgot your password */,
                                                 ),
-                                                style: FlutterFlowTheme.of(
-                                                        context)
-                                                    .bodyMedium
-                                                    .override(
-                                                      fontFamily: 'Montserrat',
-                                                      color: const Color(0xFF040404),
-                                                      fontSize: 14.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      decoration: TextDecoration
-                                                          .underline,
-                                                    ),
                                               ),
                                             ),
-                                          ),
+                                          ].divide(const SizedBox(height: 16.0)),
                                         ),
                                       ),
                                     ],

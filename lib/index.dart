@@ -76,3 +76,5 @@ export '/v2/v2_mensages/chat_2_details_copy/chat2_details_copy_widget.dart'
     show Chat2DetailsCopyWidget;
 export '/v2/register/user/avatars/avatars_widget.dart' show AvatarsWidget;
 export '/dislike/rejectedlist/rejectedlist_widget.dart' show RejectedlistWidget;
+export '/deleteaccount_success/deleteaccount_success_widget.dart'
+    show DeleteaccountSuccessWidget;

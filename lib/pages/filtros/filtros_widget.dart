@@ -1017,7 +1017,7 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                   ..updateServices(
                                     (e) => e.add(
                                         _model.coordinatorsValue == true
-                                            ? 'Support  Coordinators'
+                                            ? 'Support Coordinators'
                                             : ' '),
                                   )
                                   ..updateSchedule(

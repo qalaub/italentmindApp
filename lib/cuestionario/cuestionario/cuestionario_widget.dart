@@ -1633,7 +1633,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                      ],
+                                      ].divide(const SizedBox(width: 16.0)),
                                     ),
                                   ),
                                 ].addToEnd(const SizedBox(height: 32.0)),

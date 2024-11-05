@@ -102,7 +102,7 @@ class _RegisterPfofesional4WidgetState
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.asset(
-                                      'assets/images/logo-italente_sinfondo-negro.png',
+                                      'assets/images/logo-pegados.png',
                                       width: 180.0,
                                       height: 100.0,
                                       fit: BoxFit.fitWidth,
