@@ -21,7 +21,7 @@ class V3fv0ritesModel extends FlutterFlowModel<V3fv0ritesWidget> {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for RatingBar widget.
-  double? ratingBarValue;
+  double? ratingBarValue2;
   // Stores action output result for [Firestore Query - Query a collection] action in RatingBar widget.
   ReviewsRecord? reviewsC;
   // Model for AddFavorites component.

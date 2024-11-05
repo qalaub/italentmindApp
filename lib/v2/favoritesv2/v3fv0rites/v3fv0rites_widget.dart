@@ -16,9 +16,11 @@ class V3fv0ritesWidget extends StatefulWidget {
   const V3fv0ritesWidget({
     super.key,
     required this.profesionalId,
-  });
+    bool? isMap,
+  }) : isMap = isMap ?? false;
 
   final DocumentReference? profesionalId;
+  final bool isMap;
 
   @override
   State<V3fv0ritesWidget> createState() => _V3fv0ritesWidgetState();
@@ -439,72 +441,107 @@ perso... */
                                   ),
                                   Align(
                                     alignment: const AlignmentDirectional(-1.0, 0.0),
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      child: RatingBar.builder(
-                                        onRatingUpdate: (newValue) async {
-                                          safeSetState(() =>
-                                              _model.ratingBarValue = newValue);
-                                          _model.reviewsC =
-                                              await queryReviewsRecordOnce(
-                                            queryBuilder: (reviewsRecord) =>
-                                                reviewsRecord
-                                                    .where(
-                                                      'participant',
-                                                      isEqualTo:
-                                                          currentUserReference,
-                                                    )
-                                                    .where(
-                                                      'professional',
-                                                      isEqualTo:
-                                                          widget.profesionalId,
-                                                    ),
-                                            singleRecord: true,
-                                          ).then((s) => s.firstOrNull);
-                                          if (_model.reviewsC?.reference !=
-                                              null) {
-                                            await _model.reviewsC!.reference
-                                                .update(createReviewsRecordData(
-                                              num: _model.ratingBarValue
-                                                  ?.round(),
-                                            ));
-                                          } else {
-                                            await ReviewsRecord.collection
-                                                .doc()
-                                                .set(createReviewsRecordData(
-                                                  num: _model.ratingBarValue
-                                                      ?.round(),
-                                                  professional:
-                                                      widget.profesionalId,
-                                                  participant:
-                                                      currentUserReference,
-                                                ));
-                                          }
+                                    child: Builder(
+                                      builder: (context) {
+                                        if (widget.isMap) {
+                                          return RatingBarIndicator(
+                                            itemBuilder: (context, index) =>
+                                                const Icon(
+                                              Icons.star_rate,
+                                              color: Color(0xFFF9BF11),
+                                            ),
+                                            direction: Axis.horizontal,
+                                            rating: valueOrDefault<double>(
+                                              functions
+                                                  .averagueReviews(
+                                                      containerReviewsRecordList
+                                                          .toList())
+                                                  .toDouble(),
+                                              0.0,
+                                            ),
+                                            unratedColor: const Color(0x4D040202),
+                                            itemCount: 5,
+                                            itemSize: 15.0,
+                                          );
+                                        } else {
+                                          return InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            child: RatingBar.builder(
+                                              onRatingUpdate: (newValue) async {
+                                                safeSetState(() =>
+                                                    _model.ratingBarValue2 =
+                                                        newValue);
+                                                _model.reviewsC =
+                                                    await queryReviewsRecordOnce(
+                                                  queryBuilder:
+                                                      (reviewsRecord) =>
+                                                          reviewsRecord
+                                                              .where(
+                                                                'participant',
+                                                                isEqualTo:
+                                                                    currentUserReference,
+                                                              )
+                                                              .where(
+                                                                'professional',
+                                                                isEqualTo: widget
+                                                                    .profesionalId,
+                                                              ),
+                                                  singleRecord: true,
+                                                ).then((s) => s.firstOrNull);
+                                                if (_model
+                                                        .reviewsC?.reference !=
+                                                    null) {
+                                                  await _model
+                                                      .reviewsC!.reference
+                                                      .update(
+                                                          createReviewsRecordData(
+                                                    num: _model.ratingBarValue2
+                                                        ?.round(),
+                                                  ));
+                                                } else {
+                                                  await ReviewsRecord.collection
+                                                      .doc()
+                                                      .set(
+                                                          createReviewsRecordData(
+                                                        num: _model
+                                                            .ratingBarValue2
+                                                            ?.round(),
+                                                        professional: widget
+                                                            .profesionalId,
+                                                        participant:
+                                                            currentUserReference,
+                                                      ));
+                                                }
 
-                                          safeSetState(() {});
-                                        },
-                                        itemBuilder: (context, index) => const Icon(
-                                          Icons.star_rate,
-                                          color: Color(0xFFF9BF11),
-                                        ),
-                                        direction: Axis.horizontal,
-                                        initialRating: _model.ratingBarValue ??=
-                                            valueOrDefault<double>(
-                                          functions
-                                              .averagueReviews(
-                                                  containerReviewsRecordList
-                                                      .toList())
-                                              .toDouble(),
-                                          0.0,
-                                        ),
-                                        unratedColor: const Color(0x4D040202),
-                                        itemCount: 5,
-                                        itemSize: 15.0,
-                                        glowColor: const Color(0xFFF9BF11),
-                                      ),
+                                                safeSetState(() {});
+                                              },
+                                              itemBuilder: (context, index) =>
+                                                  const Icon(
+                                                Icons.star_rate,
+                                                color: Color(0xFFF9BF11),
+                                              ),
+                                              direction: Axis.horizontal,
+                                              initialRating:
+                                                  _model.ratingBarValue2 ??=
+                                                      valueOrDefault<double>(
+                                                functions
+                                                    .averagueReviews(
+                                                        containerReviewsRecordList
+                                                            .toList())
+                                                    .toDouble(),
+                                                0.0,
+                                              ),
+                                              unratedColor: const Color(0x4D040202),
+                                              itemCount: 5,
+                                              itemSize: 15.0,
+                                              glowColor: const Color(0xFFF9BF11),
+                                            ),
+                                          );
+                                        }
+                                      },
                                     ),
                                   ),
                                   Align(

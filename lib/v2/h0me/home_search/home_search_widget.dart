@@ -262,6 +262,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                                     profesionalId:
                                                         containerVarItem
                                                             .reference,
+                                                    isMap: true,
                                                   );
                                                 },
                                               );
