@@ -287,6 +287,7 @@ bool filterProfessionals(
   List<String> age,
   LatLng current,
   List<String> schedule,
+  bool isFilter,
 ) {
 // Calcular la distancia entre la ubicación del usuario y la ubicación del profesional
   const double earthRadius = 6371; // Radio de la Tierra en kilómetros
@@ -305,7 +306,7 @@ bool filterProfessionals(
 
   // Verificar si la distancia es aceptable
   if (userDistance > distance) {
-    return false;
+    if (isFilter) return false;
   }
 
   // Verificar si los servicios ofrecidos están en la lista de servicios deseados

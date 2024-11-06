@@ -926,13 +926,14 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                             });
                             FFAppState().updateFiltersPageStruct(
                               (e) => e
-                                ..distance = 10.0
+                                ..distance = 1000.0
                                 ..age = FFAppConstants.clearService.toList()
                                 ..services =
                                     FFAppConstants.clearService.toList()
                                 ..schedule =
                                     FFAppConstants.clearService.toList(),
                             );
+                            FFAppState().isFilter = false;
                             FFAppState().update(() {});
 
                             context.pushNamed('HomeSearch');
@@ -1086,6 +1087,7 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                         : ' '),
                                   ),
                               );
+                              FFAppState().isFilter = true;
 
                               context.pushNamed(
                                 'HomeSearch',

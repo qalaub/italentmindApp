@@ -232,7 +232,9 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                                               FFAppState()
                                                                   .filtersPage
                                                                   .schedule
-                                                                  .toList()) ==
+                                                                  .toList(),
+                                                              FFAppState()
+                                                                  .isFilter) ==
                                                           true) &&
                                                       !(currentUserDocument
                                                                   ?.blockList

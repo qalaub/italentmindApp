@@ -171,6 +171,12 @@ class FFAppState extends ChangeNotifier {
     _deletedUser = value;
   }
 
+  bool _isFilter = false;
+  bool get isFilter => _isFilter;
+  set isFilter(bool value) {
+    _isFilter = value;
+  }
+
   final _userDocQueryManager = FutureRequestManager<UsersRecord>();
   Future<UsersRecord> userDocQuery({
     String? uniqueQueryKey,
