@@ -1385,7 +1385,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'm99xfm7y': {
       'en': 'PREMIUM',
-      'es': 'DE PRIMERA CALIDAD',
+      'es': 'PREMIUM',
     },
     '7wturm2y': {
       'en': '\$28.99 / monthly',

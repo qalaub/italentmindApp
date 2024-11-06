@@ -8,6 +8,8 @@ class DeleteaccountModel extends FlutterFlowModel<DeleteaccountWidget> {
 
   bool deleted = false;
 
+  int index = 0;
+
   ///  State fields for stateful widgets in this page.
 
   // Stores action output result for [Firestore Query - Query a collection] action in Button widget.

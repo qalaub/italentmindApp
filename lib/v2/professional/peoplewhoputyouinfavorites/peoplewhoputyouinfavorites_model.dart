@@ -1,3 +1,4 @@
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
@@ -9,6 +10,8 @@ class PeoplewhoputyouinfavoritesModel
     extends FlutterFlowModel<PeoplewhoputyouinfavoritesWidget> {
   ///  State fields for stateful widgets in this page.
 
+  // Stores action output result for [Firestore Query - Query a collection] action in peoplewhoputyouinfavorites widget.
+  ChatsRecord? chats;
   // Model for Navbar component.
   late NavbarModel navbarModel;
   // Model for NavbarPremiun component.

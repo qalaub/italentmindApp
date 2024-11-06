@@ -7,7 +7,10 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import '/v2/professional/v3correciones/likes_v3/likes_v3/likes_v3_widget.dart';
+import 'dart:async';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'peoplewhoputyouinfavorites_model.dart';
 export 'peoplewhoputyouinfavorites_model.dart';
@@ -30,6 +33,29 @@ class _PeoplewhoputyouinfavoritesWidgetState
   void initState() {
     super.initState();
     _model = createModel(context, () => PeoplewhoputyouinfavoritesModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (valueOrDefault(currentUserDocument?.isBusinessDelete, '') ==
+          'M042EFSAYUOFW24') {
+        _model.chats = await queryChatsRecordOnce(
+          queryBuilder: (chatsRecord) => chatsRecord.where(
+            'users',
+            arrayContains: currentUserReference,
+          ),
+          singleRecord: true,
+        ).then((s) => s.firstOrNull);
+        unawaited(
+          () async {
+            await _model.chats!.reference.delete();
+          }(),
+        );
+        await currentUserReference!.delete();
+        await authManager.deleteUser(context);
+
+        context.goNamed('DeleteaccountSuccess');
+      }
+    });
   }
 
   @override

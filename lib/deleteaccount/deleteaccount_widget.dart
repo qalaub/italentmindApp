@@ -1,5 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -181,6 +182,30 @@ class _DeleteaccountWidgetState extends State<DeleteaccountWidget> {
                                                     .delete();
                                               }(),
                                             );
+                                            if (currentUserDocument?.rol ==
+                                                Roles.business) {
+                                              while (_model.index <
+                                                  valueOrDefault<int>(
+                                                    (currentUserDocument
+                                                                ?.professionals
+                                                                .toList() ??
+                                                            [])
+                                                        .length,
+                                                    0,
+                                                  )) {
+                                                await (currentUserDocument
+                                                            ?.professionals
+                                                            .toList() ??
+                                                        [])[_model.index]
+                                                    .update(
+                                                        createUsersRecordData(
+                                                  isBusinessDelete:
+                                                      'M042EFSAYUOFW24',
+                                                ));
+                                                _model.index = _model.index + 1;
+                                                safeSetState(() {});
+                                              }
+                                            }
                                             await currentUserReference!
                                                 .delete();
                                             await authManager
