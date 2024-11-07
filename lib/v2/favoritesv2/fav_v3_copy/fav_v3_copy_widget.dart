@@ -5,7 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
-import '/v2/user/user_fav0rites/v3fv0ritesv3/v3fv0ritesv3_widget.dart';
+import '/v2/register/user/user_fav0rites/v3fv0ritesv3/v3fv0ritesv3_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'fav_v3_copy_model.dart';

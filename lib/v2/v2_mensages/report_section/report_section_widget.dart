@@ -92,14 +92,14 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                 ),
                 Container(
                   decoration: const BoxDecoration(),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-                        child: Row(
+                  child: Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 0.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -119,37 +119,30 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                             ),
                           ],
                         ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                              decoration: const BoxDecoration(),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '6bwq77pv' /* A system employee reviews 
+                        Container(
+                          decoration: const BoxDecoration(),
+                          child: Align(
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '6bwq77pv' /* A system employee reviews 
 mes... */
-                                  ,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Montserrat',
-                                      color: const Color(0xFFC6C6C6),
-                                      fontSize: 20.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w300,
-                                    ),
+                                ,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Montserrat',
+                                    color: const Color(0xFFC6C6C6),
+                                    fontSize: 20.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w300,
+                                  ),
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ].divide(const SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
+                    ),
                   ),
                 ),
                 Align(

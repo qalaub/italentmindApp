@@ -737,7 +737,7 @@ class FFRoute {
               ? Container(
                   color: Colors.transparent,
                   child: Image.asset(
-                    'assets/images/logo-italente_(1).png',
+                    'assets/images/logo-italentes.png',
                     fit: BoxFit.cover,
                   ),
                 )

@@ -77,56 +77,56 @@ class _ReportWidgetState extends State<ReportWidget> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                    child: Container(
-                      decoration: const BoxDecoration(),
-                      child: Row(
+                  Container(
+                    decoration: const BoxDecoration(),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                      child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                decoration: const BoxDecoration(),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'nql3ibcq' /* Select an issue to report */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Montserrat',
-                                        color: Colors.white,
-                                        fontSize: 24.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
+                          Container(
+                            decoration: const BoxDecoration(),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'nql3ibcq' /* Select an issue to report */,
                               ),
-                              Container(
-                                decoration: const BoxDecoration(),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '4455pzhh' /* We will not notify the person ... */,
+                              textAlign: TextAlign.start,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Montserrat',
+                                    color: Colors.white,
+                                    fontSize: 24.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Montserrat',
-                                        color: const Color(0xFFC6C6C6),
-                                        fontSize: 20.0,
-                                        letterSpacing: 0.0,
-                                        fontWeight: FontWeight.w300,
-                                      ),
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 8.0)),
+                            ),
                           ),
-                        ],
+                          Container(
+                            decoration: const BoxDecoration(),
+                            child: Align(
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  '4455pzhh' /* We will not notify the person ... */,
+                                ),
+                                textAlign: TextAlign.start,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Montserrat',
+                                      color: const Color(0xFFC6C6C6),
+                                      fontSize: 20.0,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ].divide(const SizedBox(height: 8.0)),
                       ),
                     ),
                   ),

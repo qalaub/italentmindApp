@@ -8,6 +8,8 @@ class RegisterUser2Model extends FlutterFlowModel<RegisterUser2Widget> {
 
   bool ndisShow = false;
 
+  bool termAccept = true;
+
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
@@ -76,6 +78,8 @@ class RegisterUser2Model extends FlutterFlowModel<RegisterUser2Widget> {
     return null;
   }
 
+  // State field(s) for terms widget.
+  bool? termsValue;
   // Stores action output result for [Validate Form] action in Button widget.
   bool? formV;
 

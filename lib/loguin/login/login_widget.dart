@@ -146,7 +146,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'agbd4cwr' /* Log in to your iTalentMind acc... */,
+                                              'agbd4cwr' /* Log in to your ITalentMind acc... */,
                                             ),
                                             textAlign: TextAlign.center,
                                             style: FlutterFlowTheme.of(context)
@@ -645,7 +645,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'xf8yq72c' /*  Sign up for Italentmind */,
+                                                          'xf8yq72c' /*  Sign up for ITalentMind */,
                                                         ),
                                                         style:
                                                             GoogleFonts.getFont(

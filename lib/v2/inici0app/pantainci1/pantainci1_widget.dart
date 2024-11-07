@@ -99,7 +99,7 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.asset(
-                                          'assets/images/inicio_1-1-espaol_version.png',
+                                          'assets/images/ITalentMind.png',
                                           width: 300.0,
                                           height: 239.0,
                                           fit: BoxFit.cover,
@@ -128,7 +128,7 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.asset(
-                                          'assets/images/inicio_1-3-espaol_version.png',
+                                          'assets/images/inicio_1-3-1.png',
                                           width: 300.0,
                                           height: 200.0,
                                           fit: BoxFit.cover,
@@ -157,7 +157,7 @@ class _Pantainci1WidgetState extends State<Pantainci1Widget> {
                                         borderRadius:
                                             BorderRadius.circular(0.0),
                                         child: Image.asset(
-                                          'assets/images/inicio2-es.png',
+                                          'assets/images/inicio_1-2-1.png',
                                           width: 300.0,
                                           height: 200.0,
                                           fit: BoxFit.cover,

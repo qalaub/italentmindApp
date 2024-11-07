@@ -1698,7 +1698,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'wrexpraz' /* I agree to the iTalentMind app... */,
+                                                              'wrexpraz' /* I agree to the ITalentMind app... */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)

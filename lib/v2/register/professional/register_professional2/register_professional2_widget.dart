@@ -1867,7 +1867,7 @@ class _RegisterProfessional2WidgetState
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              '7mkqpzqn' /* I agree to the iTalentMind app... */,
+                                                              '7mkqpzqn' /* I agree to the ITalentMind app... */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)

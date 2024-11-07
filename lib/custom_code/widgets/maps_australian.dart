@@ -149,7 +149,7 @@ class _MapsAustralianState extends State<MapsAustralian> {
       }
 
       final image = img.decodeImage(Uint8List.fromList(bytes))!;
-      final resizedImage = img.copyResize(image, width: 45, height: 70);
+      final resizedImage = img.copyResize(image, width: 55, height: 80);
 
       final Uint8List resizedBytes =
           Uint8List.fromList(img.encodePng(resizedImage));

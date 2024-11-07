@@ -1219,6 +1219,160 @@ Early Intervention */
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 15.0, 0.0, 15.0),
+                                            child: Container(
+                                              width: 276.0,
+                                              height: 74.0,
+                                              decoration: const BoxDecoration(
+                                                color: Color(0x80D9D9D9),
+                                              ),
+                                              child: Stack(
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  30.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      child: InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          await launchURL(FFLocalizations.of(
+                                                                          context)
+                                                                      .languageCode ==
+                                                                  'en'
+                                                              ? 'https://italentmind.com/privacy-policies-italentmind-app-en.html/'
+                                                              : 'https://italentmind.com/politicas-privacidad-italentmind-app-es.html/');
+                                                        },
+                                                        child: Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'aewjt8q7' /* I agree to the ITalentMind app... */,
+                                                          ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Montserrat',
+                                                                color: const Color(
+                                                                    0xFF1D69D7),
+                                                                fontSize: 11.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            -0.98, -0.03),
+                                                    child: Theme(
+                                                      data: ThemeData(
+                                                        checkboxTheme:
+                                                            CheckboxThemeData(
+                                                          visualDensity:
+                                                              VisualDensity
+                                                                  .compact,
+                                                          materialTapTargetSize:
+                                                              MaterialTapTargetSize
+                                                                  .shrinkWrap,
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        4.0),
+                                                          ),
+                                                        ),
+                                                        unselectedWidgetColor:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryText,
+                                                      ),
+                                                      child: Checkbox(
+                                                        key: const ValueKey('terms'),
+                                                        value: _model
+                                                                .termsValue ??=
+                                                            false,
+                                                        onChanged:
+                                                            (newValue) async {
+                                                          safeSetState(() =>
+                                                              _model.termsValue =
+                                                                  newValue!);
+                                                        },
+                                                        side: BorderSide(
+                                                          width: 2,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                        ),
+                                                        activeColor:
+                                                            const Color(0xFF1D69D7),
+                                                        checkColor:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .info,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        if (!_model.termAccept)
+                                          Align(
+                                            alignment:
+                                                const AlignmentDirectional(0.0, 0.8),
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      20.0, 0.0, 0.0, 0.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'ca50z2vh' /* Please accept T&Cs to create y... */,
+                                                ),
+                                                style: FlutterFlowTheme.of(
+                                                        context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color: const Color(0xFFFF5963),
+                                                      fontSize: 11.0,
+                                                      letterSpacing: 0.0,
+                                                      fontWeight:
+                                                          FontWeight.w600,
+                                                    ),
+                                              ),
+                                            ),
+                                          ),
+                                        Align(
+                                          alignment:
+                                              const AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Container(
                                               width: 327.0,
@@ -1289,6 +1443,9 @@ Early Intervention */
                                                       .toList(),
                                               );
                                               safeSetState(() {});
+                                              _model.termAccept =
+                                                  _model.termsValue!;
+                                              safeSetState(() {});
                                               if ((FFAppState()
                                                           .verifyForm
                                                           .same ==
@@ -1297,7 +1454,8 @@ Early Intervention */
                                                           .verifyForm
                                                           .dropdown ==
                                                       true) &&
-                                                  _model.formV!) {
+                                                  _model.formV! &&
+                                                  _model.termsValue!) {
                                                 FFAppState().verifyForm =
                                                     FormVerifyStruct();
                                                 FFAppState().counter = 0;

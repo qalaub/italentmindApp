@@ -503,6 +503,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' ',
       'es': '',
     },
+    'aewjt8q7': {
+      'en': 'I agree to the ITalentMind app\'s privacy policy',
+      'es': 'Acepto la política de privacidad de la aplicación ITalentMind',
+    },
+    'ca50z2vh': {
+      'en': 'Please accept T&Cs to create your account',
+      'es': 'Acepte los términos y condiciones para crear su cuenta',
+    },
     'rc64jtxn': {
       'en': 'Create',
       'es': 'Crear',
@@ -823,8 +831,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
     '7mkqpzqn': {
-      'en': 'I agree to the iTalentMind app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación iTalentMind',
+      'en': 'I agree to the ITalentMind app\'s privacy policy',
+      'es': 'Acepto la política de privacidad de la aplicación ITalentMind',
     },
     '8jeu8yll': {
       'en': 'Please accept T&Cs to create your account',
@@ -882,8 +890,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Login
   {
     'agbd4cwr': {
-      'en': 'Log in to your iTalentMind account',
-      'es': 'Inicie sesión en su cuenta de iTalentMind',
+      'en': 'Log in to your ITalentMind account',
+      'es': 'Inicie sesión en su cuenta de ITalentMind',
     },
     'so3hdls2': {
       'en': 'User Name',
@@ -902,8 +910,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': ' ¿No tienes una cuenta ? ',
     },
     'xf8yq72c': {
-      'en': ' Sign up for Italentmind',
-      'es': ' Regístrate en Italentmind',
+      'en': ' Sign up for ITalentMind',
+      'es': ' Regístrate en ITalentMind',
     },
     '33ws4vq0': {
       'en': 'Don\'t Have An Account? ',
@@ -1686,8 +1694,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '',
     },
     'wrexpraz': {
-      'en': 'I agree to the iTalentMind app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación iTalentMind',
+      'en': 'I agree to the ITalentMind app\'s privacy policy',
+      'es': 'Acepto la política de privacidad de la aplicación ITalentMind',
     },
     'n9zeysic': {
       'en': 'Please accept T&Cs to create your account',
@@ -2260,9 +2268,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4455pzhh': {
       'en':
-          'We will not notify the person who \nreported it,if you are in imminent\n danger, call the corresponding  \nauthorities.',
+          'We will not notify the person who reported it,if you are in imminent danger, call the corresponding authorities.',
       'es':
-          'No avisaremos a la persona que \nlo reportó, si estás en peligro inminente, llama a las \nautoridades correspondientes.',
+          'No avisaremos a la persona que lo reportó, si estás en peligro inminente, llama a las autoridades correspondientes.',
     },
     '61ebxzx7': {
       'en': 'Harassment',
@@ -2307,7 +2315,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'A system employee reviews \nmessages to verify if they violate\n community standards, if so the \naccount will be suspended.',
       'es':
-          'Un empleado del sistema revisa \nlos mensajes para verificar si violan\nlos estándares de la comunidad. Si es así, la \ncuenta será suspendida.',
+          'Un empleado del sistema revisa \nlos mensajes para verificar si violan\nlos estándares de la comunidad.\nSi es así, la cuenta será suspendida.',
     },
     '40pxjkye': {
       'en': 'Send report',
