@@ -231,19 +231,29 @@ class _NavbarPremiunWidgetState extends State<NavbarPremiunWidget> {
                                     valueOrDefault<String>(
                                       containerChatsRecordList
                                           .where((e) =>
-                                              ((currentUserDocument
-                                                              ?.professionals
-                                                              .toList() ??
-                                                          [])
-                                                      .contains(e.userB) ==
-                                                  true) ||
-                                              ((currentUserDocument
-                                                              ?.professionals
-                                                              .toList() ??
-                                                          [])
-                                                      .contains(e.userA) ==
-                                                  true) ||
-                                              (e.userB == currentUserReference))
+                                              (((currentUserDocument?.professionals
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(e.userB) ==
+                                                      true) ||
+                                                  ((currentUserDocument
+                                                                  ?.professionals
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(e.userA) ==
+                                                      true) ||
+                                                  (e.userB ==
+                                                      currentUserReference)) &&
+                                              (((currentUserDocument?.blockUser
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(e.userA) ==
+                                                      false) &&
+                                                  ((currentUserDocument?.blockUser
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(e.userB) ==
+                                                      false)))
                                           .toList()
                                           .length
                                           .toString(),

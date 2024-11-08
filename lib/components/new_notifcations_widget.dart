@@ -162,7 +162,7 @@ class _NewNotifcationsWidgetState extends State<NewNotifcationsWidget> {
                                     ),
                                     TextSpan(
                                       text: FFLocalizations.of(context).getText(
-                                        '815vkgde' /* likes your collaborator  */,
+                                        '815vkgde' /*  likes your collaborator  */,
                                       ),
                                       style: GoogleFonts.getFont(
                                         'Montserrat',

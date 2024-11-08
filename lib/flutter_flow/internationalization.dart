@@ -2980,8 +2980,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // newNotifcations
   {
     '815vkgde': {
-      'en': 'likes your collaborator ',
-      'es': 'Me gustas a tu colaborador',
+      'en': ' likes your collaborator ',
+      'es': ' Le gusta su colaborador ',
     },
   },
   // UserBlockOptions
