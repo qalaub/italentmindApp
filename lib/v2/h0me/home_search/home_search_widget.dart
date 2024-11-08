@@ -164,7 +164,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.76),
+                                    alignment: const AlignmentDirectional(0.0, 0.72),
                                     child: StreamBuilder<List<UsersRecord>>(
                                       stream: queryUsersRecord(
                                         queryBuilder: (usersRecord) =>

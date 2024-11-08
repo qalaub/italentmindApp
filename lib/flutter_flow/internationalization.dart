@@ -2307,10 +2307,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // reportSection
   {
-    'az0zlc0g': {
-      'en': 'Harassment',
-      'es': 'Acoso',
-    },
     '6bwq77pv': {
       'en':
           'A system employee reviews \nmessages to verify if they violate\n community standards, if so the \naccount will be suspended.',
@@ -2933,11 +2929,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '3xvbswtx': {
       'en': 'There are  ',
-      'es': 'Hay',
+      'es': 'Hay  ',
     },
     'd4c9r5af': {
       'en': 'NDIS Participants \nnear your ',
-      'es': 'Participantes cerca de usted',
+      'es': 'Participantes cerca\n de usted',
     },
   },
   // DescripcionProfesional
@@ -3024,11 +3020,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ukeuwrw8': {
       'en': 'Experience  ',
-      'es': 'Experiencia',
+      'es': 'Experiencia ',
     },
     'mxc29prl': {
       'en': '  years',
-      'es': 'años',
+      'es': ' años',
     },
     'po0fsxmt': {
       'en': 'Experience',
@@ -3126,15 +3122,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // v3fv0ritesv3
   {
-    'joz42w7i': {
+    'u87hndgk': {
       'en': 'Experience  ',
       'es': 'Experiencia ',
     },
-    '19r7qdvc': {
+    'f8p9xpwy': {
       'en': ' years',
       'es': ' años',
     },
-    'rii4rqfs': {
+    '7u1agvmc': {
       'en': 'Experience',
       'es': 'Experiencia',
     },

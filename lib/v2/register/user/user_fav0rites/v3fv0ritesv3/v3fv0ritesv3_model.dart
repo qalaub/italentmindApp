@@ -21,10 +21,12 @@ class V3fv0ritesv3Model extends FlutterFlowModel<V3fv0ritesv3Widget> {
 
   String newSuburb = 'Location';
 
+  bool exists = false;
+
   ///  State fields for stateful widgets in this component.
 
   // Stores action output result for [Firestore Query - Query a collection] action in v3fv0ritesv3 widget.
-  UsersRecord? userCurrent;
+  List<UsersRecord>? userCurrent;
   // Stores action output result for [Backend Call - API (getNamePlace)] action in v3fv0ritesv3 widget.
   ApiCallResponse? apiResult23d;
   // State field(s) for RatingBar widget.

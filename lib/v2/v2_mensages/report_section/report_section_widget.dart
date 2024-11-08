@@ -56,6 +56,7 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
             ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
@@ -91,6 +92,7 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                   ),
                 ),
                 Container(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
                   decoration: const BoxDecoration(),
                   child: Padding(
                     padding:
@@ -99,25 +101,24 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'az0zlc0g' /* Harassment */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Montserrat',
-                                    color: Colors.white,
-                                    fontSize: 24.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                        Align(
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          child: Text(
+                            valueOrDefault<String>(
+                              widget.report,
+                              'Harasment',
                             ),
-                          ],
+                            textAlign: TextAlign.start,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Montserrat',
+                                  color: Colors.white,
+                                  fontSize: 24.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
                         ),
                         Container(
                           decoration: const BoxDecoration(),
@@ -149,7 +150,7 @@ mes... */
                   alignment: const AlignmentDirectional(0.01, 0.7),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 168.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         await launchUrl(Uri(

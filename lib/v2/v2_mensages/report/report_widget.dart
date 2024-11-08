@@ -145,7 +145,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              _model.currentReport = 'Harassment';
+                              _model.currentReport =
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Harassment'
+                                      : 'Acoso';
 
                               context.pushNamed(
                                 'reportSection',
@@ -206,7 +210,10 @@ class _ReportWidgetState extends State<ReportWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 _model.currentReport =
-                                    'He pretends to be someone else';
+                                    FFLocalizations.of(context).languageCode ==
+                                            'en'
+                                        ? 'He pretends to be someone else'
+                                        : 'Él se hace pasar por otra persona';
 
                                 context.pushNamed(
                                   'reportSection',
@@ -266,7 +273,10 @@ class _ReportWidgetState extends State<ReportWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               _model.currentReport =
-                                  'Share inappropriate content';
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Share inappropriate content'
+                                      : 'Compartir contenido inapropiado';
 
                               context.pushNamed(
                                 'reportSection',
@@ -324,7 +334,10 @@ class _ReportWidgetState extends State<ReportWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               _model.currentReport =
-                                  'Language that incites hatred';
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Language that incites hatred'
+                                      : 'Lenguaje que incita al odio';
 
                               context.pushNamed(
                                 'reportSection',
@@ -381,7 +394,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              _model.currentReport = 'Unauthorized sales';
+                              _model.currentReport =
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Unauthorized sales'
+                                      : 'Ventas no autorizadas';
 
                               context.pushNamed(
                                 'reportSection',
@@ -438,7 +455,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              _model.currentReport = 'Scams';
+                              _model.currentReport =
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Scams'
+                                      : 'Estafas';
 
                               context.pushNamed(
                                 'reportSection',
@@ -495,7 +516,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              _model.currentReport = 'Others';
+                              _model.currentReport =
+                                  FFLocalizations.of(context).languageCode ==
+                                          'en'
+                                      ? 'Others'
+                                      : 'Otras';
 
                               context.pushNamed(
                                 'reportSection',

@@ -100,7 +100,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
               ),
               child: Container(
                 width: 285.0,
-                height: 139.0,
+                height: 159.0,
                 decoration: BoxDecoration(
                   color: const Color(0xFF1D69D7),
                   borderRadius: BorderRadius.circular(20.0),
@@ -162,7 +162,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.06, -1.23),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Container(
                             width: 160.0,
                             decoration: const BoxDecoration(),
@@ -192,7 +192,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                           alignment: const AlignmentDirectional(0.05, -0.19),
                           child: Container(
                             width: 160.0,
-                            height: 18.0,
+                            height: 32.0,
                             decoration: const BoxDecoration(),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
@@ -204,12 +204,13 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                       FFLocalizations.of(context).languageCode),
                                   'Home',
                                 ),
+                                textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Montserrat',
                                       color: Colors.white,
-                                      fontSize: 11.0,
+                                      fontSize: 12.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                     ),
@@ -220,7 +221,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                         const SizedBox(
                           width: 160.0,
                           child: Divider(
-                            height: 11.0,
+                            height: 9.0,
                             thickness: 1.0,
                             indent: 5.0,
                             endIndent: 5.0,
@@ -321,212 +322,139 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                 ),
                                 Align(
                                   alignment: const AlignmentDirectional(-0.17, 0.1),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
-                                    child: Container(
-                                      width: 150.0,
-                                      height: 16.0,
-                                      decoration: const BoxDecoration(),
-                                      child: Stack(
-                                        children: [
-                                          const Align(
-                                            alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(0.0, 0.0, 0.0, 3.0),
-                                              child: Icon(
-                                                Icons.edit_document,
-                                                color: Colors.white,
-                                                size: 13.0,
-                                              ),
+                                  child: Container(
+                                    width: 150.0,
+                                    height: 38.0,
+                                    decoration: const BoxDecoration(),
+                                    child: Stack(
+                                      children: [
+                                        const Align(
+                                          alignment:
+                                              AlignmentDirectional(-1.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 3.0),
+                                            child: Icon(
+                                              Icons.edit_document,
+                                              color: Colors.white,
+                                              size: 13.0,
                                             ),
                                           ),
-                                          Align(
-                                            alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      20.0, 0.0, 0.0, 0.0),
-                                              child: Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'aquunf8o' /* Qualified And Certified 
+                                        ),
+                                        Align(
+                                          alignment:
+                                              const AlignmentDirectional(-1.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    20.0, 0.0, 0.0, 0.0),
+                                            child: Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'aquunf8o' /* Qualified And Certified 
 perso... */
-                                                  ,
-                                                ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.white,
-                                                          fontSize: 10.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
+                                                ,
                                               ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Montserrat',
+                                                        color: Colors.white,
+                                                        fontSize: 10.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                      ),
                                             ),
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
                               ]
                                   .divide(const SizedBox(height: 0.0))
-                                  .addToStart(const SizedBox(height: 3.0)),
+                                  .addToStart(const SizedBox(height: 4.0))
+                                  .addToEnd(const SizedBox(height: 4.0)),
                             ),
                           ),
                         ),
-                        StreamBuilder<List<ReviewsRecord>>(
-                          stream: queryReviewsRecord(
-                            queryBuilder: (reviewsRecord) =>
-                                reviewsRecord.where(
-                              'professional',
-                              isEqualTo: widget.profesionalId,
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              5.0, 6.0, 0.0, 0.0),
+                          child: StreamBuilder<List<ReviewsRecord>>(
+                            stream: queryReviewsRecord(
+                              queryBuilder: (reviewsRecord) =>
+                                  reviewsRecord.where(
+                                'professional',
+                                isEqualTo: widget.profesionalId,
+                              ),
                             ),
-                          ),
-                          builder: (context, snapshot) {
-                            // Customize what your widget looks like when it's loading.
-                            if (!snapshot.hasData) {
-                              return Center(
-                                child: SizedBox(
-                                  width: 50.0,
-                                  height: 50.0,
-                                  child: CircularProgressIndicator(
-                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                      FlutterFlowTheme.of(context).primary,
+                            builder: (context, snapshot) {
+                              // Customize what your widget looks like when it's loading.
+                              if (!snapshot.hasData) {
+                                return Center(
+                                  child: SizedBox(
+                                    width: 50.0,
+                                    height: 50.0,
+                                    child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        FlutterFlowTheme.of(context).primary,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            }
-                            List<ReviewsRecord> containerReviewsRecordList =
-                                snapshot.data!;
+                                );
+                              }
+                              List<ReviewsRecord> containerReviewsRecordList =
+                                  snapshot.data!;
 
-                            return Container(
-                              decoration: const BoxDecoration(),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Text(
-                                    valueOrDefault<String>(
-                                      functions.concatStrings(
-                                          valueOrDefault<String>(
-                                            functions
-                                                .averagueReviews(
-                                                    containerReviewsRecordList
-                                                        .toList())
-                                                .toString(),
-                                            '3',
-                                          ),
-                                          '0',
-                                          ','),
-                                      '0',
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Inter',
-                                          color: Colors.white,
-                                          fontSize: 13.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
-                                    child: Builder(
-                                      builder: (context) {
-                                        if (widget.isMap) {
-                                          return RatingBarIndicator(
-                                            itemBuilder: (context, index) =>
-                                                const Icon(
-                                              Icons.star_rate,
-                                              color: Color(0xFFF9BF11),
-                                            ),
-                                            direction: Axis.horizontal,
-                                            rating: valueOrDefault<double>(
+                              return Container(
+                                decoration: const BoxDecoration(),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Text(
+                                      valueOrDefault<String>(
+                                        functions.concatStrings(
+                                            valueOrDefault<String>(
                                               functions
                                                   .averagueReviews(
                                                       containerReviewsRecordList
                                                           .toList())
-                                                  .toDouble(),
-                                              0.0,
+                                                  .toString(),
+                                              '3',
                                             ),
-                                            unratedColor: const Color(0x4D040202),
-                                            itemCount: 5,
-                                            itemSize: 15.0,
-                                          );
-                                        } else {
-                                          return InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            child: RatingBar.builder(
-                                              onRatingUpdate: (newValue) async {
-                                                safeSetState(() =>
-                                                    _model.ratingBarValue2 =
-                                                        newValue);
-                                                _model.reviewsC =
-                                                    await queryReviewsRecordOnce(
-                                                  queryBuilder:
-                                                      (reviewsRecord) =>
-                                                          reviewsRecord
-                                                              .where(
-                                                                'participant',
-                                                                isEqualTo:
-                                                                    currentUserReference,
-                                                              )
-                                                              .where(
-                                                                'professional',
-                                                                isEqualTo: widget
-                                                                    .profesionalId,
-                                                              ),
-                                                  singleRecord: true,
-                                                ).then((s) => s.firstOrNull);
-                                                if (_model
-                                                        .reviewsC?.reference !=
-                                                    null) {
-                                                  await _model
-                                                      .reviewsC!.reference
-                                                      .update(
-                                                          createReviewsRecordData(
-                                                    num: _model.ratingBarValue2
-                                                        ?.round(),
-                                                  ));
-                                                } else {
-                                                  await ReviewsRecord.collection
-                                                      .doc()
-                                                      .set(
-                                                          createReviewsRecordData(
-                                                        num: _model
-                                                            .ratingBarValue2
-                                                            ?.round(),
-                                                        professional: widget
-                                                            .profesionalId,
-                                                        participant:
-                                                            currentUserReference,
-                                                      ));
-                                                }
-
-                                                safeSetState(() {});
-                                              },
+                                            '0',
+                                            ','),
+                                        '0',
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Inter',
+                                            color: Colors.white,
+                                            fontSize: 13.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                    ),
+                                    Align(
+                                      alignment:
+                                          const AlignmentDirectional(-1.0, 0.0),
+                                      child: Builder(
+                                        builder: (context) {
+                                          if (widget.isMap) {
+                                            return RatingBarIndicator(
                                               itemBuilder: (context, index) =>
                                                   const Icon(
                                                 Icons.star_rate,
                                                 color: Color(0xFFF9BF11),
                                               ),
                                               direction: Axis.horizontal,
-                                              initialRating:
-                                                  _model.ratingBarValue2 ??=
-                                                      valueOrDefault<double>(
+                                              rating: valueOrDefault<double>(
                                                 functions
                                                     .averagueReviews(
                                                         containerReviewsRecordList
@@ -537,41 +465,122 @@ perso... */
                                               unratedColor: const Color(0x4D040202),
                                               itemCount: 5,
                                               itemSize: 15.0,
-                                              glowColor: const Color(0xFFF9BF11),
-                                            ),
-                                          );
-                                        }
-                                      },
-                                    ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
-                                    child: Text(
-                                      valueOrDefault<String>(
-                                        functions.concatStrings(
-                                            '(',
-                                            ')',
-                                            valueOrDefault<String>(
-                                              containerReviewsRecordList.length
-                                                  .toString(),
-                                              '3',
-                                            )),
-                                        '(1278)',
+                                            );
+                                          } else {
+                                            return InkWell(
+                                              splashColor: Colors.transparent,
+                                              focusColor: Colors.transparent,
+                                              hoverColor: Colors.transparent,
+                                              highlightColor:
+                                                  Colors.transparent,
+                                              child: RatingBar.builder(
+                                                onRatingUpdate:
+                                                    (newValue) async {
+                                                  safeSetState(() =>
+                                                      _model.ratingBarValue2 =
+                                                          newValue);
+                                                  _model.reviewsC =
+                                                      await queryReviewsRecordOnce(
+                                                    queryBuilder:
+                                                        (reviewsRecord) =>
+                                                            reviewsRecord
+                                                                .where(
+                                                                  'participant',
+                                                                  isEqualTo:
+                                                                      currentUserReference,
+                                                                )
+                                                                .where(
+                                                                  'professional',
+                                                                  isEqualTo: widget
+                                                                      .profesionalId,
+                                                                ),
+                                                    singleRecord: true,
+                                                  ).then((s) => s.firstOrNull);
+                                                  if (_model.reviewsC
+                                                          ?.reference !=
+                                                      null) {
+                                                    await _model
+                                                        .reviewsC!.reference
+                                                        .update(
+                                                            createReviewsRecordData(
+                                                      num: _model
+                                                          .ratingBarValue2
+                                                          ?.round(),
+                                                    ));
+                                                  } else {
+                                                    await ReviewsRecord
+                                                        .collection
+                                                        .doc()
+                                                        .set(
+                                                            createReviewsRecordData(
+                                                          num: _model
+                                                              .ratingBarValue2
+                                                              ?.round(),
+                                                          professional: widget
+                                                              .profesionalId,
+                                                          participant:
+                                                              currentUserReference,
+                                                        ));
+                                                  }
+
+                                                  safeSetState(() {});
+                                                },
+                                                itemBuilder: (context, index) =>
+                                                    const Icon(
+                                                  Icons.star_rate,
+                                                  color: Color(0xFFF9BF11),
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating:
+                                                    _model.ratingBarValue2 ??=
+                                                        valueOrDefault<double>(
+                                                  functions
+                                                      .averagueReviews(
+                                                          containerReviewsRecordList
+                                                              .toList())
+                                                      .toDouble(),
+                                                  0.0,
+                                                ),
+                                                unratedColor: const Color(0x4D040202),
+                                                itemCount: 5,
+                                                itemSize: 15.0,
+                                                glowColor: const Color(0xFFF9BF11),
+                                              ),
+                                            );
+                                          }
+                                        },
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Inter',
-                                            color: Colors.white,
-                                            fontSize: 12.0,
-                                            letterSpacing: 0.0,
-                                          ),
                                     ),
-                                  ),
-                                ].divide(const SizedBox(width: 4.0)),
-                              ),
-                            );
-                          },
+                                    Align(
+                                      alignment: const AlignmentDirectional(1.0, 0.0),
+                                      child: Text(
+                                        valueOrDefault<String>(
+                                          functions.concatStrings(
+                                              '(',
+                                              ')',
+                                              valueOrDefault<String>(
+                                                containerReviewsRecordList
+                                                    .length
+                                                    .toString(),
+                                                '3',
+                                              )),
+                                          '(1278)',
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Inter',
+                                              color: Colors.white,
+                                              fontSize: 12.0,
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ),
+                                  ].divide(const SizedBox(width: 4.0)),
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),

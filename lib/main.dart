@@ -167,7 +167,7 @@ class _NavBarPageState extends State<NavBarPage> {
           _currentPage = null;
           _currentPageName = tabs.keys.toList()[i];
         }),
-        backgroundColor: const Color(0xB3B928B8),
+        backgroundColor: const Color(0xFF1D69D7),
         selectedItemColor: Colors.white,
         unselectedItemColor: const Color(0xFFEFECF3),
         selectedBackgroundColor: const Color(0x00000000),

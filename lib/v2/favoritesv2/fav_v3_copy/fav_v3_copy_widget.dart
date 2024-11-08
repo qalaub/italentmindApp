@@ -102,46 +102,55 @@ class _FavV3CopyWidgetState extends State<FavV3CopyWidget> {
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          AuthUserStreamWidget(
-                            builder: (context) => Builder(
-                              builder: (context) {
-                                final userList =
-                                    (currentUserDocument?.favorites.toList() ??
-                                            [])
-                                        .where((e) =>
-                                            (currentUserDocument?.blockList
-                                                        .toList() ??
-                                                    [])
-                                                .contains(e) ==
-                                            false)
-                                        .toList();
+                          if ((currentUserDocument?.favorites.toList() ?? [])
+                                  .where((e) =>
+                                      (currentUserDocument?.blockList
+                                                  .toList() ??
+                                              [])
+                                          .contains(e) ==
+                                      false)
+                                  .toList().isNotEmpty)
+                            AuthUserStreamWidget(
+                              builder: (context) => Builder(
+                                builder: (context) {
+                                  final userList = (currentUserDocument
+                                              ?.favorites
+                                              .toList() ??
+                                          [])
+                                      .where((e) =>
+                                          (currentUserDocument?.blockList
+                                                      .toList() ??
+                                                  [])
+                                              .contains(e) ==
+                                          false)
+                                      .toList();
 
-                                return ListView.separated(
-                                  padding: const EdgeInsets.fromLTRB(
-                                    0,
-                                    16.0,
-                                    0,
-                                    0,
-                                  ),
-                                  primary: false,
-                                  shrinkWrap: true,
-                                  scrollDirection: Axis.vertical,
-                                  itemCount: userList.length,
-                                  separatorBuilder: (_, __) =>
-                                      const SizedBox(height: 16.0),
-                                  itemBuilder: (context, userListIndex) {
-                                    final userListItem =
-                                        userList[userListIndex];
-                                    return V3fv0ritesv3Widget(
-                                      key: Key(
-                                          'Keyx8t_${userListIndex}_of_${userList.length}'),
-                                      profesionalId: userListItem,
-                                    );
-                                  },
-                                );
-                              },
+                                  return ListView.separated(
+                                    padding: const EdgeInsets.fromLTRB(
+                                      0,
+                                      16.0,
+                                      0,
+                                      0,
+                                    ),
+                                    primary: false,
+                                    shrinkWrap: true,
+                                    scrollDirection: Axis.vertical,
+                                    itemCount: userList.length,
+                                    separatorBuilder: (_, __) =>
+                                        const SizedBox(height: 16.0),
+                                    itemBuilder: (context, userListIndex) {
+                                      final userListItem =
+                                          userList[userListIndex];
+                                      return V3fv0ritesv3Widget(
+                                        key: Key(
+                                            'Keyx8t_${userListIndex}_of_${userList.length}'),
+                                        profesionalId: userListItem,
+                                      );
+                                    },
+                                  );
+                                },
+                              ),
                             ),
-                          ),
                         ],
                       ),
                     ),
