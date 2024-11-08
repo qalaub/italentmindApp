@@ -822,12 +822,20 @@ class _RegisterPfofesional4WidgetState
                                                         }.withoutNulls,
                                                       );
                                                     } else {
+                                                      await Future.delayed(
+                                                          const Duration(
+                                                              milliseconds:
+                                                                  1500));
                                                       unawaited(
                                                         () async {
                                                           await currentUserReference!
                                                               .delete();
                                                         }(),
                                                       );
+                                                      await Future.delayed(
+                                                          const Duration(
+                                                              milliseconds:
+                                                                  1500));
                                                       await authManager
                                                           .deleteUser(context);
                                                     }

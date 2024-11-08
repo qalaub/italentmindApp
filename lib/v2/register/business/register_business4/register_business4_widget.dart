@@ -761,12 +761,18 @@ class _RegisterBusiness4WidgetState extends State<RegisterBusiness4Widget> {
                                                     }.withoutNulls,
                                                   );
                                                 } else {
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 1500));
                                                   unawaited(
                                                     () async {
                                                       await currentUserReference!
                                                           .delete();
                                                     }(),
                                                   );
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 1500));
                                                   await authManager
                                                       .deleteUser(context);
                                                 }
