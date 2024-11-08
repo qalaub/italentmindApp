@@ -440,8 +440,9 @@ class _StandarWidgetState extends State<StandarWidget> {
                               _model.paymentId =
                                   paymentResponse.paymentId ?? '';
 
-                              if (_model.paymentId != null &&
-                                  _model.paymentId != '') {
+                              if ((_model.paymentId != null &&
+                                      _model.paymentId != '') &&
+                                  (_model.paymentId != '')) {
                                 await widget.userRef!
                                     .update(createUsersRecordData(
                                   plan: Plan.standar,

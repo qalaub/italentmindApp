@@ -446,8 +446,9 @@ class _PremiumWidgetState extends State<PremiumWidget> {
                               _model.paymentId =
                                   paymentResponse.paymentId ?? '';
 
-                              if (_model.paymentId != null &&
-                                  _model.paymentId != '') {
+                              if ((_model.paymentId != null &&
+                                      _model.paymentId != '') &&
+                                  (_model.paymentId != '')) {
                                 await widget.userRef!
                                     .update(createUsersRecordData(
                                   plan: Plan.premiun,

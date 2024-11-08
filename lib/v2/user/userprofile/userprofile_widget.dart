@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import '/v2/user/account_option/account_option_widget.dart';
+import 'dart:async';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
@@ -854,12 +855,14 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                 0.0, 40.0, 0.0, 40.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                FFAppState().authUserFireBase = false;
-
-                                await currentUserReference!
-                                    .update(createUsersRecordData(
-                                  isActive: false,
-                                ));
+                                unawaited(
+                                  () async {
+                                    await currentUserReference!
+                                        .update(createUsersRecordData(
+                                      isActive: false,
+                                    ));
+                                  }(),
+                                );
                                 GoRouter.of(context).prepareAuthEvent();
                                 await authManager.signOut();
                                 GoRouter.of(context).clearRedirectLocation();

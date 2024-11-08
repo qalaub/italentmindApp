@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
@@ -803,15 +804,12 @@ class _RegisterPfofesional4WidgetState
                                                                 .paymentId ??
                                                             '';
 
-                                                    if (_model.paymentId !=
-                                                            null &&
-                                                        _model.paymentId !=
-                                                            '') {
-                                                      FFAppState()
-                                                              .authUserFireBase =
-                                                          true;
-                                                      safeSetState(() {});
-
+                                                    if ((_model.paymentId !=
+                                                                null &&
+                                                            _model.paymentId !=
+                                                                '') &&
+                                                        (_model.paymentId !=
+                                                            '')) {
                                                       context.goNamedAuth(
                                                         'HomeSearch',
                                                         context.mounted,
@@ -824,8 +822,12 @@ class _RegisterPfofesional4WidgetState
                                                         }.withoutNulls,
                                                       );
                                                     } else {
-                                                      await widget.businessRef!
-                                                          .delete();
+                                                      unawaited(
+                                                        () async {
+                                                          await currentUserReference!
+                                                              .delete();
+                                                        }(),
+                                                      );
                                                       await authManager
                                                           .deleteUser(context);
                                                     }
