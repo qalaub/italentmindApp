@@ -52,8 +52,8 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
   Widget build(BuildContext context) {
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
-      child: StreamBuilder<UsersRecord>(
-        stream: UsersRecord.getDocument(widget.profesionalId!),
+      child: FutureBuilder<UsersRecord>(
+        future: UsersRecord.getDocumentOnce(widget.profesionalId!),
         builder: (context, snapshot) {
           // Customize what your widget looks like when it's loading.
           if (!snapshot.hasData) {
@@ -143,7 +143,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                         const Duration(milliseconds: 500),
                                     imageUrl: valueOrDefault<String>(
                                       containerUsersRecord.photoUrl,
-                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/h28p6mkmnirg/logo-italentes.png',
                                     ),
                                     width: double.infinity,
                                     height: double.infinity,
@@ -270,7 +270,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                                     text: FFLocalizations.of(
                                                             context)
                                                         .getText(
-                                                      'ukeuwrw8' /* Experience   */,
+                                                      'vgesylzd' /* Experience   */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -295,7 +295,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                                     text: FFLocalizations.of(
                                                             context)
                                                         .getText(
-                                                      'mxc29prl' /*   years */,
+                                                      'tjj4xff2' /*   years */,
                                                     ),
                                                     style: const TextStyle(),
                                                   )
@@ -352,7 +352,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'aquunf8o' /* Qualified And Certified 
+                                                'q1iwx1nf' /* Qualified And Certified 
 perso... */
                                                 ,
                                               ),

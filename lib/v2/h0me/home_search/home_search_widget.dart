@@ -134,71 +134,69 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                             (currentUserDocument?.rol != Roles.business)) {
                           return Align(
                             alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Container(
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              decoration: const BoxDecoration(
-                                color: Colors.white,
+                            child: FutureBuilder<List<UsersRecord>>(
+                              future: queryUsersRecordOnce(
+                                queryBuilder: (usersRecord) =>
+                                    usersRecord.where(
+                                  'rol',
+                                  isNotEqualTo: Roles.user.serialize(),
+                                ),
                               ),
-                              child: Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.1, -1.0),
-                                    child: Container(
-                                      width: MediaQuery.sizeOf(context).width *
-                                          1.0,
-                                      height:
-                                          MediaQuery.sizeOf(context).height *
-                                              0.925,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                      ),
-                                      child: wrapWithModel(
-                                        model: _model.mapButtonModel1,
-                                        updateCallback: () =>
-                                            safeSetState(() {}),
-                                        child: const MapButtonWidget(
-                                          isProfessional: false,
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
                                         ),
                                       ),
                                     ),
+                                  );
+                                }
+                                List<UsersRecord>
+                                    homeVistaCuidadorUsersRecordList =
+                                    snapshot.data!;
+
+                                return Container(
+                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.white,
                                   ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.72),
-                                    child: StreamBuilder<List<UsersRecord>>(
-                                      stream: queryUsersRecord(
-                                        queryBuilder: (usersRecord) =>
-                                            usersRecord.where(
-                                          'rol',
-                                          isNotEqualTo: Roles.user.serialize(),
+                                  child: Stack(
+                                    children: [
+                                      Align(
+                                        alignment:
+                                            const AlignmentDirectional(0.1, -1.0),
+                                        child: Container(
+                                          width:
+                                              MediaQuery.sizeOf(context).width *
+                                                  1.0,
+                                          height: MediaQuery.sizeOf(context)
+                                                  .height *
+                                              0.925,
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                          ),
+                                          child: wrapWithModel(
+                                            model: _model.mapButtonModel1,
+                                            updateCallback: () =>
+                                                safeSetState(() {}),
+                                            child: const MapButtonWidget(
+                                              isProfessional: false,
+                                            ),
+                                          ),
                                         ),
                                       ),
-                                      builder: (context, snapshot) {
-                                        // Customize what your widget looks like when it's loading.
-                                        if (!snapshot.hasData) {
-                                          return Center(
-                                            child: SizedBox(
-                                              width: 50.0,
-                                              height: 50.0,
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        }
-                                        List<UsersRecord>
-                                            containerUsersRecordList = snapshot
-                                                .data!
-                                                .where((u) =>
-                                                    u.uid != currentUserUid)
-                                                .toList();
-
-                                        return Container(
+                                      Align(
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.72),
+                                        child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
                                                   1.0,
@@ -212,37 +210,43 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                           ),
                                           child: Builder(
                                             builder: (context) {
-                                              final containerVar = containerUsersRecordList
-                                                  .where((e) =>
-                                                      (functions.filterProfessionals(
-                                                              e,
-                                                              FFAppState()
-                                                                  .filtersPage
-                                                                  .distance,
-                                                              FFAppState()
-                                                                  .filtersPage
-                                                                  .services
-                                                                  .toList(),
-                                                              FFAppState()
-                                                                  .filtersPage
-                                                                  .age
-                                                                  .toList(),
-                                                              FFAppState()
-                                                                  .tempLocation!,
-                                                              FFAppState()
-                                                                  .filtersPage
-                                                                  .schedule
-                                                                  .toList(),
-                                                              FFAppState()
-                                                                  .isFilter) ==
-                                                          true) &&
-                                                      !(currentUserDocument
-                                                                  ?.blockList
-                                                                  .toList() ??
-                                                              [])
-                                                          .contains(
-                                                              e.reference))
-                                                  .toList();
+                                              final vard =
+                                                  homeVistaCuidadorUsersRecordList
+                                                      .where((e) =>
+                                                          (functions
+                                                                  .filterProfessionals(
+                                                                      e,
+                                                                      valueOrDefault<
+                                                                          double>(
+                                                                        FFAppState()
+                                                                            .filtersPage
+                                                                            .distance,
+                                                                        1000.0,
+                                                                      ),
+                                                                      FFAppState()
+                                                                          .filtersPage
+                                                                          .services
+                                                                          .toList(),
+                                                                      FFAppState()
+                                                                          .filtersPage
+                                                                          .age
+                                                                          .toList(),
+                                                                      FFAppState()
+                                                                          .tempLocation!,
+                                                                      FFAppState()
+                                                                          .filtersPage
+                                                                          .schedule
+                                                                          .toList(),
+                                                                      FFAppState()
+                                                                          .isFilter) ==
+                                                              true) &&
+                                                          !(currentUserDocument
+                                                                      ?.blockList
+                                                                      .toList() ??
+                                                                  [])
+                                                              .contains(
+                                                                  e.reference))
+                                                      .toList();
 
                                               return ListView.separated(
                                                 padding: const EdgeInsets.symmetric(
@@ -250,32 +254,30 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                                 shrinkWrap: true,
                                                 scrollDirection:
                                                     Axis.horizontal,
-                                                itemCount: containerVar.length,
+                                                itemCount: vard.length,
                                                 separatorBuilder: (_, __) =>
                                                     const SizedBox(width: 20.0),
-                                                itemBuilder: (context,
-                                                    containerVarIndex) {
-                                                  final containerVarItem =
-                                                      containerVar[
-                                                          containerVarIndex];
+                                                itemBuilder:
+                                                    (context, vardIndex) {
+                                                  final vardItem =
+                                                      vard[vardIndex];
                                                   return V3fv0ritesWidget(
                                                     key: Key(
-                                                        'Keyxwz_${containerVarIndex}_of_${containerVar.length}'),
+                                                        'Keyx4o_${vardIndex}_of_${vard.length}'),
                                                     profesionalId:
-                                                        containerVarItem
-                                                            .reference,
+                                                        vardItem.reference,
                                                     isMap: true,
                                                   );
                                                 },
                                               );
                                             },
                                           ),
-                                        );
-                                      },
-                                    ),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                );
+                              },
                             ),
                           );
                         } else {

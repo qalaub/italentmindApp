@@ -3018,19 +3018,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // v3fv0rites
   {
-    'ukeuwrw8': {
+    'vgesylzd': {
       'en': 'Experience  ',
       'es': 'Experiencia ',
     },
-    'mxc29prl': {
+    'tjj4xff2': {
       'en': '  years',
       'es': ' años',
     },
-    'po0fsxmt': {
+    'wzy3mdby': {
       'en': 'Experience',
       'es': 'Experiencia',
     },
-    'aquunf8o': {
+    'q1iwx1nf': {
       'en': 'Qualified And Certified \npersonnel',
       'es': 'Personal calificado y certificado',
     },

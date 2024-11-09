@@ -289,6 +289,7 @@ bool filterProfessionals(
   List<String> schedule,
   bool isFilter,
 ) {
+  if (user.suburb == null) return false;
 // Calcular la distancia entre la ubicación del usuario y la ubicación del profesional
   const double earthRadius = 6371; // Radio de la Tierra en kilómetros
   double dLat =
