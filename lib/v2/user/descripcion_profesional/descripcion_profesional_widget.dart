@@ -112,10 +112,7 @@ class _DescripcionProfesionalWidgetState
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       2.0, 2.0, 0.0, 0.0),
                                   child: Text(
-                                    valueOrDefault<String>(
-                                      widget.parameter1,
-                                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi volutpat, lectus nec pretium vestibulum, tortor leo aliquam eros, non elementum urna purus laoreet enim. Etiam a libero porttitor, imperdiet lorem non, ornare velit. Etiam non mattis sem, nec porta metus. Sed imperdiet, nibh eget vestibulum imperdiet, quam diam tincidunt enim, ac lacinia mi purus at ante. Vivamus nec sapien fermentum, varius dolor et, molestie diam. Mauris a lectus at lorem ornare vehicula eget id enim. Nullam aliquet mattis ullamcorper. Donec malesuada, nibh nec imperdiet interdum, quam sem euismod nulla, sit amet vestibulum ipsum tortor vitae urna. Nullam id lectus non diam pulvinar consequat eget eu lorem.',
-                                    ).maybeHandleOverflow(
+                                    widget.parameter1!.maybeHandleOverflow(
                                       maxChars: 200,
                                       replacement: '…',
                                     ),

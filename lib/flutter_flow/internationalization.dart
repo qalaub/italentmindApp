@@ -1001,8 +1001,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'You don\'t have any chats created. ',
       'es': 'No tiene ningún chat creado.',
     },
+    '7l6rrcdd': {
+      'en': 'Participants',
+      'es': 'Participantes',
+    },
     '211duocj': {
-      'en': 'This message is for ',
+      'en': 'This message is for  ',
       'es': 'Este mensaje es para',
     },
     'c0s5q421': {
@@ -1016,6 +1020,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Sin chats',
     },
     'foup1hq1': {
+      'en': 'You don\'t have any chats created. ',
+      'es': 'No tiene ningún chat creado.',
+    },
+    'iurbbxt7': {
+      'en': 'Employees',
+      'es': 'Empleados',
+    },
+    '9jk05fne': {
+      'en': 'No Chats',
+      'es': 'Sin chats',
+    },
+    'kg6fjnhd': {
       'en': 'You don\'t have any chats created. ',
       'es': 'No tiene ningún chat creado.',
     },
@@ -3137,6 +3153,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // chat_ThreadComponentCopy
   {
+    'pyf0ka04': {
+      'en': 'No Messages',
+      'es': 'No hay mensajes',
+    },
+    'etillks0': {
+      'en': 'You have not sent any messages in this chat yet.',
+      'es': 'Aún no ha enviado ningún mensaje en este chat.',
+    },
     'd4y1t6bx': {
       'en': 'Start typing here...',
       'es': 'Comience a escribir aquí...',

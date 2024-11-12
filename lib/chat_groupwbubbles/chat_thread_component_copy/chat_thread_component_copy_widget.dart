@@ -164,9 +164,12 @@ class _ChatThreadComponentCopyWidgetState
                           color: FlutterFlowTheme.of(context).primary,
                           size: 90.0,
                         ),
-                        title: 'No Messages',
-                        body:
-                            'You have not sent any messages in this chat yet.',
+                        title: FFLocalizations.of(context).getText(
+                          'pyf0ka04' /* No Messages */,
+                        ),
+                        body: FFLocalizations.of(context).getText(
+                          'etillks0' /* You have not sent any messages... */,
+                        ),
                       );
                     }
 

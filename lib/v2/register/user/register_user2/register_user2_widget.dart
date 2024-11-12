@@ -895,7 +895,11 @@ Early Intervention */
                                                                               .passwordTextController
                                                                               .text) ==
                                                                           true)
-                                                                  ? 'Password has to be the same'
+                                                                  ? (FFLocalizations.of(context)
+                                                                              .languageCode ==
+                                                                          'en'
+                                                                      ? 'Password has to be the same'
+                                                                      : 'La contraseña debe ser la misma')
                                                                   : ' ',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -1167,7 +1171,11 @@ Early Intervention */
                                                                               .confirmPasswordTextController
                                                                               .text) ==
                                                                           true)
-                                                                  ? 'Password has to be the same'
+                                                                  ? (FFLocalizations.of(context)
+                                                                              .languageCode ==
+                                                                          'en'
+                                                                      ? 'Password has to be the same'
+                                                                      : 'La contraseña debe ser la misma')
                                                                   : ' ',
                                                               style: FlutterFlowTheme
                                                                       .of(context)

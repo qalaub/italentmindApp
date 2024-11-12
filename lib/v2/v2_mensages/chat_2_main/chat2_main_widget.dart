@@ -167,161 +167,312 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                 (chatClipIndex) {
                                           final chatClipItem =
                                               chatClip[chatClipIndex];
-                                          return Container(
-                                            decoration: const BoxDecoration(),
-                                            child: StreamBuilder<UsersRecord>(
-                                              stream: UsersRecord.getDocument(
-                                                  chatClipItem.users
-                                                      .where((e) => e ==
-                                                              currentUserReference
-                                                          ? false
-                                                          : true)
-                                                      .toList()[0]),
-                                              builder: (context, snapshot) {
-                                                // Customize what your widget looks like when it's loading.
-                                                if (!snapshot.hasData) {
-                                                  return Center(
-                                                    child: SizedBox(
-                                                      width: 50.0,
-                                                      height: 50.0,
-                                                      child:
-                                                          CircularProgressIndicator(
-                                                        valueColor:
-                                                            AlwaysStoppedAnimation<
-                                                                Color>(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary,
-                                                        ),
+                                          return StreamBuilder<UsersRecord>(
+                                            stream: UsersRecord.getDocument(
+                                                chatClipItem.users
+                                                    .where((e) => e ==
+                                                            currentUserReference
+                                                        ? false
+                                                        : true)
+                                                    .toList()[0]),
+                                            builder: (context, snapshot) {
+                                              // Customize what your widget looks like when it's loading.
+                                              if (!snapshot.hasData) {
+                                                return Center(
+                                                  child: SizedBox(
+                                                    width: 50.0,
+                                                    height: 50.0,
+                                                    child:
+                                                        CircularProgressIndicator(
+                                                      valueColor:
+                                                          AlwaysStoppedAnimation<
+                                                              Color>(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
                                                       ),
                                                     ),
-                                                  );
-                                                }
+                                                  ),
+                                                );
+                                              }
 
-                                                final columnUsersRecord =
-                                                    snapshot.data!;
+                                              final containerUsersRecord =
+                                                  snapshot.data!;
 
-                                                return Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    Stack(
-                                                      children: [
-                                                        Material(
-                                                          color: Colors
-                                                              .transparent,
-                                                          elevation: 2.0,
-                                                          shape:
-                                                              const CircleBorder(),
-                                                          child: Container(
-                                                            width: 66.0,
-                                                            height: 66.0,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              shape: BoxShape
-                                                                  .circle,
-                                                              border:
-                                                                  Border.all(
-                                                                color: columnUsersRecord
-                                                                        .isActive
-                                                                    ? const Color(
-                                                                        0xFF00FF0A)
-                                                                    : const Color(
-                                                                        0xFF2B2B2B),
-                                                                width: 1.5,
+                                              return Container(
+                                                decoration: const BoxDecoration(),
+                                                child: Builder(
+                                                  builder: (context) {
+                                                    if (currentUserDocument
+                                                            ?.business ==
+                                                        null) {
+                                                      return Column(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Stack(
+                                                            children: [
+                                                              Material(
+                                                                color: Colors
+                                                                    .transparent,
+                                                                elevation: 2.0,
+                                                                shape:
+                                                                    const CircleBorder(),
+                                                                child:
+                                                                    Container(
+                                                                  width: 66.0,
+                                                                  height: 66.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    shape: BoxShape
+                                                                        .circle,
+                                                                    border:
+                                                                        Border
+                                                                            .all(
+                                                                      color: containerUsersRecord
+                                                                              .isActive
+                                                                          ? const Color(
+                                                                              0xFF00FF0A)
+                                                                          : const Color(
+                                                                              0xFF2B2B2B),
+                                                                      width:
+                                                                          1.5,
+                                                                    ),
+                                                                  ),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding:
+                                                                        const EdgeInsets.all(
+                                                                            2.0),
+                                                                    child:
+                                                                        ClipRRect(
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              240.0),
+                                                                      child: Image
+                                                                          .network(
+                                                                        valueOrDefault<
+                                                                            String>(
+                                                                          containerUsersRecord
+                                                                              .photoUrl,
+                                                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                                                        ),
+                                                                        width:
+                                                                            44.0,
+                                                                        height:
+                                                                            44.0,
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
                                                               ),
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        0.0,
+                                                                        1.0),
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          61.0,
+                                                                          30.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 10.0,
+                                                                    height:
+                                                                        10.0,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      color: containerUsersRecord
+                                                                              .isActive
+                                                                          ? const Color(
+                                                                              0xFF00FF0A)
+                                                                          : const Color(
+                                                                              0xFF2B2B2B),
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              240.0),
+                                                                      border:
+                                                                          Border
+                                                                              .all(
+                                                                        color: const Color(
+                                                                            0xFF333030),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                          Text(
+                                                            functions
+                                                                .upperCaseFirstLetter(
+                                                                    valueOrDefault<
+                                                                        String>(
+                                                              containerUsersRecord
+                                                                  .firtsName,
+                                                              'Name',
+                                                            )),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Montserrat',
+                                                                  color: Colors
+                                                                      .white,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                ),
+                                                          ),
+                                                        ],
+                                                      );
+                                                    } else {
+                                                      return Visibility(
+                                                        visible:
+                                                            containerUsersRecord
+                                                                    .rol ==
+                                                                Roles.business,
+                                                        child: Column(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Stack(
+                                                              children: [
+                                                                Material(
+                                                                  color: Colors
+                                                                      .transparent,
+                                                                  elevation:
+                                                                      2.0,
+                                                                  shape:
+                                                                      const CircleBorder(),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 66.0,
+                                                                    height:
+                                                                        66.0,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      shape: BoxShape
+                                                                          .circle,
+                                                                      border:
+                                                                          Border
+                                                                              .all(
+                                                                        color: containerUsersRecord.isActive
+                                                                            ? const Color(0xFF00FF0A)
+                                                                            : const Color(0xFF2B2B2B),
+                                                                        width:
+                                                                            1.5,
+                                                                      ),
+                                                                    ),
+                                                                    child:
+                                                                        Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              2.0),
+                                                                      child:
+                                                                          ClipRRect(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(240.0),
+                                                                        child: Image
+                                                                            .network(
+                                                                          valueOrDefault<
+                                                                              String>(
+                                                                            containerUsersRecord.photoUrl,
+                                                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                                                          ),
+                                                                          width:
+                                                                              44.0,
+                                                                          height:
+                                                                              44.0,
+                                                                          fit: BoxFit
+                                                                              .cover,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Align(
+                                                                  alignment:
+                                                                      const AlignmentDirectional(
+                                                                          0.0,
+                                                                          1.0),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            61.0,
+                                                                            30.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          10.0,
+                                                                      height:
+                                                                          10.0,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        color: containerUsersRecord.isActive
+                                                                            ? const Color(0xFF00FF0A)
+                                                                            : const Color(0xFF2B2B2B),
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(240.0),
+                                                                        border:
+                                                                            Border.all(
+                                                                          color:
+                                                                              const Color(0xFF333030),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
                                                             ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  const EdgeInsets
-                                                                      .all(2.0),
-                                                              child: ClipRRect(
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            240.0),
-                                                                child: Image
-                                                                    .network(
+                                                            Text(
+                                                              functions.upperCaseFirstLetter(
                                                                   valueOrDefault<
                                                                       String>(
-                                                                    columnUsersRecord
-                                                                        .photoUrl,
-                                                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
-                                                                  ),
-                                                                  width: 44.0,
-                                                                  height: 44.0,
-                                                                  fit: BoxFit
-                                                                      .cover,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Align(
-                                                          alignment:
-                                                              const AlignmentDirectional(
-                                                                  0.0, 1.0),
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        61.0,
-                                                                        30.0,
+                                                                containerUsersRecord
+                                                                    .firtsName,
+                                                                'Name',
+                                                              )),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Montserrat',
+                                                                    color: Colors
+                                                                        .white,
+                                                                    letterSpacing:
                                                                         0.0,
-                                                                        0.0),
-                                                            child: Container(
-                                                              width: 10.0,
-                                                              height: 10.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: columnUsersRecord
-                                                                        .isActive
-                                                                    ? const Color(
-                                                                        0xFF00FF0A)
-                                                                    : const Color(
-                                                                        0xFF2B2B2B),
-                                                                borderRadius:
-                                                                    BorderRadius
-                                                                        .circular(
-                                                                            240.0),
-                                                                border:
-                                                                    Border.all(
-                                                                  color: const Color(
-                                                                      0xFF333030),
-                                                                ),
-                                                              ),
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                  ),
                                                             ),
-                                                          ),
+                                                          ],
                                                         ),
-                                                      ],
-                                                    ),
-                                                    Text(
-                                                      functions
-                                                          .upperCaseFirstLetter(
-                                                              valueOrDefault<
-                                                                  String>(
-                                                        columnUsersRecord
-                                                            .firtsName,
-                                                        'Name',
-                                                      )),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight.w500,
-                                                          ),
-                                                    ),
-                                                  ],
-                                                );
-                                              },
-                                            ),
+                                                      );
+                                                    }
+                                                  },
+                                                ),
+                                              );
+                                            },
                                           );
                                         })
                                             .divide(const SizedBox(width: 16.0))
@@ -345,6 +496,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Montserrat',
+                                          color: const Color(0xFF1D69D7),
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -414,194 +566,285 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 1.0, 0.0, 0.0),
-                                          child: InkWell(
-                                            splashColor: Colors.transparent,
-                                            focusColor: Colors.transparent,
-                                            hoverColor: Colors.transparent,
-                                            highlightColor: Colors.transparent,
-                                            onTap: () async {
-                                              FFAppState().currentChat =
-                                                  chat2MainVarItem.reference;
-                                              safeSetState(() {});
-
-                                              context.pushNamed(
-                                                'chat_2_Details',
-                                                queryParameters: {
-                                                  'chatRef': serializeParam(
-                                                    chat2MainVarItem,
-                                                    ParamType.Document,
-                                                  ),
-                                                  'chatRefTotal':
-                                                      serializeParam(
-                                                    chat2MainVarItem.reference,
-                                                    ParamType.DocumentReference,
-                                                  ),
-                                                }.withoutNulls,
-                                                extra: <String, dynamic>{
-                                                  'chatRef': chat2MainVarItem,
-                                                },
-                                              );
-                                            },
-                                            child: Material(
-                                              color: Colors.transparent,
-                                              elevation: 0.0,
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(0.0),
-                                              ),
-                                              child: Container(
-                                                width: double.infinity,
-                                                decoration: BoxDecoration(
-                                                  color: Colors.white,
-                                                  boxShadow: [
-                                                    BoxShadow(
-                                                      blurRadius: 0.0,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .alternate,
-                                                      offset: const Offset(
-                                                        0.0,
-                                                        1.0,
+                                          child: StreamBuilder<UsersRecord>(
+                                            stream: UsersRecord.getDocument(
+                                                chat2MainVarItem.users
+                                                    .where((e) => e.id ==
+                                                            currentUserReference
+                                                                ?.id
+                                                        ? false
+                                                        : true)
+                                                    .toList()[0]),
+                                            builder: (context, snapshot) {
+                                              // Customize what your widget looks like when it's loading.
+                                              if (!snapshot.hasData) {
+                                                return Center(
+                                                  child: SizedBox(
+                                                    width: 50.0,
+                                                    height: 50.0,
+                                                    child:
+                                                        CircularProgressIndicator(
+                                                      valueColor:
+                                                          AlwaysStoppedAnimation<
+                                                              Color>(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
                                                       ),
-                                                    )
-                                                  ],
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          0.0),
-                                                ),
-                                                child: Builder(
-                                                  builder: (context) {
-                                                    if (chat2MainVarItem
-                                                            .users.length <=
-                                                        2) {
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    16.0,
-                                                                    12.0,
-                                                                    12.0,
-                                                                    12.0),
-                                                        child: StreamBuilder<
-                                                            UsersRecord>(
-                                                          stream: UsersRecord.getDocument(
-                                                              chat2MainVarItem
-                                                                  .users
-                                                                  .where((e) => e
-                                                                              .id ==
-                                                                          currentUserReference
-                                                                              ?.id
-                                                                      ? false
-                                                                      : true)
-                                                                  .toList()[0]),
-                                                          builder: (context,
-                                                              snapshot) {
-                                                            // Customize what your widget looks like when it's loading.
-                                                            if (!snapshot
-                                                                .hasData) {
-                                                              return Center(
-                                                                child: SizedBox(
-                                                                  width: 50.0,
-                                                                  height: 50.0,
-                                                                  child:
-                                                                      CircularProgressIndicator(
-                                                                    valueColor:
-                                                                        AlwaysStoppedAnimation<
-                                                                            Color>(
-                                                                      FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primary,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              );
-                                                            }
+                                                    ),
+                                                  ),
+                                                );
+                                              }
 
-                                                            final rowUsersRecord =
-                                                                snapshot.data!;
+                                              final containerUsersRecord =
+                                                  snapshot.data!;
 
-                                                            return Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      Material(
-                                                                    color: Colors
-                                                                        .transparent,
-                                                                    elevation:
-                                                                        0.0,
-                                                                    shape:
-                                                                        const CircleBorder(),
-                                                                    child:
-                                                                        Container(
-                                                                      width:
-                                                                          59.0,
-                                                                      height:
-                                                                          59.0,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        shape: BoxShape
-                                                                            .circle,
-                                                                        border:
-                                                                            Border.all(
-                                                                          color:
-                                                                              Colors.black,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding:
-                                                                            const EdgeInsets.all(2.0),
+                                              return InkWell(
+                                                splashColor: Colors.transparent,
+                                                focusColor: Colors.transparent,
+                                                hoverColor: Colors.transparent,
+                                                highlightColor:
+                                                    Colors.transparent,
+                                                onTap: () async {
+                                                  FFAppState().currentChat =
+                                                      chat2MainVarItem
+                                                          .reference;
+                                                  safeSetState(() {});
+
+                                                  context.pushNamed(
+                                                    'chat_2_Details',
+                                                    queryParameters: {
+                                                      'chatRef': serializeParam(
+                                                        chat2MainVarItem,
+                                                        ParamType.Document,
+                                                      ),
+                                                      'chatRefTotal':
+                                                          serializeParam(
+                                                        chat2MainVarItem
+                                                            .reference,
+                                                        ParamType
+                                                            .DocumentReference,
+                                                      ),
+                                                    }.withoutNulls,
+                                                    extra: <String, dynamic>{
+                                                      'chatRef':
+                                                          chat2MainVarItem,
+                                                    },
+                                                  );
+                                                },
+                                                child: Material(
+                                                  color: Colors.transparent,
+                                                  elevation: 0.0,
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            0.0),
+                                                  ),
+                                                  child: Container(
+                                                    width: double.infinity,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.white,
+                                                      boxShadow: [
+                                                        BoxShadow(
+                                                          blurRadius: 0.0,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .alternate,
+                                                          offset: const Offset(
+                                                            0.0,
+                                                            1.0,
+                                                          ),
+                                                        )
+                                                      ],
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              0.0),
+                                                    ),
+                                                    child: Builder(
+                                                      builder: (context) {
+                                                        if (chat2MainVarItem
+                                                                .users.length <=
+                                                            2) {
+                                                          return Builder(
+                                                            builder: (context) {
+                                                              if (currentUserDocument
+                                                                      ?.business ==
+                                                                  null) {
+                                                                return Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          16.0,
+                                                                          12.0,
+                                                                          12.0,
+                                                                          12.0),
+                                                                  child: Row(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
+                                                                            0.0,
+                                                                            0.0),
                                                                         child:
-                                                                            ClipRRect(
-                                                                          borderRadius:
-                                                                              BorderRadius.circular(24.0),
+                                                                            Material(
+                                                                          color:
+                                                                              Colors.transparent,
+                                                                          elevation:
+                                                                              0.0,
+                                                                          shape:
+                                                                              const CircleBorder(),
                                                                           child:
-                                                                              CachedNetworkImage(
-                                                                            fadeInDuration:
-                                                                                const Duration(milliseconds: 500),
-                                                                            fadeOutDuration:
-                                                                                const Duration(milliseconds: 500),
-                                                                            imageUrl:
-                                                                                valueOrDefault<String>(
-                                                                              rowUsersRecord.photoUrl,
-                                                                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
-                                                                            ),
+                                                                              Container(
                                                                             width:
-                                                                                44.0,
+                                                                                59.0,
                                                                             height:
-                                                                                44.0,
-                                                                            fit:
-                                                                                BoxFit.cover,
+                                                                                59.0,
+                                                                            decoration:
+                                                                                BoxDecoration(
+                                                                              shape: BoxShape.circle,
+                                                                              border: Border.all(
+                                                                                color: Colors.black,
+                                                                                width: 1.0,
+                                                                              ),
+                                                                            ),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: const EdgeInsets.all(2.0),
+                                                                              child: ClipRRect(
+                                                                                borderRadius: BorderRadius.circular(24.0),
+                                                                                child: CachedNetworkImage(
+                                                                                  fadeInDuration: const Duration(milliseconds: 500),
+                                                                                  fadeOutDuration: const Duration(milliseconds: 500),
+                                                                                  imageUrl: valueOrDefault<String>(
+                                                                                    containerUsersRecord.photoUrl,
+                                                                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                                                                  ),
+                                                                                  width: 44.0,
+                                                                                  height: 44.0,
+                                                                                  fit: BoxFit.cover,
+                                                                                ),
+                                                                              ),
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ),
+                                                                      Expanded(
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              8.0,
+                                                                              0.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Column(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            crossAxisAlignment:
+                                                                                CrossAxisAlignment.start,
+                                                                            children: [
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                children: [
+                                                                                  Expanded(
+                                                                                    child: Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                      child: Text(
+                                                                                        functions.upperCaseFirstLetter(valueOrDefault<String>(
+                                                                                          functions.concatStrings(containerUsersRecord.firtsName, containerUsersRecord.lastName, ' '),
+                                                                                          'Ghost User',
+                                                                                        )),
+                                                                                        textAlign: TextAlign.start,
+                                                                                        style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                              fontFamily: 'Poppins',
+                                                                                              fontSize: 14.0,
+                                                                                              letterSpacing: 0.0,
+                                                                                              fontWeight: FontWeight.bold,
+                                                                                            ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ),
+                                                                                  if (!chat2MainVarItem.lastMessageSeenBy.contains(currentUserReference))
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                      child: Container(
+                                                                                        width: 12.0,
+                                                                                        height: 12.0,
+                                                                                        decoration: BoxDecoration(
+                                                                                          color: FlutterFlowTheme.of(context).accent1,
+                                                                                          shape: BoxShape.circle,
+                                                                                          border: Border.all(
+                                                                                            color: FlutterFlowTheme.of(context).primary,
+                                                                                            width: 2.0,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                ],
+                                                                              ),
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                child: Text(
+                                                                                  chat2MainVarItem.lastMessage,
+                                                                                  textAlign: TextAlign.start,
+                                                                                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                        fontFamily: 'Poppins',
+                                                                                        letterSpacing: 0.0,
+                                                                                      ),
+                                                                                ),
+                                                                              ),
+                                                                              Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                children: [
+                                                                                  Padding(
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                    child: Text(
+                                                                                      dateTimeFormat(
+                                                                                        "relative",
+                                                                                        chat2MainVarItem.lastMessageTime!,
+                                                                                        locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
+                                                                                      ),
+                                                                                      textAlign: TextAlign.start,
+                                                                                      style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                            fontFamily: 'Poppins',
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                  ),
+                                                                                  Icon(
+                                                                                    Icons.chevron_right_rounded,
+                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                    size: 24.0,
+                                                                                  ),
+                                                                                ].divide(const SizedBox(width: 16.0)),
+                                                                              ),
+                                                                            ],
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
-                                                                ),
-                                                                Expanded(
+                                                                );
+                                                              } else {
+                                                                return Visibility(
+                                                                  visible: containerUsersRecord
+                                                                          .rol ==
+                                                                      Roles
+                                                                          .business,
                                                                   child:
                                                                       Padding(
                                                                     padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
-                                                                            8.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    child:
-                                                                        Column(
+                                                                            16.0,
+                                                                            12.0,
+                                                                            12.0,
+                                                                            12.0),
+                                                                    child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
@@ -609,205 +852,317 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                           CrossAxisAlignment
                                                                               .start,
                                                                       children: [
-                                                                        Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Expanded(
-                                                                              child: Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                                                                                child: Text(
-                                                                                  functions.upperCaseFirstLetter(valueOrDefault<String>(
-                                                                                    functions.concatStrings(rowUsersRecord.firtsName, rowUsersRecord.lastName, ' '),
-                                                                                    'Ghost User',
-                                                                                  )),
-                                                                                  textAlign: TextAlign.start,
-                                                                                  style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                        fontFamily: 'Poppins',
-                                                                                        fontSize: 14.0,
-                                                                                        letterSpacing: 0.0,
-                                                                                        fontWeight: FontWeight.bold,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            if (!chat2MainVarItem.lastMessageSeenBy.contains(currentUserReference))
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                                                                                child: Container(
-                                                                                  width: 12.0,
-                                                                                  height: 12.0,
-                                                                                  decoration: BoxDecoration(
-                                                                                    color: FlutterFlowTheme.of(context).accent1,
-                                                                                    shape: BoxShape.circle,
-                                                                                    border: Border.all(
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                      width: 2.0,
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                          ],
-                                                                        ),
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              4.0,
+                                                                        Align(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
-                                                                              Text(
-                                                                            chat2MainVarItem.lastMessage,
-                                                                            textAlign:
-                                                                                TextAlign.start,
-                                                                            style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                  fontFamily: 'Poppins',
-                                                                                  letterSpacing: 0.0,
+                                                                              Material(
+                                                                            color:
+                                                                                Colors.transparent,
+                                                                            elevation:
+                                                                                0.0,
+                                                                            shape:
+                                                                                const CircleBorder(),
+                                                                            child:
+                                                                                Container(
+                                                                              width: 59.0,
+                                                                              height: 59.0,
+                                                                              decoration: BoxDecoration(
+                                                                                shape: BoxShape.circle,
+                                                                                border: Border.all(
+                                                                                  color: Colors.black,
+                                                                                  width: 1.0,
                                                                                 ),
-                                                                          ),
-                                                                        ),
-                                                                        Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
-                                                                          children:
-                                                                              [
-                                                                            Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                                                              child: Text(
-                                                                                dateTimeFormat(
-                                                                                  "relative",
-                                                                                  chat2MainVarItem.lastMessageTime!,
-                                                                                  locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
-                                                                                ),
-                                                                                textAlign: TextAlign.start,
-                                                                                style: FlutterFlowTheme.of(context).labelSmall.override(
-                                                                                      fontFamily: 'Poppins',
-                                                                                      letterSpacing: 0.0,
+                                                                              ),
+                                                                              child: Padding(
+                                                                                padding: const EdgeInsets.all(2.0),
+                                                                                child: ClipRRect(
+                                                                                  borderRadius: BorderRadius.circular(24.0),
+                                                                                  child: CachedNetworkImage(
+                                                                                    fadeInDuration: const Duration(milliseconds: 500),
+                                                                                    fadeOutDuration: const Duration(milliseconds: 500),
+                                                                                    imageUrl: valueOrDefault<String>(
+                                                                                      containerUsersRecord.photoUrl,
+                                                                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                                                                     ),
+                                                                                    width: 44.0,
+                                                                                    height: 44.0,
+                                                                                    fit: BoxFit.cover,
+                                                                                  ),
+                                                                                ),
                                                                               ),
                                                                             ),
-                                                                            Icon(
-                                                                              Icons.chevron_right_rounded,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              size: 24.0,
+                                                                          ),
+                                                                        ),
+                                                                        Expanded(
+                                                                          child:
+                                                                              Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                8.0,
+                                                                                0.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  children: [
+                                                                                    Expanded(
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                        child: Text(
+                                                                                          functions.upperCaseFirstLetter(valueOrDefault<String>(
+                                                                                            functions.concatStrings(containerUsersRecord.firtsName, containerUsersRecord.lastName, ' '),
+                                                                                            'Ghost User',
+                                                                                          )),
+                                                                                          textAlign: TextAlign.start,
+                                                                                          style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                                fontFamily: 'Poppins',
+                                                                                                fontSize: 14.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                                fontWeight: FontWeight.bold,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    if (!chat2MainVarItem.lastMessageSeenBy.contains(currentUserReference))
+                                                                                      Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                        child: Container(
+                                                                                          width: 12.0,
+                                                                                          height: 12.0,
+                                                                                          decoration: BoxDecoration(
+                                                                                            color: FlutterFlowTheme.of(context).accent1,
+                                                                                            shape: BoxShape.circle,
+                                                                                            border: Border.all(
+                                                                                              color: FlutterFlowTheme.of(context).primary,
+                                                                                              width: 2.0,
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                  ],
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                  child: Text(
+                                                                                    chat2MainVarItem.lastMessage,
+                                                                                    textAlign: TextAlign.start,
+                                                                                    style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                          fontFamily: 'Poppins',
+                                                                                          letterSpacing: 0.0,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                                Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                  children: [
+                                                                                    Padding(
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                      child: Text(
+                                                                                        dateTimeFormat(
+                                                                                          "relative",
+                                                                                          chat2MainVarItem.lastMessageTime!,
+                                                                                          locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
+                                                                                        ),
+                                                                                        textAlign: TextAlign.start,
+                                                                                        style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                              fontFamily: 'Poppins',
+                                                                                              letterSpacing: 0.0,
+                                                                                            ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Icon(
+                                                                                      Icons.chevron_right_rounded,
+                                                                                      color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                      size: 24.0,
+                                                                                    ),
+                                                                                  ].divide(const SizedBox(width: 16.0)),
+                                                                                ),
+                                                                              ],
                                                                             ),
-                                                                          ].divide(const SizedBox(width: 16.0)),
+                                                                          ),
                                                                         ),
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                ),
-                                                              ],
-                                                            );
-                                                          },
-                                                        ),
-                                                      );
-                                                    } else {
-                                                      return Padding(
-                                                        padding:
-                                                            const EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    16.0,
-                                                                    12.0,
-                                                                    12.0,
-                                                                    12.0),
-                                                        child: FutureBuilder<
-                                                            UsersRecord>(
-                                                          future: FFAppState()
-                                                              .userDocQuery(
-                                                            uniqueQueryKey:
-                                                                chat2MainVarItem
-                                                                    .reference
-                                                                    .id,
-                                                            requestFn: () => UsersRecord
-                                                                .getDocumentOnce(
+                                                                );
+                                                              }
+                                                            },
+                                                          );
+                                                        } else {
+                                                          return Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        16.0,
+                                                                        12.0,
+                                                                        12.0,
+                                                                        12.0),
+                                                            child: FutureBuilder<
+                                                                UsersRecord>(
+                                                              future: FFAppState()
+                                                                  .userDocQuery(
+                                                                uniqueQueryKey:
                                                                     chat2MainVarItem
+                                                                        .reference
+                                                                        .id,
+                                                                requestFn: () =>
+                                                                    UsersRecord.getDocumentOnce(chat2MainVarItem
                                                                         .users
                                                                         .where((e) =>
                                                                             e !=
                                                                             currentUserReference)
                                                                         .toList()
                                                                         .first),
-                                                          ),
-                                                          builder: (context,
-                                                              snapshot) {
-                                                            // Customize what your widget looks like when it's loading.
-                                                            if (!snapshot
-                                                                .hasData) {
-                                                              return Center(
-                                                                child: SizedBox(
-                                                                  width: 50.0,
-                                                                  height: 50.0,
-                                                                  child:
-                                                                      CircularProgressIndicator(
-                                                                    valueColor:
-                                                                        AlwaysStoppedAnimation<
-                                                                            Color>(
-                                                                      FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primary,
+                                                              ),
+                                                              builder: (context,
+                                                                  snapshot) {
+                                                                // Customize what your widget looks like when it's loading.
+                                                                if (!snapshot
+                                                                    .hasData) {
+                                                                  return Center(
+                                                                    child:
+                                                                        SizedBox(
+                                                                      width:
+                                                                          50.0,
+                                                                      height:
+                                                                          50.0,
+                                                                      child:
+                                                                          CircularProgressIndicator(
+                                                                        valueColor:
+                                                                            AlwaysStoppedAnimation<Color>(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .primary,
+                                                                        ),
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                ),
-                                                              );
-                                                            }
+                                                                  );
+                                                                }
 
-                                                            final rowUsersRecord =
-                                                                snapshot.data!;
+                                                                final rowUsersRecord =
+                                                                    snapshot
+                                                                        .data!;
 
-                                                            return Row(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              crossAxisAlignment:
-                                                                  CrossAxisAlignment
-                                                                      .start,
-                                                              children: [
-                                                                Padding(
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
+                                                                return Row(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           8.0),
-                                                                  child:
-                                                                      SizedBox(
-                                                                    width: 44.0,
-                                                                    height:
-                                                                        54.0,
-                                                                    child:
-                                                                        Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              1.0,
-                                                                              1.0),
-                                                                          child:
-                                                                              FutureBuilder<UsersRecord>(
-                                                                            future:
-                                                                                UsersRecord.getDocumentOnce(chat2MainVarItem.users.where((e) => e != currentUserReference).toList().last),
-                                                                            builder:
-                                                                                (context, snapshot) {
-                                                                              // Customize what your widget looks like when it's loading.
-                                                                              if (!snapshot.hasData) {
-                                                                                return Center(
-                                                                                  child: SizedBox(
-                                                                                    width: 50.0,
-                                                                                    height: 50.0,
-                                                                                    child: CircularProgressIndicator(
-                                                                                      valueColor: AlwaysStoppedAnimation<Color>(
-                                                                                        FlutterFlowTheme.of(context).primary,
+                                                                      child:
+                                                                          SizedBox(
+                                                                        width:
+                                                                            44.0,
+                                                                        height:
+                                                                            54.0,
+                                                                        child:
+                                                                            Stack(
+                                                                          children: [
+                                                                            Align(
+                                                                              alignment: const AlignmentDirectional(1.0, 1.0),
+                                                                              child: FutureBuilder<UsersRecord>(
+                                                                                future: UsersRecord.getDocumentOnce(chat2MainVarItem.users.where((e) => e != currentUserReference).toList().last),
+                                                                                builder: (context, snapshot) {
+                                                                                  // Customize what your widget looks like when it's loading.
+                                                                                  if (!snapshot.hasData) {
+                                                                                    return Center(
+                                                                                      child: SizedBox(
+                                                                                        width: 50.0,
+                                                                                        height: 50.0,
+                                                                                        child: CircularProgressIndicator(
+                                                                                          valueColor: AlwaysStoppedAnimation<Color>(
+                                                                                            FlutterFlowTheme.of(context).primary,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    );
+                                                                                  }
+
+                                                                                  final containerUsersRecord = snapshot.data!;
+
+                                                                                  return Container(
+                                                                                    width: 32.0,
+                                                                                    height: 32.0,
+                                                                                    decoration: BoxDecoration(
+                                                                                      color: FlutterFlowTheme.of(context).accent1,
+                                                                                      borderRadius: BorderRadius.circular(12.0),
+                                                                                      shape: BoxShape.rectangle,
+                                                                                      border: Border.all(
+                                                                                        color: FlutterFlowTheme.of(context).primary,
+                                                                                        width: 2.0,
                                                                                       ),
                                                                                     ),
-                                                                                  ),
-                                                                                );
-                                                                              }
-
-                                                                              final containerUsersRecord = snapshot.data!;
-
-                                                                              return Container(
+                                                                                    child: Builder(
+                                                                                      builder: (context) {
+                                                                                        if (containerUsersRecord.photoUrl != '') {
+                                                                                          return Padding(
+                                                                                            padding: const EdgeInsets.all(2.0),
+                                                                                            child: ClipRRect(
+                                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                                              child: CachedNetworkImage(
+                                                                                                fadeInDuration: const Duration(milliseconds: 200),
+                                                                                                fadeOutDuration: const Duration(milliseconds: 200),
+                                                                                                imageUrl: valueOrDefault<String>(
+                                                                                                  containerUsersRecord.photoUrl,
+                                                                                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/test-flow-at3mts/assets/jozbfglfd548/flutterflow_future%402x.jpg',
+                                                                                                ),
+                                                                                                width: 44.0,
+                                                                                                height: 44.0,
+                                                                                                fit: BoxFit.cover,
+                                                                                              ),
+                                                                                            ),
+                                                                                          );
+                                                                                        } else {
+                                                                                          return Padding(
+                                                                                            padding: const EdgeInsets.all(2.0),
+                                                                                            child: Container(
+                                                                                              width: 100.0,
+                                                                                              height: 100.0,
+                                                                                              decoration: BoxDecoration(
+                                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                                borderRadius: BorderRadius.circular(8.0),
+                                                                                              ),
+                                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                              child: Text(
+                                                                                                valueOrDefault<String>(
+                                                                                                  containerUsersRecord.displayName,
+                                                                                                  'A',
+                                                                                                ).maybeHandleOverflow(
+                                                                                                  maxChars: 1,
+                                                                                                ),
+                                                                                                textAlign: TextAlign.center,
+                                                                                                style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                                      fontFamily: 'Readex Pro',
+                                                                                                      letterSpacing: 0.0,
+                                                                                                      fontWeight: FontWeight.bold,
+                                                                                                    ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          );
+                                                                                        }
+                                                                                      },
+                                                                                    ),
+                                                                                  );
+                                                                                },
+                                                                              ),
+                                                                            ),
+                                                                            Align(
+                                                                              alignment: const AlignmentDirectional(-1.0, -1.0),
+                                                                              child: Container(
                                                                                 width: 32.0,
                                                                                 height: 32.0,
                                                                                 decoration: BoxDecoration(
@@ -821,7 +1176,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                 ),
                                                                                 child: Builder(
                                                                                   builder: (context) {
-                                                                                    if (containerUsersRecord.photoUrl != '') {
+                                                                                    if (rowUsersRecord.photoUrl != '') {
                                                                                       return Padding(
                                                                                         padding: const EdgeInsets.all(2.0),
                                                                                         child: ClipRRect(
@@ -830,7 +1185,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                             fadeInDuration: const Duration(milliseconds: 200),
                                                                                             fadeOutDuration: const Duration(milliseconds: 200),
                                                                                             imageUrl: valueOrDefault<String>(
-                                                                                              containerUsersRecord.photoUrl,
+                                                                                              rowUsersRecord.photoUrl,
                                                                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/test-flow-at3mts/assets/jozbfglfd548/flutterflow_future%402x.jpg',
                                                                                             ),
                                                                                             width: 44.0,
@@ -852,7 +1207,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                           alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                           child: Text(
                                                                                             valueOrDefault<String>(
-                                                                                              containerUsersRecord.displayName,
+                                                                                              rowUsersRecord.displayName,
                                                                                               'A',
                                                                                             ).maybeHandleOverflow(
                                                                                               maxChars: 1,
@@ -869,208 +1224,122 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                     }
                                                                                   },
                                                                                 ),
-                                                                              );
-                                                                            },
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              -1.0,
-                                                                              -1.0),
-                                                                          child:
-                                                                              Container(
-                                                                            width:
-                                                                                32.0,
-                                                                            height:
-                                                                                32.0,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              color: FlutterFlowTheme.of(context).accent1,
-                                                                              borderRadius: BorderRadius.circular(12.0),
-                                                                              shape: BoxShape.rectangle,
-                                                                              border: Border.all(
-                                                                                color: FlutterFlowTheme.of(context).primary,
-                                                                                width: 2.0,
                                                                               ),
                                                                             ),
-                                                                            child:
-                                                                                Builder(
-                                                                              builder: (context) {
-                                                                                if (rowUsersRecord.photoUrl != '') {
-                                                                                  return Padding(
-                                                                                    padding: const EdgeInsets.all(2.0),
-                                                                                    child: ClipRRect(
-                                                                                      borderRadius: BorderRadius.circular(8.0),
-                                                                                      child: CachedNetworkImage(
-                                                                                        fadeInDuration: const Duration(milliseconds: 200),
-                                                                                        fadeOutDuration: const Duration(milliseconds: 200),
-                                                                                        imageUrl: valueOrDefault<String>(
-                                                                                          rowUsersRecord.photoUrl,
-                                                                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/test-flow-at3mts/assets/jozbfglfd548/flutterflow_future%402x.jpg',
-                                                                                        ),
-                                                                                        width: 44.0,
-                                                                                        height: 44.0,
-                                                                                        fit: BoxFit.cover,
-                                                                                      ),
-                                                                                    ),
-                                                                                  );
-                                                                                } else {
-                                                                                  return Padding(
-                                                                                    padding: const EdgeInsets.all(2.0),
-                                                                                    child: Container(
-                                                                                      width: 100.0,
-                                                                                      height: 100.0,
-                                                                                      decoration: BoxDecoration(
-                                                                                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                        borderRadius: BorderRadius.circular(8.0),
-                                                                                      ),
-                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        valueOrDefault<String>(
-                                                                                          rowUsersRecord.displayName,
-                                                                                          'A',
-                                                                                        ).maybeHandleOverflow(
-                                                                                          maxChars: 1,
-                                                                                        ),
-                                                                                        textAlign: TextAlign.center,
-                                                                                        style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                              fontFamily: 'Readex Pro',
-                                                                                              letterSpacing: 0.0,
-                                                                                              fontWeight: FontWeight.bold,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  );
-                                                                                }
-                                                                              },
-                                                                            ),
-                                                                          ),
+                                                                          ],
                                                                         ),
-                                                                      ],
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                ),
-                                                                Expanded(
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
+                                                                    Expanded(
+                                                                      child:
+                                                                          Padding(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             8.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    child:
-                                                                        Column(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      crossAxisAlignment:
-                                                                          CrossAxisAlignment
-                                                                              .start,
-                                                                      children: [
-                                                                        Row(
+                                                                        child:
+                                                                            Column(
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
+                                                                          crossAxisAlignment:
+                                                                              CrossAxisAlignment.start,
                                                                           children: [
-                                                                            Expanded(
-                                                                              child: Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                                                                                child: Text(
-                                                                                  FFLocalizations.of(context).getText(
-                                                                                    'w7icb90c' /* Group Chat */,
-                                                                                  ),
-                                                                                  textAlign: TextAlign.start,
-                                                                                  style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                        fontFamily: 'Readex Pro',
-                                                                                        letterSpacing: 0.0,
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              children: [
+                                                                                Expanded(
+                                                                                  child: Padding(
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                    child: Text(
+                                                                                      FFLocalizations.of(context).getText(
+                                                                                        'w7icb90c' /* Group Chat */,
                                                                                       ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                            if (!chat2MainVarItem.lastMessageSeenBy.contains(currentUserReference))
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                                                                                child: Container(
-                                                                                  width: 12.0,
-                                                                                  height: 12.0,
-                                                                                  decoration: BoxDecoration(
-                                                                                    color: FlutterFlowTheme.of(context).accent1,
-                                                                                    shape: BoxShape.circle,
-                                                                                    border: Border.all(
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                      width: 2.0,
+                                                                                      textAlign: TextAlign.start,
+                                                                                      style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                            fontFamily: 'Readex Pro',
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ),
-                                                                          ],
-                                                                        ),
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              4.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            valueOrDefault<String>(
-                                                                              chat2MainVarItem.lastMessage,
-                                                                              'No messages yet.',
+                                                                                if (!chat2MainVarItem.lastMessageSeenBy.contains(currentUserReference))
+                                                                                  Padding(
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                    child: Container(
+                                                                                      width: 12.0,
+                                                                                      height: 12.0,
+                                                                                      decoration: BoxDecoration(
+                                                                                        color: FlutterFlowTheme.of(context).accent1,
+                                                                                        shape: BoxShape.circle,
+                                                                                        border: Border.all(
+                                                                                          color: FlutterFlowTheme.of(context).primary,
+                                                                                          width: 2.0,
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ),
+                                                                              ],
                                                                             ),
-                                                                            textAlign:
-                                                                                TextAlign.start,
-                                                                            style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                  fontFamily: 'Readex Pro',
-                                                                                  letterSpacing: 0.0,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                        Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
-                                                                          children:
-                                                                              [
                                                                             Padding(
                                                                               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 valueOrDefault<String>(
-                                                                                  dateTimeFormat(
-                                                                                    "relative",
-                                                                                    chat2MainVarItem.lastMessageTime,
-                                                                                    locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
-                                                                                  ),
-                                                                                  '--',
+                                                                                  chat2MainVarItem.lastMessage,
+                                                                                  'No messages yet.',
                                                                                 ),
                                                                                 textAlign: TextAlign.start,
-                                                                                style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                       fontFamily: 'Readex Pro',
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
                                                                             ),
-                                                                            Icon(
-                                                                              Icons.chevron_right_rounded,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              size: 24.0,
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                              children: [
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                  child: Text(
+                                                                                    valueOrDefault<String>(
+                                                                                      dateTimeFormat(
+                                                                                        "relative",
+                                                                                        chat2MainVarItem.lastMessageTime,
+                                                                                        locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
+                                                                                      ),
+                                                                                      '--',
+                                                                                    ),
+                                                                                    textAlign: TextAlign.start,
+                                                                                    style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                          fontFamily: 'Readex Pro',
+                                                                                          letterSpacing: 0.0,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                                Icon(
+                                                                                  Icons.chevron_right_rounded,
+                                                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                  size: 24.0,
+                                                                                ),
+                                                                              ].divide(const SizedBox(width: 16.0)),
                                                                             ),
-                                                                          ].divide(const SizedBox(width: 16.0)),
+                                                                          ],
                                                                         ),
-                                                                      ],
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            );
-                                                          },
-                                                        ),
-                                                      );
-                                                    }
-                                                  },
+                                                                  ],
+                                                                );
+                                                              },
+                                                            ),
+                                                          );
+                                                        }
+                                                      },
+                                                    ),
+                                                  ),
                                                 ),
-                                              ),
-                                            ),
+                                              );
+                                            },
                                           ),
                                         );
                                       },
@@ -1125,14 +1394,10 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                     builder: (context) {
                                       final chatClip = containerChatsRecordList
                                           .where((e) =>
-                                              (((currentUserDocument?.professionals
-                                                                  .toList() ??
-                                                              [])
+                                              (((currentUserDocument?.professionals.toList() ?? [])
                                                           .contains(e.userB) ==
                                                       true) ||
-                                                  ((currentUserDocument?.professionals
-                                                                  .toList() ??
-                                                              [])
+                                                  ((currentUserDocument?.professionals.toList() ?? [])
                                                           .contains(e.userA) ==
                                                       true) ||
                                                   (e.userB ==
@@ -1140,11 +1405,13 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                               (((currentUserDocument?.blockList.toList() ?? [])
                                                           .contains(e.userA) ==
                                                       false) &&
-                                                  ((currentUserDocument?.blockList
-                                                                  .toList() ??
-                                                              [])
+                                                  ((currentUserDocument?.blockList.toList() ?? [])
                                                           .contains(e.userB) ==
-                                                      false)))
+                                                      false)) &&
+                                              ((currentUserDocument?.professionals.toList() ??
+                                                          [])
+                                                      .contains(e.userB) ==
+                                                  false))
                                           .toList()
                                           .take(4)
                                           .toList();
@@ -1160,42 +1427,42 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                       (chatClipIndex) {
                                             final chatClipItem =
                                                 chatClip[chatClipIndex];
-                                            return Container(
-                                              decoration: const BoxDecoration(),
-                                              child: StreamBuilder<UsersRecord>(
-                                                stream: UsersRecord.getDocument(
-                                                    chatClipItem.users
-                                                        .where((e) => e ==
-                                                                currentUserReference
-                                                            ? false
-                                                            : true)
-                                                        .toList()
-                                                        .last),
-                                                builder: (context, snapshot) {
-                                                  // Customize what your widget looks like when it's loading.
-                                                  if (!snapshot.hasData) {
-                                                    return Center(
-                                                      child: SizedBox(
-                                                        width: 50.0,
-                                                        height: 50.0,
-                                                        child:
-                                                            CircularProgressIndicator(
-                                                          valueColor:
-                                                              AlwaysStoppedAnimation<
-                                                                  Color>(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                          ),
+                                            return StreamBuilder<UsersRecord>(
+                                              stream: UsersRecord.getDocument(
+                                                  chatClipItem.users
+                                                      .where((e) => e ==
+                                                              currentUserReference
+                                                          ? false
+                                                          : true)
+                                                      .toList()
+                                                      .last),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50.0,
+                                                      height: 50.0,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                                Color>(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
                                                         ),
                                                       ),
-                                                    );
-                                                  }
+                                                    ),
+                                                  );
+                                                }
 
-                                                  final columnUsersRecord =
-                                                      snapshot.data!;
+                                                final containerUsersRecord =
+                                                    snapshot.data!;
 
-                                                  return Column(
+                                                return Container(
+                                                  decoration: const BoxDecoration(),
+                                                  child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
                                                     mainAxisAlignment:
@@ -1219,7 +1486,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                     .circle,
                                                                 border:
                                                                     Border.all(
-                                                                  color: columnUsersRecord
+                                                                  color: containerUsersRecord
                                                                           .isActive
                                                                       ? const Color(
                                                                           0xFF00FF0A)
@@ -1243,7 +1510,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                       .network(
                                                                     valueOrDefault<
                                                                         String>(
-                                                                      columnUsersRecord
+                                                                      containerUsersRecord
                                                                           .photoUrl,
                                                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                                                                     ),
@@ -1274,7 +1541,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                 height: 10.0,
                                                                 decoration:
                                                                     BoxDecoration(
-                                                                  color: columnUsersRecord
+                                                                  color: containerUsersRecord
                                                                           .isActive
                                                                       ? const Color(
                                                                           0xFF00FF0A)
@@ -1300,7 +1567,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                             .upperCaseFirstLetter(
                                                                 valueOrDefault<
                                                                     String>(
-                                                          columnUsersRecord
+                                                          containerUsersRecord
                                                               .firtsName,
                                                           'Name',
                                                         )),
@@ -1320,9 +1587,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                             ),
                                                       ),
                                                     ],
-                                                  );
-                                                },
-                                              ),
+                                                  ),
+                                                );
+                                              },
                                             );
                                           })
                                               .divide(const SizedBox(width: 16.0))
@@ -1332,6 +1599,23 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                       );
                                     },
                                   ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 8.0, 0.0, 0.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '7l6rrcdd' /* Participants */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: const Color(0xFF1D69D7),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                 ),
                               ),
                               Expanded(
@@ -1407,397 +1691,820 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 1.0, 0.0, 0.0),
-                                            child: InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                FFAppState().currentChat =
-                                                    chat2BussinesItem.reference;
-                                                safeSetState(() {});
-
-                                                context.pushNamed(
-                                                  'chat_2_DetailsCopy',
-                                                  queryParameters: {
-                                                    'chatRef': serializeParam(
-                                                      chat2BussinesItem,
-                                                      ParamType.Document,
-                                                    ),
-                                                    'chatRefTotal':
-                                                        serializeParam(
-                                                      chat2BussinesItem
-                                                          .reference,
-                                                      ParamType
-                                                          .DocumentReference,
-                                                    ),
-                                                    'professional':
-                                                        serializeParam(
-                                                      chat2BussinesItem.userB,
-                                                      ParamType
-                                                          .DocumentReference,
-                                                    ),
-                                                  }.withoutNulls,
-                                                  extra: <String, dynamic>{
-                                                    'chatRef':
-                                                        chat2BussinesItem,
-                                                  },
-                                                );
-                                              },
-                                              child: Material(
-                                                color: Colors.transparent,
-                                                elevation: 0.0,
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          0.0),
-                                                ),
-                                                child: Container(
-                                                  width: double.infinity,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.white,
-                                                    boxShadow: [
-                                                      BoxShadow(
-                                                        blurRadius: 0.0,
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        offset: const Offset(
-                                                          0.0,
-                                                          1.0,
+                                            child: StreamBuilder<UsersRecord>(
+                                              stream: UsersRecord.getDocument(
+                                                  chat2BussinesItem.userA!),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50.0,
+                                                      height: 50.0,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                                Color>(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
                                                         ),
-                                                      )
-                                                    ],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            0.0),
-                                                  ),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                16.0,
-                                                                12.0,
-                                                                12.0,
-                                                                12.0),
-                                                    child: StreamBuilder<
-                                                        UsersRecord>(
-                                                      stream: UsersRecord.getDocument(
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+
+                                                final containerUsersRecord =
+                                                    snapshot.data!;
+
+                                                return InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    FFAppState().currentChat =
+                                                        chat2BussinesItem
+                                                            .reference;
+                                                    safeSetState(() {});
+
+                                                    context.pushNamed(
+                                                      'chat_2_DetailsCopy',
+                                                      queryParameters: {
+                                                        'chatRef':
+                                                            serializeParam(
+                                                          chat2BussinesItem,
+                                                          ParamType.Document,
+                                                        ),
+                                                        'chatRefTotal':
+                                                            serializeParam(
                                                           chat2BussinesItem
-                                                              .users
-                                                              .where((e) => e
-                                                                          .id ==
-                                                                      currentUserReference
-                                                                          ?.id
-                                                                  ? false
-                                                                  : true)
-                                                              .toList()
-                                                              .last),
-                                                      builder:
-                                                          (context, snapshot) {
-                                                        // Customize what your widget looks like when it's loading.
-                                                        if (!snapshot.hasData) {
-                                                          return Center(
-                                                            child: SizedBox(
-                                                              width: 50.0,
-                                                              height: 50.0,
-                                                              child:
-                                                                  CircularProgressIndicator(
-                                                                valueColor:
-                                                                    AlwaysStoppedAnimation<
-                                                                        Color>(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primary,
-                                                                ),
-                                                              ),
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                        'professional':
+                                                            serializeParam(
+                                                          chat2BussinesItem
+                                                              .userB,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                      }.withoutNulls,
+                                                      extra: <String, dynamic>{
+                                                        'chatRef':
+                                                            chat2BussinesItem,
+                                                      },
+                                                    );
+                                                  },
+                                                  child: Material(
+                                                    color: Colors.transparent,
+                                                    elevation: 0.0,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              0.0),
+                                                    ),
+                                                    child: Container(
+                                                      width: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            blurRadius: 0.0,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .alternate,
+                                                            offset: const Offset(
+                                                              0.0,
+                                                              1.0,
                                                             ),
-                                                          );
-                                                        }
-
-                                                        final rowUsersRecord =
-                                                            snapshot.data!;
-
-                                                        return Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          crossAxisAlignment:
-                                                              CrossAxisAlignment
-                                                                  .start,
-                                                          children: [
-                                                            Align(
-                                                              alignment:
-                                                                  const AlignmentDirectional(
-                                                                      0.0, 0.0),
-                                                              child: Material(
-                                                                color: Colors
-                                                                    .transparent,
-                                                                elevation: 0.0,
-                                                                shape:
-                                                                    const CircleBorder(),
-                                                                child:
-                                                                    Container(
-                                                                  width: 59.0,
-                                                                  height: 59.0,
-                                                                  decoration:
-                                                                      BoxDecoration(
-                                                                    shape: BoxShape
-                                                                        .circle,
-                                                                    border:
-                                                                        Border
-                                                                            .all(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      width:
-                                                                          1.0,
-                                                                    ),
-                                                                  ),
+                                                          )
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(0.0),
+                                                      ),
+                                                      child: Visibility(
+                                                        visible:
+                                                            containerUsersRecord
+                                                                    .rol ==
+                                                                Roles.user,
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      16.0,
+                                                                      12.0,
+                                                                      12.0,
+                                                                      12.0),
+                                                          child: Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        0.0,
+                                                                        0.0),
+                                                                child: Material(
+                                                                  color: Colors
+                                                                      .transparent,
+                                                                  elevation:
+                                                                      0.0,
+                                                                  shape:
+                                                                      const CircleBorder(),
                                                                   child:
-                                                                      Padding(
-                                                                    padding:
-                                                                        const EdgeInsets.all(
-                                                                            2.0),
-                                                                    child:
-                                                                        ClipRRect(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              24.0),
-                                                                      child:
-                                                                          CachedNetworkImage(
-                                                                        fadeInDuration:
-                                                                            const Duration(milliseconds: 500),
-                                                                        fadeOutDuration:
-                                                                            const Duration(milliseconds: 500),
-                                                                        imageUrl:
-                                                                            valueOrDefault<String>(
-                                                                          rowUsersRecord
-                                                                              .photoUrl,
-                                                                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
-                                                                        ),
+                                                                      Container(
+                                                                    width: 59.0,
+                                                                    height:
+                                                                        59.0,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      shape: BoxShape
+                                                                          .circle,
+                                                                      border:
+                                                                          Border
+                                                                              .all(
+                                                                        color: Colors
+                                                                            .black,
                                                                         width:
-                                                                            44.0,
-                                                                        height:
-                                                                            44.0,
-                                                                        fit: BoxFit
-                                                                            .cover,
+                                                                            1.0,
+                                                                      ),
+                                                                    ),
+                                                                    child:
+                                                                        Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              2.0),
+                                                                      child:
+                                                                          ClipRRect(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(24.0),
+                                                                        child:
+                                                                            CachedNetworkImage(
+                                                                          fadeInDuration:
+                                                                              const Duration(milliseconds: 500),
+                                                                          fadeOutDuration:
+                                                                              const Duration(milliseconds: 500),
+                                                                          imageUrl:
+                                                                              valueOrDefault<String>(
+                                                                            containerUsersRecord.photoUrl,
+                                                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                                                          ),
+                                                                          width:
+                                                                              44.0,
+                                                                          height:
+                                                                              44.0,
+                                                                          fit: BoxFit
+                                                                              .cover,
+                                                                        ),
                                                                       ),
                                                                     ),
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ),
-                                                            Expanded(
-                                                              child: Padding(
-                                                                padding:
-                                                                    const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            8.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                child: StreamBuilder<
-                                                                    UsersRecord>(
-                                                                  stream: UsersRecord
-                                                                      .getDocument(
-                                                                          chat2BussinesItem
-                                                                              .userB!),
-                                                                  builder: (context,
-                                                                      snapshot) {
-                                                                    // Customize what your widget looks like when it's loading.
-                                                                    if (!snapshot
-                                                                        .hasData) {
-                                                                      return Center(
-                                                                        child:
-                                                                            SizedBox(
-                                                                          width:
-                                                                              50.0,
-                                                                          height:
-                                                                              50.0,
+                                                              Expanded(
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child: StreamBuilder<
+                                                                      UsersRecord>(
+                                                                    stream: UsersRecord.getDocument(
+                                                                        chat2BussinesItem
+                                                                            .userB!),
+                                                                    builder:
+                                                                        (context,
+                                                                            snapshot) {
+                                                                      // Customize what your widget looks like when it's loading.
+                                                                      if (!snapshot
+                                                                          .hasData) {
+                                                                        return Center(
                                                                           child:
-                                                                              CircularProgressIndicator(
-                                                                            valueColor:
-                                                                                AlwaysStoppedAnimation<Color>(
-                                                                              FlutterFlowTheme.of(context).primary,
+                                                                              SizedBox(
+                                                                            width:
+                                                                                50.0,
+                                                                            height:
+                                                                                50.0,
+                                                                            child:
+                                                                                CircularProgressIndicator(
+                                                                              valueColor: AlwaysStoppedAnimation<Color>(
+                                                                                FlutterFlowTheme.of(context).primary,
+                                                                              ),
                                                                             ),
                                                                           ),
-                                                                        ),
-                                                                      );
-                                                                    }
+                                                                        );
+                                                                      }
 
-                                                                    final columnUsersRecord =
-                                                                        snapshot
-                                                                            .data!;
+                                                                      final columnUsersRecord =
+                                                                          snapshot
+                                                                              .data!;
 
-                                                                    return Column(
-                                                                      mainAxisSize:
-                                                                          MainAxisSize
-                                                                              .max,
-                                                                      crossAxisAlignment:
-                                                                          CrossAxisAlignment
-                                                                              .start,
-                                                                      children: [
-                                                                        Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Expanded(
-                                                                              child: Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                                                                                child: Text(
-                                                                                  functions.upperCaseFirstLetter(valueOrDefault<String>(
-                                                                                    functions.concatStrings(rowUsersRecord.firtsName, rowUsersRecord.lastName, ' '),
-                                                                                    'Ghost User',
-                                                                                  )),
-                                                                                  textAlign: TextAlign.start,
-                                                                                  style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                      return Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        crossAxisAlignment:
+                                                                            CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Expanded(
+                                                                                child: Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                  child: Text(
+                                                                                    functions.upperCaseFirstLetter(valueOrDefault<String>(
+                                                                                      functions.concatStrings(containerUsersRecord.firtsName, containerUsersRecord.lastName, ' '),
+                                                                                      'Ghost User',
+                                                                                    )),
+                                                                                    textAlign: TextAlign.start,
+                                                                                    style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                          fontFamily: 'Poppins',
+                                                                                          fontSize: 14.0,
+                                                                                          letterSpacing: 0.0,
+                                                                                          fontWeight: FontWeight.bold,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                              if (!chat2BussinesItem.lastMessageSeenBy.contains(currentUserReference))
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  child: Container(
+                                                                                    width: 12.0,
+                                                                                    height: 12.0,
+                                                                                    decoration: BoxDecoration(
+                                                                                      color: FlutterFlowTheme.of(context).accent1,
+                                                                                      shape: BoxShape.circle,
+                                                                                      border: Border.all(
+                                                                                        color: FlutterFlowTheme.of(context).primary,
+                                                                                        width: 2.0,
+                                                                                      ),
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                            ],
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                4.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              chat2BussinesItem.lastMessage.maybeHandleOverflow(
+                                                                                maxChars: 50,
+                                                                              ),
+                                                                              textAlign: TextAlign.start,
+                                                                              style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                    fontFamily: 'Poppins',
+                                                                                    letterSpacing: 0.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                4.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                InkWell(
+                                                                              splashColor: Colors.transparent,
+                                                                              focusColor: Colors.transparent,
+                                                                              hoverColor: Colors.transparent,
+                                                                              highlightColor: Colors.transparent,
+                                                                              onTap: () async {
+                                                                                context.pushNamed(
+                                                                                  'ProfileInfo',
+                                                                                  queryParameters: {
+                                                                                    'professional': serializeParam(
+                                                                                      chat2BussinesItem.userB,
+                                                                                      ParamType.DocumentReference,
+                                                                                    ),
+                                                                                  }.withoutNulls,
+                                                                                );
+                                                                              },
+                                                                              child: RichText(
+                                                                                textScaler: MediaQuery.of(context).textScaler,
+                                                                                text: TextSpan(
+                                                                                  children: [
+                                                                                    TextSpan(
+                                                                                      text: FFLocalizations.of(context).getText(
+                                                                                        '211duocj' /* This message is for   */,
+                                                                                      ),
+                                                                                      style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                            fontFamily: 'Poppins',
+                                                                                            letterSpacing: 0.0,
+                                                                                          ),
+                                                                                    ),
+                                                                                    TextSpan(
+                                                                                      text: columnUsersRecord.firtsName,
+                                                                                      style: const TextStyle(
+                                                                                        color: Color(0xFF4963C9),
+                                                                                        fontWeight: FontWeight.w500,
+                                                                                      ),
+                                                                                    )
+                                                                                  ],
+                                                                                  style: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: 'Poppins',
-                                                                                        fontSize: 14.0,
                                                                                         letterSpacing: 0.0,
-                                                                                        fontWeight: FontWeight.bold,
+                                                                                      ),
+                                                                                ),
+                                                                                textAlign: TextAlign.start,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceBetween,
+                                                                            children:
+                                                                                [
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                child: Text(
+                                                                                  dateTimeFormat(
+                                                                                    "relative",
+                                                                                    chat2BussinesItem.lastMessageTime!,
+                                                                                    locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
+                                                                                  ),
+                                                                                  textAlign: TextAlign.start,
+                                                                                  style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                        fontFamily: 'Poppins',
+                                                                                        letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
                                                                               ),
-                                                                            ),
-                                                                            if (!chat2BussinesItem.lastMessageSeenBy.contains(currentUserReference))
-                                                                              Padding(
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                                                                                child: Container(
-                                                                                  width: 12.0,
-                                                                                  height: 12.0,
-                                                                                  decoration: BoxDecoration(
-                                                                                    color: FlutterFlowTheme.of(context).accent1,
-                                                                                    shape: BoxShape.circle,
-                                                                                    border: Border.all(
-                                                                                      color: FlutterFlowTheme.of(context).primary,
-                                                                                      width: 2.0,
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
+                                                                              Icon(
+                                                                                Icons.chevron_right_rounded,
+                                                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                size: 24.0,
                                                                               ),
-                                                                          ],
-                                                                        ),
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              4.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            chat2BussinesItem.lastMessage.maybeHandleOverflow(
-                                                                              maxChars: 50,
-                                                                            ),
-                                                                            textAlign:
-                                                                                TextAlign.start,
-                                                                            style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                  fontFamily: 'Poppins',
-                                                                                  letterSpacing: 0.0,
-                                                                                ),
+                                                                            ].divide(const SizedBox(width: 16.0)),
                                                                           ),
-                                                                        ),
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              4.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              InkWell(
-                                                                            splashColor:
-                                                                                Colors.transparent,
-                                                                            focusColor:
-                                                                                Colors.transparent,
-                                                                            hoverColor:
-                                                                                Colors.transparent,
-                                                                            highlightColor:
-                                                                                Colors.transparent,
-                                                                            onTap:
-                                                                                () async {
-                                                                              context.pushNamed(
-                                                                                'ProfileInfo',
-                                                                                queryParameters: {
-                                                                                  'professional': serializeParam(
-                                                                                    chat2BussinesItem.userB,
-                                                                                    ParamType.DocumentReference,
-                                                                                  ),
-                                                                                }.withoutNulls,
-                                                                              );
-                                                                            },
-                                                                            child:
-                                                                                RichText(
-                                                                              textScaler: MediaQuery.of(context).textScaler,
-                                                                              text: TextSpan(
-                                                                                children: [
-                                                                                  TextSpan(
-                                                                                    text: FFLocalizations.of(context).getText(
-                                                                                      '211duocj' /* This message is for  */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                          fontFamily: 'Poppins',
-                                                                                          letterSpacing: 0.0,
-                                                                                        ),
-                                                                                  ),
-                                                                                  TextSpan(
-                                                                                    text: columnUsersRecord.firtsName,
-                                                                                    style: const TextStyle(
-                                                                                      color: Color(0xFF4963C9),
-                                                                                      fontWeight: FontWeight.w500,
-                                                                                    ),
-                                                                                  )
-                                                                                ],
-                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                      fontFamily: 'Poppins',
-                                                                                      letterSpacing: 0.0,
-                                                                                    ),
-                                                                              ),
-                                                                              textAlign: TextAlign.start,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
-                                                                          children:
-                                                                              [
-                                                                            Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-                                                                              child: Text(
-                                                                                dateTimeFormat(
-                                                                                  "relative",
-                                                                                  chat2BussinesItem.lastMessageTime!,
-                                                                                  locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
-                                                                                ),
-                                                                                textAlign: TextAlign.start,
-                                                                                style: FlutterFlowTheme.of(context).labelSmall.override(
-                                                                                      fontFamily: 'Poppins',
-                                                                                      letterSpacing: 0.0,
-                                                                                    ),
-                                                                              ),
-                                                                            ),
-                                                                            Icon(
-                                                                              Icons.chevron_right_rounded,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              size: 24.0,
-                                                                            ),
-                                                                          ].divide(const SizedBox(width: 16.0)),
-                                                                        ),
-                                                                      ],
-                                                                    );
-                                                                  },
+                                                                        ],
+                                                                      );
+                                                                    },
+                                                                  ),
                                                                 ),
                                                               ),
-                                                            ),
-                                                          ],
-                                                        );
-                                                      },
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
+                                                );
+                                              },
+                                            ),
+                                          );
+                                        },
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 8.0, 0.0, 0.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    'iurbbxt7' /* Employees */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Readex Pro',
+                                        color: const Color(0xFF1D69D7),
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ),
+                              Expanded(
+                                child: AuthUserStreamWidget(
+                                  builder: (context) => Builder(
+                                    builder: (context) {
+                                      final chat2Bussines = containerChatsRecordList
+                                          .where((e) =>
+                                              (((currentUserDocument?.professionals.toList() ?? [])
+                                                          .contains(e.userB) ==
+                                                      true) ||
+                                                  ((currentUserDocument
+                                                                  ?.professionals
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(e.userA) ==
+                                                      true) ||
+                                                  (e.userB ==
+                                                      currentUserReference)) &&
+                                              (((currentUserDocument?.blockUser.toList() ?? [])
+                                                          .contains(e.userA) ==
+                                                      false) &&
+                                                  ((currentUserDocument
+                                                                  ?.blockUser
+                                                                  .toList() ??
+                                                              [])
+                                                          .contains(e.userB) ==
+                                                      false)))
+                                          .toList();
+                                      if (chat2Bussines.isEmpty) {
+                                        return Center(
+                                          child: SizedBox(
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.9,
+                                            child: EmptyStateSimpleWidget(
+                                              icon: Icon(
+                                                Icons.mark_chat_unread_outlined,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                size: 90.0,
                                               ),
+                                              title: FFLocalizations.of(context)
+                                                  .getText(
+                                                '9jk05fne' /* No Chats */,
+                                              ),
+                                              body: FFLocalizations.of(context)
+                                                  .getText(
+                                                'kg6fjnhd' /* You don't have any chats creat... */,
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      }
+
+                                      return ListView.separated(
+                                        padding: const EdgeInsets.fromLTRB(
+                                          0,
+                                          11.0,
+                                          0,
+                                          0,
+                                        ),
+                                        shrinkWrap: true,
+                                        scrollDirection: Axis.vertical,
+                                        itemCount: chat2Bussines.length,
+                                        separatorBuilder: (_, __) =>
+                                            const SizedBox(height: 3.0),
+                                        itemBuilder:
+                                            (context, chat2BussinesIndex) {
+                                          final chat2BussinesItem =
+                                              chat2Bussines[chat2BussinesIndex];
+                                          return Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 1.0, 0.0, 0.0),
+                                            child: StreamBuilder<UsersRecord>(
+                                              stream: UsersRecord.getDocument(
+                                                  chat2BussinesItem
+                                                      .users.first),
+                                              builder: (context, snapshot) {
+                                                // Customize what your widget looks like when it's loading.
+                                                if (!snapshot.hasData) {
+                                                  return Center(
+                                                    child: SizedBox(
+                                                      width: 50.0,
+                                                      height: 50.0,
+                                                      child:
+                                                          CircularProgressIndicator(
+                                                        valueColor:
+                                                            AlwaysStoppedAnimation<
+                                                                Color>(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .primary,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  );
+                                                }
+
+                                                final containerUsersRecord =
+                                                    snapshot.data!;
+
+                                                return InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    FFAppState().currentChat =
+                                                        chat2BussinesItem
+                                                            .reference;
+                                                    safeSetState(() {});
+
+                                                    context.pushNamed(
+                                                      'chat_2_DetailsCopy',
+                                                      queryParameters: {
+                                                        'chatRef':
+                                                            serializeParam(
+                                                          chat2BussinesItem,
+                                                          ParamType.Document,
+                                                        ),
+                                                        'chatRefTotal':
+                                                            serializeParam(
+                                                          chat2BussinesItem
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                        'professional':
+                                                            serializeParam(
+                                                          chat2BussinesItem
+                                                              .userB,
+                                                          ParamType
+                                                              .DocumentReference,
+                                                        ),
+                                                      }.withoutNulls,
+                                                      extra: <String, dynamic>{
+                                                        'chatRef':
+                                                            chat2BussinesItem,
+                                                      },
+                                                    );
+                                                  },
+                                                  child: Material(
+                                                    color: Colors.transparent,
+                                                    elevation: 0.0,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              0.0),
+                                                    ),
+                                                    child: Container(
+                                                      width: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: Colors.white,
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            blurRadius: 0.0,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .alternate,
+                                                            offset: const Offset(
+                                                              0.0,
+                                                              1.0,
+                                                            ),
+                                                          )
+                                                        ],
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(0.0),
+                                                      ),
+                                                      child: Visibility(
+                                                        visible:
+                                                            containerUsersRecord
+                                                                    .rol ==
+                                                                Roles
+                                                                    .profesional,
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      16.0,
+                                                                      12.0,
+                                                                      12.0,
+                                                                      12.0),
+                                                          child: Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        0.0,
+                                                                        0.0),
+                                                                child: Material(
+                                                                  color: Colors
+                                                                      .transparent,
+                                                                  elevation:
+                                                                      0.0,
+                                                                  shape:
+                                                                      const CircleBorder(),
+                                                                  child:
+                                                                      Container(
+                                                                    width: 59.0,
+                                                                    height:
+                                                                        59.0,
+                                                                    decoration:
+                                                                        BoxDecoration(
+                                                                      shape: BoxShape
+                                                                          .circle,
+                                                                      border:
+                                                                          Border
+                                                                              .all(
+                                                                        color: Colors
+                                                                            .black,
+                                                                        width:
+                                                                            1.0,
+                                                                      ),
+                                                                    ),
+                                                                    child:
+                                                                        Padding(
+                                                                      padding:
+                                                                          const EdgeInsets.all(
+                                                                              2.0),
+                                                                      child:
+                                                                          ClipRRect(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(24.0),
+                                                                        child:
+                                                                            CachedNetworkImage(
+                                                                          fadeInDuration:
+                                                                              const Duration(milliseconds: 500),
+                                                                          fadeOutDuration:
+                                                                              const Duration(milliseconds: 500),
+                                                                          imageUrl:
+                                                                              valueOrDefault<String>(
+                                                                            containerUsersRecord.photoUrl,
+                                                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                                                          ),
+                                                                          width:
+                                                                              44.0,
+                                                                          height:
+                                                                              44.0,
+                                                                          fit: BoxFit
+                                                                              .cover,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Expanded(
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          8.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child: StreamBuilder<
+                                                                      UsersRecord>(
+                                                                    stream: UsersRecord.getDocument(
+                                                                        chat2BussinesItem
+                                                                            .userB!),
+                                                                    builder:
+                                                                        (context,
+                                                                            snapshot) {
+                                                                      // Customize what your widget looks like when it's loading.
+                                                                      if (!snapshot
+                                                                          .hasData) {
+                                                                        return Center(
+                                                                          child:
+                                                                              SizedBox(
+                                                                            width:
+                                                                                50.0,
+                                                                            height:
+                                                                                50.0,
+                                                                            child:
+                                                                                CircularProgressIndicator(
+                                                                              valueColor: AlwaysStoppedAnimation<Color>(
+                                                                                FlutterFlowTheme.of(context).primary,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      }
+
+                                                                      final columnUsersRecord =
+                                                                          snapshot
+                                                                              .data!;
+
+                                                                      return Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.max,
+                                                                        crossAxisAlignment:
+                                                                            CrossAxisAlignment.start,
+                                                                        children: [
+                                                                          Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            children: [
+                                                                              Expanded(
+                                                                                child: Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                  child: Text(
+                                                                                    functions.upperCaseFirstLetter(valueOrDefault<String>(
+                                                                                      functions.concatStrings(containerUsersRecord.firtsName, containerUsersRecord.lastName, ' '),
+                                                                                      'Ghost User',
+                                                                                    )),
+                                                                                    textAlign: TextAlign.start,
+                                                                                    style: FlutterFlowTheme.of(context).bodyLarge.override(
+                                                                                          fontFamily: 'Poppins',
+                                                                                          fontSize: 14.0,
+                                                                                          letterSpacing: 0.0,
+                                                                                          fontWeight: FontWeight.bold,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                              if (!chat2BussinesItem.lastMessageSeenBy.contains(currentUserReference))
+                                                                                Padding(
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  child: Container(
+                                                                                    width: 12.0,
+                                                                                    height: 12.0,
+                                                                                    decoration: BoxDecoration(
+                                                                                      color: FlutterFlowTheme.of(context).accent1,
+                                                                                      shape: BoxShape.circle,
+                                                                                      border: Border.all(
+                                                                                        color: FlutterFlowTheme.of(context).primary,
+                                                                                        width: 2.0,
+                                                                                      ),
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                            ],
+                                                                          ),
+                                                                          Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                4.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              chat2BussinesItem.lastMessage.maybeHandleOverflow(
+                                                                                maxChars: 50,
+                                                                              ),
+                                                                              textAlign: TextAlign.start,
+                                                                              style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                    fontFamily: 'Poppins',
+                                                                                    letterSpacing: 0.0,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                          Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceBetween,
+                                                                            children:
+                                                                                [
+                                                                              Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                child: Text(
+                                                                                  dateTimeFormat(
+                                                                                    "relative",
+                                                                                    chat2BussinesItem.lastMessageTime!,
+                                                                                    locale: FFLocalizations.of(context).languageShortCode ?? FFLocalizations.of(context).languageCode,
+                                                                                  ),
+                                                                                  textAlign: TextAlign.start,
+                                                                                  style: FlutterFlowTheme.of(context).labelSmall.override(
+                                                                                        fontFamily: 'Poppins',
+                                                                                        letterSpacing: 0.0,
+                                                                                      ),
+                                                                                ),
+                                                                              ),
+                                                                              Icon(
+                                                                                Icons.chevron_right_rounded,
+                                                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                size: 24.0,
+                                                                              ),
+                                                                            ].divide(const SizedBox(width: 16.0)),
+                                                                          ),
+                                                                        ],
+                                                                      );
+                                                                    },
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                );
+                                              },
                                             ),
                                           );
                                         },

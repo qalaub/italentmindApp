@@ -790,22 +790,6 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                 ),
               ),
             ),
-          if (currentUserDocument?.business != null)
-            AuthUserStreamWidget(
-              builder: (context) => Container(
-                width: MediaQuery.sizeOf(context).width * 1.0,
-                height: MediaQuery.sizeOf(context).height * 1.0,
-                decoration: const BoxDecoration(
-                  color: Color(0x5DFFFFFF),
-                ),
-                child: SizedBox(
-                  height: MediaQuery.sizeOf(context).height * 1.0,
-                  child: const Stack(
-                    children: [],
-                  ),
-                ),
-              ),
-            ),
         ],
       ),
     );

@@ -235,134 +235,125 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                     ),
                   ],
                 ),
-                if (currentUserDocument?.business == null)
-                  AuthUserStreamWidget(
-                    builder: (context) => Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Expanded(
-                          flex: 1,
-                          child: Stack(
-                            alignment: const AlignmentDirectional(1.0, 0.0),
-                            children: [
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: FlutterFlowIconButton(
-                                  key: const ValueKey('message'),
-                                  borderColor: Colors.transparent,
-                                  buttonSize: 48.0,
-                                  icon: const Icon(
-                                    key: ValueKey('message'),
-                                    Icons.wechat_rounded,
-                                    color: Colors.white,
-                                    size: 34.0,
-                                  ),
-                                  onPressed: () async {
-                                    if (loggedIn) {
-                                      context.pushNamed('chat_2_main');
-                                    } else {
-                                      context.pushNamed('Login');
-                                    }
-                                  },
-                                ),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Expanded(
+                      flex: 1,
+                      child: Stack(
+                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        children: [
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              key: const ValueKey('message'),
+                              borderColor: Colors.transparent,
+                              buttonSize: 48.0,
+                              icon: const Icon(
+                                key: ValueKey('message'),
+                                Icons.wechat_rounded,
+                                color: Colors.white,
+                                size: 34.0,
                               ),
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, -1.0),
-                                child: StreamBuilder<List<ChatsRecord>>(
-                                  stream: queryChatsRecord(
-                                    queryBuilder: (chatsRecord) => chatsRecord
-                                        .where(
-                                          'users',
-                                          arrayContains: currentUserReference,
-                                          isNull:
-                                              (currentUserReference) == null,
-                                        )
-                                        .orderBy('last_message_time',
-                                            descending: true),
-                                  ),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: CircularProgressIndicator(
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    }
-                                    List<ChatsRecord> containerChatsRecordList =
-                                        snapshot.data!;
-
-                                    return Container(
-                                      width: 20.0,
-                                      height: 20.0,
-                                      decoration: const BoxDecoration(
-                                        color: Color(0xFFFF0000),
-                                        shape: BoxShape.circle,
-                                      ),
-                                      alignment:
-                                          const AlignmentDirectional(0.0, -1.0),
-                                      child: Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.0, -1.0),
-                                        child: Text(
-                                          valueOrDefault<String>(
-                                            containerChatsRecordList
-                                                .where((e) =>
-                                                    e.lastMessageSeenBy.contains(
-                                                        currentUserReference) ==
-                                                    false)
-                                                .toList()
-                                                .length
-                                                .toString(),
-                                            '0',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Readex Pro',
-                                                color: const Color(0xFFF4F4F4),
-                                                letterSpacing: 0.0,
-                                              ),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Align(
-                          alignment: const AlignmentDirectional(0.29, 0.64),
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'uizwmrzg' /* Message */,
+                              onPressed: () async {
+                                if (loggedIn) {
+                                  context.pushNamed('chat_2_main');
+                                } else {
+                                  context.pushNamed('Login');
+                                }
+                              },
                             ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Poppins',
-                                  color: Colors.white,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
                           ),
-                        ),
-                        Container(
-                          height: 5.0,
-                          decoration: const BoxDecoration(),
-                        ),
-                      ],
+                          Align(
+                            alignment: const AlignmentDirectional(0.0, -1.0),
+                            child: StreamBuilder<List<ChatsRecord>>(
+                              stream: queryChatsRecord(
+                                queryBuilder: (chatsRecord) => chatsRecord
+                                    .where(
+                                      'users',
+                                      arrayContains: currentUserReference,
+                                      isNull: (currentUserReference) == null,
+                                    )
+                                    .orderBy('last_message_time',
+                                        descending: true),
+                              ),
+                              builder: (context, snapshot) {
+                                // Customize what your widget looks like when it's loading.
+                                if (!snapshot.hasData) {
+                                  return Center(
+                                    child: SizedBox(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                          FlutterFlowTheme.of(context).primary,
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                }
+                                List<ChatsRecord> containerChatsRecordList =
+                                    snapshot.data!;
+
+                                return Container(
+                                  width: 20.0,
+                                  height: 20.0,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xFFFF0000),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
+                                  child: Align(
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    child: Text(
+                                      valueOrDefault<String>(
+                                        containerChatsRecordList
+                                            .where((e) =>
+                                                e.lastMessageSeenBy.contains(
+                                                    currentUserReference) ==
+                                                false)
+                                            .toList()
+                                            .length
+                                            .toString(),
+                                        '0',
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: const Color(0xFFF4F4F4),
+                                            letterSpacing: 0.0,
+                                          ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.29, 0.64),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'uizwmrzg' /* Message */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Poppins',
+                              color: Colors.white,
+                              letterSpacing: 0.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
+                    ),
+                    Container(
+                      height: 5.0,
+                      decoration: const BoxDecoration(),
+                    ),
+                  ],
+                ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [

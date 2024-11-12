@@ -1496,7 +1496,10 @@ class _RegisterProfessional2WidgetState
                                                                               .same &&
                                                                           (functions.verifyCorrectPassword(_model.passwordTextController.text) ==
                                                                               true)
-                                                                      ? 'Password has to be the same'
+                                                                      ? (FFLocalizations.of(context).languageCode ==
+                                                                              'en'
+                                                                          ? 'Password has to be the same'
+                                                                          : 'La contraseña debe ser la misma')
                                                                       : ' ',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -1773,7 +1776,10 @@ class _RegisterProfessional2WidgetState
                                                                               .same &&
                                                                           (functions.verifyCorrectPassword(_model.confirmPasswordTextController.text) ==
                                                                               true)
-                                                                      ? 'Password has to be the same'
+                                                                      ? (FFLocalizations.of(context).languageCode ==
+                                                                              'en'
+                                                                          ? 'Password has to be the same'
+                                                                          : 'La contraseña debe ser la misma')
                                                                       : ' ',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
