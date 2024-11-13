@@ -107,10 +107,11 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                   'u3pklca0' /* Profile */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineLarge.override(
-                      fontFamily: 'Montserrat',
+                      fontFamily: 'pintanga',
                       color: Colors.white,
                       fontSize: 24.0,
                       letterSpacing: 0.0,
+                      useGoogleFonts: false,
                     ),
               ),
               actions: [
@@ -366,10 +367,11 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                                         .headlineLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 16.0,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -395,10 +397,11 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                                         .headlineLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 13.0,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -420,10 +423,11 @@ class _ProfileInfoWidgetState extends State<ProfileInfoWidget> {
                                                         .headlineLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 13.0,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),

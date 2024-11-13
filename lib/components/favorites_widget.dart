@@ -263,10 +263,11 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: 'pintanga',
                                           fontSize: 13.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w300,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),

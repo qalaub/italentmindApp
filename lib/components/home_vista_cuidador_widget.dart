@@ -100,7 +100,7 @@ class _HomeVistaCuidadorWidgetState extends State<HomeVistaCuidadorWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'ITC Bauhaus fuente',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       fontSize: 19.0,
                                       letterSpacing: 0.0,
@@ -125,7 +125,7 @@ class _HomeVistaCuidadorWidgetState extends State<HomeVistaCuidadorWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'ITC Bauhaus fuente',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       fontSize: 18.0,
                                       letterSpacing: 0.0,
@@ -165,7 +165,7 @@ near your  */
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'ITC Bauhaus fuente',
+                                    fontFamily: 'pintanga',
                                     color: Colors.white,
                                     fontSize: 17.0,
                                     letterSpacing: 0.0,

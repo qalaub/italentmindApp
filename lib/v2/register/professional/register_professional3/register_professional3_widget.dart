@@ -206,27 +206,28 @@ class _RegisterProfessional3WidgetState
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.86,
-                                                  textStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                   selectedTextStyle:
                                                       FlutterFlowTheme.of(
                                                               context)
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: Colors.black,
                                                             fontSize: 14.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                   buttonPosition:
                                                       RadioButtonPosition.left,
@@ -276,12 +277,14 @@ class _RegisterProfessional3WidgetState
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: Colors.black,
                                                             fontSize: 15.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -435,13 +438,15 @@ class _RegisterProfessional3WidgetState
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Montserrat',
+                                                                            'pintanga',
                                                                         color: Colors
                                                                             .black,
                                                                         letterSpacing:
                                                                             0.0,
                                                                         fontWeight:
                                                                             FontWeight.w500,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                               hintText:
                                                                   FFLocalizations.of(
@@ -509,12 +514,14 @@ class _RegisterProfessional3WidgetState
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: Colors.black,
                                                             fontSize: 15.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -567,11 +574,13 @@ class _RegisterProfessional3WidgetState
                                                                       .labelMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Readex Pro',
+                                                                            'pintanga',
                                                                         fontSize:
                                                                             14.0,
                                                                         letterSpacing:
                                                                             0.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                   hintText: FFLocalizations.of(
                                                                           context)
@@ -583,9 +592,11 @@ class _RegisterProfessional3WidgetState
                                                                       .labelMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Readex Pro',
+                                                                            'pintanga',
                                                                         letterSpacing:
                                                                             0.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                   errorStyle: FlutterFlowTheme.of(
                                                                           context)
@@ -878,17 +889,16 @@ class _RegisterProfessional3WidgetState
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: const Color(0xFF4963C9),
-                                                  textStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            fontSize: 20.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        color: Colors.white,
+                                                        fontSize: 20.0,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                   elevation: 5.0,
                                                   borderSide: const BorderSide(
                                                     color: Colors.transparent,

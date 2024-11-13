@@ -81,11 +81,12 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
               'ethpzizz' /* Choose your AVATAR */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'pintanga',
                   color: Colors.white,
                   fontSize: 24.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: const [],
@@ -304,10 +305,11 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: Colors.white,
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               elevation: 5.0,
                               borderSide: const BorderSide(

@@ -177,11 +177,12 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .headlineLarge
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -208,11 +209,12 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       fontSize: 12.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -305,12 +307,13 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 11.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -360,13 +363,13 @@ perso... */
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.white,
                                                         fontSize: 10.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: false,
                                                       ),
                                             ),
                                           ),
@@ -569,10 +572,11 @@ perso... */
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              fontFamily: 'pintanga',
                                               color: Colors.white,
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),

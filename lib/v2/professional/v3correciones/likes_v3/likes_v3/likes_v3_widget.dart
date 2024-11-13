@@ -106,7 +106,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
               : null;
 
           return Container(
-            width: 300.0,
+            width: 319.0,
             height: 145.0,
             decoration: BoxDecoration(
               color: const Color(0xFF4963C9),
@@ -146,167 +146,176 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                     decoration: const BoxDecoration(),
                     child: Align(
                       alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Align(
-                                  alignment: const AlignmentDirectional(0.0, -0.1),
-                                  child: Text(
-                                    functions.upperCaseFirstLetter(
-                                        valueOrDefault<String>(
-                                      functions.concatStrings(
-                                          containerUsersRecord?.firtsName,
-                                          containerUsersRecord?.lastName,
-                                          ' '),
-                                      'claudia',
-                                    )),
-                                    style: FlutterFlowTheme.of(context)
-                                        .headlineLarge
-                                        .override(
-                                          fontFamily: 'Montserrat',
-                                          color: Colors.white,
-                                          fontSize: 16.0,
-                                          letterSpacing: 0.0,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 12.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                const Icon(
-                                  FFIcons.ksearch,
-                                  color: Colors.white,
-                                  size: 18.0,
-                                ),
-                                Container(
-                                  decoration: const BoxDecoration(),
-                                  child: RichText(
-                                    textScaler:
-                                        MediaQuery.of(context).textScaler,
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '3blsmgx7' /* :   */,
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Colors.white,
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
-                                        ),
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            '0rovwbhn' /* Therapeut */,
-                                          ),
-                                          style: GoogleFonts.getFont(
-                                            'Montserrat',
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 14.0,
-                                          ),
-                                        )
-                                      ],
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 56.0, 0.0),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Align(
+                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Align(
+                                    alignment: const AlignmentDirectional(0.0, -0.1),
+                                    child: Text(
+                                      functions.upperCaseFirstLetter(
+                                          valueOrDefault<String>(
+                                        functions.concatStrings(
+                                            containerUsersRecord?.firtsName,
+                                            containerUsersRecord?.lastName,
+                                            ' '),
+                                        'claudia',
+                                      )),
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
+                                          .headlineLarge
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 8.0, 0.0, 0.0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Icon(
-                                  FFIcons.kubicationplane,
-                                  color: Colors.white,
-                                  size: 20.0,
-                                ),
-                                Container(
-                                  width: 180.0,
-                                  height: 40.0,
-                                  decoration: const BoxDecoration(),
-                                  child: RichText(
-                                    textScaler:
-                                        MediaQuery.of(context).textScaler,
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'd5fsigxw' /* :   */,
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 12.0, 0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  const Icon(
+                                    FFIcons.ksearch,
+                                    color: Colors.white,
+                                    size: 18.0,
+                                  ),
+                                  Container(
+                                    decoration: const BoxDecoration(),
+                                    child: RichText(
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              '3blsmgx7' /* :   */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Colors.white,
+                                                  fontSize: 16.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                color: Colors.white,
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
-                                        ),
-                                        TextSpan(
-                                          text: functions
-                                              .extractStateAndPostalCode(
-                                                  _model.newSuburb),
-                                          style: GoogleFonts.getFont(
-                                            'Montserrat',
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 14.0,
-                                          ),
-                                        )
-                                      ],
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Montserrat',
-                                            color: Colors.white,
-                                            fontSize: 14.0,
-                                            letterSpacing: 0.0,
-                                          ),
+                                          TextSpan(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              '0rovwbhn' /* Therapeut */,
+                                            ),
+                                            style: GoogleFonts.getFont(
+                                              'Montserrat',
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 14.0,
+                                            ),
+                                          )
+                                        ],
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'pintanga',
+                                              color: Colors.white,
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
-                          ),
-                        ]
-                            .divide(const SizedBox(height: 4.0))
-                            .addToStart(const SizedBox(height: 3.0)),
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 8.0, 0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(
+                                    FFIcons.kubicationplane,
+                                    color: Colors.white,
+                                    size: 20.0,
+                                  ),
+                                  Container(
+                                    width: 180.0,
+                                    height: 40.0,
+                                    decoration: const BoxDecoration(),
+                                    child: RichText(
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'd5fsigxw' /* :   */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  color: Colors.white,
+                                                  fontSize: 16.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                          ),
+                                          TextSpan(
+                                            text: functions
+                                                .extractStateAndPostalCode(
+                                                    _model.newSuburb),
+                                            style: GoogleFonts.getFont(
+                                              'Montserrat',
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 14.0,
+                                            ),
+                                          )
+                                        ],
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'pintanga',
+                                              color: Colors.white,
+                                              fontSize: 14.0,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ]
+                              .divide(const SizedBox(height: 4.0))
+                              .addToStart(const SizedBox(height: 3.0)),
+                        ),
                       ),
                     ),
                   ),

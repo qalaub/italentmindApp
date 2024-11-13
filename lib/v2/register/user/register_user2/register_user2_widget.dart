@@ -220,11 +220,12 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    fontFamily: 'Montserrat',
+                                                    fontFamily: 'pintanga',
                                                     color: const Color(0xFF1D69D7),
                                                     fontSize: 20.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
+                                                    useGoogleFonts: false,
                                                   ),
                                             ),
                                           ),
@@ -250,7 +251,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      10.0, 15.0, 0.0, 15.0),
+                                                      15.0, 15.0, 0.0, 15.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -261,12 +262,11 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 15.0,
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -311,8 +311,9 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     hintText:
                                                         FFLocalizations.of(
@@ -325,19 +326,21 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     errorStyle: FlutterFlowTheme
                                                             .of(context)
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .error,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                           lineHeight: 1.0,
                                                         ),
                                                     enabledBorder:
@@ -393,10 +396,10 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.black,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                                   maxLines: null,
                                                   maxLength: 15,
@@ -415,22 +418,22 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'stcd2q6r' /* * Type of disability */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -559,11 +562,13 @@ Early Intervention */
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     color: Colors
                                                                         .black,
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                           hintText:
                                                               FFLocalizations.of(
@@ -629,7 +634,7 @@ Early Intervention */
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
@@ -637,6 +642,8 @@ Early Intervention */
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -654,9 +661,11 @@ Early Intervention */
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           );
                                                         }
@@ -674,22 +683,22 @@ Early Intervention */
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    8.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'doorbb0o' /* * Password */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -731,11 +740,13 @@ Early Intervention */
                                                                 .labelMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   fontSize:
                                                                       14.0,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                         hintText:
                                                             FFLocalizations.of(
@@ -749,9 +760,11 @@ Early Intervention */
                                                                 .labelMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                         errorStyle:
                                                             FlutterFlowTheme.of(
@@ -759,12 +772,14 @@ Early Intervention */
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .error,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                   lineHeight:
                                                                       1.0,
                                                                 ),
@@ -850,9 +865,11 @@ Early Intervention */
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: Colors.black,
                                                             letterSpacing: 0.0,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                       maxLength: 50,
                                                       buildCounter: (context,
@@ -906,7 +923,7 @@ Early Intervention */
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
@@ -914,6 +931,8 @@ Early Intervention */
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -951,22 +970,22 @@ Early Intervention */
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    20.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'mvgiizta' /* * Password has to be the same */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -1009,9 +1028,11 @@ Early Intervention */
                                                                 .labelMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                         hintText:
                                                             FFLocalizations.of(
@@ -1025,9 +1046,11 @@ Early Intervention */
                                                                 .labelMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                         errorStyle:
                                                             FlutterFlowTheme.of(
@@ -1035,12 +1058,14 @@ Early Intervention */
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .error,
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                   lineHeight:
                                                                       1.0,
                                                                 ),
@@ -1126,9 +1151,11 @@ Early Intervention */
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: Colors.black,
                                                             letterSpacing: 0.0,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                       maxLength: 50,
                                                       buildCounter: (context,
@@ -1182,7 +1209,7 @@ Early Intervention */
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
@@ -1190,6 +1217,8 @@ Early Intervention */
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1276,7 +1305,7 @@ Early Intervention */
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 color: const Color(
                                                                     0xFF1D69D7),
                                                                 fontSize: 11.0,
@@ -1285,6 +1314,8 @@ Early Intervention */
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w600,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ),
@@ -1365,12 +1396,13 @@ Early Intervention */
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFFFF5963),
                                                       fontSize: 11.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w600,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -1514,11 +1546,11 @@ Early Intervention */
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.white,
                                                         fontSize: 20.0,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(

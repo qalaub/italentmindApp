@@ -73,10 +73,11 @@ class _AccountOptionWidgetState extends State<AccountOptionWidget> {
                 'text',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'pintanga',
                     fontSize: 16.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w500,
+                    useGoogleFonts: false,
                   ),
             ),
           ),

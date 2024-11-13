@@ -65,11 +65,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
               'alwqsse6' /* My Subscription */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Inter',
+                  fontFamily: 'pintanga',
                   color: Colors.white,
                   fontSize: 24.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: const [],
@@ -107,11 +108,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 28.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -125,9 +127,10 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                           textAlign: TextAlign.center,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'pintanga',
                                     color: Colors.white,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),
@@ -164,10 +167,11 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -190,11 +194,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'pintanga',
                                             color: const Color(0xFFF9C532),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                     AuthUserStreamWidget(
@@ -234,11 +239,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                     AuthUserStreamWidget(
@@ -256,11 +262,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              fontFamily: 'pintanga',
                                               color: const Color(0xFFF9C532),
                                               fontSize: 21.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -282,11 +289,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'pintanga',
                                             color: const Color(0xFFF9C532),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                     AuthUserStreamWidget(
@@ -305,11 +313,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Inter',
+                                              fontFamily: 'pintanga',
                                               color: Colors.white,
                                               fontSize: 12.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -347,11 +356,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: const Color(0xFF1D69D7),
                                       fontSize: 15.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -379,11 +389,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.black,
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -418,11 +429,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: const Color(0xFF1D69D7),
                                       fontSize: 15.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -450,11 +462,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.black,
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -489,11 +502,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: const Color(0xFF1D69D7),
                                       fontSize: 15.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -521,11 +535,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.black,
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -560,11 +575,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: const Color(0xFF1D69D7),
                                       fontSize: 15.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -592,11 +608,12 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.black,
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -632,10 +649,11 @@ class _MySubscriptionBasicWidgetState extends State<MySubscriptionBasicWidget> {
                         color: const Color(0xFF4963C9),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                         elevation: 5.0,
                         borderSide: const BorderSide(

@@ -110,9 +110,10 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .labelSmall
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'pintanga',
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     )),
                                     Text(
@@ -130,8 +131,9 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .labelSmall
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'pintanga',
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ].divide(const SizedBox(width: 4.0)),
@@ -179,9 +181,10 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'pintanga',
                                               color: Colors.white,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: false,
                                               lineHeight: 1.5,
                                             ),
                                       )),
@@ -288,8 +291,9 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                           '--',
                         ),
                         style: FlutterFlowTheme.of(context).labelSmall.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily: 'pintanga',
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -331,8 +335,9 @@ class _ChatThreadUpdateWidgetState extends State<ChatThreadUpdateWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'pintanga',
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                             )),
                             if (widget.chatMessagesRef?.image != null &&

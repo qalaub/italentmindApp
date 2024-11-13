@@ -102,9 +102,10 @@ class _UserBlockWidgetState extends State<UserBlockWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -118,9 +119,10 @@ class _UserBlockWidgetState extends State<UserBlockWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),

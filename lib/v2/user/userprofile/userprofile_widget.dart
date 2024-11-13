@@ -112,10 +112,11 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: Colors.black,
                                       fontSize: 28.0,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -628,9 +629,10 @@ class _UserprofileWidgetState extends State<UserprofileWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Readex Pro',
+                                                  fontFamily: 'pintanga',
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),

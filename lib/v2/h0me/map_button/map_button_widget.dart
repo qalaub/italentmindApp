@@ -282,9 +282,10 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'pintanga',
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                                 hintText: FFLocalizations.of(context).getText(
                                   '8xqm114z' /* City Or Zip Code */,
@@ -292,9 +293,10 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'pintanga',
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                                 enabledBorder: InputBorder.none,
                                 focusedBorder: InputBorder.none,
@@ -304,9 +306,10 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'pintanga',
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
+                                    useGoogleFonts: false,
                                   ),
                               validator: _model.queryTextControllerValidator
                                   .asValidator(context),

@@ -476,7 +476,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                             alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 4.0, 0.0, 0.0),
+                                  8.0, 0.0, 0.0, 0.0),
                               child: StreamBuilder<List<ReviewsRecord>>(
                                 stream: queryReviewsRecord(
                                   queryBuilder: (reviewsRecord) =>

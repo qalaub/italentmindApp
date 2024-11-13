@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
@@ -169,11 +170,12 @@ class _RegisterPfofesional4WidgetState
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    fontFamily: 'Montserrat',
+                                                    fontFamily: 'pintanga',
                                                     color: const Color(0xFF1D69D7),
                                                     fontSize: 20.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
+                                                    useGoogleFonts: false,
                                                   ),
                                             ),
                                           ),
@@ -196,12 +198,13 @@ class _RegisterPfofesional4WidgetState
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFF6F6F6F),
                                                       fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -224,12 +227,13 @@ class _RegisterPfofesional4WidgetState
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFFE90606),
                                                       fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -729,6 +733,44 @@ class _RegisterPfofesional4WidgetState
                                                         },
                                                       ),
                                                     });
+                                                    _model.addToUserChat(
+                                                        currentUserReference!);
+                                                    _model.addToUserChat(
+                                                        widget.businessRef!);
+                                                    unawaited(
+                                                      () async {
+                                                        await ChatsRecord
+                                                            .collection
+                                                            .doc()
+                                                            .set({
+                                                          ...createChatsRecordData(
+                                                            userA:
+                                                                currentUserReference,
+                                                            userB: widget
+                                                                .businessRef,
+                                                            lastMessage: '',
+                                                            lastMessageTime:
+                                                                getCurrentTimestamp,
+                                                            lastMessageSentBy:
+                                                                currentUserReference,
+                                                            groupChatId: random_data
+                                                                .randomInteger(
+                                                                    1000000,
+                                                                    9999999),
+                                                          ),
+                                                          ...mapToFirestore(
+                                                            {
+                                                              'users': _model
+                                                                  .userChat,
+                                                              'last_message_seen_by':
+                                                                  [
+                                                                currentUserReference
+                                                              ],
+                                                            },
+                                                          ),
+                                                        });
+                                                      }(),
+                                                    );
 
                                                     context.goNamedAuth(
                                                       'HomeSearch',
@@ -867,10 +909,11 @@ class _RegisterPfofesional4WidgetState
                                                         .titleSmall
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 20.0,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 elevation: 5.0,
                                                 borderSide: const BorderSide(

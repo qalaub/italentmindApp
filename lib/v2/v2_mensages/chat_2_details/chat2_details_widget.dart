@@ -5,7 +5,7 @@ import '/chat_groupwbubbles/chat_thread_component/chat_thread_component_widget.d
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/v2/v2_mensages/options_message/options_message_widget.dart';
+import '/v2/options_message/options_message_widget.dart';
 import 'dart:async';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
@@ -168,9 +168,10 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],

@@ -497,8 +497,9 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium
                                                   .override(
-                                                    fontFamily: 'Readex Pro',
+                                                    fontFamily: 'pintanga',
                                                     letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
                                                   ),
                                           hintText: FFLocalizations.of(context)
                                               .getText(
@@ -508,19 +509,21 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelSmall
                                                   .override(
-                                                    fontFamily: 'Readex Pro',
+                                                    fontFamily: 'pintanga',
                                                     letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
                                                   ),
                                           errorStyle: FlutterFlowTheme.of(
                                                   context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Readex Pro',
+                                                fontFamily: 'pintanga',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .error,
                                                 fontSize: 12.0,
                                                 letterSpacing: 0.0,
+                                                useGoogleFonts: false,
                                               ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -570,8 +573,9 @@ class _ChatThreadComponentWidgetState extends State<ChatThreadComponentWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'pintanga',
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: false,
                                             ),
                                         maxLines: 12,
                                         minLines: 1,

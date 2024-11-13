@@ -96,11 +96,12 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             fontSize: 20.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -126,9 +127,10 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),

@@ -212,24 +212,86 @@ flutter:
     - assets/jsons/
 
   fonts:
-    - family: 'ITC Bauhaus fuente'
+    - family: 'pintanga'
       fonts:
-        - asset: assets/fonts/BauhausStd-Demi.ttf
+        - asset: assets/fonts/PitangaVariableTest-BF65e68dfbba9dc.ttf
           weight: 100
-        - asset: assets/fonts/BauhausStd-Heavy.ttf
+        - asset: assets/fonts/PitangaTest-ThinItalic-BF65e68dfab6c82.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/PitangaTest-ExtraLight-BF65e68dfa5b763.ttf
           weight: 200
-        - asset: assets/fonts/BauhausStd-Light.ttf
+        - asset: assets/fonts/PitangaTest-ExtraLightItalic-BF65e68dfa3d62f.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/PitangaTest-Light-BF65e68dfabb5e7.ttf
           weight: 300
-        - asset: assets/fonts/BauhausStd-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/BauhausStd-Bold.ttf
-          weight: 700
-    - family: 'pitanga'
-      fonts:
+        - asset: assets/fonts/PitangaTest-LightItalic-BF65e68dfb528bd.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/PitangaTest-Regular-BF65e68dfb505e7.ttf
+        - asset: assets/fonts/PitangaTest-Italic-BF65e68dfa996f7.ttf
+          style: italic
         - asset: assets/fonts/PitangaTest-Medium-BF65e68dfb493cf.ttf
           weight: 500
+        - asset: assets/fonts/PitangaTest-MediumItalic-BF65e68dfac26b4.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/PitangaTest-SemiBold-BF65e68dfa1f756.ttf
+          weight: 600
+        - asset: assets/fonts/PitangaTest-SemiBoldItalic-BF65e68dfad5474.ttf
+          weight: 600
+          style: italic
         - asset: assets/fonts/PitangaTest-Bold-BF65e68df91c1c5.ttf
           weight: 700
+        - asset: assets/fonts/PitangaTest-BoldItalic-BF65e68dfa0c87c.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/PitangaTest-ExtraBold-BF65e68df9a0724.ttf
+          weight: 800
+        - asset: assets/fonts/PitangaTest-ExtraBoldItalic-BF65e68df9b7e1d.ttf
+          weight: 800
+          style: italic
+    - family: 'v2 pitanga'
+      fonts:
+        - asset: assets/fonts/PitangaTest-Thin-BF65e68dfb0b844.ttf
+          weight: 100
+        - asset: assets/fonts/PitangaTest-ThinItalic-BF65e68dfab6c82.ttf
+          weight: 100
+          style: italic
+        - asset: assets/fonts/PitangaTest-ExtraLight-BF65e68dfa5b763.ttf
+          weight: 200
+        - asset: assets/fonts/PitangaTest-ExtraLightItalic-BF65e68dfa3d62f.ttf
+          weight: 200
+          style: italic
+        - asset: assets/fonts/PitangaTest-Light-BF65e68dfabb5e7.ttf
+          weight: 300
+        - asset: assets/fonts/PitangaTest-LightItalic-BF65e68dfb528bd.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/PitangaTest-Regular-BF65e68dfb505e7.ttf
+        - asset: assets/fonts/PitangaTest-Italic-BF65e68dfa996f7.ttf
+          style: italic
+        - asset: assets/fonts/PitangaTest-Medium-BF65e68dfb493cf.ttf
+          weight: 500
+        - asset: assets/fonts/PitangaTest-MediumItalic-BF65e68dfac26b4.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/PitangaTest-SemiBold-BF65e68dfa1f756.ttf
+          weight: 600
+        - asset: assets/fonts/PitangaTest-SemiBoldItalic-BF65e68dfad5474.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/PitangaTest-Bold-BF65e68df91c1c5.ttf
+          weight: 700
+        - asset: assets/fonts/PitangaTest-BoldItalic-BF65e68dfa0c87c.ttf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/PitangaTest-ExtraBold-BF65e68df9a0724.ttf
+          weight: 800
+        - asset: assets/fonts/PitangaTest-ExtraBoldItalic-BF65e68df9b7e1d.ttf
+          weight: 800
+          style: italic
 
     - family: MyFlutterApp
       fonts:

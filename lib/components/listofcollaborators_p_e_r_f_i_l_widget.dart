@@ -179,8 +179,8 @@ class _ListofcollaboratorsPERFILWidgetState
                                 Align(
                                   alignment: const AlignmentDirectional(0.06, -1.23),
                                   child: Container(
-                                    width: 139.0,
-                                    height: 36.0,
+                                    width: 143.0,
+                                    height: 42.0,
                                     decoration: const BoxDecoration(),
                                     child: Text(
                                       functions.upperCaseFirstLetter(
@@ -188,11 +188,12 @@ class _ListofcollaboratorsPERFILWidgetState
                                       style: FlutterFlowTheme.of(context)
                                           .headlineLarge
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -201,22 +202,24 @@ class _ListofcollaboratorsPERFILWidgetState
                                   alignment: const AlignmentDirectional(0.05, -0.19),
                                   child: Container(
                                     width: 139.0,
+                                    height: 30.0,
                                     decoration: const BoxDecoration(),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 2.0, 0.0, 0.0),
-                                      child: Text(
-                                        containerUsersRecord.serviceType.first,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Montserrat',
-                                              color: Colors.white,
-                                              fontSize: 11.0,
-                                              letterSpacing: 0.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
+                                    child: Text(
+                                      functions.changeServiceLanguge(
+                                          containerUsersRecord
+                                              .serviceType.first,
+                                          FFLocalizations.of(context)
+                                              .languageCode),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'pintanga',
+                                            color: Colors.white,
+                                            fontSize: 11.0,
+                                            letterSpacing: 0.0,
+                                            fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -281,13 +284,15 @@ class _ListofcollaboratorsPERFILWidgetState
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: Colors.white,
                                                             fontSize: 11.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight
                                                                     .normal,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -349,7 +354,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 color: Colors
                                                                     .white,
                                                                 fontSize: 10.0,
@@ -358,6 +363,8 @@ class _ListofcollaboratorsPERFILWidgetState
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ),
@@ -372,7 +379,9 @@ class _ListofcollaboratorsPERFILWidgetState
                                     ),
                                   ),
                                 ),
-                              ].addToStart(const SizedBox(height: 18.0)),
+                              ]
+                                  .divide(const SizedBox(height: 4.0))
+                                  .addToStart(const SizedBox(height: 18.0)),
                             ),
                             Align(
                               alignment: const AlignmentDirectional(0.74, -0.67),

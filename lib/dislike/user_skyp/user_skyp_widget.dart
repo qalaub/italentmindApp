@@ -123,9 +123,10 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -141,9 +142,10 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),

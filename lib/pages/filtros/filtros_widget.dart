@@ -54,11 +54,12 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                 'pyd4pn6r' /* Filters */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'pintanga',
                     color: const Color(0xFFF7F9F9),
-                    fontSize: 24.0,
+                    fontSize: 22.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
+                    useGoogleFonts: false,
                   ),
             ),
           ),
@@ -107,10 +108,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: const Color(0xFF545454),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -127,10 +129,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.black,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -219,10 +222,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: const Color(0xFF545454),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -270,10 +274,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -304,10 +309,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -338,10 +344,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -393,10 +400,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: const Color(0xFF545454),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -442,10 +450,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -477,10 +486,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -511,10 +521,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -546,10 +557,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -580,10 +592,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -633,10 +646,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: const Color(0xFF545454),
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -681,10 +695,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -714,10 +729,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -747,10 +763,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -780,10 +797,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -813,10 +831,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -846,10 +865,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -879,10 +899,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   activeColor: const Color(0xFF1D69D7),
@@ -951,10 +972,11 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: const Color(0xFF0F0E0F),
                                   fontSize: 25.0,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                             elevation: 3.0,
                             borderSide: const BorderSide(
@@ -1113,11 +1135,12 @@ class _FiltrosWidgetState extends State<FiltrosWidget> {
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: Colors.white,
                                     fontSize: 25.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                               elevation: 3.0,
                               borderSide: const BorderSide(

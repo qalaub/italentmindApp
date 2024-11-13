@@ -181,10 +181,11 @@ class _NewNotifcationsWidgetState extends State<NewNotifcationsWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 15.0,
                                         letterSpacing: 0.0,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 textAlign: TextAlign.start,

@@ -137,9 +137,10 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                           'dwydsl0d' /* 32 years */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily: 'pintanga',
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -169,9 +170,10 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'pintanga',
                                       fontSize: 12.0,
                                       letterSpacing: 0.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -194,9 +196,10 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                         'nni9655x' /* telfer psychologist */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'pintanga',
                             fontSize: 11.0,
                             letterSpacing: 0.0,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),
@@ -217,9 +220,10 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                           '1u04gdol' /* MARCH 1, 2024 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
+                              fontFamily: 'pintanga',
                               fontSize: 11.0,
                               letterSpacing: 0.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),

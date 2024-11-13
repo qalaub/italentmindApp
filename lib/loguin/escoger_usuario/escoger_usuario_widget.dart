@@ -108,7 +108,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                               alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.96,
-                                height: 307.0,
+                                height: 277.0,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFFFFFEFE),
                                   borderRadius: const BorderRadius.only(
@@ -124,13 +124,14 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                 ),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Align(
                                       alignment:
                                           const AlignmentDirectional(0.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 0.0),
+                                            8.0, 0.0, 8.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'bxuhytvi' /* What type of account would you... */,
@@ -139,11 +140,12 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.black,
                                                 fontSize: 17.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -152,7 +154,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                       alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 15.0, 0.0, 0.0),
+                                            0.0, 4.0, 0.0, 0.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
@@ -195,12 +197,13 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: Colors.white,
                                                       fontSize: 17.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: const BorderSide(
@@ -249,10 +252,11 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
                                                   .override(
-                                                    fontFamily: 'Montserrat',
+                                                    fontFamily: 'pintanga',
                                                     color: Colors.black,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
                                                   ),
                                           elevation: 3.0,
                                           borderSide: const BorderSide(
@@ -283,7 +287,9 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                         ),
                                       ),
                                     ),
-                                  ],
+                                  ]
+                                      .addToStart(const SizedBox(height: 32.0))
+                                      .addToEnd(const SizedBox(height: 32.0)),
                                 ),
                               ),
                             ),

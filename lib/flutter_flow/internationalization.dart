@@ -2934,7 +2934,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'sumldv79': {
       'en': ' years of Exp',
-      'es': 'años de Exp',
+      'es': ' años de Exp',
     },
     'u273thdj': {
       'en': 'expe',
@@ -3189,6 +3189,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Miscellaneous
   {
+    'dwira00j': {
+      'en': 'Hello World',
+      'es': '',
+    },
     '1czujlt9': {
       'en': '',
       'es': '',

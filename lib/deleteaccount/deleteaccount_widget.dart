@@ -97,10 +97,11 @@ class _DeleteaccountWidgetState extends State<DeleteaccountWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           fontSize: 19.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -111,46 +112,51 @@ class _DeleteaccountWidgetState extends State<DeleteaccountWidget> {
                                 ),
                                 Container(
                                   decoration: const BoxDecoration(),
-                                  child: RichText(
-                                    textScaler:
-                                        MediaQuery.of(context).textScaler,
-                                    text: TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'x6d6bhar' /* Deleting your account will be ... */,
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        15.0, 0.0, 15.0, 0.0),
+                                    child: RichText(
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'x6d6bhar' /* Deleting your account will be ... */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Montserrat',
+                                                  fontSize: 15.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.normal,
+                                                ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'Montserrat',
-                                                fontSize: 15.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.normal,
-                                              ),
-                                        ),
-                                        TextSpan(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'eyhsvphq' /*   Are you sure you want to del... */,
-                                          ),
-                                          style: const TextStyle(
-                                            color: Color(0xFF1D69D7),
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        )
-                                      ],
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Montserrat',
-                                            fontSize: 15.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.normal,
-                                          ),
+                                          TextSpan(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'eyhsvphq' /*   Are you sure you want to del... */,
+                                            ),
+                                            style: const TextStyle(
+                                              color: Color(0xFF1D69D7),
+                                              fontWeight: FontWeight.w600,
+                                            ),
+                                          )
+                                        ],
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'pintanga',
+                                              fontSize: 15.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.normal,
+                                              useGoogleFonts: false,
+                                            ),
+                                      ),
+                                      textAlign: TextAlign.center,
                                     ),
-                                    textAlign: TextAlign.center,
                                   ),
                                 ),
                                 Padding(
@@ -236,9 +242,10 @@ class _DeleteaccountWidgetState extends State<DeleteaccountWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFF4963C9),
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: const BorderSide(
@@ -275,9 +282,10 @@ class _DeleteaccountWidgetState extends State<DeleteaccountWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: Colors.white,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: const BorderSide(

@@ -129,11 +129,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Montserrat',
+                                              fontFamily: 'pintanga',
                                               color: const Color(0xFF1D69D7),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -175,11 +176,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -221,11 +223,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: _model.firts
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -273,11 +276,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: !_model.firts
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -319,11 +323,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -365,11 +370,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: _model.second
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -417,11 +423,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: !_model.second
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -463,11 +470,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -509,11 +517,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: _model.tree
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -561,11 +570,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: !_model.tree
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -607,11 +617,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -653,11 +664,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: _model.four
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -705,11 +717,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: !_model.four
                                                           ? Colors.white
                                                           : Colors.black,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
                                             borderSide: const BorderSide(
@@ -1540,12 +1553,13 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Inter',
+                                                      fontFamily: 'pintanga',
                                                       color: Colors.black,
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: const BorderSide(
@@ -1617,12 +1631,13 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
                                                     .override(
-                                                      fontFamily: 'Inter',
+                                                      fontFamily: 'pintanga',
                                                       color: Colors.white,
                                                       fontSize: 14.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w600,
+                                                      useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: const BorderSide(

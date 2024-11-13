@@ -233,11 +233,12 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                       context)
                                                   .bodyMedium
                                                   .override(
-                                                    fontFamily: 'Montserrat',
+                                                    fontFamily: 'pintanga',
                                                     color: const Color(0xFF1D69D7),
                                                     fontSize: 20.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
+                                                    useGoogleFonts: false,
                                                   ),
                                             ),
                                           ),
@@ -269,22 +270,22 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 '0vh9393z' /* *First name */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -347,27 +348,30 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 errorStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
@@ -417,10 +421,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.black,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               maxLines: null,
                                               maxLength: 100,
@@ -442,22 +446,22 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'eh8ceevs' /* * Last name */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -520,27 +524,30 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 errorStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
@@ -590,10 +597,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.black,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               maxLines: null,
                                               maxLength: 100,
@@ -615,22 +622,22 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'b8408ni3' /* * Company name */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -670,27 +677,30 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 hintStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 errorStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                     ),
                                                 enabledBorder:
                                                     OutlineInputBorder(
@@ -740,10 +750,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.black,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               maxLines: null,
                                               maxLength: 100,
@@ -764,22 +774,22 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 '4ak6m4wj' /* * Email address */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -845,9 +855,11 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'pintanga',
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                       alignLabelWithHint: false,
                                                       hintStyle:
@@ -856,9 +868,11 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'pintanga',
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                       errorStyle:
                                                           FlutterFlowTheme.of(
@@ -866,12 +880,14 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'pintanga',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .error,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                                 lineHeight: 1.0,
                                                               ),
                                                       enabledBorder:
@@ -926,9 +942,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.black,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     maxLines: null,
                                                     maxLength: 100,
@@ -964,12 +981,14 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: const Color(
                                                                 0xFFFF5963),
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ).animateOnPageLoad(
                                                         animationsMap[
@@ -985,22 +1004,22 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 '8u8yabxe' /*   * Confirm email address */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -1045,9 +1064,11 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'pintanga',
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                       alignLabelWithHint: false,
                                                       hintStyle:
@@ -1056,9 +1077,11 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .labelMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'pintanga',
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                       errorStyle:
                                                           FlutterFlowTheme.of(
@@ -1066,12 +1089,14 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Readex Pro',
+                                                                    'pintanga',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .error,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                                 lineHeight: 1.0,
                                                               ),
                                                       enabledBorder:
@@ -1126,9 +1151,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.black,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     maxLines: null,
                                                     maxLength: 100,
@@ -1165,12 +1191,14 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             color: const Color(
                                                                 0xFFFF5963),
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ).animateOnPageLoad(
                                                         animationsMap[
@@ -1182,26 +1210,26 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                         ),
                                         Align(
                                           alignment: const AlignmentDirectional(
-                                              -0.54, -0.93),
+                                              -0.74, -0.93),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'i3w1obqw' /* * Enter your phone number     ... */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -1239,41 +1267,39 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                 obscureText: false,
                                                 decoration: InputDecoration(
                                                   isDense: true,
-                                                  labelStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  labelStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                   alignLabelWithHint: false,
                                                   hintText: FFLocalizations.of(
                                                           context)
                                                       .getText(
                                                     '8t59l3cg' /* Example (XXX) XXX-XXXX */,
                                                   ),
-                                                  hintStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .labelMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'Readex Pro',
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  hintStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                   errorStyle: FlutterFlowTheme
                                                           .of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: 'pintanga',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .error,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                         lineHeight: 1.0,
                                                       ),
                                                   enabledBorder:
@@ -1328,9 +1354,10 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.black,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 maxLines: null,
                                                 maxLength: 14,
@@ -1352,22 +1379,22 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 15.0, 0.0, 15.0),
+                                                    15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
                                                 'rcfnlny4' /* * Select your suburb */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -1540,10 +1567,12 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 fontSize: 14.0,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                           validator: _model
                                                               .queryTextControllerValidator
@@ -1582,7 +1611,7 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
@@ -1590,6 +1619,8 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ).animateOnPageLoad(
                                                                 animationsMap[
@@ -1607,9 +1638,11 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           );
                                                         }
@@ -1768,10 +1801,11 @@ class _RegisterBusiness1WidgetState extends State<RegisterBusiness1Widget>
                                                         .titleSmall
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 20.0,
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 elevation: 5.0,
                                                 borderSide: const BorderSide(

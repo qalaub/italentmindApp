@@ -85,10 +85,11 @@ class _SelectOptionImgWidgetState extends State<SelectOptionImgWidget> {
                 'text',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'pintanga',
                     fontSize: 16.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.w500,
+                    useGoogleFonts: false,
                   ),
             ),
           ),

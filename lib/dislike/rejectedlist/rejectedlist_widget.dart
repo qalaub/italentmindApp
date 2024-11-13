@@ -62,11 +62,12 @@ class _RejectedlistWidgetState extends State<RejectedlistWidget> {
               'm4mi5bv5' /* Rejected list */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Montserrat',
+                  fontFamily: 'pintanga',
                   color: Colors.white,
                   fontSize: 25.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: const [],

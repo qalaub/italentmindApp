@@ -93,10 +93,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
               '7zo6r85o' /* My Profile */,
             ),
             style: FlutterFlowTheme.of(context).headlineLarge.override(
-                  fontFamily: 'Montserrat',
+                  fontFamily: 'pintanga',
                   color: Colors.white,
                   fontSize: 22.0,
                   letterSpacing: 0.0,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: const [],
@@ -174,10 +175,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineLarge
                                                 .override(
-                                                  fontFamily: 'Montserrat',
+                                                  fontFamily: 'pintanga',
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Padding(
@@ -190,17 +192,19 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                 'm72rvraz' /* Highly recommended */,
                                               ),
                                               textAlign: TextAlign.center,
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .headlineSmall
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: const Color(0xFF4963C9),
-                                                    fontSize: 14.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight:
-                                                        FontWeight.normal,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .headlineSmall
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        color:
+                                                            const Color(0xFF4963C9),
+                                                        fontSize: 14.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ].addToStart(const SizedBox(height: 4.0)),
@@ -231,11 +235,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: const Color(0xFF1D69D7),
                                             fontSize: 15.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ],
@@ -266,10 +271,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Montserrat',
+                                                  fontFamily: 'pintanga',
                                                   fontSize: 12.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -363,9 +369,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                                     .labelMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             enabledBorder:
                                                                 UnderlineInputBorder(
@@ -425,13 +433,15 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 fontSize: 15.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w500,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                           textAlign:
                                                               TextAlign.center,
@@ -492,11 +502,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: const Color(0xFF1D69D7),
                                                 fontSize: 15.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -533,11 +544,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -696,9 +708,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        'pintanga',
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                         ),
                                                       );
@@ -772,7 +786,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     fontSize:
                                                                         13.0,
                                                                     letterSpacing:
@@ -780,6 +794,8 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                           hintText:
                                                               FFLocalizations.of(
@@ -823,9 +839,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        'pintanga',
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                         ),
                                                       );
@@ -866,11 +884,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: const Color(0xFF1D69D7),
                                                 fontSize: 15.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -907,11 +926,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -999,11 +1019,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 13.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     hintText:
                                                         FFLocalizations.of(
@@ -1040,9 +1061,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                             .labelMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Readex Pro',
+                                                                  'pintanga',
                                                               letterSpacing:
                                                                   0.0,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                   ),
                                                 ),
@@ -1074,10 +1097,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: const Color(0xFF1D69D7),
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -1119,11 +1143,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             fontSize: 20.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
                                       elevation: 3.0,
                                       borderRadius: BorderRadius.circular(12.0),
@@ -1148,10 +1173,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: const Color(0xFF1D69D7),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -1227,8 +1253,9 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     enabledBorder:
                                                         UnderlineInputBorder(
@@ -1279,9 +1306,9 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: 'pintanga',
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                                   maxLines: null,
                                                   minLines: 1,
@@ -1330,11 +1357,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: const Color(0xFF1D69D7),
                                                 fontSize: 15.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ],
@@ -1371,11 +1399,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -1523,11 +1552,12 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Montserrat',
+                                              fontFamily: 'pintanga',
                                               color: Colors.white,
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
+                                              useGoogleFonts: false,
                                             ),
                                         elevation: 0.0,
                                         borderRadius:
@@ -1711,10 +1741,11 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .headlineLarge
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                             elevation: 3.0,
                             borderSide: const BorderSide(

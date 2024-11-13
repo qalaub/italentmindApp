@@ -97,11 +97,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: Colors.white,
                                     fontSize: 24.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -117,11 +118,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Montserrat',
+                                      fontFamily: 'pintanga',
                                       color: const Color(0xFFC6C6C6),
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w300,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -180,11 +182,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 19.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 const Icon(
@@ -245,11 +248,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.white,
                                           fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                   const Icon(
@@ -307,11 +311,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 19.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 const Icon(
@@ -368,11 +373,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 19.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 const Icon(
@@ -429,11 +435,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 19.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 const Icon(
@@ -490,11 +497,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 19.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 const Icon(
@@ -551,11 +559,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Montserrat',
+                                        fontFamily: 'pintanga',
                                         color: Colors.white,
                                         fontSize: 19.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                                 const Icon(

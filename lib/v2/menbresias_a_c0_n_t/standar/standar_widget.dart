@@ -122,11 +122,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 30.81,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -144,11 +145,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       fontSize: 13.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w300,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -207,11 +209,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.white,
                                                   fontSize: 18.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -315,11 +318,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Inter',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.white,
                                                 fontSize: 18.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -396,11 +400,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'pintanga',
                                             color: const Color(0xFFFFD400),
                                             fontSize: 13.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -477,11 +482,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'pintanga',
                                         color: const Color(0xFF25292F),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),

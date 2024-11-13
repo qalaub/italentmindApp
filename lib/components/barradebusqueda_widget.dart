@@ -99,13 +99,15 @@ class _BarradebusquedaWidgetState extends State<BarradebusquedaWidget> {
                         ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelLarge.override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'pintanga',
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'pintanga',
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                         enabledBorder: UnderlineInputBorder(
                           borderSide: const BorderSide(
@@ -137,9 +139,10 @@ class _BarradebusquedaWidgetState extends State<BarradebusquedaWidget> {
                         ),
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily: 'pintanga',
                             color: Colors.black,
                             letterSpacing: 0.0,
+                            useGoogleFonts: false,
                           ),
                       validator:
                           _model.textControllerValidator.asValidator(context),
@@ -179,10 +182,11 @@ class _BarradebusquedaWidgetState extends State<BarradebusquedaWidget> {
                       color: Colors.white,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Readex Pro',
+                                fontFamily: 'pintanga',
                                 color: Colors.black,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: false,
                               ),
                       elevation: 0.0,
                       borderSide: const BorderSide(

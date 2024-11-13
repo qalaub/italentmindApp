@@ -111,11 +111,12 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                         'ms8eabq6' /* Block User */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Montserrat',
+                            fontFamily: 'pintanga',
                             color: const Color(0xFF0F0E0F),
                             fontSize: 18.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ]
@@ -159,11 +160,12 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: const Color(0xFF0F0E0F),
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),
@@ -206,10 +208,11 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                         'sk3uz8xx' /* Report User */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Montserrat',
+                            fontFamily: 'pintanga',
                             fontSize: 18.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ]

@@ -178,13 +178,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.white,
                                                         fontSize: 13.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -203,13 +203,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.white,
                                                         fontSize: 9.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -291,12 +291,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -353,11 +353,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Montserrat',
+                                                                'pintanga',
                                                             fontSize: 12.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w500,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -457,12 +459,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -524,11 +526,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.white,
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -558,12 +561,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color: Colors.white,
                                                           fontSize: 13.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -581,12 +585,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFFEEEFF0),
                                                       fontSize: 9.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -669,11 +674,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -728,11 +734,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -844,11 +851,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -909,11 +917,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.white,
                                                   fontSize: 16.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -942,12 +951,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFFF4F7F9),
                                                       fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w600,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -965,12 +975,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFFF7F9F9),
                                                       fontSize: 9.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w500,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -1052,11 +1063,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -1111,11 +1123,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -1211,12 +1224,12 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         fontSize: 12.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),

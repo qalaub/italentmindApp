@@ -83,10 +83,11 @@ class _DescripcionProfesionalWidgetState
                         ),
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: const Color(0xFF1D69D7),
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                       ),
                     ),
@@ -141,11 +142,12 @@ class _DescripcionProfesionalWidgetState
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           color: Colors.black,
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 );
@@ -172,9 +174,10 @@ class _DescripcionProfesionalWidgetState
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: const Color(0xFF1D69D7),
                                   letterSpacing: 0.0,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -286,10 +289,11 @@ class _DescripcionProfesionalWidgetState
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.black,
                                                 fontSize: 17.0,
                                                 letterSpacing: 0.0,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -308,10 +312,11 @@ class _DescripcionProfesionalWidgetState
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.black,
                                                 fontSize: 17.0,
                                                 letterSpacing: 0.0,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -358,10 +363,11 @@ Perso... */
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.black,
                                             fontSize: 17.0,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -429,10 +435,11 @@ Perso... */
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Montserrat',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.black,
                                                   fontSize: 17.0,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         );
@@ -479,10 +486,11 @@ Perso... */
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Montserrat',
+                                              fontFamily: 'pintanga',
                                               color: Colors.black,
                                               fontSize: 17.0,
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -526,10 +534,11 @@ Perso... */
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.black,
                                             fontSize: 17.0,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -597,10 +606,11 @@ Perso... */
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Montserrat',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.black,
                                                   fontSize: 17.0,
                                                   letterSpacing: 0.0,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         );

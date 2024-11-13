@@ -99,10 +99,10 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
-                                          fontFamily: 'pitanga',
+                                          fontFamily: 'pintanga',
                                           fontSize: 19.0,
                                           letterSpacing: 0.0,
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
                                   ),
@@ -205,12 +205,12 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'pitanga',
+                                                      fontFamily: 'pintanga',
                                                       color: Colors.black,
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
-                                                          FontWeight.w300,
+                                                          FontWeight.w500,
                                                       useGoogleFonts: false,
                                                     ),
                                             unselectedTextStyle:
@@ -299,7 +299,7 @@ class _Cadari0WidgetState extends State<Cadari0Widget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'pitanga',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             letterSpacing: 0.0,
                                             useGoogleFonts: false,

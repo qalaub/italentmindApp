@@ -385,11 +385,12 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .headlineLarge
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.white,
                                                 fontSize: 19.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -415,11 +416,12 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Montserrat',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.white,
                                                 fontSize: 11.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -512,7 +514,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 color: Colors
                                                                     .white,
                                                                 fontSize: 10.0,
@@ -521,6 +523,8 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ),
@@ -616,7 +620,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Montserrat',
+                                                                        'pintanga',
                                                                     color: Colors
                                                                         .white,
                                                                     fontSize:
@@ -626,6 +630,8 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .normal,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -686,7 +692,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 color: Colors
                                                                     .white,
                                                                 fontSize: 10.0,
@@ -695,6 +701,8 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ),

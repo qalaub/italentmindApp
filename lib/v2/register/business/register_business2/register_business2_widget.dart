@@ -237,12 +237,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Montserrat',
+                                                      fontFamily: 'pintanga',
                                                       color: const Color(0xFF1D69D7),
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w600,
+                                                      useGoogleFonts: false,
                                                     ),
                                               ),
                                             ),
@@ -267,7 +268,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      5.0, 15.0, 0.0, 15.0),
+                                                      15.0, 15.0, 0.0, 15.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -278,12 +279,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 15.0,
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -404,11 +404,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Montserrat',
+                                                                          'pintanga',
                                                                       color: Colors
                                                                           .black,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             hintText:
                                                                 FFLocalizations.of(
@@ -475,7 +477,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Montserrat',
+                                                                          'pintanga',
                                                                       color: const Color(
                                                                           0xFFFF5963),
                                                                       letterSpacing:
@@ -483,6 +485,8 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                               ).animateOnPageLoad(
                                                                   animationsMap[
@@ -500,9 +504,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        'pintanga',
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             );
                                                           }
@@ -521,7 +527,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
-                                                        5.0, 15.0, 0.0, 15.0),
+                                                        15.0, 15.0, 0.0, 15.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -531,13 +537,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
-                                                        color: Colors.black,
-                                                        fontSize: 15.0,
+                                                        fontFamily: 'pintanga',
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -627,7 +631,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Montserrat',
+                                                                      'pintanga',
                                                                   color: Colors
                                                                       .black,
                                                                   letterSpacing:
@@ -635,6 +639,8 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w500,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                         hintText:
                                                             FFLocalizations.of(
@@ -716,9 +722,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                       .labelMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Readex Pro',
+                                                                            'pintanga',
                                                                         letterSpacing:
                                                                             0.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                               hintText:
                                                                   FFLocalizations.of(
@@ -744,11 +752,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Readex Pro',
+                                                                            'pintanga',
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .error,
                                                                         letterSpacing:
                                                                             0.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                               enabledBorder:
                                                                   OutlineInputBorder(
@@ -837,9 +847,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Readex Pro',
+                                                                      'pintanga',
                                                                   letterSpacing:
                                                                       0.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                       );
                                                     }
@@ -853,7 +865,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      0.0, 15.0, 0.0, 15.0),
+                                                      15.0, 15.0, 0.0, 15.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -864,12 +876,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 15.0,
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -988,11 +999,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Montserrat',
+                                                                          'pintanga',
                                                                       color: Colors
                                                                           .black,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             hintText:
                                                                 FFLocalizations.of(
@@ -1057,7 +1070,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Montserrat',
+                                                                          'pintanga',
                                                                       color: const Color(
                                                                           0xFFFF5963),
                                                                       letterSpacing:
@@ -1065,6 +1078,8 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                       fontWeight:
                                                                           FontWeight
                                                                               .w500,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                               ).animateOnPageLoad(
                                                                   animationsMap[
@@ -1082,9 +1097,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        'pintanga',
                                                                     letterSpacing:
                                                                         0.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             );
                                                           }
@@ -1102,7 +1119,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      0.0, 15.0, 0.0, 15.0),
+                                                      15.0, 15.0, 0.0, 15.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -1113,12 +1130,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 15.0,
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -1165,11 +1181,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .labelMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       fontSize:
                                                                           14.0,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             hintText:
                                                                 FFLocalizations.of(
@@ -1183,9 +1201,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .labelMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             errorStyle:
                                                                 FlutterFlowTheme.of(
@@ -1193,12 +1213,14 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .error,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                       lineHeight:
                                                                           1.0,
                                                                     ),
@@ -1284,11 +1306,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 color: Colors
                                                                     .black,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                           maxLength: 40,
                                                           buildCounter: (context,
@@ -1337,13 +1361,15 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Montserrat',
+                                                                            'pintanga',
                                                                         color: const Color(
                                                                             0xFFFF5963),
                                                                         letterSpacing:
                                                                             0.0,
                                                                         fontWeight:
                                                                             FontWeight.w500,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ).animateOnPageLoad(
                                                                     animationsMap[
@@ -1382,7 +1408,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                             child: Padding(
                                               padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
-                                                      0.0, 15.0, 0.0, 15.0),
+                                                      15.0, 15.0, 0.0, 15.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -1393,12 +1419,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 15.0,
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ),
@@ -1445,11 +1470,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .labelMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       fontSize:
                                                                           14.0,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             hintText:
                                                                 FFLocalizations.of(
@@ -1463,9 +1490,11 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .labelMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                     ),
                                                             errorStyle:
                                                                 FlutterFlowTheme.of(
@@ -1473,12 +1502,14 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Readex Pro',
+                                                                          'pintanga',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .error,
                                                                       letterSpacing:
                                                                           0.0,
+                                                                      useGoogleFonts:
+                                                                          false,
                                                                       lineHeight:
                                                                           1.0,
                                                                     ),
@@ -1564,11 +1595,13 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Montserrat',
+                                                                    'pintanga',
                                                                 color: Colors
                                                                     .black,
                                                                 letterSpacing:
                                                                     0.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                           maxLength: 40,
                                                           buildCounter: (context,
@@ -1617,13 +1650,15 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Montserrat',
+                                                                            'pintanga',
                                                                         color: const Color(
                                                                             0xFFFF5963),
                                                                         letterSpacing:
                                                                             0.0,
                                                                         fontWeight:
                                                                             FontWeight.w500,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ).animateOnPageLoad(
                                                                     animationsMap[
@@ -1711,7 +1746,7 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Montserrat',
+                                                                      'pintanga',
                                                                   color: const Color(
                                                                       0xFF1D69D7),
                                                                   fontSize:
@@ -1721,6 +1756,8 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                         ),
@@ -1817,14 +1854,14 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         color:
                                                             const Color(0xFFFF5963),
                                                         fontSize: 11.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),
@@ -1963,17 +2000,16 @@ class _RegisterBusiness2WidgetState extends State<RegisterBusiness2Widget>
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: const Color(0xFF4963C9),
-                                                  textStyle:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .titleSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            fontSize: 20.0,
-                                                            letterSpacing: 0.0,
-                                                          ),
+                                                  textStyle: FlutterFlowTheme
+                                                          .of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        color: Colors.white,
+                                                        fontSize: 20.0,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                   elevation: 5.0,
                                                   borderSide: const BorderSide(
                                                     color: Colors.transparent,

@@ -63,11 +63,12 @@ class _FavV2WidgetState extends State<FavV2Widget> {
             '2owg0jwu' /* Favorites */,
           ),
           style: FlutterFlowTheme.of(context).headlineMedium.override(
-                fontFamily: 'Montserrat',
+                fontFamily: 'pintanga',
                 color: const Color(0xFFEFECF3),
                 fontSize: 25.0,
                 letterSpacing: 0.0,
                 fontWeight: FontWeight.bold,
+                useGoogleFonts: false,
               ),
         ),
         actions: const [],

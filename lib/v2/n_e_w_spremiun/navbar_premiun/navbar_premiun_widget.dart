@@ -262,9 +262,10 @@ class _NavbarPremiunWidgetState extends State<NavbarPremiunWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: 'pintanga',
                                           color: const Color(0xFFF4F4F4),
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),

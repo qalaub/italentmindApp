@@ -235,8 +235,9 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'pintanga',
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: false,
                                             lineHeight: 1.5,
                                           ),
                                     )),
@@ -255,8 +256,9 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .labelSmall
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'pintanga',
                                               letterSpacing: 0.0,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -275,8 +277,9 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .labelLarge
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: 'pintanga',
                                           letterSpacing: 0.0,
+                                          useGoogleFonts: false,
                                           lineHeight: 1.5,
                                         ),
                                   )),

@@ -46,11 +46,12 @@ class _MenjsaDeAlertaWidgetState extends State<MenjsaDeAlertaWidget> {
           ),
           textAlign: TextAlign.center,
           style: FlutterFlowTheme.of(context).bodyMedium.override(
-                fontFamily: 'Montserrat',
+                fontFamily: 'pintanga',
                 color: const Color(0xFFE90606),
                 fontSize: 13.0,
                 letterSpacing: 0.0,
                 fontWeight: FontWeight.w500,
+                useGoogleFonts: false,
               ),
         ),
       ),

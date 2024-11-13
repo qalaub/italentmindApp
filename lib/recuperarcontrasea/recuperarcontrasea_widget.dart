@@ -97,10 +97,11 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .headlineMedium
                                         .override(
-                                          fontFamily: 'Montserrat',
+                                          fontFamily: 'pintanga',
                                           fontSize: 19.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -171,8 +172,9 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: false,
                                           ),
                                       validator: _model
                                           .emailTextControllerValidator
@@ -224,9 +226,10 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Montserrat',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             letterSpacing: 0.0,
+                                            useGoogleFonts: false,
                                           ),
                                       elevation: 3.0,
                                       borderSide: const BorderSide(
@@ -244,16 +247,16 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                     ],
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -0.9),
                     child: Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
-                          'assets/images/logo-italente_sinfondo-negro.png',
+                          'assets/images/logo-pegados.png',
                           width: 180.0,
-                          height: 110.0,
+                          height: 100.0,
                           fit: BoxFit.cover,
                         ),
                       ),

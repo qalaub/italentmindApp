@@ -112,11 +112,12 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 24.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -133,11 +134,12 @@ mes... */
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Montserrat',
+                                    fontFamily: 'pintanga',
                                     color: const Color(0xFFC6C6C6),
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w300,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -181,11 +183,12 @@ mes... */
                         color: const Color(0xFF4963C9),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
                                 ),
                         elevation: 5.0,
                         borderSide: const BorderSide(

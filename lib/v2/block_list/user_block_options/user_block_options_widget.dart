@@ -104,11 +104,12 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                       'm2jml2va' /* Unlock user */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Montserrat',
+                          fontFamily: 'pintanga',
                           color: const Color(0xFF0F0E0F),
                           fontSize: 16.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ]
@@ -145,11 +146,12 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                       '83easc4k' /* View Profile */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Montserrat',
+                          fontFamily: 'pintanga',
                           color: const Color(0xFF0F0E0F),
                           fontSize: 16.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
+                          useGoogleFonts: false,
                         ),
                   ),
                 ]

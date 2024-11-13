@@ -65,11 +65,12 @@ class _BlockListWidgetState extends State<BlockListWidget> {
               'b01rt5ya' /* Blocked list */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Montserrat',
+                  fontFamily: 'pintanga',
                   color: Colors.white,
                   fontSize: 25.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
+                  useGoogleFonts: false,
                 ),
           ),
           actions: const [],

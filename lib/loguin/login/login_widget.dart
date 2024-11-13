@@ -152,11 +152,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Montserrat',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.black,
                                                   fontSize: 19.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -194,16 +195,18 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   .getText(
                                                 'so3hdls2' /* User Name */,
                                               ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Montserrat',
-                                                    color: Colors.black,
-                                                    fontSize: 15.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'pintanga',
+                                                        color: Colors.black,
+                                                        fontSize: 15.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        useGoogleFonts: false,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -249,19 +252,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 errorStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                       lineHeight: 1.0,
                                                     ),
                                                 enabledBorder:
@@ -312,10 +317,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.black,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               maxLines: null,
                                               keyboardType:
@@ -341,11 +346,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Montserrat',
+                                                  fontFamily: 'pintanga',
                                                   color: Colors.black,
                                                   fontSize: 15.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w500,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -393,19 +399,21 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                         .labelMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              'pintanga',
                                                           letterSpacing: 0.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 errorStyle: FlutterFlowTheme.of(
                                                         context)
                                                     .bodyMedium
                                                     .override(
-                                                      fontFamily: 'Readex Pro',
+                                                      fontFamily: 'pintanga',
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .error,
                                                       letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
                                                       lineHeight: 1.0,
                                                     ),
                                                 enabledBorder:
@@ -475,10 +483,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily:
-                                                            'Readex Pro',
+                                                        fontFamily: 'pintanga',
                                                         color: Colors.black,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               keyboardType:
                                                   TextInputType.visiblePassword,
@@ -585,10 +593,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
                                                       .override(
-                                                        fontFamily:
-                                                            'Montserrat',
+                                                        fontFamily: 'pintanga',
                                                         fontSize: 19.0,
                                                         letterSpacing: 0.0,
+                                                        useGoogleFonts: false,
                                                       ),
                                               elevation: 3.0,
                                               borderSide: const BorderSide(
@@ -705,7 +713,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Montserrat',
+                                                              'pintanga',
                                                           color:
                                                               const Color(0xFF040404),
                                                           fontSize: 14.0,
@@ -715,6 +723,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                           decoration:
                                                               TextDecoration
                                                                   .underline,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),

@@ -122,11 +122,12 @@ class _BasicWidgetState extends State<BasicWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   fontSize: 30.81,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -145,11 +146,12 @@ class _BasicWidgetState extends State<BasicWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'pintanga',
                                       color: Colors.white,
                                       fontSize: 13.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w300,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -208,11 +210,12 @@ class _BasicWidgetState extends State<BasicWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily: 'Inter',
+                                                  fontFamily: 'pintanga',
                                                   color: const Color(0xFF0F0E0E),
                                                   fontSize: 18.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -316,11 +319,12 @@ class _BasicWidgetState extends State<BasicWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Inter',
+                                                fontFamily: 'pintanga',
                                                 color: Colors.black,
                                                 fontSize: 18.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -397,11 +401,12 @@ class _BasicWidgetState extends State<BasicWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'pintanga',
                                             color: Colors.white,
                                             fontSize: 13.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -478,11 +483,12 @@ class _BasicWidgetState extends State<BasicWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'pintanga',
                                         color: Colors.black,
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),

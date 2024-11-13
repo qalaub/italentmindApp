@@ -78,10 +78,11 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                 'i4r2sseo' /* Messages */,
               ),
               style: FlutterFlowTheme.of(context).titleMedium.override(
-                    fontFamily: 'Montserrat',
+                    fontFamily: 'pintanga',
                     fontSize: 23.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
+                    useGoogleFonts: false,
                   ),
             ),
           ),
@@ -1146,9 +1147,10 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                                 ),
                                                                                                 textAlign: TextAlign.center,
                                                                                                 style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                                      fontFamily: 'Readex Pro',
+                                                                                                      fontFamily: 'pintanga',
                                                                                                       letterSpacing: 0.0,
                                                                                                       fontWeight: FontWeight.bold,
+                                                                                                      useGoogleFonts: false,
                                                                                                     ),
                                                                                               ),
                                                                                             ),
@@ -1214,9 +1216,10 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                             ),
                                                                                             textAlign: TextAlign.center,
                                                                                             style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                                  fontFamily: 'Readex Pro',
+                                                                                                  fontFamily: 'pintanga',
                                                                                                   letterSpacing: 0.0,
                                                                                                   fontWeight: FontWeight.bold,
+                                                                                                  useGoogleFonts: false,
                                                                                                 ),
                                                                                           ),
                                                                                         ),
@@ -1257,8 +1260,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                       ),
                                                                                       textAlign: TextAlign.start,
                                                                                       style: FlutterFlowTheme.of(context).bodyLarge.override(
-                                                                                            fontFamily: 'Readex Pro',
+                                                                                            fontFamily: 'pintanga',
                                                                                             letterSpacing: 0.0,
+                                                                                            useGoogleFonts: false,
                                                                                           ),
                                                                                     ),
                                                                                   ),
@@ -1290,8 +1294,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                 ),
                                                                                 textAlign: TextAlign.start,
                                                                                 style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                      fontFamily: 'Readex Pro',
+                                                                                      fontFamily: 'pintanga',
                                                                                       letterSpacing: 0.0,
+                                                                                      useGoogleFonts: false,
                                                                                     ),
                                                                               ),
                                                                             ),
@@ -1312,8 +1317,9 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                                     ),
                                                                                     textAlign: TextAlign.start,
                                                                                     style: FlutterFlowTheme.of(context).labelSmall.override(
-                                                                                          fontFamily: 'Readex Pro',
+                                                                                          fontFamily: 'pintanga',
                                                                                           letterSpacing: 0.0,
+                                                                                          useGoogleFonts: false,
                                                                                         ),
                                                                                   ),
                                                                                 ),
@@ -1462,131 +1468,139 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
 
                                                 return Container(
                                                   decoration: const BoxDecoration(),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Stack(
-                                                        children: [
-                                                          Material(
-                                                            color: Colors
-                                                                .transparent,
-                                                            elevation: 2.0,
-                                                            shape:
-                                                                const CircleBorder(),
-                                                            child: Container(
-                                                              width: 66.0,
-                                                              height: 66.0,
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                shape: BoxShape
-                                                                    .circle,
-                                                                border:
-                                                                    Border.all(
-                                                                  color: containerUsersRecord
-                                                                          .isActive
-                                                                      ? const Color(
-                                                                          0xFF00FF0A)
-                                                                      : const Color(
-                                                                          0xFF2B2B2B),
-                                                                  width: 1.5,
-                                                                ),
-                                                              ),
-                                                              child: Padding(
-                                                                padding:
-                                                                    const EdgeInsets
-                                                                        .all(
-                                                                            2.0),
-                                                                child:
-                                                                    ClipRRect(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              240.0),
-                                                                  child: Image
-                                                                      .network(
-                                                                    valueOrDefault<
-                                                                        String>(
-                                                                      containerUsersRecord
-                                                                          .photoUrl,
-                                                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
-                                                                    ),
-                                                                    width: 44.0,
-                                                                    height:
-                                                                        44.0,
-                                                                    fit: BoxFit
-                                                                        .cover,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Align(
-                                                            alignment:
-                                                                const AlignmentDirectional(
-                                                                    0.0, 1.0),
-                                                            child: Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          61.0,
-                                                                          30.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                  child: Visibility(
+                                                    visible:
+                                                        containerUsersRecord
+                                                                .rol ==
+                                                            Roles.user,
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Stack(
+                                                          children: [
+                                                            Material(
+                                                              color: Colors
+                                                                  .transparent,
+                                                              elevation: 2.0,
+                                                              shape:
+                                                                  const CircleBorder(),
                                                               child: Container(
-                                                                width: 10.0,
-                                                                height: 10.0,
+                                                                width: 66.0,
+                                                                height: 66.0,
                                                                 decoration:
                                                                     BoxDecoration(
-                                                                  color: containerUsersRecord
-                                                                          .isActive
-                                                                      ? const Color(
-                                                                          0xFF00FF0A)
-                                                                      : const Color(
-                                                                          0xFF2B2B2B),
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              240.0),
+                                                                  shape: BoxShape
+                                                                      .circle,
                                                                   border: Border
                                                                       .all(
-                                                                    color: const Color(
-                                                                        0xFF333030),
+                                                                    color: containerUsersRecord
+                                                                            .isActive
+                                                                        ? const Color(
+                                                                            0xFF00FF0A)
+                                                                        : const Color(
+                                                                            0xFF2B2B2B),
+                                                                    width: 1.5,
+                                                                  ),
+                                                                ),
+                                                                child: Padding(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .all(
+                                                                              2.0),
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            240.0),
+                                                                    child: Image
+                                                                        .network(
+                                                                      valueOrDefault<
+                                                                          String>(
+                                                                        containerUsersRecord
+                                                                            .photoUrl,
+                                                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
+                                                                      ),
+                                                                      width:
+                                                                          44.0,
+                                                                      height:
+                                                                          44.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),
                                                             ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      Text(
-                                                        functions
-                                                            .upperCaseFirstLetter(
-                                                                valueOrDefault<
-                                                                    String>(
-                                                          containerUsersRecord
-                                                              .firtsName,
-                                                          'Name',
-                                                        )),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Montserrat',
-                                                              color:
-                                                                  Colors.white,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
+                                                            Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.0, 1.0),
+                                                              child: Padding(
+                                                                padding: const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        61.0,
+                                                                        30.0,
+                                                                        0.0,
+                                                                        0.0),
+                                                                child:
+                                                                    Container(
+                                                                  width: 10.0,
+                                                                  height: 10.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    color: containerUsersRecord
+                                                                            .isActive
+                                                                        ? const Color(
+                                                                            0xFF00FF0A)
+                                                                        : const Color(
+                                                                            0xFF2B2B2B),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            240.0),
+                                                                    border:
+                                                                        Border
+                                                                            .all(
+                                                                      color: const Color(
+                                                                          0xFF333030),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ),
                                                             ),
-                                                      ),
-                                                    ],
+                                                          ],
+                                                        ),
+                                                        Text(
+                                                          functions
+                                                              .upperCaseFirstLetter(
+                                                                  valueOrDefault<
+                                                                      String>(
+                                                            containerUsersRecord
+                                                                .firtsName,
+                                                            'Name',
+                                                          )),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'pintanga',
+                                                                color: Colors
+                                                                    .white,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 );
                                               },
@@ -1611,10 +1625,11 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'pintanga',
                                         color: const Color(0xFF1D69D7),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -2092,10 +2107,11 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'pintanga',
                                         color: const Color(0xFF1D69D7),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -2217,7 +2233,7 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                     safeSetState(() {});
 
                                                     context.pushNamed(
-                                                      'chat_2_DetailsCopy',
+                                                      'chat_2_Details',
                                                       queryParameters: {
                                                         'chatRef':
                                                             serializeParam(
@@ -2228,13 +2244,6 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                             serializeParam(
                                                           chat2BussinesItem
                                                               .reference,
-                                                          ParamType
-                                                              .DocumentReference,
-                                                        ),
-                                                        'professional':
-                                                            serializeParam(
-                                                          chat2BussinesItem
-                                                              .userB,
                                                           ParamType
                                                               .DocumentReference,
                                                         ),

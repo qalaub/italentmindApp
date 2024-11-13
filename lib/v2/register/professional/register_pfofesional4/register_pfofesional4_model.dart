@@ -9,6 +9,15 @@ class RegisterPfofesional4Model
 
   bool photosVerify = true;
 
+  List<DocumentReference> userChat = [];
+  void addToUserChat(DocumentReference item) => userChat.add(item);
+  void removeFromUserChat(DocumentReference item) => userChat.remove(item);
+  void removeAtIndexFromUserChat(int index) => userChat.removeAt(index);
+  void insertAtIndexInUserChat(int index, DocumentReference item) =>
+      userChat.insert(index, item);
+  void updateUserChatAtIndex(int index, Function(DocumentReference) updateFn) =>
+      userChat[index] = updateFn(userChat[index]);
+
   ///  State fields for stateful widgets in this page.
 
   // Model for img1.

@@ -1,6 +1,6 @@
 import '/chat_groupwbubbles/chat_thread_component_copy/chat_thread_component_copy_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/v2/v2_mensages/options_message/options_message_widget.dart';
+import '/v2/options_message/options_message_widget.dart';
 import 'chat2_details_copy_widget.dart' show Chat2DetailsCopyWidget;
 import 'package:flutter/material.dart';
 

@@ -60,10 +60,11 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
                   ),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'pintanga',
                         color: const Color(0xFF1D69D7),
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
+                        useGoogleFonts: false,
                       ),
                 ),
               ),
@@ -82,8 +83,9 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
                   ),
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Readex Pro',
+                        fontFamily: 'pintanga',
                         letterSpacing: 0.0,
+                        useGoogleFonts: false,
                       ),
                 ),
               ),

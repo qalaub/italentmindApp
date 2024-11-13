@@ -63,11 +63,12 @@ class _FavV3CopyWidgetState extends State<FavV3CopyWidget> {
             'sgzeqrp6' /* Favorites */,
           ),
           style: FlutterFlowTheme.of(context).headlineMedium.override(
-                fontFamily: 'Montserrat',
+                fontFamily: 'pintanga',
                 color: const Color(0xFFEFECF3),
                 fontSize: 24.0,
                 letterSpacing: 0.0,
                 fontWeight: FontWeight.bold,
+                useGoogleFonts: false,
               ),
         ),
         actions: const [],
