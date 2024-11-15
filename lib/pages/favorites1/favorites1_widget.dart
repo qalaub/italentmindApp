@@ -3,9 +3,13 @@ import '/components/favorites_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'favorites1_model.dart';
 export 'favorites1_model.dart';
 
@@ -42,14 +46,14 @@ class _Favorites1WidgetState extends State<Favorites1Widget> {
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: const Color(0xFFBD39BA),
+          backgroundColor: Color(0xFFBD39BA),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const FaIcon(
+            icon: FaIcon(
               FontAwesomeIcons.angleLeft,
               color: Colors.white,
               size: 30.0,
@@ -64,13 +68,13 @@ class _Favorites1WidgetState extends State<Favorites1Widget> {
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Montserrat',
-                  color: const Color(0xFFEFECF3),
+                  color: Color(0xFFEFECF3),
                   fontSize: 25.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -81,16 +85,16 @@ class _Favorites1WidgetState extends State<Favorites1Widget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: AuthUserStreamWidget(
                   builder: (context) => Builder(
                     builder: (context) {
                       final userList =
-                          (currentUserDocument?.favorites.toList() ?? [])
+                          (currentUserDocument?.favorites?.toList() ?? [])
                               .toList();
 
                       return ListView.separated(
-                        padding: const EdgeInsets.fromLTRB(
+                        padding: EdgeInsets.fromLTRB(
                           0,
                           35.0,
                           0,
@@ -99,7 +103,7 @@ class _Favorites1WidgetState extends State<Favorites1Widget> {
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         itemCount: userList.length,
-                        separatorBuilder: (_, __) => const SizedBox(height: 15.0),
+                        separatorBuilder: (_, __) => SizedBox(height: 15.0),
                         itemBuilder: (context, userListIndex) {
                           final userListItem = userList[userListIndex];
                           return FavoritesWidget(
@@ -114,11 +118,11 @@ class _Favorites1WidgetState extends State<Favorites1Widget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.8),
+                alignment: AlignmentDirectional(0.0, 0.8),
                 child: wrapWithModel(
                   model: _model.navbarModel,
                   updateCallback: () => safeSetState(() {}),
-                  child: const NavbarWidget(),
+                  child: NavbarWidget(),
                 ),
               ),
             ],

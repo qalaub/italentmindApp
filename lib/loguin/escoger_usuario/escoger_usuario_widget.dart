@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'escoger_usuario_model.dart';
 export 'escoger_usuario_model.dart';
@@ -52,11 +53,11 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(0.0),
+          preferredSize: Size.fromHeight(0.0),
           child: AppBar(
-            backgroundColor: const Color(0xFFFFFEFE),
+            backgroundColor: Color(0xFFFFFEFE),
             automaticallyImplyLeading: false,
-            actions: const [],
+            actions: [],
             centerTitle: false,
             toolbarHeight: 0.0,
             elevation: 0.0,
@@ -81,7 +82,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
@@ -93,7 +94,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -0.8),
+                              alignment: AlignmentDirectional(0.0, -0.8),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
@@ -105,13 +106,13 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.96,
                                 height: 277.0,
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFFFFFEFE),
-                                  borderRadius: const BorderRadius.only(
+                                  color: Color(0xFFFFFEFE),
+                                  borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(24.0),
                                     bottomRight: Radius.circular(24.0),
                                     topLeft: Radius.circular(24.0),
@@ -128,9 +129,9 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(0.0, -1.0),
+                                          AlignmentDirectional(0.0, -1.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             8.0, 0.0, 8.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -151,9 +152,9 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 4.0, 0.0, 0.0),
                                         child: Container(
                                           width:
@@ -161,21 +162,21 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                                   0.96,
                                           height: 1.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFF718CD4),
+                                            color: Color(0xFF718CD4),
                                             border: Border.all(
-                                              color: const Color(0xFF718CD4),
+                                              color: Color(0xFF718CD4),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 30.0, 0.0, 20.0),
                                         child: FFButtonWidget(
-                                          key: const ValueKey('participant'),
+                                          key: ValueKey('participant'),
                                           onPressed: () async {
                                             context.pushNamed('RegisterUser1');
                                           },
@@ -187,12 +188,12 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                             width: 250.0,
                                             height: 47.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: const Color(0xFF1D69D7),
+                                            color: Color(0xFF1D69D7),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -206,7 +207,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFFBAD6FF),
                                               width: 1.0,
                                             ),
@@ -217,15 +218,15 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: FFButtonWidget(
-                                        key: const ValueKey('professional'),
+                                        key: ValueKey('professional'),
                                         onPressed: () async {
                                           context.pushNamed(
                                             'RegisterProfessional3',
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  const TransitionInfo(
+                                                  TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType
@@ -242,12 +243,12 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                           width: 250.0,
                                           height: 47.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: const Color(0xFFBAD6FF),
+                                          color: Color(0xFFBAD6FF),
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
@@ -259,7 +260,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                                     useGoogleFonts: false,
                                                   ),
                                           elevation: 3.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0xFF1D69D7),
                                             width: 1.0,
                                           ),
@@ -269,9 +270,9 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 30.0, 0.0, 0.0),
                                         child: Container(
                                           width:
@@ -279,27 +280,27 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                                   0.96,
                                           height: 1.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFF718CD4),
+                                            color: Color(0xFF718CD4),
                                             border: Border.all(
-                                              color: const Color(0xFF718CD4),
+                                              color: Color(0xFF718CD4),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ),
                                   ]
-                                      .addToStart(const SizedBox(height: 32.0))
-                                      .addToEnd(const SizedBox(height: 32.0)),
+                                      .addToStart(SizedBox(height: 32.0))
+                                      .addToEnd(SizedBox(height: 32.0)),
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-0.91, -0.96),
+                              alignment: AlignmentDirectional(-0.91, -0.96),
                               child: FlutterFlowIconButton(
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 40.0,
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.arrow_back_ios_new,
                                   color: Colors.black,
                                   size: 26.0,
@@ -308,7 +309,7 @@ class _EscogerUsuarioWidgetState extends State<EscogerUsuarioWidget> {
                                   context.pushNamed(
                                     'Login',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                         duration: Duration(milliseconds: 200),

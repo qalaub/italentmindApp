@@ -1,6 +1,9 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'report_model.dart';
 export 'report_model.dart';
 
@@ -46,20 +49,20 @@ class _ReportWidgetState extends State<ReportWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(-1.0, 0.0),
+            alignment: AlignmentDirectional(-1.0, 0.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -68,7 +71,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                           onTap: () async {
                             context.safePop();
                           },
-                          child: const Icon(
+                          child: Icon(
                             Icons.clear,
                             color: Colors.white,
                             size: 28.0,
@@ -78,17 +81,17 @@ class _ReportWidgetState extends State<ReportWidget> {
                     ),
                   ),
                   Container(
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'nql3ibcq' /* Select an issue to report */,
@@ -107,9 +110,9 @@ class _ReportWidgetState extends State<ReportWidget> {
                             ),
                           ),
                           Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   '4455pzhh' /* We will not notify the person ... */,
@@ -119,7 +122,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'pintanga',
-                                      color: const Color(0xFFC6C6C6),
+                                      color: Color(0xFFC6C6C6),
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w300,
@@ -128,13 +131,13 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ),
                             ),
                           ),
-                        ].divide(const SizedBox(height: 8.0)),
+                        ].divide(SizedBox(height: 8.0)),
                       ),
                     ),
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 32.0, 16.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -161,11 +164,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     ParamType.String,
                                   ),
                                   'user1': serializeParam(
-                                    widget.user1,
+                                    widget!.user1,
                                     ParamType.String,
                                   ),
                                   'user2': serializeParam(
-                                    widget.user2,
+                                    widget!.user2,
                                     ParamType.String,
                                   ),
                                 }.withoutNulls,
@@ -190,7 +193,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                         useGoogleFonts: false,
                                       ),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -198,13 +201,13 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ],
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             height: 43.0,
                             thickness: 1.0,
                             color: Color(0xFFBDBDBD),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -226,11 +229,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                       ParamType.String,
                                     ),
                                     'user1': serializeParam(
-                                      widget.user1,
+                                      widget!.user1,
                                       ParamType.String,
                                     ),
                                     'user2': serializeParam(
-                                      widget.user2,
+                                      widget!.user2,
                                       ParamType.String,
                                     ),
                                   }.withoutNulls,
@@ -256,7 +259,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                           useGoogleFonts: false,
                                         ),
                                   ),
-                                  const Icon(
+                                  Icon(
                                     Icons.arrow_forward_ios,
                                     color: Colors.white,
                                     size: 24.0,
@@ -265,7 +268,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ),
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             height: 43.0,
                             thickness: 1.0,
                             color: Color(0xFFBDBDBD),
@@ -290,11 +293,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     ParamType.String,
                                   ),
                                   'user1': serializeParam(
-                                    widget.user1,
+                                    widget!.user1,
                                     ParamType.String,
                                   ),
                                   'user2': serializeParam(
-                                    widget.user2,
+                                    widget!.user2,
                                     ParamType.String,
                                   ),
                                 }.withoutNulls,
@@ -319,7 +322,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                         useGoogleFonts: false,
                                       ),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -327,7 +330,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ],
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             height: 43.0,
                             thickness: 1.0,
                             color: Color(0xFFBDBDBD),
@@ -352,11 +355,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     ParamType.String,
                                   ),
                                   'user1': serializeParam(
-                                    widget.user1,
+                                    widget!.user1,
                                     ParamType.String,
                                   ),
                                   'user2': serializeParam(
-                                    widget.user2,
+                                    widget!.user2,
                                     ParamType.String,
                                   ),
                                 }.withoutNulls,
@@ -381,7 +384,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                         useGoogleFonts: false,
                                       ),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -389,7 +392,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ],
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             height: 43.0,
                             thickness: 1.0,
                             color: Color(0xFFBDBDBD),
@@ -414,11 +417,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     ParamType.String,
                                   ),
                                   'user1': serializeParam(
-                                    widget.user1,
+                                    widget!.user1,
                                     ParamType.String,
                                   ),
                                   'user2': serializeParam(
-                                    widget.user2,
+                                    widget!.user2,
                                     ParamType.String,
                                   ),
                                 }.withoutNulls,
@@ -443,7 +446,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                         useGoogleFonts: false,
                                       ),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -451,7 +454,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ],
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             height: 43.0,
                             thickness: 1.0,
                             color: Color(0xFFBDBDBD),
@@ -476,11 +479,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     ParamType.String,
                                   ),
                                   'user1': serializeParam(
-                                    widget.user1,
+                                    widget!.user1,
                                     ParamType.String,
                                   ),
                                   'user2': serializeParam(
-                                    widget.user2,
+                                    widget!.user2,
                                     ParamType.String,
                                   ),
                                 }.withoutNulls,
@@ -505,7 +508,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                         useGoogleFonts: false,
                                       ),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -513,7 +516,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                               ],
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             height: 43.0,
                             thickness: 1.0,
                             color: Color(0xFFBDBDBD),
@@ -538,11 +541,11 @@ class _ReportWidgetState extends State<ReportWidget> {
                                     ParamType.String,
                                   ),
                                   'user1': serializeParam(
-                                    widget.user1,
+                                    widget!.user1,
                                     ParamType.String,
                                   ),
                                   'user2': serializeParam(
-                                    widget.user2,
+                                    widget!.user2,
                                     ParamType.String,
                                   ),
                                 }.withoutNulls,
@@ -567,7 +570,7 @@ class _ReportWidgetState extends State<ReportWidget> {
                                         useGoogleFonts: false,
                                       ),
                                 ),
-                                const Icon(
+                                Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -576,12 +579,12 @@ class _ReportWidgetState extends State<ReportWidget> {
                             ),
                           ),
                         ]
-                            .addToStart(const SizedBox(height: 8.0))
-                            .addToEnd(const SizedBox(height: 43.0)),
+                            .addToStart(SizedBox(height: 8.0))
+                            .addToEnd(SizedBox(height: 43.0)),
                       ),
                     ),
                   ),
-                ].divide(const SizedBox(height: 16.0)),
+                ].divide(SizedBox(height: 16.0)),
               ),
             ),
           ),

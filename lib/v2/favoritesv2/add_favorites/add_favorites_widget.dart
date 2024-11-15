@@ -1,11 +1,15 @@
+import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/random_data_util.dart' as random_data;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'add_favorites_model.dart';
 export 'add_favorites_model.dart';
 
@@ -46,7 +50,7 @@ class _AddFavoritesWidgetState extends State<AddFavoritesWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(1.0, -1.0),
+      alignment: AlignmentDirectional(1.0, -1.0),
       child: StreamBuilder<List<ChatsRecord>>(
         stream: queryChatsRecord(
           queryBuilder: (chatsRecord) => chatsRecord
@@ -56,7 +60,7 @@ class _AddFavoritesWidgetState extends State<AddFavoritesWidget> {
               )
               .where(
                 'user_b',
-                isEqualTo: widget.professional?.reference,
+                isEqualTo: widget!.professional?.reference,
               ),
           singleRecord: true,
         ),
@@ -83,14 +87,14 @@ class _AddFavoritesWidgetState extends State<AddFavoritesWidget> {
 
           return Builder(
             builder: (context) {
-              if ((currentUserDocument?.favorites.toList() ?? [])
-                  .contains(widget.professional?.reference)) {
+              if ((currentUserDocument?.favorites?.toList() ?? [])
+                  .contains(widget!.professional?.reference)) {
                 return FlutterFlowIconButton(
                   borderColor: Colors.transparent,
                   borderRadius: 20.0,
                   borderWidth: 1.0,
                   buttonSize: 45.0,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.favorite,
                     color: Color(0xFFFB4F4F),
                     size: 27.0,
@@ -100,7 +104,7 @@ class _AddFavoritesWidgetState extends State<AddFavoritesWidget> {
                       ...mapToFirestore(
                         {
                           'favorites': FieldValue.arrayRemove(
-                              [widget.professional?.reference]),
+                              [widget!.professional?.reference]),
                         },
                       ),
                     });
@@ -114,101 +118,105 @@ class _AddFavoritesWidgetState extends State<AddFavoritesWidget> {
                   borderRadius: 20.0,
                   borderWidth: 1.0,
                   buttonSize: 45.0,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.favorite_border,
                     color: Color(0xFFFB4F4F),
                     size: 27.0,
                   ),
                   showLoadingIndicator: true,
                   onPressed: () async {
-                    await currentUserReference!.update({
-                      ...mapToFirestore(
-                        {
-                          'favorites': FieldValue.arrayUnion(
-                              [widget.professional?.reference]),
-                        },
-                      ),
-                    });
-                    FFAppState().favoritesChange = false;
-                    _model.addToUserToAdd(widget.professional!.reference);
-                    _model.addToUserToAdd(currentUserReference!);
-                    if (conditionalBuilderChatsRecord != null
-                        ? (conditionalBuilderChatsRecord.users
-                                .contains(currentUserReference) ==
-                            true)
-                        : false) {
-                      _model.newRef = await queryChatsRecordOnce(
-                        queryBuilder: (chatsRecord) => chatsRecord
-                            .where(
-                              'user_a',
-                              isEqualTo: currentUserReference,
-                            )
-                            .where(
-                              'user_b',
-                              isEqualTo: widget.professional?.reference,
-                            ),
-                        singleRecord: true,
-                      ).then((s) => s.firstOrNull);
-                    } else {
-                      // newChat
-
-                      var chatsRecordReference = ChatsRecord.collection.doc();
-                      await chatsRecordReference.set({
-                        ...createChatsRecordData(
-                          userA: currentUserReference,
-                          userB: widget.professional?.reference,
-                          lastMessage: '',
-                          lastMessageTime: getCurrentTimestamp,
-                          lastMessageSentBy: currentUserReference,
-                          groupChatId:
-                              random_data.randomInteger(1000000, 9999999),
-                        ),
+                    if (loggedIn != null) {
+                      await currentUserReference!.update({
                         ...mapToFirestore(
                           {
-                            'users': _model.userToAdd,
+                            'favorites': FieldValue.arrayUnion(
+                                [widget!.professional?.reference]),
                           },
                         ),
                       });
-                      _model.newChatThread = ChatsRecord.getDocumentFromData({
-                        ...createChatsRecordData(
-                          userA: currentUserReference,
-                          userB: widget.professional?.reference,
-                          lastMessage: '',
-                          lastMessageTime: getCurrentTimestamp,
-                          lastMessageSentBy: currentUserReference,
-                          groupChatId:
-                              random_data.randomInteger(1000000, 9999999),
-                        ),
-                        ...mapToFirestore(
-                          {
-                            'users': _model.userToAdd,
-                          },
-                        ),
-                      }, chatsRecordReference);
+                      FFAppState().favoritesChange = false;
+                      _model.addToUserToAdd(widget!.professional!.reference);
+                      _model.addToUserToAdd(currentUserReference!);
+                      if (conditionalBuilderChatsRecord != null
+                          ? (conditionalBuilderChatsRecord?.users
+                                  ?.contains(currentUserReference) ==
+                              true)
+                          : false) {
+                        _model.newRef = await queryChatsRecordOnce(
+                          queryBuilder: (chatsRecord) => chatsRecord
+                              .where(
+                                'user_a',
+                                isEqualTo: currentUserReference,
+                              )
+                              .where(
+                                'user_b',
+                                isEqualTo: widget!.professional?.reference,
+                              ),
+                          singleRecord: true,
+                        ).then((s) => s.firstOrNull);
+                      } else {
+                        // newChat
+
+                        var chatsRecordReference = ChatsRecord.collection.doc();
+                        await chatsRecordReference.set({
+                          ...createChatsRecordData(
+                            userA: currentUserReference,
+                            userB: widget!.professional?.reference,
+                            lastMessage: '',
+                            lastMessageTime: getCurrentTimestamp,
+                            lastMessageSentBy: currentUserReference,
+                            groupChatId:
+                                random_data.randomInteger(1000000, 9999999),
+                          ),
+                          ...mapToFirestore(
+                            {
+                              'users': _model.userToAdd,
+                            },
+                          ),
+                        });
+                        _model.newChatThread = ChatsRecord.getDocumentFromData({
+                          ...createChatsRecordData(
+                            userA: currentUserReference,
+                            userB: widget!.professional?.reference,
+                            lastMessage: '',
+                            lastMessageTime: getCurrentTimestamp,
+                            lastMessageSentBy: currentUserReference,
+                            groupChatId:
+                                random_data.randomInteger(1000000, 9999999),
+                          ),
+                          ...mapToFirestore(
+                            {
+                              'users': _model.userToAdd,
+                            },
+                          ),
+                        }, chatsRecordReference);
+                      }
+
+                      _model.userToAdd = [];
+                      if (widget!.professional?.business != null) {
+                        await NewsbusinessRecord.collection
+                            .doc()
+                            .set(createNewsbusinessRecordData(
+                              business: widget!.professional?.business,
+                              professional: widget!.professional?.reference,
+                              user: currentUserReference,
+                              isView: false,
+                            ));
+                      }
+
+                      context.pushNamed(
+                        'ProfileInfo',
+                        queryParameters: {
+                          'professional': serializeParam(
+                            widget!.professional?.reference,
+                            ParamType.DocumentReference,
+                          ),
+                        }.withoutNulls,
+                      );
+                    } else {
+                      context.pushNamed('Login');
                     }
 
-                    _model.userToAdd = [];
-                    if (widget.professional?.business != null) {
-                      await NewsbusinessRecord.collection
-                          .doc()
-                          .set(createNewsbusinessRecordData(
-                            business: widget.professional?.business,
-                            professional: widget.professional?.reference,
-                            user: currentUserReference,
-                            isView: false,
-                          ));
-                    }
-
-                    context.pushNamed(
-                      'ProfileInfo',
-                      queryParameters: {
-                        'professional': serializeParam(
-                          widget.professional?.reference,
-                          ParamType.DocumentReference,
-                        ),
-                      }.withoutNulls,
-                    );
-                  
                     safeSetState(() {});
                   },
                 );

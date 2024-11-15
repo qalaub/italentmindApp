@@ -1,10 +1,14 @@
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'cuestionario_model.dart';
 export 'cuestionario_model.dart';
 
@@ -58,16 +62,16 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-0.91, -1.06),
+                      alignment: AlignmentDirectional(-0.91, -1.06),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,
                           borderRadius: 20.0,
                           borderWidth: 1.0,
                           buttonSize: 40.0,
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.arrow_back_ios_new,
                             color: Colors.black,
                             size: 24.0,
@@ -79,10 +83,10 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset(
@@ -95,15 +99,15 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.0, 1.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 120.0, 0.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 0.96,
                           height: MediaQuery.sizeOf(context).height * 0.75,
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFFFEFE),
+                            color: Color(0xFFFFFEFE),
                             borderRadius: BorderRadius.circular(16.0),
                             border: Border.all(
                               color: Colors.black,
@@ -118,10 +122,10 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 0.0),
                                     child: Container(
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'odr2f45r' /* Find Your Membership */,
@@ -130,7 +134,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'pintanga',
-                                              color: const Color(0xFF1D69D7),
+                                              color: Color(0xFF1D69D7),
                                               fontSize: 20.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
@@ -139,7 +143,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 340.0,
                                     child: Divider(
                                       height: 20.0,
@@ -151,7 +155,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.86,
                                     height: 184.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -159,13 +163,13 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 16.0, 8.0, 4.0),
                                             child: Container(
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -211,14 +215,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.firts
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -231,7 +235,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -264,14 +268,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.firts
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -284,7 +288,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -293,25 +297,25 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                           ),
                                           showLoadingIndicator: false,
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                   ),
                                   Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.86,
                                     height: 184.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 16.0, 8.0, 4.0),
                                           child: Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -358,14 +362,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.second
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -378,7 +382,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -411,14 +415,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.second
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -431,7 +435,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -440,25 +444,25 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                           ),
                                           showLoadingIndicator: false,
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                   ),
                                   Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.86,
                                     height: 184.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 16.0, 8.0, 4.0),
                                           child: Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -505,14 +509,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.tree
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -525,7 +529,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -558,14 +562,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.tree
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -578,7 +582,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -587,25 +591,25 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                           ),
                                           showLoadingIndicator: false,
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                   ),
                                   Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.86,
                                     height: 184.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 16.0, 8.0, 4.0),
                                           child: Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -652,14 +656,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: _model.four
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -672,7 +676,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -705,14 +709,14 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 0.96,
                                             height: 44.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     24.0, 0.0, 24.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: !_model.four
-                                                ? const Color(0xFF1D69D7)
-                                                : const Color(0xF0FFFFFF),
+                                                ? Color(0xFF1D69D7)
+                                                : Color(0xF0FFFFFF),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -725,7 +729,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 2.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF565454),
                                               width: 0.5,
                                             ),
@@ -734,10 +738,10 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                           ),
                                           showLoadingIndicator: false,
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                   ),
-                                  const Divider(
+                                  Divider(
                                     height: 32.0,
                                     thickness: 1.0,
                                     indent: 12.0,
@@ -746,7 +750,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                   ),
                                   if (_model.showSugguestions)
                                     Container(
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Builder(
                                         builder: (context) {
                                           if (_model.suguestion == 'Basic') {
@@ -755,11 +759,11 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       .width *
                                                   0.86,
                                               height: 230.0,
-                                              constraints: const BoxConstraints(
+                                              constraints: BoxConstraints(
                                                 minHeight: 230.0,
                                               ),
                                               decoration: BoxDecoration(
-                                                color: const Color(0x9ED7AE71),
+                                                color: Color(0x9ED7AE71),
                                                 borderRadius:
                                                     BorderRadius.circular(18.0),
                                               ),
@@ -772,12 +776,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -802,12 +806,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: RichText(
                                                         textScaler:
                                                             MediaQuery.of(
@@ -842,7 +846,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                   .getText(
                                                                 'y45s3saf' /*  Basic */,
                                                               ),
-                                                              style: const TextStyle(
+                                                              style: TextStyle(
                                                                 color: Colors
                                                                     .white,
                                                                 fontWeight:
@@ -861,7 +865,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 'h6wvrndf' /*   plan. */,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             )
                                                           ],
                                                           style: FlutterFlowTheme
@@ -883,12 +887,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 8.0,
                                                                 16.0, 8.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -913,12 +917,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: RichText(
                                                         textScaler:
                                                             MediaQuery.of(
@@ -956,7 +960,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             ),
                                                             TextSpan(
                                                               text: FFLocalizations
@@ -967,7 +971,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             ),
                                                             TextSpan(
                                                               text: FFLocalizations
@@ -978,7 +982,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             )
                                                           ],
                                                           style: FlutterFlowTheme
@@ -1008,11 +1012,11 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       .width *
                                                   0.86,
                                               height: 230.0,
-                                              constraints: const BoxConstraints(
+                                              constraints: BoxConstraints(
                                                 minHeight: 230.0,
                                               ),
                                               decoration: BoxDecoration(
-                                                color: const Color(0xE3E6E6E6),
+                                                color: Color(0xE3E6E6E6),
                                                 borderRadius:
                                                     BorderRadius.circular(18.0),
                                               ),
@@ -1025,12 +1029,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -1055,12 +1059,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: RichText(
                                                         textScaler:
                                                             MediaQuery.of(
@@ -1095,7 +1099,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                   .getText(
                                                                 '5l8cbxjy' /*  Standar */,
                                                               ),
-                                                              style: const TextStyle(
+                                                              style: TextStyle(
                                                                 color: Color(
                                                                     0xFF767676),
                                                                 fontWeight:
@@ -1117,7 +1121,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 '28mt6gpb' /*  plan. */,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             )
                                                           ],
                                                           style: FlutterFlowTheme
@@ -1139,12 +1143,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 8.0,
                                                                 16.0, 8.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -1169,12 +1173,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: RichText(
                                                         textScaler:
                                                             MediaQuery.of(
@@ -1212,7 +1216,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             ),
                                                             TextSpan(
                                                               text: FFLocalizations
@@ -1223,7 +1227,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             ),
                                                             TextSpan(
                                                               text: FFLocalizations
@@ -1234,7 +1238,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             )
                                                           ],
                                                           style: FlutterFlowTheme
@@ -1263,11 +1267,11 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       .width *
                                                   0.86,
                                               height: 230.0,
-                                              constraints: const BoxConstraints(
+                                              constraints: BoxConstraints(
                                                 minHeight: 230.0,
                                               ),
                                               decoration: BoxDecoration(
-                                                gradient: const LinearGradient(
+                                                gradient: LinearGradient(
                                                   colors: [
                                                     Color(0xACF9CB4A),
                                                     Color(0xA393782B)
@@ -1290,12 +1294,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -1320,12 +1324,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: RichText(
                                                         textScaler:
                                                             MediaQuery.of(
@@ -1360,7 +1364,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                   .getText(
                                                                 'rajr4igr' /*  Premium */,
                                                               ),
-                                                              style: const TextStyle(
+                                                              style: TextStyle(
                                                                 color: Color(
                                                                     0xFF93782B),
                                                                 fontWeight:
@@ -1379,7 +1383,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 '7o84rm6d' /*  plan. */,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             )
                                                           ],
                                                           style: FlutterFlowTheme
@@ -1401,12 +1405,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 8.0,
                                                                 16.0, 8.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -1431,12 +1435,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 0.0,
                                                                 16.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: RichText(
                                                         textScaler:
                                                             MediaQuery.of(
@@ -1474,7 +1478,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             ),
                                                             TextSpan(
                                                               text: FFLocalizations
@@ -1485,7 +1489,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             ),
                                                             TextSpan(
                                                               text: FFLocalizations
@@ -1496,7 +1500,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                                 ,
                                                               ),
                                                               style:
-                                                                  const TextStyle(),
+                                                                  TextStyle(),
                                                             )
                                                           ],
                                                           style: FlutterFlowTheme
@@ -1524,7 +1528,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                       ),
                                     ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -1543,10 +1547,10 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                             width: 150.0,
                                             height: 45.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 12.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: Colors.white,
                                             textStyle:
@@ -1562,7 +1566,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF7A7777),
                                               width: 1.0,
                                             ),
@@ -1600,7 +1604,8 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                   'RegisterProfessional1');
                                             }
                                           },
-                                          text: _model.suguestion != ''
+                                          text: _model.suguestion != null &&
+                                                  _model.suguestion != ''
                                               ? functions.concatStrings(
                                                   FFLocalizations.of(context)
                                                               .languageCode ==
@@ -1621,12 +1626,12 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                             width: 150.0,
                                             height: 45.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     12.0, 0.0, 12.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
-                                            color: const Color(0xFF4963C9),
+                                            color: Color(0xFF4963C9),
                                             textStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .titleSmall
@@ -1640,7 +1645,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                       useGoogleFonts: false,
                                                     ),
                                             elevation: 3.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -1648,10 +1653,10 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 16.0)),
+                                      ].divide(SizedBox(width: 16.0)),
                                     ),
                                   ),
-                                ].addToEnd(const SizedBox(height: 32.0)),
+                                ].addToEnd(SizedBox(height: 32.0)),
                               ),
                             ),
                           ),
@@ -1660,7 +1665,7 @@ class _CuestionarioWidgetState extends State<CuestionarioWidget> {
                     ),
                   ],
                 ),
-              ].addToEnd(const SizedBox(height: 32.0)),
+              ].addToEnd(SizedBox(height: 32.0)),
             ),
           ),
         ),

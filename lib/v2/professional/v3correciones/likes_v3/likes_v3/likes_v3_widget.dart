@@ -1,13 +1,17 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'likes_v3_model.dart';
 export 'likes_v3_model.dart';
 
@@ -42,7 +46,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
       _model.newUser = await queryUsersRecordOnce(
         queryBuilder: (usersRecord) => usersRecord.where(
           'uid',
-          isEqualTo: widget.professionalRef?.id,
+          isEqualTo: widget!.professionalRef?.id,
         ),
         singleRecord: true,
       ).then((s) => s.firstOrNull);
@@ -71,13 +75,13 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, -0.9),
+      alignment: AlignmentDirectional(0.0, -0.9),
       child: StreamBuilder<List<UsersRecord>>(
         stream: queryUsersRecord(
           queryBuilder: (usersRecord) => usersRecord.where(
             'uid',
-            isEqualTo: widget.professionalRef?.id,
-            isNull: (widget.professionalRef?.id) == null,
+            isEqualTo: widget!.professionalRef?.id,
+            isNull: (widget!.professionalRef?.id) == null,
           ),
           singleRecord: true,
         ),
@@ -109,7 +113,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
             width: 319.0,
             height: 145.0,
             decoration: BoxDecoration(
-              color: const Color(0xFF4963C9),
+              color: Color(0xFF4963C9),
               borderRadius: BorderRadius.circular(22.0),
               shape: BoxShape.rectangle,
             ),
@@ -117,16 +121,16 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(0.0, -0.6),
+                  alignment: AlignmentDirectional(0.0, -0.6),
                   child: Container(
                     width: 63.0,
                     height: 63.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
+                        fadeInDuration: Duration(milliseconds: 500),
+                        fadeOutDuration: Duration(milliseconds: 500),
                         imageUrl: valueOrDefault<String>(
                           containerUsersRecord?.photoUrl,
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
@@ -139,23 +143,23 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.5,
                     height: 100.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 56.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 56.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -163,7 +167,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, -0.1),
+                                    alignment: AlignmentDirectional(0.0, -0.1),
                                     child: Text(
                                       functions.upperCaseFirstLetter(
                                           valueOrDefault<String>(
@@ -189,18 +193,18 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  const Icon(
+                                  Icon(
                                     FFIcons.ksearch,
                                     color: Colors.white,
                                     size: 18.0,
                                   ),
                                   Container(
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: RichText(
                                       textScaler:
                                           MediaQuery.of(context).textScaler,
@@ -250,13 +254,13 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Icon(
+                                  Icon(
                                     FFIcons.kubicationplane,
                                     color: Colors.white,
                                     size: 20.0,
@@ -264,7 +268,7 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                                   Container(
                                     width: 180.0,
                                     height: 40.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: RichText(
                                       textScaler:
                                           MediaQuery.of(context).textScaler,
@@ -313,17 +317,17 @@ class _LikesV3WidgetState extends State<LikesV3Widget> {
                               ),
                             ),
                           ]
-                              .divide(const SizedBox(height: 4.0))
-                              .addToStart(const SizedBox(height: 3.0)),
+                              .divide(SizedBox(height: 4.0))
+                              .addToStart(SizedBox(height: 3.0)),
                         ),
                       ),
                     ),
                   ),
                 ),
               ]
-                  .divide(const SizedBox(width: 8.0))
-                  .addToStart(const SizedBox(width: 12.0))
-                  .addToEnd(const SizedBox(width: 12.0)),
+                  .divide(SizedBox(width: 8.0))
+                  .addToStart(SizedBox(width: 12.0))
+                  .addToEnd(SizedBox(width: 12.0)),
             ),
           );
         },

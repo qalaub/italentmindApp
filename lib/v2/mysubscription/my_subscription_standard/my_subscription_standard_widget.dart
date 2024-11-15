@@ -4,9 +4,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'my_subscription_standard_model.dart';
 export 'my_subscription_standard_model.dart';
 
@@ -45,14 +47,14 @@ class _MySubscriptionStandardWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: const Color(0xFF4963C9),
+          backgroundColor: Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const FaIcon(
+            icon: FaIcon(
               FontAwesomeIcons.angleLeft,
               color: Colors.white,
               size: 30.0,
@@ -73,7 +75,7 @@ class _MySubscriptionStandardWidgetState
                   fontWeight: FontWeight.w600,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -85,7 +87,7 @@ class _MySubscriptionStandardWidgetState
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [Color(0xFF758195), Color(0xFF25292F)],
                       stops: [0.0, 1.0],
@@ -98,9 +100,9 @@ class _MySubscriptionStandardWidgetState
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'f5w0ny4t' /* Standard Account */,
@@ -118,7 +120,7 @@ class _MySubscriptionStandardWidgetState
                         ),
                       ),
                       Container(
-                        decoration: const BoxDecoration(),
+                        decoration: BoxDecoration(),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'vm05tydz' /* Unlock all the power of this m... */,
@@ -127,13 +129,13 @@ class _MySubscriptionStandardWidgetState
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Inter',
-                                    color: const Color(0xE8ECECEC),
+                                    color: Color(0xE8ECECEC),
                                     letterSpacing: 0.0,
                                   ),
                         ),
                       ),
                       Container(
-                        decoration: const BoxDecoration(),
+                        decoration: BoxDecoration(),
                         child: RichText(
                           textScaler: MediaQuery.of(context).textScaler,
                           text: TextSpan(
@@ -157,7 +159,7 @@ class _MySubscriptionStandardWidgetState
                                 ),
                                 style: GoogleFonts.getFont(
                                   'Inter',
-                                  color: const Color(0xFFECE7E7),
+                                  color: Color(0xFFECE7E7),
                                   fontWeight: FontWeight.normal,
                                 ),
                               )
@@ -173,14 +175,14 @@ class _MySubscriptionStandardWidgetState
                           ),
                         ),
                       ),
-                      SizedBox(
+                      Container(
                         height: 110.0,
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-0.9, -0.2),
+                              alignment: AlignmentDirectional(-0.9, -0.2),
                               child: Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -192,7 +194,7 @@ class _MySubscriptionStandardWidgetState
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Inter',
-                                            color: const Color(0xFFF9C532),
+                                            color: Color(0xFFF9C532),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
@@ -222,9 +224,9 @@ class _MySubscriptionStandardWidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.6),
+                              alignment: AlignmentDirectional(0.0, 0.6),
                               child: Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -247,7 +249,11 @@ class _MySubscriptionStandardWidgetState
                                         valueOrDefault<bool>(
                                                 currentUserDocument?.freeTrial,
                                                 false)
-                                            ? 'Free trial'
+                                            ? (FFLocalizations.of(context)
+                                                        .languageCode ==
+                                                    'en'
+                                                ? 'Free trial'
+                                                : 'Prueba gratis')
                                             : functions
                                                 .getRestantDays(
                                                     currentUserDocument!
@@ -263,7 +269,7 @@ class _MySubscriptionStandardWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Inter',
-                                              color: const Color(0xFFF9C532),
+                                              color: Color(0xFFF9C532),
                                               fontSize: 21.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -275,9 +281,9 @@ class _MySubscriptionStandardWidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.9, -0.2),
+                              alignment: AlignmentDirectional(0.9, -0.2),
                               child: Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -289,7 +295,7 @@ class _MySubscriptionStandardWidgetState
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Inter',
-                                            color: const Color(0xFFF9C532),
+                                            color: Color(0xFFF9C532),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
@@ -332,15 +338,15 @@ class _MySubscriptionStandardWidgetState
                         ),
                       ),
                     ]
-                        .divide(const SizedBox(height: 8.0))
-                        .addToStart(const SizedBox(height: 16.0)),
+                        .divide(SizedBox(height: 8.0))
+                        .addToStart(SizedBox(height: 16.0)),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -357,7 +363,7 @@ class _MySubscriptionStandardWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Montserrat',
-                                    color: const Color(0xFF1D69D7),
+                                    color: Color(0xFF1D69D7),
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -366,7 +372,7 @@ class _MySubscriptionStandardWidgetState
                           ],
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -380,7 +386,7 @@ class _MySubscriptionStandardWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '3pyigs17' /* Connect with a wide range of s... */,
@@ -401,15 +407,15 @@ class _MySubscriptionStandardWidgetState
                             ],
                           ),
                         ),
-                      ].divide(const SizedBox(height: 8.0)),
+                      ].divide(SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -426,7 +432,7 @@ class _MySubscriptionStandardWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Montserrat',
-                                    color: const Color(0xFF1D69D7),
+                                    color: Color(0xFF1D69D7),
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -435,7 +441,7 @@ class _MySubscriptionStandardWidgetState
                           ],
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -449,7 +455,7 @@ class _MySubscriptionStandardWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '9a0cx31a' /* Be seen quicker as you placed ... */,
@@ -470,15 +476,15 @@ class _MySubscriptionStandardWidgetState
                             ],
                           ),
                         ),
-                      ].divide(const SizedBox(height: 8.0)),
+                      ].divide(SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -495,7 +501,7 @@ class _MySubscriptionStandardWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Montserrat',
-                                    color: const Color(0xFF1D69D7),
+                                    color: Color(0xFF1D69D7),
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -504,7 +510,7 @@ class _MySubscriptionStandardWidgetState
                           ],
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -517,7 +523,7 @@ class _MySubscriptionStandardWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'mrqcxjm5' /* Utilise our innovative map fea... */,
@@ -538,17 +544,17 @@ class _MySubscriptionStandardWidgetState
                             ],
                           ),
                         ),
-                      ].divide(const SizedBox(height: 8.0)),
+                      ].divide(SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.01, 0.7),
+                  alignment: AlignmentDirectional(0.01, 0.7),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                     child: FFButtonWidget(
-                      key: const ValueKey('return'),
+                      key: ValueKey('return'),
                       onPressed: () async {
                         context.pushNamed('userprofile');
                       },
@@ -558,11 +564,11 @@ class _MySubscriptionStandardWidgetState
                       options: FFButtonOptions(
                         width: 275.0,
                         height: 45.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: const Color(0xFF4963C9),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0xFF4963C9),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Montserrat',
@@ -571,7 +577,7 @@ class _MySubscriptionStandardWidgetState
                                   letterSpacing: 0.0,
                                 ),
                         elevation: 5.0,
-                        borderSide: const BorderSide(
+                        borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),
@@ -580,7 +586,7 @@ class _MySubscriptionStandardWidgetState
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 26.0)).addToEnd(const SizedBox(height: 32.0)),
+              ].divide(SizedBox(height: 26.0)).addToEnd(SizedBox(height: 32.0)),
             ),
           ),
         ),

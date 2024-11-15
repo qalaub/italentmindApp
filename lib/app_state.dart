@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'flutter_flow/request_manager.dart';
 import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
+import '/backend/schema/enums/enums.dart';
+import '/backend/api_requests/api_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
@@ -123,7 +126,7 @@ class FFAppState extends ChangeNotifier {
     _currentChat = value;
   }
 
-  LatLng? _tempLocation = const LatLng(41.2033216, -77.1945247);
+  LatLng? _tempLocation = LatLng(41.2033216, -77.1945247);
   LatLng? get tempLocation => _tempLocation;
   set tempLocation(LatLng? value) {
     _tempLocation = value;

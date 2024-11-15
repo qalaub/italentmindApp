@@ -503,9 +503,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' ',
       'es': '',
     },
-    'aewjt8q7': {
-      'en': 'I agree to the ITalentMind app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación ITalentMind',
+    'ym16lhkv': {
+      'en': ' I accept the detailed legal notice and limitation of liability',
+      'es': ' Acepto el aviso legal detallado y limitación de responsabilidad',
+    },
+    'dlwil3fe': {
+      'en': ' I agree to the ITalentMind app\'s privacy policy',
+      'es': ' Acepto la política de privacidad de la aplicación ITalentMind',
     },
     'ca50z2vh': {
       'en': 'Please accept T&Cs to create your account',
@@ -830,9 +834,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' ',
       'es': '',
     },
-    '7mkqpzqn': {
-      'en': 'I agree to the ITalentMind app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación ITalentMind',
+    'hmgskvke': {
+      'en':
+          ' I accept the detailed legal notice and \n limitation of liability',
+      'es':
+          ' Acepto el aviso legal detallado y limitación   de responsabilidad',
+    },
+    '8rz8x0cz': {
+      'en': ' I agree to the ITalentMind app\'s privacy policy',
+      'es': ' Acepto la política de privacidad de la aplicación ITalentMind',
     },
     '8jeu8yll': {
       'en': 'Please accept T&Cs to create your account',
@@ -1007,7 +1017,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '211duocj': {
       'en': 'This message is for  ',
-      'es': 'Este mensaje es para',
+      'es': 'Este mensaje es para  ',
     },
     'c0s5q421': {
       'en':
@@ -1291,15 +1301,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'b35dldum': {
       'en':
-          'Register a new business profile\n(This option is for any provider or professional that delivers services under the NDIS umbrella, including sole traders and/or companies)',
+          'Register a new business profile (This option is for any provider or professional offering support services, including sole traders and/or companies).',
       'es':
-          'Registrar un nuevo perfil comercial\n(Esta opción es para cualquier proveedor o profesional que preste servicios bajo el paraguas del NDIS, incluidos comerciantes individuales y/o empresas)',
+          'Registrar un nuevo perfil de negocio\n(Esta opción es para cualquier proveedor o profesional que ofrezca servicios de apoyo, incluyendo trabajadores independientes y/o empresas).',
     },
     'a0ekxe2q': {
       'en':
           'Register a new business profile (This option is for any provider or professional offering support services, including sole traders and/or companies).',
       'es':
-          'Registra un nuevo perfil de negocio\n(Esta opción es para cualquier proveedor o profesional que ofrezca servicios de apoyo, incluyendo trabajadores independientes y/o empresas).',
+          'Registrar un nuevo perfil de negocio\n(Esta opción es para cualquier proveedor o profesional que ofrezca servicios de apoyo, incluyendo trabajadores independientes y/o empresas).',
     },
     'm9ysesh3': {
       'en':
@@ -1709,9 +1719,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' ',
       'es': '',
     },
-    'wrexpraz': {
-      'en': 'I agree to the ITalentMind app\'s privacy policy',
-      'es': 'Acepto la política de privacidad de la aplicación ITalentMind',
+    '0ta6re0q': {
+      'en': ' I accept the detailed legal notice and limitation of liability',
+      'es': ' Acepto el aviso legal detallado y limitación de responsabilidad',
+    },
+    'pab0jwlw': {
+      'en': ' I agree to the ITalentMind app\'s privacy policy',
+      'es': ' Acepto la política de privacidad de la aplicación ITalentMind',
     },
     'n9zeysic': {
       'en': 'Please accept T&Cs to create your account',

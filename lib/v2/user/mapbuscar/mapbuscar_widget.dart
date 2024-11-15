@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'mapbuscar_model.dart';
 export 'mapbuscar_model.dart';
 
@@ -44,7 +46,7 @@ class _MapbuscarWidgetState extends State<MapbuscarWidget> {
   Widget build(BuildContext context) {
     return Container(
       height: 70.0,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Color(0xDAFFFFFF),
         boxShadow: [
           BoxShadow(
@@ -67,17 +69,17 @@ class _MapbuscarWidgetState extends State<MapbuscarWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Icon(
+          Icon(
             Icons.location_on,
             color: Color(0xFF4963C9),
             size: 32.0,
           ),
           Container(
             width: MediaQuery.sizeOf(context).width * 0.5,
-            decoration: const BoxDecoration(),
+            decoration: BoxDecoration(),
             child: Text(
               valueOrDefault<String>(
-                widget.text,
+                widget!.text,
                 'text',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(

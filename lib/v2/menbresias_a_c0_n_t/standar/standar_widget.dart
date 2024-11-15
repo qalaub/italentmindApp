@@ -4,8 +4,12 @@ import '/backend/schema/enums/enums.dart';
 import '/backend/stripe/payment_manager.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'standar_model.dart';
 export 'standar_model.dart';
 
@@ -53,7 +57,7 @@ class _StandarWidgetState extends State<StandarWidget> {
           child: Container(
             width: MediaQuery.sizeOf(context).width * 1.0,
             height: MediaQuery.sizeOf(context).height * 1.0,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0xFF758195), Color(0xFF25292F)],
                 stops: [0.0, 1.0],
@@ -65,10 +69,10 @@ class _StandarWidgetState extends State<StandarWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -83,17 +87,17 @@ class _StandarWidgetState extends State<StandarWidget> {
                               'MembresiasV2',
                               queryParameters: {
                                 'professionalUpdate': serializeParam(
-                                  widget.userRef,
+                                  widget!.userRef,
                                   ParamType.DocumentReference,
                                 ),
                                 'currentPlan': serializeParam(
-                                  widget.currentPlan,
+                                  widget!.currentPlan,
                                   ParamType.Enum,
                                 ),
                               }.withoutNulls,
                             );
                           },
-                          child: const Icon(
+                          child: Icon(
                             Icons.close,
                             color: Colors.white,
                             size: 24.0,
@@ -106,7 +110,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                 Container(
                   width: MediaQuery.sizeOf(context).width * 0.9,
                   height: MediaQuery.sizeOf(context).height * 0.835,
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -114,7 +118,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               '2tbfsa6i' /* Get Standard */,
@@ -132,11 +136,11 @@ class _StandarWidgetState extends State<StandarWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'g2bvdrzz' /* Unlock all the power of this m... */,
@@ -159,7 +163,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                         Container(
                           width: MediaQuery.sizeOf(context).width * 0.7,
                           height: MediaQuery.sizeOf(context).height * 0.22,
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
                             child: SvgPicture.asset(
@@ -171,12 +175,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 32.0, 0.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: 90.0,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: Color(0x84FFFFFF),
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(16.0),
@@ -186,12 +190,12 @@ class _StandarWidgetState extends State<StandarWidget> {
                               ),
                             ),
                             child: Stack(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         17.0, 0.0, 16.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -201,7 +205,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'hksq23z1' /* Annual */,
@@ -219,7 +223,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                           ),
                                         ),
                                         Container(
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'xohkkpp5' /* Then $117/Year */,
@@ -240,11 +244,11 @@ class _StandarWidgetState extends State<StandarWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.9, -0.5),
+                                  alignment: AlignmentDirectional(0.9, -0.5),
                                   child: Container(
                                     width: 78.0,
                                     height: 23.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0xD026CB63),
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(12.0),
@@ -254,7 +258,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                       ),
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'kfrgg2po' /* Best Value */,
@@ -277,14 +281,14 @@ class _StandarWidgetState extends State<StandarWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 6.0, 0.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: 90.0,
                             decoration: BoxDecoration(
-                              color: const Color(0x35FFFFFF),
-                              borderRadius: const BorderRadius.only(
+                              color: Color(0x35FFFFFF),
+                              borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(16.0),
                                 bottomRight: Radius.circular(16.0),
                                 topLeft: Radius.circular(16.0),
@@ -296,7 +300,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -310,7 +314,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Container(
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'hgdwe8j4' /* Monthly */,
@@ -328,7 +332,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                         ),
                                       ),
                                       Container(
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'ncfsx34n' /*   $17.99 / monthly  */,
@@ -379,19 +383,19 @@ class _StandarWidgetState extends State<StandarWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
                                 ),
-                                activeColor: const Color(0xFF1D69D7),
+                                activeColor: Color(0xFF1D69D7),
                                 checkColor: FlutterFlowTheme.of(context).info,
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 0.0),
                                 child: Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'dr3fgq6m' /* Do you accept the terms and co... */,
@@ -401,7 +405,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'pintanga',
-                                            color: const Color(0xFFFFD400),
+                                            color: Color(0xFFFFD400),
                                             fontSize: 13.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
@@ -412,10 +416,10 @@ class _StandarWidgetState extends State<StandarWidget> {
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(width: 12.0)),
+                          ].divide(SizedBox(width: 12.0)),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 19.0, 0.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -448,7 +452,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                               if ((_model.paymentId != null &&
                                       _model.paymentId != '') &&
                                   (_model.paymentId != '')) {
-                                await widget.userRef!
+                                await widget!.userRef!
                                     .update(createUsersRecordData(
                                   plan: Plan.standar,
                                   rol: Roles.profesional,
@@ -460,13 +464,13 @@ class _StandarWidgetState extends State<StandarWidget> {
                               safeSetState(() {});
                             },
                             child: Container(
-                              key: const ValueKey('standar'),
+                              key: ValueKey('standar'),
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 55.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(30.0),
                                   bottomRight: Radius.circular(30.0),
                                   topLeft: Radius.circular(30.0),
@@ -474,7 +478,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                 ),
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
                                     'qv8m1lsy' /* Get started Standard */,
@@ -483,7 +487,7 @@ class _StandarWidgetState extends State<StandarWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'pintanga',
-                                        color: const Color(0xFF25292F),
+                                        color: Color(0xFF25292F),
                                         fontSize: 18.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -495,13 +499,13 @@ class _StandarWidgetState extends State<StandarWidget> {
                           ),
                         ),
                       ]
-                          .divide(const SizedBox(height: 8.0))
-                          .addToStart(const SizedBox(height: 16.0))
-                          .addToEnd(const SizedBox(height: 16.0)),
+                          .divide(SizedBox(height: 8.0))
+                          .addToStart(SizedBox(height: 16.0))
+                          .addToEnd(SizedBox(height: 16.0)),
                     ),
                   ),
                 ),
-              ].addToStart(const SizedBox(height: 32.0)),
+              ].addToStart(SizedBox(height: 32.0)),
             ),
           ),
         ),

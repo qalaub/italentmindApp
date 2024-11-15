@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -12,6 +13,7 @@ import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 import 'package:provider/provider.dart';
 import 'map_button_model.dart';
@@ -21,7 +23,7 @@ class MapButtonWidget extends StatefulWidget {
   const MapButtonWidget({
     super.key,
     bool? isProfessional,
-  }) : isProfessional = isProfessional ?? false;
+  }) : this.isProfessional = isProfessional ?? false;
 
   final bool isProfessional;
 
@@ -45,7 +47,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
     super.initState();
     _model = createModel(context, () => MapButtonModel());
 
-    getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0), cached: true)
+    getCurrentUserLocation(defaultLocation: LatLng(0.0, 0.0), cached: true)
         .then((loc) => safeSetState(() => currentUserLocationValue = loc));
     _model.queryTextController ??= TextEditingController();
     _model.queryFocusNode ??= FocusNode();
@@ -80,11 +82,11 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
 
     return Container(
       height: MediaQuery.sizeOf(context).height * 1.0,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Stack(
         children: [
           Align(
-            alignment: const AlignmentDirectional(0.0, -0.99),
+            alignment: AlignmentDirectional(0.0, -0.99),
             child: AuthUserStreamWidget(
               builder: (context) => FutureBuilder<List<UsersRecord>>(
                 future: queryUsersRecordOnce(),
@@ -106,7 +108,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                   List<UsersRecord> mapsAustralianUsersRecordList =
                       snapshot.data!;
 
-                  return SizedBox(
+                  return Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 1.0,
                     child: custom_widgets.MapsAustralian(
@@ -137,7 +139,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                       language: FFAppState().filtersPage.language,
                       age: FFAppState().filtersPage.age,
                       service: FFAppState().filtersPage.services,
-                      isProfessional: widget.isProfessional,
+                      isProfessional: widget!.isProfessional,
                       schedule: FFAppState().filtersPage.schedule,
                     ),
                   );
@@ -153,7 +155,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
               controller: _model.googleMapsController,
               onCameraIdle: (latLng) => _model.googleMapsCenter = latLng,
               initialLocation: _model.googleMapsCenter ??=
-                  const LatLng(13.106061, -59.613158),
+                  LatLng(13.106061, -59.613158),
               markerColor: GoogleMarkerColor.violet,
               mapType: MapType.normal,
               style: GoogleMapStyle.standard,
@@ -168,7 +170,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
               centerMapOnMarkerTap: false,
             ),
           Align(
-            alignment: const AlignmentDirectional(-0.04, -0.95),
+            alignment: AlignmentDirectional(-0.04, -0.95),
             child: PointerInterceptor(
               intercepting: isWeb,
               child: Material(
@@ -188,7 +190,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                     ),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, -0.97),
+                    alignment: AlignmentDirectional(0.0, -0.97),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -198,7 +200,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                             if (_model.isLoading == true) {
                               return Container(
                                 clipBehavior: Clip.antiAlias,
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
@@ -208,9 +210,9 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                               );
                             } else {
                               return Align(
-                                alignment: const AlignmentDirectional(-0.82, -0.96),
+                                alignment: AlignmentDirectional(-0.82, -0.96),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       2.0, 2.0, 0.0, 3.0),
                                   child: FlutterFlowIconButton(
                                     borderColor: Colors.white,
@@ -218,7 +220,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                     borderWidth: 1.0,
                                     buttonSize: 40.0,
                                     fillColor: Colors.white,
-                                    icon: const Icon(
+                                    icon: Icon(
                                       Icons.search_sharp,
                                       color: Color(0xFF1D69D7),
                                       size: 24.0,
@@ -234,14 +236,14 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: TextFormField(
                               controller: _model.queryTextController,
                               focusNode: _model.queryFocusNode,
                               onChanged: (_) => EasyDebounce.debounce(
                                 '_model.queryTextController',
-                                const Duration(milliseconds: 100),
+                                Duration(milliseconds: 100),
                                 () async {
                                   _model.isLoading = true;
                                   _model.apiResultuev =
@@ -318,7 +320,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                         ),
                         if (currentUserDocument?.rol == Roles.user)
                           AuthUserStreamWidget(
-                            builder: (context) => const SizedBox(
+                            builder: (context) => SizedBox(
                               height: 100.0,
                               child: VerticalDivider(
                                 width: 5.0,
@@ -331,7 +333,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                           ),
                         if (currentUserDocument?.rol == Roles.user)
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 2.0, 0.0, 2.0),
                             child: AuthUserStreamWidget(
                               builder: (context) => FFButtonWidget(
@@ -339,7 +341,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                   context.pushNamed(
                                     'Filtros',
                                     extra: <String, dynamic>{
-                                      kTransitionInfoKey: const TransitionInfo(
+                                      kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType: PageTransitionType.fade,
                                       ),
@@ -349,7 +351,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                 text: FFLocalizations.of(context).getText(
                                   'eb4rjv4r' /* Filter */,
                                 ),
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.filter_list_alt,
                                   color: Color(0xFF4963C9),
                                   size: 26.0,
@@ -358,9 +360,9 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.309,
                                   height: 39.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       14.0, 0.0, 14.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: Colors.white,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -373,7 +375,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                         fontWeight: FontWeight.w500,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.white,
                                     width: 1.0,
                                   ),
@@ -389,18 +391,18 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
               ),
             ),
           ),
-          if (_model.queryResults.isNotEmpty)
+          if (_model.queryResults.length > 0)
             Align(
-              alignment: const AlignmentDirectional(0.0, -0.5),
+              alignment: AlignmentDirectional(0.0, -0.5),
               child: PointerInterceptor(
                 intercepting: isWeb,
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.96,
                     height: MediaQuery.sizeOf(context).height * 0.47,
                     decoration: BoxDecoration(
-                      color: const Color(0x33000000),
+                      color: Color(0x33000000),
                       borderRadius: BorderRadius.circular(0.0),
                     ),
                     child: SingleChildScrollView(
@@ -408,7 +410,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Builder(
                               builder: (context) {
                                 final newquery = _model.queryResults.toList();
@@ -419,7 +421,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                   scrollDirection: Axis.vertical,
                                   itemCount: newquery.length,
                                   separatorBuilder: (_, __) =>
-                                      const SizedBox(height: 0.0),
+                                      SizedBox(height: 0.0),
                                   itemBuilder: (context, newqueryIndex) {
                                     final newqueryItem =
                                         newquery[newqueryIndex];
@@ -442,12 +444,12 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                                     (_model.newPlace
                                                             ?.jsonBody ??
                                                         ''),
-                                                  )?.lat.toString(),
+                                                  )?.lat?.toString(),
                                                   GetPlaceCall.location(
                                                     (_model.newPlace
                                                             ?.jsonBody ??
                                                         ''),
-                                                  )?.lng.toString(),
+                                                  )?.lng?.toString(),
                                                   ',');
                                           FFAppState()
                                                   .newUbicationProfessional =
@@ -465,7 +467,7 @@ class _MapButtonWidgetState extends State<MapButtonWidget> {
                                       child: MapbuscarWidget(
                                         key: Key(
                                             'Keyb3v_${newqueryIndex}_of_${newquery.length}'),
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.location_on,
                                           color: Color(0xFF1D69D7),
                                         ),

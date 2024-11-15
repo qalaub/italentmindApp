@@ -1,17 +1,22 @@
+import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/components/home_vista_cuidador_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/favoritesv2/v3fv0rites/v3fv0rites_widget.dart';
 import '/v2/h0me/map_button/map_button_widget.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/flutter_flow/permissions_util.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'home_search_model.dart';
 export 'home_search_model.dart';
@@ -21,7 +26,7 @@ class HomeSearchWidget extends StatefulWidget {
     super.key,
     this.currentLatLng,
     bool? authUser,
-  }) : authUser = authUser ?? true;
+  }) : this.authUser = authUser ?? true;
 
   final List<LatLng>? currentLatLng;
   final bool authUser;
@@ -115,25 +120,25 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
         backgroundColor: Colors.white,
         body: SafeArea(
           top: true,
-          child: SizedBox(
+          child: Container(
             height: MediaQuery.sizeOf(context).height * 1.0,
             child: Stack(
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 1.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Colors.white,
                     ),
-                    alignment: const AlignmentDirectional(0.0, -1.0),
+                    alignment: AlignmentDirectional(0.0, -1.0),
                     child: Builder(
                       builder: (context) {
                         if ((currentUserDocument?.rol != Roles.profesional) &&
                             (currentUserDocument?.rol != Roles.business)) {
                           return Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: FutureBuilder<List<UsersRecord>>(
                               future: queryUsersRecordOnce(
                                 queryBuilder: (usersRecord) =>
@@ -164,14 +169,14 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
 
                                 return Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Stack(
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.1, -1.0),
+                                            AlignmentDirectional(0.1, -1.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
@@ -187,7 +192,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                             model: _model.mapButtonModel1,
                                             updateCallback: () =>
                                                 safeSetState(() {}),
-                                            child: const MapButtonWidget(
+                                            child: MapButtonWidget(
                                               isProfessional: false,
                                             ),
                                           ),
@@ -195,17 +200,17 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.72),
+                                            AlignmentDirectional(0.0, 0.72),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
                                                   1.0,
                                           height: 170.0,
-                                          constraints: const BoxConstraints(
+                                          constraints: BoxConstraints(
                                             minHeight: 150.0,
                                             maxHeight: 170.0,
                                           ),
-                                          decoration: const BoxDecoration(
+                                          decoration: BoxDecoration(
                                             color: Color(0x76F9F6F6),
                                           ),
                                           child: Builder(
@@ -242,21 +247,21 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                                               true) &&
                                                           !(currentUserDocument
                                                                       ?.blockList
-                                                                      .toList() ??
+                                                                      ?.toList() ??
                                                                   [])
                                                               .contains(
                                                                   e.reference))
                                                       .toList();
 
                                               return ListView.separated(
-                                                padding: const EdgeInsets.symmetric(
+                                                padding: EdgeInsets.symmetric(
                                                     horizontal: 20.0),
                                                 shrinkWrap: true,
                                                 scrollDirection:
                                                     Axis.horizontal,
                                                 itemCount: vard.length,
                                                 separatorBuilder: (_, __) =>
-                                                    const SizedBox(width: 20.0),
+                                                    SizedBox(width: 20.0),
                                                 itemBuilder:
                                                     (context, vardIndex) {
                                                   final vardItem =
@@ -282,7 +287,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                           );
                         } else {
                           return Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: FutureBuilder<List<UsersRecord>>(
                               future: queryUsersRecordOnce(
                                 queryBuilder: (usersRecord) =>
@@ -313,14 +318,14 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
 
                                 return Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Stack(
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, -1.5),
+                                            AlignmentDirectional(0.0, -1.5),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
@@ -336,7 +341,7 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                             model: _model.mapButtonModel2,
                                             updateCallback: () =>
                                                 safeSetState(() {}),
-                                            child: const MapButtonWidget(
+                                            child: MapButtonWidget(
                                               isProfessional: true,
                                             ),
                                           ),
@@ -344,13 +349,13 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-0.9, 0.76),
+                                            AlignmentDirectional(-0.9, 0.76),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
                                                   0.601,
                                           height: 220.0,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           child: wrapWithModel(
                                             model:
                                                 _model.homeVistaCuidadorModel,
@@ -385,31 +390,31 @@ class _HomeSearchWidgetState extends State<HomeSearchWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 1.01),
+                  alignment: AlignmentDirectional(0.0, 1.01),
                   child: Container(
                     height: 73.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0xFF1D69D7),
                     ),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Builder(
                       builder: (context) {
                         if (currentUserDocument?.rol != Roles.business) {
                           return Align(
-                            alignment: const AlignmentDirectional(0.0, 1.0),
+                            alignment: AlignmentDirectional(0.0, 1.0),
                             child: wrapWithModel(
                               model: _model.navbarModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: const NavbarWidget(),
+                              child: NavbarWidget(),
                             ),
                           );
                         } else {
                           return Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: wrapWithModel(
                               model: _model.navbarPremiunModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: const NavbarPremiunWidget(),
+                              child: NavbarPremiunWidget(),
                             ),
                           );
                         }

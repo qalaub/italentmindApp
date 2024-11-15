@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'report_section_model.dart';
 export 'report_section_model.dart';
@@ -51,7 +53,7 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
         body: SafeArea(
           top: true,
           child: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: Color(0xFF272727),
             ),
             child: Column(
@@ -70,10 +72,10 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                     ),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(-1.0, -1.0),
+                    alignment: AlignmentDirectional(-1.0, -1.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -82,7 +84,7 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                         onTap: () async {
                           context.safePop();
                         },
-                        child: const Icon(
+                        child: Icon(
                           Icons.arrow_back,
                           color: Colors.black,
                           size: 31.0,
@@ -93,19 +95,19 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                 ),
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(32.0, 0.0, 32.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
-                              widget.report,
+                              widget!.report,
                               'Harasment',
                             ),
                             textAlign: TextAlign.start,
@@ -122,9 +124,9 @@ class _ReportSectionWidgetState extends State<ReportSectionWidget> {
                           ),
                         ),
                         Container(
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Align(
-                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                            alignment: AlignmentDirectional(-1.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 '6bwq77pv' /* A system employee reviews 
@@ -135,7 +137,7 @@ mes... */
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'pintanga',
-                                    color: const Color(0xFFC6C6C6),
+                                    color: Color(0xFFC6C6C6),
                                     fontSize: 20.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w300,
@@ -144,15 +146,15 @@ mes... */
                             ),
                           ),
                         ),
-                      ].divide(const SizedBox(height: 8.0)),
+                      ].divide(SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.01, 0.7),
+                  alignment: AlignmentDirectional(0.01, 0.7),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         await launchUrl(Uri(
@@ -161,9 +163,9 @@ mes... */
                             query: {
                               'subject': 'Report',
                               'body': functions.generateBodyForEmail(
-                                  widget.user1!,
-                                  widget.user2!,
-                                  widget.report!),
+                                  widget!.user1!,
+                                  widget!.user2!,
+                                  widget!.report!),
                             }
                                 .entries
                                 .map((MapEntry<String, String> e) =>
@@ -176,11 +178,11 @@ mes... */
                       options: FFButtonOptions(
                         width: 275.0,
                         height: 45.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: const Color(0xFF4963C9),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0xFF4963C9),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'pintanga',
@@ -191,7 +193,7 @@ mes... */
                                   useGoogleFonts: false,
                                 ),
                         elevation: 5.0,
-                        borderSide: const BorderSide(
+                        borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),
@@ -200,7 +202,7 @@ mes... */
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 32.0)),
+              ].divide(SizedBox(height: 32.0)),
             ),
           ),
         ),

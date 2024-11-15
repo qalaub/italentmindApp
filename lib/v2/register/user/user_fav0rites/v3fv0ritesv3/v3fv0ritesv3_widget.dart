@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
@@ -7,10 +8,14 @@ import '/v2/favoritesv2/add_favorites/add_favorites_widget.dart';
 import '/v2/menbresiav2/membresia_logo/membresia_logo_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'v3fv0ritesv3_model.dart';
 export 'v3fv0ritesv3_model.dart';
 
@@ -45,11 +50,11 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       currentUserLocationValue =
-          await getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0));
+          await getCurrentUserLocation(defaultLocation: LatLng(0.0, 0.0));
       _model.userCurrent = await queryUsersRecordOnce(
         queryBuilder: (usersRecord) => usersRecord.where(
           'uid',
-          isEqualTo: widget.profesionalId?.id,
+          isEqualTo: widget!.profesionalId?.id,
         ),
         limit: 1,
       );
@@ -58,7 +63,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
         _model.exists = true;
         _model.apiResult23d = await GetNamePlaceCall.call(
           lat: functions.latLngToString(
-              _model.userCurrent?.first.suburb != null
+              _model.userCurrent?.first?.suburb != null
                   ? _model.userCurrent!.first.suburb!
                   : currentUserLocationValue!),
         );
@@ -91,9 +96,9 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
       child: Container(
         width: 285.0,
         height: 139.0,
-        decoration: const BoxDecoration(),
+        decoration: BoxDecoration(),
         child: FutureBuilder<UsersRecord>(
-          future: UsersRecord.getDocumentOnce(widget.profesionalId!),
+          future: UsersRecord.getDocumentOnce(widget!.profesionalId!),
           builder: (context, snapshot) {
             // Customize what your widget looks like when it's loading.
             if (!snapshot.hasData) {
@@ -119,7 +124,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                   false,
                 )) {
                   return Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -133,7 +138,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                             'ProfileInfo',
                             queryParameters: {
                               'professional': serializeParam(
-                                widget.profesionalId,
+                                widget!.profesionalId,
                                 ParamType.DocumentReference,
                               ),
                             }.withoutNulls,
@@ -150,8 +155,8 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                           width: 285.0,
                           height: 139.0,
                           decoration: BoxDecoration(
-                            color: const Color(0xFF1D69D7),
-                            boxShadow: const [
+                            color: Color(0xFF1D69D7),
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 0.0,
                                 color: Color(0xFF8BA4FF),
@@ -172,36 +177,36 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 29.0, 0.0, 0.0),
                                       child: Container(
                                         width: 63.0,
                                         height: 63.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFFD9D9D9),
-                                          borderRadius: const BorderRadius.only(
+                                          color: Color(0xFFD9D9D9),
+                                          borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(12.0),
                                             bottomRight: Radius.circular(12.0),
                                             topLeft: Radius.circular(12.0),
                                             topRight: Radius.circular(12.0),
                                           ),
                                           border: Border.all(
-                                            color: const Color(0xFFD9D9D9),
+                                            color: Color(0xFFD9D9D9),
                                           ),
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 1.0),
+                                              AlignmentDirectional(-1.0, 1.0),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                             child: CachedNetworkImage(
                                               fadeInDuration:
-                                                  const Duration(milliseconds: 500),
+                                                  Duration(milliseconds: 500),
                                               fadeOutDuration:
-                                                  const Duration(milliseconds: 500),
+                                                  Duration(milliseconds: 500),
                                               imageUrl: valueOrDefault<String>(
                                                 conditionalBuilderUsersRecord
                                                     .photoUrl,
@@ -217,16 +222,16 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 5.0, 0.0, 0.0),
                                       child: StreamBuilder<List<ReviewsRecord>>(
                                         stream: queryReviewsRecord(
                                           queryBuilder: (reviewsRecord) =>
                                               reviewsRecord.where(
                                             'professional',
-                                            isEqualTo: widget.profesionalId,
+                                            isEqualTo: widget!.profesionalId,
                                           ),
                                         ),
                                         builder: (context, snapshot) {
@@ -253,7 +258,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                               snapshot.data!;
 
                                           return Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -261,7 +266,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: InkWell(
                                                     splashColor:
@@ -291,7 +296,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                       .where(
                                                                         'professional',
                                                                         isEqualTo:
-                                                                            widget.profesionalId,
+                                                                            widget!.profesionalId,
                                                                       ),
                                                           singleRecord: true,
                                                         ).then((s) =>
@@ -317,7 +322,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                     .ratingBarValue
                                                                     ?.round(),
                                                                 professional:
-                                                                    widget
+                                                                    widget!
                                                                         .profesionalId,
                                                                 participant:
                                                                     currentUserReference,
@@ -328,7 +333,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                       },
                                                       itemBuilder:
                                                           (context, index) =>
-                                                              const Icon(
+                                                              Icon(
                                                         Icons.star_rate,
                                                         color:
                                                             Color(0xFFF9BF11),
@@ -347,15 +352,15 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                         0.0,
                                                       ),
                                                       unratedColor:
-                                                          const Color(0x4D040202),
+                                                          Color(0x4D040202),
                                                       itemCount: 5,
                                                       itemSize: 12.0,
                                                       glowColor:
-                                                          const Color(0xFFF9BF11),
+                                                          Color(0xFFF9BF11),
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 4.0)),
+                                              ].divide(SizedBox(width: 4.0)),
                                             ),
                                           );
                                         },
@@ -371,13 +376,13 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                 children: [
                                   Align(
                                     alignment:
-                                        const AlignmentDirectional(0.06, -1.23),
+                                        AlignmentDirectional(0.06, -1.23),
                                     child: Container(
                                       width: 160.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, -1.0),
+                                            AlignmentDirectional(0.0, -1.0),
                                         child: Text(
                                           functions.upperCaseFirstLetter(
                                               conditionalBuilderUsersRecord
@@ -398,14 +403,14 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                   ),
                                   Align(
                                     alignment:
-                                        const AlignmentDirectional(0.05, -0.19),
+                                        AlignmentDirectional(0.05, -0.19),
                                     child: Container(
                                       width: 168.0,
                                       height: 32.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           functions.changeServiceLanguge(
                                               conditionalBuilderUsersRecord
@@ -427,7 +432,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
+                                  SizedBox(
                                     width: 166.0,
                                     child: Divider(
                                       height: 8.0,
@@ -438,14 +443,14 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.09, 0.52),
+                                    alignment: AlignmentDirectional(0.09, 0.52),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Container(
                                         width: 160.0,
                                         height: 69.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -454,15 +459,15 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                               CrossAxisAlignment.center,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -0.17, 0.1),
                                               child: Container(
                                                 width: 150.0,
                                                 height: 16.0,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Stack(
                                                   children: [
-                                                    const Align(
+                                                    Align(
                                                       alignment:
                                                           AlignmentDirectional(
                                                               -1.0, 0.0),
@@ -483,11 +488,11 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -495,6 +500,9 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                     0.0),
                                                         child: Text(
                                                           conditionalBuilderUsersRecord
+                                                                          .ndis !=
+                                                                      null &&
+                                                                  conditionalBuilderUsersRecord
                                                                           .ndis !=
                                                                       ''
                                                               ? (FFLocalizations.of(
@@ -534,19 +542,19 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -0.03, 0.18),
                                               child: Container(
                                                 width: 150.0,
                                                 height: 16.0,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Stack(
                                                     children: [
-                                                      const Align(
+                                                      Align(
                                                         alignment:
                                                             AlignmentDirectional(
                                                                 -1.0, 0.0),
@@ -559,11 +567,11 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       20.0,
                                                                       0.0,
@@ -603,7 +611,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                       .years
                                                                       .toString(),
                                                                   style:
-                                                                      const TextStyle(),
+                                                                      TextStyle(),
                                                                 ),
                                                                 TextSpan(
                                                                   text: FFLocalizations.of(
@@ -612,7 +620,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                                     'f8p9xpwy' /*  years */,
                                                                   ),
                                                                   style:
-                                                                      const TextStyle(),
+                                                                      TextStyle(),
                                                                 )
                                                               ],
                                                               style: FlutterFlowTheme
@@ -643,15 +651,15 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -0.17, 0.1),
                                               child: Container(
                                                 width: 150.0,
                                                 height: 16.0,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Stack(
                                                   children: [
-                                                    const Align(
+                                                    Align(
                                                       alignment:
                                                           AlignmentDirectional(
                                                               -1.0, 0.0),
@@ -672,11 +680,11 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -712,8 +720,8 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                               ),
                                             ),
                                           ]
-                                              .divide(const SizedBox(height: 8.0))
-                                              .addToEnd(const SizedBox(height: 8.0)),
+                                              .divide(SizedBox(height: 8.0))
+                                              .addToEnd(SizedBox(height: 8.0)),
                                         ),
                                       ),
                                     ),
@@ -727,9 +735,9 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Container(
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,
@@ -747,7 +755,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                             }.withoutNulls,
                                             extra: <String, dynamic>{
                                               kTransitionInfoKey:
-                                                  const TransitionInfo(
+                                                  TransitionInfo(
                                                 hasTransition: true,
                                                 transitionType:
                                                     PageTransitionType.fade,
@@ -770,12 +778,12 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, -0.19),
+                                    alignment: AlignmentDirectional(1.0, -0.19),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 16.0),
                                       child: Container(
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: wrapWithModel(
                                           model: _model.membresiaLogoModel,
                                           updateCallback: () =>
@@ -803,7 +811,7 @@ class _V3fv0ritesv3WidgetState extends State<V3fv0ritesv3Widget> {
                   return Container(
                     width: double.infinity,
                     height: 1.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                   );
                 }
               },

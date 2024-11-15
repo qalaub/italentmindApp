@@ -5,10 +5,8 @@ admin.initializeApp();
 const stripeModule = require("stripe");
 
 // Credentials
-const kStripeProdSecretKey =
-  "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";
-const kStripeTestSecretKey =
-  "sk_test_51QAAWbHOc4SmPVKbg11QcEgXer0DwVJZIWrMuDPNxQG7QpcWs1fjYyCen5hiSrV7BRdPCQXj6gPs1VPg9d9OMwZ900zgJ5gUWU";
+const kStripeProdSecretKey = "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";
+const kStripeTestSecretKey = "sk_test_51QAAWbHOc4SmPVKbg11QcEgXer0DwVJZIWrMuDPNxQG7QpcWs1fjYyCen5hiSrV7BRdPCQXj6gPs1VPg9d9OMwZ900zgJ5gUWU";
 
 const secretKey = (isProd) =>
   isProd ? kStripeProdSecretKey : kStripeTestSecretKey;
@@ -32,7 +30,7 @@ exports.initStripeTestPayment = functions.https.onCall(
       return "Unauthenticated calls are not allowed.";
     }
     return await initPayment(data, false);
-  },
+  }
 );
 
 async function initPayment(data, isProd) {
@@ -55,7 +53,7 @@ async function initPayment(data, isProd) {
 
     const ephemeralKey = await stripe.ephemeralKeys.create(
       { customer: customer.id },
-      { apiVersion: "2020-08-27" },
+      { apiVersion: "2020-08-27" }
     );
     const paymentIntent = await stripe.paymentIntents.create({
       amount: data.amount,
@@ -87,48 +85,34 @@ function userFacingMessage(error) {
 }
 exports.onUserDeleted = functions.auth.user().onDelete(async (user) => {
   let firestore = admin.firestore();
-  let userRef = firestore.doc("users/" + user.uid);
+  let userRef = firestore.doc('users/' + user.uid);
   await firestore.collection("users").doc(user.uid).delete();
-  await firestore
-    .collection("chat_messages")
-    .where("user", "==", userRef)
-    .get()
-    .then(async (querySnapshot) => {
-      for (var doc of querySnapshot.docs) {
-        console.log(
-          `Deleting document ${doc.id} from collection chat_messages`,
-        );
-        await doc.ref.delete();
-      }
-    });
-  await firestore
-    .collection("chats")
-    .where("users", "array-contains", userRef)
-    .get()
-    .then(async (querySnapshot) => {
-      for (var doc of querySnapshot.docs) {
-        console.log(`Deleting document ${doc.id} from collection chats`);
-        await doc.ref.delete();
-      }
-    });
-  await firestore
-    .collection("codes")
-    .where("business", "==", userRef)
-    .get()
-    .then(async (querySnapshot) => {
-      for (var doc of querySnapshot.docs) {
-        console.log(`Deleting document ${doc.id} from collection codes`);
-        await doc.ref.delete();
-      }
-    });
-  await firestore
-    .collection("newsbusiness")
-    .where("business", "==", userRef)
-    .get()
-    .then(async (querySnapshot) => {
-      for (var doc of querySnapshot.docs) {
-        console.log(`Deleting document ${doc.id} from collection newsbusiness`);
-        await doc.ref.delete();
-      }
-    });
+  await firestore.collection("chat_messages").where("user", "==", userRef).get().then(async (querySnapshot) => {
+    for (var doc of querySnapshot.docs) {
+            console.log(`Deleting document ${doc.id} from collection chat_messages`);
+      await doc.ref.delete();
+
+    };
+  });
+  await firestore.collection("chats").where("users", "array-contains", userRef).get().then(async (querySnapshot) => {
+    for (var doc of querySnapshot.docs) {
+            console.log(`Deleting document ${doc.id} from collection chats`);
+      await doc.ref.delete();
+
+    };
+  });
+  await firestore.collection("codes").where("business", "==", userRef).get().then(async (querySnapshot) => {
+    for (var doc of querySnapshot.docs) {
+            console.log(`Deleting document ${doc.id} from collection codes`);
+      await doc.ref.delete();
+
+    };
+  });
+  await firestore.collection("newsbusiness").where("business", "==", userRef).get().then(async (querySnapshot) => {
+    for (var doc of querySnapshot.docs) {
+            console.log(`Deleting document ${doc.id} from collection newsbusiness`);
+      await doc.ref.delete();
+
+    };
+  });
 });

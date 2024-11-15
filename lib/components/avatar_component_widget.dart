@@ -1,5 +1,8 @@
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'avatar_component_model.dart';
 export 'avatar_component_model.dart';
 
@@ -47,9 +50,9 @@ class _AvatarComponentWidgetState extends State<AvatarComponentWidget> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
         border: Border.all(
-          color: widget.isActive! ? const Color(0xFF00FF0A) : const Color(0x00000000),
+          color: widget!.isActive! ? Color(0xFF00FF0A) : Color(0x00000000),
           width: valueOrDefault<double>(
-            widget.isActive! ? 4.0 : 0.0,
+            widget!.isActive! ? 4.0 : 0.0,
             4.0,
           ),
         ),
@@ -57,7 +60,7 @@ class _AvatarComponentWidgetState extends State<AvatarComponentWidget> {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Image.network(
-          widget.img!,
+          widget!.img!,
           width: 200.0,
           height: 200.0,
           fit: BoxFit.cover,

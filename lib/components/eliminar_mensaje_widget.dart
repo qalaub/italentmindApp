@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'eliminar_mensaje_model.dart';
 export 'eliminar_mensaje_model.dart';
 
@@ -36,7 +38,7 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+      padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -48,12 +50,12 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                decoration: const BoxDecoration(),
+                decoration: BoxDecoration(),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'mm8yxrkf' /* ACCOUNT DELETION SUCCESSFUL */,
@@ -61,14 +63,14 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
                   textAlign: TextAlign.center,
                   style: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'pintanga',
-                        color: const Color(0xFF1D69D7),
+                        color: Color(0xFF1D69D7),
                         letterSpacing: 0.0,
                         fontWeight: FontWeight.bold,
                         useGoogleFonts: false,
                       ),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 364.0,
                 child: Divider(
                   thickness: 2.8,
@@ -76,7 +78,7 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
                 ),
               ),
               Container(
-                decoration: const BoxDecoration(),
+                decoration: BoxDecoration(),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'bei0ybwd' /* Your account has been successf... */,
@@ -89,7 +91,7 @@ class _EliminarMensajeWidgetState extends State<EliminarMensajeWidget> {
                       ),
                 ),
               ),
-            ].divide(const SizedBox(height: 12.0)),
+            ].divide(SizedBox(height: 12.0)),
           ),
         ),
       ),

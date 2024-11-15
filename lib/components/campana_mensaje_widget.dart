@@ -1,5 +1,8 @@
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'campana_mensaje_model.dart';
 export 'campana_mensaje_model.dart';
 
@@ -38,7 +41,7 @@ class _CampanaMensajeWidgetState extends State<CampanaMensajeWidget> {
     return Container(
       width: 76.6,
       height: 76.6,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8.0),
         child: Image.asset(

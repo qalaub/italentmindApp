@@ -3,7 +3,10 @@ import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'options_message_model.dart';
 export 'options_message_model.dart';
 
@@ -44,14 +47,14 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(1.0, -1.0),
+      alignment: AlignmentDirectional(1.0, -1.0),
       child: AuthUserStreamWidget(
         builder: (context) => Container(
           width: MediaQuery.sizeOf(context).width * 0.729,
           height: currentUserDocument?.rol == Roles.user ? 137.0 : 88.0,
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
-            boxShadow: const [
+            boxShadow: [
               BoxShadow(
                 blurRadius: 4.0,
                 color: Color(0x33000000),
@@ -61,7 +64,7 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                 ),
               )
             ],
-            borderRadius: const BorderRadius.only(
+            borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
               topLeft: Radius.circular(0.0),
@@ -83,14 +86,14 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                     ...mapToFirestore(
                       {
                         'blockList':
-                            FieldValue.arrayUnion([widget.userRef?.reference]),
+                            FieldValue.arrayUnion([widget!.userRef?.reference]),
                         'blockUser':
-                            FieldValue.arrayUnion([widget.userRef?.reference]),
+                            FieldValue.arrayUnion([widget!.userRef?.reference]),
                       },
                     ),
                   });
 
-                  await widget.userRef!.reference.update({
+                  await widget!.userRef!.reference.update({
                     ...mapToFirestore(
                       {
                         'blockList':
@@ -102,7 +105,7 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                   context.goNamed('chat_2_main');
                 },
                 child: Row(
-                  key: const ValueKey('block'),
+                  key: ValueKey('block'),
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -112,7 +115,7 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'pintanga',
-                            color: const Color(0xFF0F0E0F),
+                            color: Color(0xFF0F0E0F),
                             fontSize: 18.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w500,
@@ -120,12 +123,12 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                           ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 16.0))
-                      .addToEnd(const SizedBox(width: 16.0)),
+                      .addToStart(SizedBox(width: 16.0))
+                      .addToEnd(SizedBox(width: 16.0)),
                 ),
               ),
               if (currentUserDocument?.rol == Roles.user)
-                const Divider(
+                Divider(
                   thickness: 1.0,
                   color: Color(0xFFBDBDBD),
                 ),
@@ -140,20 +143,20 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                       'ProfileInfo',
                       queryParameters: {
                         'professional': serializeParam(
-                          widget.userRef?.reference,
+                          widget!.userRef?.reference,
                           ParamType.DocumentReference,
                         ),
                       }.withoutNulls,
                     );
                   },
                   child: Row(
-                    key: const ValueKey('view'),
+                    key: ValueKey('view'),
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             '7zfllcgm' /* View Profile */,
@@ -161,7 +164,7 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'pintanga',
-                                    color: const Color(0xFF0F0E0F),
+                                    color: Color(0xFF0F0E0F),
                                     fontSize: 18.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
@@ -170,11 +173,11 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                         ),
                       ),
                     ]
-                        .addToStart(const SizedBox(width: 16.0))
-                        .addToEnd(const SizedBox(width: 16.0)),
+                        .addToStart(SizedBox(width: 16.0))
+                        .addToEnd(SizedBox(width: 16.0)),
                   ),
                 ),
-              const Divider(
+              Divider(
                 thickness: 1.0,
                 color: Color(0xFFBDBDBD),
               ),
@@ -192,14 +195,14 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                         ParamType.String,
                       ),
                       'user2': serializeParam(
-                        widget.userRef?.email,
+                        widget!.userRef?.email,
                         ParamType.String,
                       ),
                     }.withoutNulls,
                   );
                 },
                 child: Row(
-                  key: const ValueKey('report'),
+                  key: ValueKey('report'),
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -216,11 +219,11 @@ class _OptionsMessageWidgetState extends State<OptionsMessageWidget> {
                           ),
                     ),
                   ]
-                      .addToStart(const SizedBox(width: 16.0))
-                      .addToEnd(const SizedBox(width: 16.0)),
+                      .addToStart(SizedBox(width: 16.0))
+                      .addToEnd(SizedBox(width: 16.0)),
                 ),
               ),
-            ].addToStart(const SizedBox(height: 16.0)),
+            ].addToStart(SizedBox(height: 16.0)),
           ),
         ),
       ),

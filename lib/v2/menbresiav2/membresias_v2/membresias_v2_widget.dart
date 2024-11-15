@@ -1,11 +1,14 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'membresias_v2_model.dart';
 export 'membresias_v2_model.dart';
@@ -38,7 +41,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (widget.isUpdate != null) {
+      if (widget!.isUpdate != null) {
         if (currentUserDocument?.plan == Plan.basic) {
           _model.basic = true;
         } else if (currentUserDocument?.plan == Plan.standar) {
@@ -80,23 +83,23 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-0.08, -0.79),
+                alignment: AlignmentDirectional(-0.08, -0.79),
                 child: Container(
                   width: double.infinity,
                   height: MediaQuery.sizeOf(context).height * 1.0,
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          if ((widget.currentPlan == null) ||
-                              (widget.currentPlan != Plan.basic))
+                          if ((widget!.currentPlan == null) ||
+                              (widget!.currentPlan != Plan.basic))
                             Container(
                               width: MediaQuery.sizeOf(context).width * 0.9,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -104,7 +107,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.84,
                                     height: 46.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       gradient: LinearGradient(
                                         colors: [
                                           Color(0xFFFFAE34),
@@ -128,13 +131,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   12.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.331,
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
@@ -145,7 +148,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Inter',
-                                                    color: const Color(0xFFFFFCFC),
+                                                    color: Color(0xFFFFFCFC),
                                                     fontSize: 16.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
@@ -155,7 +158,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -168,7 +171,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     MediaQuery.sizeOf(context)
                                                             .width *
                                                         0.4,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -193,7 +196,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     MediaQuery.sizeOf(context)
                                                             .width *
                                                         0.47,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -222,7 +225,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   Material(
                                     color: Colors.transparent,
                                     elevation: 15.0,
-                                    shape: const RoundedRectangleBorder(
+                                    shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(10.0),
                                         bottomRight: Radius.circular(10.0),
@@ -234,7 +237,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                       width: MediaQuery.sizeOf(context).width *
                                           0.84,
                                       height: 223.0,
-                                      decoration: const BoxDecoration(
+                                      decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(10.0),
@@ -254,7 +257,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 MainAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         14.0, 0.0, 8.0, 0.0),
                                                 child: Container(
@@ -267,7 +270,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                               .width *
                                                           0.08,
                                                   clipBehavior: Clip.antiAlias,
-                                                  decoration: const BoxDecoration(
+                                                  decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.asset(
@@ -281,7 +284,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     MediaQuery.sizeOf(context)
                                                             .width *
                                                         0.6,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -313,7 +316,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(14.0, 0.0,
                                                                 8.0, 0.0),
                                                     child: Container(
@@ -327,7 +330,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           0.08,
                                                       clipBehavior:
                                                           Clip.antiAlias,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         shape: BoxShape.circle,
                                                       ),
                                                       child: Image.asset(
@@ -341,7 +344,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                                 context)
                                                             .width *
                                                         0.559,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Text(
                                                       FFLocalizations.of(
                                                               context)
@@ -368,16 +371,16 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               Expanded(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Container(
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
                                                         0.1,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: ToggleIcon(
-                                                      key: const ValueKey('basic'),
+                                                      key: ValueKey('basic'),
                                                       onPressed: () async {
                                                         safeSetState(() =>
                                                             _model.basic =
@@ -393,7 +396,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         safeSetState(() {});
                                                       },
                                                       value: _model.basic,
-                                                      onIcon: const Icon(
+                                                      onIcon: Icon(
                                                         key: ValueKey('basic'),
                                                         Icons
                                                             .radio_button_checked,
@@ -402,7 +405,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         size: 25.0,
                                                       ),
                                                       offIcon: Icon(
-                                                        key: const ValueKey('basic'),
+                                                        key: ValueKey('basic'),
                                                         Icons.radio_button_off,
                                                         color:
                                                             FlutterFlowTheme.of(
@@ -422,7 +425,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 MainAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         14.0, 0.0, 8.0, 0.0),
                                                 child: Container(
@@ -435,7 +438,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                               .width *
                                                           0.08,
                                                   clipBehavior: Clip.antiAlias,
-                                                  decoration: const BoxDecoration(
+                                                  decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.asset(
@@ -449,7 +452,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     MediaQuery.sizeOf(context)
                                                             .width *
                                                         0.6,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -471,17 +474,17 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                             ],
                                           ),
                                         ]
-                                            .divide(const SizedBox(height: 13.0))
-                                            .addToStart(const SizedBox(height: 6.0))
-                                            .addToEnd(const SizedBox(height: 6.0)),
+                                            .divide(SizedBox(height: 13.0))
+                                            .addToStart(SizedBox(height: 6.0))
+                                            .addToEnd(SizedBox(height: 6.0)),
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          if ((widget.currentPlan == null) ||
-                              (widget.currentPlan != Plan.standar))
+                          if ((widget!.currentPlan == null) ||
+                              (widget!.currentPlan != Plan.standar))
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -489,7 +492,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.84,
                                   height: 46.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
                                         Color(0xFF758195),
@@ -512,13 +515,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
                                                   0.331,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'xp8xjno7' /* STANDARD */,
@@ -538,7 +541,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -550,7 +553,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.4,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -575,7 +578,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.47,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -586,7 +589,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'pintanga',
-                                                      color: const Color(0xFFEEEFF0),
+                                                      color: Color(0xFFEEEFF0),
                                                       fontSize: 9.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -604,7 +607,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                 Material(
                                   color: Colors.transparent,
                                   elevation: 15.0,
-                                  shape: const RoundedRectangleBorder(
+                                  shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(10.0),
                                       bottomRight: Radius.circular(10.0),
@@ -615,11 +618,11 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   child: Container(
                                     width:
                                         MediaQuery.sizeOf(context).width * 0.84,
-                                    height: 254.0,
+                                    height: 274.0,
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(10.0),
                                         bottomRight: Radius.circular(10.0),
                                         topLeft: Radius.circular(0.0),
@@ -637,7 +640,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               MainAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       14.0, 0.0, 8.0, 0.0),
                                               child: Container(
@@ -650,7 +653,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                             .width *
                                                         0.08,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: const BoxDecoration(
+                                                decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
@@ -663,7 +666,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.6,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -695,7 +698,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       .spaceBetween,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           14.0, 0.0, 8.0, 0.0),
                                                   child: Container(
@@ -709,7 +712,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         0.08,
                                                     clipBehavior:
                                                         Clip.antiAlias,
-                                                    decoration: const BoxDecoration(
+                                                    decoration: BoxDecoration(
                                                       shape: BoxShape.circle,
                                                     ),
                                                     child: Image.asset(
@@ -723,7 +726,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.55,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -745,24 +748,24 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Container(
                                                     width: MediaQuery.sizeOf(
                                                                 context)
                                                             .width *
                                                         0.1,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: ToggleIcon(
                                                         key:
-                                                            const ValueKey('standar'),
+                                                            ValueKey('standar'),
                                                         onPressed: () async {
                                                           safeSetState(() =>
                                                               _model.standar =
@@ -781,7 +784,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           safeSetState(() {});
                                                         },
                                                         value: _model.standar,
-                                                        onIcon: const Icon(
+                                                        onIcon: Icon(
                                                           key: ValueKey(
                                                               'standar'),
                                                           Icons
@@ -791,7 +794,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                           size: 25.0,
                                                         ),
                                                         offIcon: Icon(
-                                                          key: const ValueKey(
+                                                          key: ValueKey(
                                                               'standar'),
                                                           Icons
                                                               .radio_button_off,
@@ -814,7 +817,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               MainAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       14.0, 0.0, 8.0, 0.0),
                                               child: Container(
@@ -827,7 +830,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                             .width *
                                                         0.08,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: const BoxDecoration(
+                                                decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
@@ -840,7 +843,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.6,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -863,16 +866,16 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                           ],
                                         ),
                                       ]
-                                          .divide(const SizedBox(height: 11.0))
-                                          .addToStart(const SizedBox(height: 6.0))
-                                          .addToEnd(const SizedBox(height: 6.0)),
+                                          .divide(SizedBox(height: 11.0))
+                                          .addToStart(SizedBox(height: 6.0))
+                                          .addToEnd(SizedBox(height: 6.0)),
                                     ),
                                   ),
                                 ),
                               ],
                             ),
-                          if ((widget.currentPlan == null) ||
-                              (widget.currentPlan != Plan.premiun))
+                          if ((widget!.currentPlan == null) ||
+                              (widget!.currentPlan != Plan.premiun))
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -880,7 +883,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.84,
                                   height: 46.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
                                         Color(0xFFFFD700),
@@ -903,13 +906,13 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width:
                                               MediaQuery.sizeOf(context).width *
                                                   0.331,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'm99xfm7y' /* PREMIUM */,
@@ -929,7 +932,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -941,7 +944,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.4,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -952,7 +955,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'pintanga',
-                                                      color: const Color(0xFFF4F7F9),
+                                                      color: Color(0xFFF4F7F9),
                                                       fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -965,7 +968,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.47,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -976,7 +979,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'pintanga',
-                                                      color: const Color(0xFFF7F9F9),
+                                                      color: Color(0xFFF7F9F9),
                                                       fontSize: 9.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -994,7 +997,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                 Material(
                                   color: Colors.transparent,
                                   elevation: 15.0,
-                                  shape: const RoundedRectangleBorder(
+                                  shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(10.0),
                                       bottomRight: Radius.circular(10.0),
@@ -1008,7 +1011,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                     decoration: BoxDecoration(
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
-                                      borderRadius: const BorderRadius.only(
+                                      borderRadius: BorderRadius.only(
                                         bottomLeft: Radius.circular(10.0),
                                         bottomRight: Radius.circular(10.0),
                                         topLeft: Radius.circular(0.0),
@@ -1026,7 +1029,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               MainAxisAlignment.start,
                                           children: [
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       14.0, 0.0, 8.0, 0.0),
                                               child: Container(
@@ -1039,7 +1042,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                             .width *
                                                         0.08,
                                                 clipBehavior: Clip.antiAlias,
-                                                decoration: const BoxDecoration(
+                                                decoration: BoxDecoration(
                                                   shape: BoxShape.circle,
                                                 ),
                                                 child: Image.asset(
@@ -1052,7 +1055,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.6,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
@@ -1084,7 +1087,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       .spaceBetween,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           14.0, 0.0, 8.0, 0.0),
                                                   child: Container(
@@ -1098,7 +1101,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                         0.08,
                                                     clipBehavior:
                                                         Clip.antiAlias,
-                                                    decoration: const BoxDecoration(
+                                                    decoration: BoxDecoration(
                                                       shape: BoxShape.circle,
                                                     ),
                                                     child: Image.asset(
@@ -1112,7 +1115,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.563,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1137,9 +1140,9 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       MediaQuery.sizeOf(context)
                                                               .width *
                                                           0.1,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: ToggleIcon(
-                                                    key: const ValueKey('premiun'),
+                                                    key: ValueKey('premiun'),
                                                     onPressed: () async {
                                                       safeSetState(() =>
                                                           _model.premiun =
@@ -1155,7 +1158,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       safeSetState(() {});
                                                     },
                                                     value: _model.premiun,
-                                                    onIcon: const Icon(
+                                                    onIcon: Icon(
                                                       key: ValueKey('premiun'),
                                                       Icons
                                                           .radio_button_checked,
@@ -1163,7 +1166,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                       size: 25.0,
                                                     ),
                                                     offIcon: Icon(
-                                                      key: const ValueKey('premiun'),
+                                                      key: ValueKey('premiun'),
                                                       Icons.radio_button_off,
                                                       color:
                                                           FlutterFlowTheme.of(
@@ -1179,7 +1182,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -1187,7 +1190,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                 MainAxisAlignment.start,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         14.0, 0.0, 8.0, 0.0),
                                                 child: Container(
@@ -1200,7 +1203,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                               .width *
                                                           0.08,
                                                   clipBehavior: Clip.antiAlias,
-                                                  decoration: const BoxDecoration(
+                                                  decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                   ),
                                                   child: Image.asset(
@@ -1214,7 +1217,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                                     MediaQuery.sizeOf(context)
                                                             .width *
                                                         0.6,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
@@ -1237,23 +1240,23 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                           ),
                                         ),
                                       ]
-                                          .divide(const SizedBox(height: 13.0))
-                                          .addToStart(const SizedBox(height: 6.0))
-                                          .addToEnd(const SizedBox(height: 6.0)),
+                                          .divide(SizedBox(height: 13.0))
+                                          .addToStart(SizedBox(height: 6.0))
+                                          .addToEnd(SizedBox(height: 6.0)),
                                     ),
                                   ),
                                 ),
                               ],
                             ),
                           Align(
-                            alignment: const AlignmentDirectional(0.01, 0.7),
+                            alignment: AlignmentDirectional(0.01, 0.7),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 10.0),
                               child: FFButtonWidget(
-                                key: const ValueKey('continue'),
+                                key: ValueKey('continue'),
                                 onPressed: () async {
-                                  if (widget.professionalUpdate != null) {
+                                  if (widget!.professionalUpdate != null) {
                                     if (FFAppState()
                                             .registerProviderForm
                                             .plan ==
@@ -1262,11 +1265,11 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         'BASIC',
                                         queryParameters: {
                                           'userRef': serializeParam(
-                                            widget.professionalUpdate,
+                                            widget!.professionalUpdate,
                                             ParamType.DocumentReference,
                                           ),
                                           'currentPlan': serializeParam(
-                                            widget.currentPlan,
+                                            widget!.currentPlan,
                                             ParamType.Enum,
                                           ),
                                         }.withoutNulls,
@@ -1279,11 +1282,11 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         'STANDAR',
                                         queryParameters: {
                                           'userRef': serializeParam(
-                                            widget.professionalUpdate,
+                                            widget!.professionalUpdate,
                                             ParamType.DocumentReference,
                                           ),
                                           'currentPlan': serializeParam(
-                                            widget.currentPlan,
+                                            widget!.currentPlan,
                                             ParamType.Enum,
                                           ),
                                         }.withoutNulls,
@@ -1293,11 +1296,11 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         'Premium',
                                         queryParameters: {
                                           'userRef': serializeParam(
-                                            widget.professionalUpdate,
+                                            widget!.professionalUpdate,
                                             ParamType.DocumentReference,
                                           ),
                                           'currentPlan': serializeParam(
-                                            widget.currentPlan,
+                                            widget!.currentPlan,
                                             ParamType.Enum,
                                           ),
                                         }.withoutNulls,
@@ -1321,11 +1324,11 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                 options: FFButtonOptions(
                                   width: 275.0,
                                   height: 45.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: const Color(0xFF4D87DA),
+                                  color: Color(0xFF4D87DA),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -1336,7 +1339,7 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                   elevation: 5.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -1346,34 +1349,34 @@ class _MembresiasV2WidgetState extends State<MembresiasV2Widget> {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(height: 12.0))
-                            .addToStart(const SizedBox(height: 20.0)),
+                            .divide(SizedBox(height: 12.0))
+                            .addToStart(SizedBox(height: 20.0)),
                       ),
                     ),
                   ),
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-0.9, -0.95),
+                alignment: AlignmentDirectional(-0.9, -0.95),
                 child: Container(
                   width: 50.0,
                   height: 50.0,
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: Align(
-                    alignment: const AlignmentDirectional(-5.1, -0.98),
+                    alignment: AlignmentDirectional(-5.1, -0.98),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        if (widget.professionalUpdate != null) {
+                        if (widget!.professionalUpdate != null) {
                           context.pushNamed('userprofile');
                         } else {
                           context.safePop();
                         }
                       },
-                      child: const Icon(
+                      child: Icon(
                         Icons.chevron_left_outlined,
                         color: Colors.black,
                         size: 40.0,

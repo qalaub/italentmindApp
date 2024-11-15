@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/backend/stripe/payment_manager.dart';
 import '/components/image_upload_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -9,8 +10,10 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
 import '/flutter_flow/random_data_util.dart' as random_data;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'register_pfofesional4_model.dart';
 export 'register_pfofesional4_model.dart';
@@ -65,7 +68,7 @@ class _RegisterPfofesional4WidgetState
         onWillPop: () async => false,
         child: Scaffold(
           key: scaffoldKey,
-          backgroundColor: const Color(0xFFFFFEFE),
+          backgroundColor: Color(0xFFFFFEFE),
           body: SafeArea(
             top: true,
             child: Column(
@@ -85,7 +88,7 @@ class _RegisterPfofesional4WidgetState
                           child: Stack(
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
                                   child: Image.asset(
@@ -97,9 +100,9 @@ class _RegisterPfofesional4WidgetState
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.0, -1.0),
+                                alignment: AlignmentDirectional(0.0, -1.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
@@ -108,19 +111,19 @@ class _RegisterPfofesional4WidgetState
                                       width: 180.0,
                                       height: 100.0,
                                       fit: BoxFit.fitWidth,
-                                      alignment: const Alignment(0.0, 0.0),
+                                      alignment: Alignment(0.0, 0.0),
                                     ),
                                   ),
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-0.91, -0.96),
+                                alignment: AlignmentDirectional(-0.91, -0.96),
                                 child: FlutterFlowIconButton(
                                   borderColor: Colors.transparent,
                                   borderRadius: 20.0,
                                   borderWidth: 1.0,
                                   buttonSize: 40.0,
-                                  icon: const Icon(
+                                  icon: Icon(
                                     Icons.arrow_back_ios_new,
                                     color: Colors.black,
                                     size: 24.0,
@@ -131,14 +134,14 @@ class _RegisterPfofesional4WidgetState
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.2),
+                                alignment: AlignmentDirectional(0.0, 0.2),
                                 child: Container(
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.96,
                                   height: 526.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFFFFEFE),
-                                    borderRadius: const BorderRadius.only(
+                                    color: Color(0xFFFFFEFE),
+                                    borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(24.0),
                                       bottomRight: Radius.circular(24.0),
                                       topLeft: Radius.circular(24.0),
@@ -155,10 +158,10 @@ class _RegisterPfofesional4WidgetState
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, -1.0),
+                                              AlignmentDirectional(0.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -171,7 +174,7 @@ class _RegisterPfofesional4WidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'pintanga',
-                                                    color: const Color(0xFF1D69D7),
+                                                    color: Color(0xFF1D69D7),
                                                     fontSize: 20.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -183,9 +186,9 @@ class _RegisterPfofesional4WidgetState
                                         if (_model.photosVerify)
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, -1.0),
+                                                AlignmentDirectional(0.0, -1.0),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 10.0),
                                               child: Text(
@@ -199,7 +202,7 @@ class _RegisterPfofesional4WidgetState
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'pintanga',
-                                                      color: const Color(0xFF6F6F6F),
+                                                      color: Color(0xFF6F6F6F),
                                                       fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -212,9 +215,9 @@ class _RegisterPfofesional4WidgetState
                                         if (!_model.photosVerify)
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, -1.0),
+                                                AlignmentDirectional(0.0, -1.0),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 0.0, 10.0, 0.0),
                                               child: Text(
@@ -228,7 +231,7 @@ class _RegisterPfofesional4WidgetState
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'pintanga',
-                                                      color: const Color(0xFFE90606),
+                                                      color: Color(0xFFE90606),
                                                       fontSize: 13.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -240,28 +243,28 @@ class _RegisterPfofesional4WidgetState
                                           ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: 380.0,
                                             height: 1.0,
                                             decoration: BoxDecoration(
-                                              color: const Color(0xFF718CD4),
+                                              color: Color(0xFF718CD4),
                                               border: Border.all(
-                                                color: const Color(0xFF718CD4),
+                                                color: Color(0xFF718CD4),
                                               ),
                                             ),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 30.0, 0.0, 0.0),
                                           child: Container(
                                             width: 350.0,
                                             height: 300.0,
                                             decoration: BoxDecoration(
-                                              color: const Color(0xFFFFFEFE),
-                                              borderRadius: const BorderRadius.only(
+                                              color: Color(0xFFFFFEFE),
+                                              borderRadius: BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(24.0),
                                                 bottomRight:
@@ -270,18 +273,18 @@ class _RegisterPfofesional4WidgetState
                                                 topRight: Radius.circular(24.0),
                                               ),
                                               border: Border.all(
-                                                color: const Color(0xFF718CD4),
+                                                color: Color(0xFF718CD4),
                                               ),
                                             ),
                                             child: Stack(
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Container(
@@ -289,9 +292,9 @@ class _RegisterPfofesional4WidgetState
                                                       height: 130.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            const Color(0xFFD9D9D9),
+                                                            Color(0xFFD9D9D9),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -307,7 +310,7 @@ class _RegisterPfofesional4WidgetState
                                                         ),
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFD9D9D9),
+                                                              Color(0xFFD9D9D9),
                                                           width: 1.0,
                                                         ),
                                                       ),
@@ -316,7 +319,7 @@ class _RegisterPfofesional4WidgetState
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child:
-                                                            const ImageUploadWidget(
+                                                            ImageUploadWidget(
                                                           key: ValueKey(
                                                               'image1'),
                                                           background:
@@ -328,11 +331,11 @@ class _RegisterPfofesional4WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Container(
@@ -340,9 +343,9 @@ class _RegisterPfofesional4WidgetState
                                                       height: 130.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            const Color(0xFFD9D9D9),
+                                                            Color(0xFFD9D9D9),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -358,7 +361,7 @@ class _RegisterPfofesional4WidgetState
                                                         ),
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFD9D9D9),
+                                                              Color(0xFFD9D9D9),
                                                           width: 1.0,
                                                         ),
                                                       ),
@@ -367,7 +370,7 @@ class _RegisterPfofesional4WidgetState
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child:
-                                                            const ImageUploadWidget(
+                                                            ImageUploadWidget(
                                                           key: ValueKey(
                                                               'image1'),
                                                         ),
@@ -377,11 +380,11 @@ class _RegisterPfofesional4WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           1.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 10.0, 0.0),
                                                     child: Container(
@@ -389,9 +392,9 @@ class _RegisterPfofesional4WidgetState
                                                       height: 130.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            const Color(0xFFD9D9D9),
+                                                            Color(0xFFD9D9D9),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -407,7 +410,7 @@ class _RegisterPfofesional4WidgetState
                                                         ),
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFD9D9D9),
+                                                              Color(0xFFD9D9D9),
                                                           width: 1.0,
                                                         ),
                                                       ),
@@ -416,7 +419,7 @@ class _RegisterPfofesional4WidgetState
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child:
-                                                            const ImageUploadWidget(
+                                                            ImageUploadWidget(
                                                           key: ValueKey(
                                                               'image1'),
                                                         ),
@@ -426,11 +429,11 @@ class _RegisterPfofesional4WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 10.0,
                                                                 10.0,
@@ -441,9 +444,9 @@ class _RegisterPfofesional4WidgetState
                                                       height: 130.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            const Color(0xFFD9D9D9),
+                                                            Color(0xFFD9D9D9),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -459,7 +462,7 @@ class _RegisterPfofesional4WidgetState
                                                         ),
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFD9D9D9),
+                                                              Color(0xFFD9D9D9),
                                                           width: 1.0,
                                                         ),
                                                       ),
@@ -468,7 +471,7 @@ class _RegisterPfofesional4WidgetState
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child:
-                                                            const ImageUploadWidget(
+                                                            ImageUploadWidget(
                                                           key: ValueKey(
                                                               'image1'),
                                                         ),
@@ -478,11 +481,11 @@ class _RegisterPfofesional4WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 10.0),
                                                     child: Container(
@@ -490,9 +493,9 @@ class _RegisterPfofesional4WidgetState
                                                       height: 130.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            const Color(0xFFD9D9D9),
+                                                            Color(0xFFD9D9D9),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -508,7 +511,7 @@ class _RegisterPfofesional4WidgetState
                                                         ),
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFD9D9D9),
+                                                              Color(0xFFD9D9D9),
                                                           width: 1.0,
                                                         ),
                                                       ),
@@ -517,7 +520,7 @@ class _RegisterPfofesional4WidgetState
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child:
-                                                            const ImageUploadWidget(
+                                                            ImageUploadWidget(
                                                           key: ValueKey(
                                                               'image1'),
                                                         ),
@@ -527,11 +530,11 @@ class _RegisterPfofesional4WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           1.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 10.0, 10.0),
                                                     child: Container(
@@ -539,9 +542,9 @@ class _RegisterPfofesional4WidgetState
                                                       height: 130.0,
                                                       decoration: BoxDecoration(
                                                         color:
-                                                            const Color(0xFFD9D9D9),
+                                                            Color(0xFFD9D9D9),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -557,7 +560,7 @@ class _RegisterPfofesional4WidgetState
                                                         ),
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFD9D9D9),
+                                                              Color(0xFFD9D9D9),
                                                           width: 1.0,
                                                         ),
                                                       ),
@@ -566,7 +569,7 @@ class _RegisterPfofesional4WidgetState
                                                         updateCallback: () =>
                                                             safeSetState(() {}),
                                                         child:
-                                                            const ImageUploadWidget(
+                                                            ImageUploadWidget(
                                                           key: ValueKey(
                                                               'image1'),
                                                         ),
@@ -580,18 +583,18 @@ class _RegisterPfofesional4WidgetState
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Container(
                                               width: 380.0,
                                               height: 1.0,
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF718CD4),
+                                                color: Color(0xFF718CD4),
                                                 border: Border.all(
-                                                  color: const Color(0xFF718CD4),
+                                                  color: Color(0xFF718CD4),
                                                 ),
                                               ),
                                             ),
@@ -599,15 +602,17 @@ class _RegisterPfofesional4WidgetState
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.01, 0.7),
+                                              AlignmentDirectional(0.01, 0.7),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
                                                 if (FFAppState()
-                                                        .imagesUserUpload.isNotEmpty) {
+                                                        .imagesUserUpload
+                                                        .length >
+                                                    0) {
                                                   _model.photosVerify = true;
                                                   safeSetState(() {});
                                                   FFAppState()
@@ -688,7 +693,9 @@ class _RegisterPfofesional4WidgetState
                                                           .plan,
                                                       photoUrl: FFAppState()
                                                                   .registerProviderForm
-                                                                  .images.isNotEmpty
+                                                                  .images
+                                                                  .length >
+                                                              0
                                                           ? FFAppState()
                                                               .registerProviderForm
                                                               .images
@@ -719,9 +726,9 @@ class _RegisterPfofesional4WidgetState
                                                     ),
                                                   });
 
-                                                  if (widget.businessRef !=
+                                                  if (widget!.businessRef !=
                                                       null) {
-                                                    await widget.businessRef!
+                                                    await widget!.businessRef!
                                                         .update({
                                                       ...mapToFirestore(
                                                         {
@@ -736,7 +743,7 @@ class _RegisterPfofesional4WidgetState
                                                     _model.addToUserChat(
                                                         currentUserReference!);
                                                     _model.addToUserChat(
-                                                        widget.businessRef!);
+                                                        widget!.businessRef!);
                                                     unawaited(
                                                       () async {
                                                         await ChatsRecord
@@ -746,7 +753,7 @@ class _RegisterPfofesional4WidgetState
                                                           ...createChatsRecordData(
                                                             userA:
                                                                 currentUserReference,
-                                                            userB: widget
+                                                            userB: widget!
                                                                 .businessRef,
                                                             lastMessage: '',
                                                             lastMessageTime:
@@ -896,14 +903,14 @@ class _RegisterPfofesional4WidgetState
                                               options: FFButtonOptions(
                                                 width: 275.0,
                                                 height: 45.0,
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
-                                                    const EdgeInsetsDirectional
+                                                    EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color: const Color(0xFF4963C9),
+                                                color: Color(0xFF4963C9),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall
@@ -916,7 +923,7 @@ class _RegisterPfofesional4WidgetState
                                                           useGoogleFonts: false,
                                                         ),
                                                 elevation: 5.0,
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),

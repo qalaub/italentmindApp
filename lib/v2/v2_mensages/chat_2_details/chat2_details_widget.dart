@@ -5,12 +5,16 @@ import '/chat_groupwbubbles/chat_thread_component/chat_thread_component_widget.d
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/options_message/options_message_widget.dart';
 import 'dart:async';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'chat2_details_model.dart';
 export 'chat2_details_model.dart';
 
@@ -44,7 +48,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       unawaited(
         () async {
-          await widget.chatRef!.reference.update({
+          await widget!.chatRef!.reference.update({
             ...mapToFirestore(
               {
                 'last_message_seen_by':
@@ -67,7 +71,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<UsersRecord>(
-      stream: UsersRecord.getDocument(widget.chatRef!.users
+      stream: UsersRecord.getDocument(widget!.chatRef!.users
           .where((e) => e != currentUserReference)
           .toList()
           .first),
@@ -75,7 +79,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: const Color(0xFF1D69D7),
+            backgroundColor: Color(0xFF1D69D7),
             body: Center(
               child: SizedBox(
                 width: 50.0,
@@ -94,9 +98,9 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
 
         return Scaffold(
           key: scaffoldKey,
-          backgroundColor: const Color(0xFF1D69D7),
+          backgroundColor: Color(0xFF1D69D7),
           body: Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -105,7 +109,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 110.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0xFF4963C9),
                   ),
                   child: Row(
@@ -114,13 +118,13 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(-1.05, 0.2),
+                        alignment: AlignmentDirectional(-1.05, 0.2),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,
                           borderRadius: 20.0,
                           borderWidth: 1.0,
                           buttonSize: 56.0,
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,
                             size: 38.0,
@@ -131,26 +135,26 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.42),
+                        alignment: AlignmentDirectional(0.0, 0.42),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Container(
                                   width: 62.0,
                                   height: 62.0,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     shape: BoxShape.circle,
                                   ),
                                   child: CachedNetworkImage(
-                                    fadeInDuration: const Duration(milliseconds: 500),
+                                    fadeInDuration: Duration(milliseconds: 500),
                                     fadeOutDuration:
-                                        const Duration(milliseconds: 500),
+                                        Duration(milliseconds: 500),
                                     imageUrl: valueOrDefault<String>(
                                       chat2DetailsUsersRecord.photoUrl,
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
@@ -179,13 +183,13 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.02, 0.29),
+                        alignment: AlignmentDirectional(1.02, 0.29),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,
                           borderRadius: 20.0,
                           borderWidth: 1.0,
                           buttonSize: 64.25,
-                          icon: const Icon(
+                          icon: Icon(
                             Icons.more_vert,
                             color: Color(0xFFF9FCFF),
                             size: 40.25,
@@ -212,7 +216,7 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                     child: Stack(
                       children: [
                         Container(
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Colors.white,
                           ),
                           child: wrapWithModel(
@@ -220,25 +224,25 @@ class _Chat2DetailsWidgetState extends State<Chat2DetailsWidget> {
                             updateCallback: () => safeSetState(() {}),
                             updateOnChange: true,
                             child: ChatThreadComponentWidget(
-                              chatRef: widget.chatRef,
+                              chatRef: widget!.chatRef,
                               profesiona: chat2DetailsUsersRecord,
-                              chatRefTotal: widget.chatRefTotal,
+                              chatRefTotal: widget!.chatRefTotal,
                             ),
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(1.0, -1.0),
+                          alignment: AlignmentDirectional(1.0, -1.0),
                           child: AuthUserStreamWidget(
                             builder: (context) => Container(
                               width: MediaQuery.sizeOf(context).width * 0.505,
                               height: currentUserDocument?.rol == Roles.user
                                   ? 137.0
                                   : 88.0,
-                              constraints: const BoxConstraints(
+                              constraints: BoxConstraints(
                                 minHeight: 100.0,
                                 maxHeight: 140.0,
                               ),
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Visibility(
                                 visible: _model.showMenu,
                                 child: wrapWithModel(

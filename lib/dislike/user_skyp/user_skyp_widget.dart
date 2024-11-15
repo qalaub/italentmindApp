@@ -2,7 +2,10 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'user_skyp_model.dart';
 export 'user_skyp_model.dart';
 
@@ -43,7 +46,7 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<UsersRecord>(
-      future: UsersRecord.getDocumentOnce(widget.userRef!),
+      future: UsersRecord.getDocumentOnce(widget!.userRef!),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -72,7 +75,7 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
               'ProfileInfo',
               queryParameters: {
                 'professional': serializeParam(
-                  widget.userRef,
+                  widget!.userRef,
                   ParamType.DocumentReference,
                 ),
               }.withoutNulls,
@@ -82,11 +85,11 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
             width: MediaQuery.sizeOf(context).width * 1.0,
             height: 90.0,
             decoration: BoxDecoration(
-              color: const Color(0xFFDEE8EB),
+              color: Color(0xFFDEE8EB),
               borderRadius: BorderRadius.circular(0.0),
             ),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +101,7 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
                         width: 75.0,
                         height: 75.0,
                         clipBehavior: Clip.antiAlias,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           shape: BoxShape.circle,
                         ),
                         child: Image.network(
@@ -107,16 +110,16 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Text(
                                   functions.upperCaseFirstLetter(
                                       usera1UsersRecord.firtsName),
@@ -132,9 +135,9 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Text(
                                   functions.changeServiceLanguge(
                                       usera1UsersRecord.serviceType.first,
@@ -150,10 +153,10 @@ class _UserSkypWidgetState extends State<UserSkypWidget> {
                                 ),
                               ),
                             ),
-                          ].divide(const SizedBox(height: 8.0)),
+                          ].divide(SizedBox(height: 8.0)),
                         ),
                       ),
-                    ].divide(const SizedBox(width: 12.0)),
+                    ].divide(SizedBox(width: 12.0)),
                   ),
                 ],
               ),

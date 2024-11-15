@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -6,9 +7,13 @@ import '/v2/favoritesv2/add_favorites/add_favorites_widget.dart';
 import '/v2/menbresiav2/membresia_logo/membresia_logo_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'v3fv0rites_model.dart';
 export 'v3fv0rites_model.dart';
 
@@ -17,7 +22,7 @@ class V3fv0ritesWidget extends StatefulWidget {
     super.key,
     required this.profesionalId,
     bool? isMap,
-  }) : isMap = isMap ?? false;
+  }) : this.isMap = isMap ?? false;
 
   final DocumentReference? profesionalId;
   final bool isMap;
@@ -51,9 +56,9 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: FutureBuilder<UsersRecord>(
-        future: UsersRecord.getDocumentOnce(widget.profesionalId!),
+        future: UsersRecord.getDocumentOnce(widget!.profesionalId!),
         builder: (context, snapshot) {
           // Customize what your widget looks like when it's loading.
           if (!snapshot.hasData) {
@@ -85,7 +90,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                   'ProfileInfo',
                   queryParameters: {
                     'professional': serializeParam(
-                      widget.profesionalId,
+                      widget!.profesionalId,
                       ParamType.DocumentReference,
                     ),
                   }.withoutNulls,
@@ -102,7 +107,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                 width: 285.0,
                 height: 159.0,
                 decoration: BoxDecoration(
-                  color: const Color(0xFF1D69D7),
+                  color: Color(0xFF1D69D7),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Row(
@@ -114,33 +119,33 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, -1.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 11.0, 0.0, 0.0),
                             child: Container(
                               width: 61.0,
                               height: 61.0,
                               decoration: BoxDecoration(
-                                color: const Color(0xFFD9D9D9),
-                                borderRadius: const BorderRadius.only(
+                                color: Color(0xFFD9D9D9),
+                                borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(12.0),
                                   bottomRight: Radius.circular(12.0),
                                   topLeft: Radius.circular(12.0),
                                   topRight: Radius.circular(12.0),
                                 ),
                                 border: Border.all(
-                                  color: const Color(0xFFD9D9D9),
+                                  color: Color(0xFFD9D9D9),
                                 ),
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(-1.0, 1.0),
+                                alignment: AlignmentDirectional(-1.0, 1.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: CachedNetworkImage(
-                                    fadeInDuration: const Duration(milliseconds: 500),
+                                    fadeInDuration: Duration(milliseconds: 500),
                                     fadeOutDuration:
-                                        const Duration(milliseconds: 500),
+                                        Duration(milliseconds: 500),
                                     imageUrl: valueOrDefault<String>(
                                       containerUsersRecord.photoUrl,
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/h28p6mkmnirg/logo-italentes.png',
@@ -162,14 +167,14 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: Container(
                             width: 160.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     5.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   functions.upperCaseFirstLetter(
@@ -190,13 +195,13 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.05, -0.19),
+                          alignment: AlignmentDirectional(0.05, -0.19),
                           child: Container(
                             width: 160.0,
                             height: 32.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 valueOrDefault<String>(
@@ -220,7 +225,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                             ),
                           ),
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 160.0,
                           child: Divider(
                             height: 9.0,
@@ -231,23 +236,23 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.09, 0.52),
+                          alignment: AlignmentDirectional(0.09, 0.52),
                           child: Container(
                             width: 160.0,
                             height: 50.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-0.03, 0.18),
+                                  alignment: AlignmentDirectional(-0.03, 0.18),
                                   child: Container(
                                     width: 150.0,
                                     height: 16.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Stack(
                                       children: [
-                                        const Align(
+                                        Align(
                                           alignment:
                                               AlignmentDirectional(-1.0, 0.0),
                                           child: Icon(
@@ -258,10 +263,10 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 0.0, 0.0),
                                             child: RichText(
                                               textScaler: MediaQuery.of(context)
@@ -291,7 +296,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                                     text: containerUsersRecord
                                                         .years
                                                         .toString(),
-                                                    style: const TextStyle(),
+                                                    style: TextStyle(),
                                                   ),
                                                   TextSpan(
                                                     text: FFLocalizations.of(
@@ -299,7 +304,7 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                                         .getText(
                                                       'tjj4xff2' /*   years */,
                                                     ),
-                                                    style: const TextStyle(),
+                                                    style: TextStyle(),
                                                   )
                                                 ],
                                                 style:
@@ -324,14 +329,14 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-0.17, 0.1),
+                                  alignment: AlignmentDirectional(-0.17, 0.1),
                                   child: Container(
                                     width: 150.0,
                                     height: 38.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Stack(
                                       children: [
-                                        const Align(
+                                        Align(
                                           alignment:
                                               AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
@@ -347,10 +352,10 @@ class _V3fv0ritesWidgetState extends State<V3fv0ritesWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -379,21 +384,21 @@ perso... */
                                   ),
                                 ),
                               ]
-                                  .divide(const SizedBox(height: 0.0))
-                                  .addToStart(const SizedBox(height: 4.0))
-                                  .addToEnd(const SizedBox(height: 4.0)),
+                                  .divide(SizedBox(height: 0.0))
+                                  .addToStart(SizedBox(height: 4.0))
+                                  .addToEnd(SizedBox(height: 4.0)),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               5.0, 6.0, 0.0, 0.0),
                           child: StreamBuilder<List<ReviewsRecord>>(
                             stream: queryReviewsRecord(
                               queryBuilder: (reviewsRecord) =>
                                   reviewsRecord.where(
                                 'professional',
-                                isEqualTo: widget.profesionalId,
+                                isEqualTo: widget!.profesionalId,
                               ),
                             ),
                             builder: (context, snapshot) {
@@ -415,7 +420,7 @@ perso... */
                                   snapshot.data!;
 
                               return Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -446,13 +451,13 @@ perso... */
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Builder(
                                         builder: (context) {
-                                          if (widget.isMap) {
+                                          if (widget!.isMap) {
                                             return RatingBarIndicator(
                                               itemBuilder: (context, index) =>
-                                                  const Icon(
+                                                  Icon(
                                                 Icons.star_rate,
                                                 color: Color(0xFFF9BF11),
                                               ),
@@ -465,7 +470,7 @@ perso... */
                                                     .toDouble(),
                                                 0.0,
                                               ),
-                                              unratedColor: const Color(0x4D040202),
+                                              unratedColor: Color(0x4D040202),
                                               itemCount: 5,
                                               itemSize: 15.0,
                                             );
@@ -494,7 +499,7 @@ perso... */
                                                                 )
                                                                 .where(
                                                                   'professional',
-                                                                  isEqualTo: widget
+                                                                  isEqualTo: widget!
                                                                       .profesionalId,
                                                                 ),
                                                     singleRecord: true,
@@ -519,7 +524,7 @@ perso... */
                                                           num: _model
                                                               .ratingBarValue2
                                                               ?.round(),
-                                                          professional: widget
+                                                          professional: widget!
                                                               .profesionalId,
                                                           participant:
                                                               currentUserReference,
@@ -529,7 +534,7 @@ perso... */
                                                   safeSetState(() {});
                                                 },
                                                 itemBuilder: (context, index) =>
-                                                    const Icon(
+                                                    Icon(
                                                   Icons.star_rate,
                                                   color: Color(0xFFF9BF11),
                                                 ),
@@ -544,10 +549,10 @@ perso... */
                                                       .toDouble(),
                                                   0.0,
                                                 ),
-                                                unratedColor: const Color(0x4D040202),
+                                                unratedColor: Color(0x4D040202),
                                                 itemCount: 5,
                                                 itemSize: 15.0,
-                                                glowColor: const Color(0xFFF9BF11),
+                                                glowColor: Color(0xFFF9BF11),
                                               ),
                                             );
                                           }
@@ -555,7 +560,7 @@ perso... */
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(1.0, 0.0),
+                                      alignment: AlignmentDirectional(1.0, 0.0),
                                       child: Text(
                                         valueOrDefault<String>(
                                           functions.concatStrings(
@@ -580,7 +585,7 @@ perso... */
                                             ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 4.0)),
+                                  ].divide(SizedBox(width: 4.0)),
                                 ),
                               );
                             },
@@ -593,7 +598,7 @@ perso... */
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -610,7 +615,7 @@ perso... */
                                   ),
                                 }.withoutNulls,
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                     duration: Duration(milliseconds: 300),
@@ -628,9 +633,9 @@ perso... */
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(1.0, -0.19),
+                          alignment: AlignmentDirectional(1.0, -0.19),
                           child: Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: wrapWithModel(
                               model: _model.membresiaLogoModel,
                               updateCallback: () => safeSetState(() {}),

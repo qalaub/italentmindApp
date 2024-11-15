@@ -1,3 +1,4 @@
+import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
@@ -6,6 +7,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'navbar_professional_model.dart';
 export 'navbar_professional_model.dart';
 
@@ -42,7 +45,7 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: StreamBuilder<List<UsersRecord>>(
         stream: queryUsersRecord(
           queryBuilder: (usersRecord) => usersRecord.where(
@@ -71,7 +74,7 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
           return Container(
             width: double.infinity,
             height: 67.0,
-            decoration: const BoxDecoration(),
+            decoration: BoxDecoration(),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -86,13 +89,13 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                         Expanded(
                           flex: 1,
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: FlutterFlowIconButton(
-                              key: const ValueKey('home'),
+                              key: ValueKey('home'),
                               borderColor: Colors.transparent,
                               borderRadius: 34.0,
                               buttonSize: 48.0,
-                              icon: const FaIcon(
+                              icon: FaIcon(
                                 key: ValueKey('home'),
                                 FontAwesomeIcons.houseUser,
                                 color: Colors.white,
@@ -109,7 +112,7 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'ojk01ls6' /* Home */,
@@ -118,16 +121,17 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Poppins',
+                                  fontFamily: 'pintanga',
                                   color: Colors.white,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
                         Container(
                           height: 5.0,
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                         ),
                       ],
                     ),
@@ -138,19 +142,18 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                     Expanded(
                       flex: 1,
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Stack(
-                          alignment: const AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.0, 0.0),
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: FlutterFlowIconButton(
-                                key: const ValueKey('likes'),
+                                key: ValueKey('likes'),
                                 borderColor: Colors.transparent,
                                 borderRadius: 34.0,
                                 buttonSize: 48.0,
-                                icon: const Icon(
-                                  key: ValueKey('likes'),
+                                icon: Icon(
                                   Icons.favorite_border_rounded,
                                   color: Colors.white,
                                   size: 33.0,
@@ -181,19 +184,19 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                                 },
                               ),
                             ),
-                            if (containerUsersRecordList.isNotEmpty)
+                            if (containerUsersRecordList.length > 0)
                               Align(
-                                alignment: const AlignmentDirectional(0.0, -1.0),
+                                alignment: AlignmentDirectional(0.0, -1.0),
                                 child: Container(
                                   width: 20.0,
                                   height: 20.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Color(0xFFFF0000),
                                     shape: BoxShape.circle,
                                   ),
-                                  alignment: const AlignmentDirectional(0.0, -1.0),
+                                  alignment: AlignmentDirectional(0.0, -1.0),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Text(
                                       valueOrDefault<String>(
                                         containerUsersRecordList.length
@@ -204,7 +207,7 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'pintanga',
-                                            color: const Color(0xFFF4F4F4),
+                                            color: Color(0xFFF4F4F4),
                                             letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
@@ -217,22 +220,23 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-0.33, 0.64),
+                      alignment: AlignmentDirectional(-0.33, 0.64),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'g6t0s28n' /* Likes */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'pintanga',
                               color: Colors.white,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
                     Container(
                       height: 5.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                     ),
                   ],
                 ),
@@ -242,16 +246,15 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                     Expanded(
                       flex: 1,
                       child: Stack(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: FlutterFlowIconButton(
-                              key: const ValueKey('message'),
+                              key: ValueKey('message'),
                               borderColor: Colors.transparent,
                               buttonSize: 48.0,
-                              icon: const Icon(
-                                key: ValueKey('message'),
+                              icon: Icon(
                                 Icons.wechat_rounded,
                                 color: Colors.white,
                                 size: 34.0,
@@ -266,7 +269,7 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, -1.0),
+                            alignment: AlignmentDirectional(0.0, -1.0),
                             child: StreamBuilder<List<ChatsRecord>>(
                               stream: queryChatsRecord(
                                 queryBuilder: (chatsRecord) => chatsRecord
@@ -300,20 +303,19 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                                 return Container(
                                   width: 20.0,
                                   height: 20.0,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                     color: Color(0xFFFF0000),
                                     shape: BoxShape.circle,
                                   ),
-                                  alignment: const AlignmentDirectional(0.0, -1.0),
+                                  alignment: AlignmentDirectional(0.0, -1.0),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Text(
                                       valueOrDefault<String>(
                                         containerChatsRecordList
                                             .where((e) =>
-                                                e.lastMessageSeenBy.contains(
-                                                    currentUserReference) ==
-                                                false)
+                                                e.lastMessageSeenBy.first.id !=
+                                                currentUserReference?.id)
                                             .toList()
                                             .length
                                             .toString(),
@@ -323,7 +325,7 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'pintanga',
-                                            color: const Color(0xFFF4F4F4),
+                                            color: Color(0xFFF4F4F4),
                                             letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
@@ -337,22 +339,23 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.29, 0.64),
+                      alignment: AlignmentDirectional(0.29, 0.64),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'uizwmrzg' /* Message */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'pintanga',
                               color: Colors.white,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
                     Container(
                       height: 5.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                     ),
                   ],
                 ),
@@ -362,16 +365,15 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                     Expanded(
                       flex: 1,
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 6.0, 0.0),
                           child: FlutterFlowIconButton(
-                            key: const ValueKey('profile'),
+                            key: ValueKey('profile'),
                             borderColor: Colors.transparent,
                             buttonSize: 48.0,
-                            icon: const Icon(
-                              key: ValueKey('profile'),
+                            icon: Icon(
                               Icons.person,
                               color: Colors.white,
                               size: 37.0,
@@ -388,22 +390,23 @@ class _NavbarProfessionalWidgetState extends State<NavbarProfessionalWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.78, 0.59),
+                      alignment: AlignmentDirectional(0.78, 0.59),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '0ebx9rck' /* Profile */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'pintanga',
                               color: Colors.white,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
                     Container(
                       height: 5.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                     ),
                   ],
                 ),

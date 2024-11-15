@@ -8,7 +8,6 @@ export '../base_auth_user_provider.dart';
 class ItalentmindFirebaseUser extends BaseAuthUser {
   ItalentmindFirebaseUser(this.user);
   User? user;
-  @override
   bool get loggedIn => user != null;
 
   @override

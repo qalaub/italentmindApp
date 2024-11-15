@@ -4,6 +4,9 @@ import '/flutter_flow/flutter_flow_video_player.dart';
 import '/v2/professional/imganes/imganes_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'descripcion_profesional_model.dart';
 export 'descripcion_profesional_model.dart';
 
@@ -17,9 +20,9 @@ class DescripcionProfesionalWidget extends StatefulWidget {
     required this.imgs,
     String? company,
     this.schedule,
-  })  : video = video ??
+  })  : this.video = video ??
             'https://assets.mixkit.co/videos/preview/mixkit-forest-stream-in-the-sunlight-529-large.mp4',
-        company = company ?? 'default230';
+        this.company = company ?? 'default230';
 
   final String? parameter1;
   final String? parameter2;
@@ -64,19 +67,19 @@ class _DescripcionProfesionalWidgetState
         mainAxisSize: MainAxisSize.max,
         children: [
           Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
               child: Container(
                 width: MediaQuery.sizeOf(context).width * 1.0,
-                decoration: const BoxDecoration(),
+                decoration: BoxDecoration(),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, -1.0),
+                      alignment: AlignmentDirectional(-1.0, -1.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'hf498zjb' /* Description */,
@@ -84,7 +87,7 @@ class _DescripcionProfesionalWidgetState
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
                                   fontFamily: 'pintanga',
-                                  color: const Color(0xFF1D69D7),
+                                  color: Color(0xFF1D69D7),
                                   fontSize: 16.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
@@ -92,10 +95,10 @@ class _DescripcionProfesionalWidgetState
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         width: double.infinity,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Color(0xFFFFFEFE),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
@@ -105,15 +108,15 @@ class _DescripcionProfesionalWidgetState
                           ),
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(-1.0, -1.0),
+                          alignment: AlignmentDirectional(-1.0, -1.0),
                           child: Builder(
                             builder: (context) {
                               if (!_model.more) {
                                 return Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       2.0, 2.0, 0.0, 0.0),
                                   child: Text(
-                                    widget.parameter1!.maybeHandleOverflow(
+                                    widget!.parameter1!.maybeHandleOverflow(
                                       maxChars: 200,
                                       replacement: '…',
                                     ),
@@ -131,10 +134,10 @@ class _DescripcionProfesionalWidgetState
                                 );
                               } else {
                                 return Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       2.0, 2.0, 0.0, 0.0),
                                   child: Text(
-                                    widget.parameter1!.maybeHandleOverflow(
+                                    widget!.parameter1!.maybeHandleOverflow(
                                       maxChars: 2000,
                                       replacement: '…',
                                     ),
@@ -157,9 +160,9 @@ class _DescripcionProfesionalWidgetState
                         ),
                       ),
                     ),
-                    if (functions.getLengthString(widget.parameter1!) > 200)
+                    if (functions.getLengthString(widget!.parameter1!) > 200)
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -175,19 +178,19 @@ class _DescripcionProfesionalWidgetState
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'pintanga',
-                                  color: const Color(0xFF1D69D7),
+                                  color: Color(0xFF1D69D7),
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
                         ),
                       ),
-                  ].divide(const SizedBox(height: 16.0)),
+                  ].divide(SizedBox(height: 16.0)),
                 ),
               ),
             ),
           ),
-          const SizedBox(
+          SizedBox(
             width: 360.0,
             child: Divider(
               thickness: 1.0,
@@ -195,21 +198,21 @@ class _DescripcionProfesionalWidgetState
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+            padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
             child: Container(
               width: MediaQuery.sizeOf(context).width * 1.0,
               height: 235.0,
-              decoration: const BoxDecoration(),
+              decoration: BoxDecoration(),
               child: wrapWithModel(
                 model: _model.imganesModel,
                 updateCallback: () => safeSetState(() {}),
                 child: ImganesWidget(
-                  professional: widget.imgs!,
+                  professional: widget!.imgs!,
                 ),
               ),
             ),
           ),
-          const SizedBox(
+          SizedBox(
             width: 360.0,
             child: Divider(
               thickness: 1.0,
@@ -217,10 +220,10 @@ class _DescripcionProfesionalWidgetState
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
             child: FlutterFlowVideoPlayer(
-              path: widget.video != ''
-                  ? widget.video
+              path: widget!.video != null && widget!.video != ''
+                  ? widget!.video
                   : 'https://assets.mixkit.co/videos/51585/51585-720.mp4',
               videoType: VideoType.network,
               width: 400.0,
@@ -234,7 +237,7 @@ class _DescripcionProfesionalWidgetState
               lazyLoad: false,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             width: 360.0,
             child: Divider(
               thickness: 1.0,
@@ -242,24 +245,24 @@ class _DescripcionProfesionalWidgetState
             ),
           ),
           Align(
-            alignment: const AlignmentDirectional(0.09, 0.52),
+            alignment: AlignmentDirectional(0.09, 0.52),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
               child: Container(
                 width: double.infinity,
-                decoration: const BoxDecoration(),
+                decoration: BoxDecoration(),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(-0.8, 0.0),
+                        alignment: AlignmentDirectional(-0.8, 0.0),
                         child: Container(
                           width: 270.0,
                           height: 50.0,
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Stack(
                             children: [
                               Row(
@@ -270,7 +273,7 @@ class _DescripcionProfesionalWidgetState
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      const Align(
+                                      Align(
                                         alignment:
                                             AlignmentDirectional(-1.0, 0.0),
                                         child: Icon(
@@ -281,7 +284,7 @@ class _DescripcionProfesionalWidgetState
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'sg6ti0nl' /* Experience */,
@@ -297,7 +300,7 @@ class _DescripcionProfesionalWidgetState
                                               ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 12.0)),
+                                    ].divide(SizedBox(width: 12.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -305,9 +308,9 @@ class _DescripcionProfesionalWidgetState
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Text(
-                                          widget.parameter2!,
+                                          widget!.parameter2!,
                                           maxLines: 1,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -322,24 +325,24 @@ class _DescripcionProfesionalWidgetState
                                       ),
                                     ],
                                   ),
-                                ].divide(const SizedBox(width: 4.0)),
+                                ].divide(SizedBox(width: 4.0)),
                               ),
                             ],
                           ),
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-0.8, 0.0),
+                        alignment: AlignmentDirectional(-0.8, 0.0),
                         child: Container(
                           width: 270.0,
                           height: 50.0,
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Stack(
                             children: [
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  const Align(
+                                  Align(
                                     alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -352,7 +355,7 @@ class _DescripcionProfesionalWidgetState
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'ncsao3xb' /* Qualified And Certified 
@@ -371,23 +374,23 @@ Perso... */
                                           ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 12.0)),
+                                ].divide(SizedBox(width: 12.0)),
                               ),
                             ],
                           ),
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-0.8, 0.0),
+                        alignment: AlignmentDirectional(-0.8, 0.0),
                         child: Container(
                           width: 300.0,
-                          decoration: const BoxDecoration(),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          decoration: BoxDecoration(),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Align(
+                              Align(
                                 alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -401,14 +404,14 @@ Perso... */
                               ),
                               Container(
                                 width: 266.0,
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Builder(
                                   builder: (context) {
                                     final scheduleDays =
-                                        widget.schedule?.toList() ?? [];
+                                        widget!.schedule?.toList() ?? [];
 
                                     return ListView.separated(
-                                      padding: const EdgeInsets.fromLTRB(
+                                      padding: EdgeInsets.fromLTRB(
                                         0,
                                         2.0,
                                         0,
@@ -418,14 +421,14 @@ Perso... */
                                       scrollDirection: Axis.vertical,
                                       itemCount: scheduleDays.length,
                                       separatorBuilder: (_, __) =>
-                                          const SizedBox(height: 4.0),
+                                          SizedBox(height: 4.0),
                                       itemBuilder:
                                           (context, scheduleDaysIndex) {
                                         final scheduleDaysItem =
                                             scheduleDays[scheduleDaysIndex];
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
                                             functions.getTranslateDay(
                                                 scheduleDaysItem,
@@ -448,23 +451,23 @@ Perso... */
                                   },
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 12.0)),
+                            ].divide(SizedBox(width: 12.0)),
                           ),
                         ),
                       ),
-                      if (widget.company != 'default230')
+                      if (widget!.company != 'default230')
                         Align(
-                          alignment: const AlignmentDirectional(-0.8, 0.0),
+                          alignment: AlignmentDirectional(-0.8, 0.0),
                           child: Container(
                             width: 270.0,
                             height: 50.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Stack(
                               children: [
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    const Align(
+                                    Align(
                                       alignment:
                                           AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
@@ -479,9 +482,9 @@ Perso... */
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Text(
-                                        widget.company,
+                                        widget!.company,
                                         textAlign: TextAlign.start,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -494,25 +497,25 @@ Perso... */
                                             ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 12.0)),
+                                  ].divide(SizedBox(width: 12.0)),
                                 ),
                               ],
                             ),
                           ),
                         ),
                       Align(
-                        alignment: const AlignmentDirectional(-0.8, 0.0),
+                        alignment: AlignmentDirectional(-0.8, 0.0),
                         child: Container(
                           width: 300.0,
                           height: 50.0,
-                          decoration: const BoxDecoration(),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          decoration: BoxDecoration(),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Stack(
                             children: [
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
-                                  const Align(
+                                  Align(
                                     alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
@@ -525,7 +528,7 @@ Perso... */
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         '9x3iutr3' /* Official ID document. */,
@@ -542,23 +545,23 @@ Perso... */
                                           ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 12.0)),
+                                ].divide(SizedBox(width: 12.0)),
                               ),
                             ],
                           ),
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-0.8, 0.0),
+                        alignment: AlignmentDirectional(-0.8, 0.0),
                         child: Container(
                           width: 300.0,
-                          decoration: const BoxDecoration(),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          decoration: BoxDecoration(),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Align(
+                              Align(
                                 alignment: AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -572,14 +575,14 @@ Perso... */
                               ),
                               Container(
                                 width: 266.0,
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Builder(
                                   builder: (context) {
                                     final servicesList =
-                                        widget.services!.toList();
+                                        widget!.services!.toList();
 
                                     return ListView.separated(
-                                      padding: const EdgeInsets.fromLTRB(
+                                      padding: EdgeInsets.fromLTRB(
                                         0,
                                         2.0,
                                         0,
@@ -589,14 +592,14 @@ Perso... */
                                       scrollDirection: Axis.vertical,
                                       itemCount: servicesList.length,
                                       separatorBuilder: (_, __) =>
-                                          const SizedBox(height: 4.0),
+                                          SizedBox(height: 4.0),
                                       itemBuilder:
                                           (context, servicesListIndex) {
                                         final servicesListItem =
                                             servicesList[servicesListIndex];
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Text(
                                             functions.changeServiceLanguge(
                                                 servicesListItem,
@@ -619,13 +622,13 @@ Perso... */
                                   },
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 12.0)),
+                            ].divide(SizedBox(width: 12.0)),
                           ),
                         ),
                       ),
                     ]
-                        .divide(const SizedBox(height: 16.0))
-                        .addToEnd(const SizedBox(height: 32.0)),
+                        .divide(SizedBox(height: 16.0))
+                        .addToEnd(SizedBox(height: 32.0)),
                   ),
                 ),
               ),

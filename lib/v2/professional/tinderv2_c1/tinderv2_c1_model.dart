@@ -1,11 +1,26 @@
+import '/auth/base_auth_user_provider.dart';
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
+import '/backend/schema/enums/enums.dart';
+import '/flutter_flow/flutter_flow_swipeable_stack.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import '/v2/professional/mensage_tinder/mensage_tinder_widget.dart';
+import '/v2/professional/tinderv2_c0/tinderv2_c0_widget.dart';
+import 'dart:async';
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'tinderv2_c1_widget.dart' show Tinderv2C1Widget;
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class Tinderv2C1Model extends FlutterFlowModel<Tinderv2C1Widget> {
   ///  Local state fields for this page.

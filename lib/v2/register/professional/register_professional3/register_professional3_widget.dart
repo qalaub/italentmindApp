@@ -1,5 +1,7 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_radio_button.dart';
@@ -7,8 +9,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'register_professional3_model.dart';
 export 'register_professional3_model.dart';
@@ -71,7 +75,7 @@ class _RegisterProfessional3WidgetState
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
@@ -83,13 +87,13 @@ class _RegisterProfessional3WidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-0.91, -0.96),
+                              alignment: AlignmentDirectional(-0.91, -0.96),
                               child: FlutterFlowIconButton(
                                 borderColor: Colors.transparent,
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 40.0,
-                                icon: const Icon(
+                                icon: Icon(
                                   Icons.arrow_back_ios_new,
                                   color: Colors.black,
                                   size: 24.0,
@@ -100,9 +104,9 @@ class _RegisterProfessional3WidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, -0.84),
+                              alignment: AlignmentDirectional(0.0, -0.84),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 6.0, 0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
@@ -116,11 +120,11 @@ class _RegisterProfessional3WidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.3),
+                              alignment: AlignmentDirectional(0.0, 0.3),
                               child: Material(
                                 color: Colors.transparent,
                                 elevation: 2.0,
-                                shape: const RoundedRectangleBorder(
+                                shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(24.0),
                                     bottomRight: Radius.circular(24.0),
@@ -140,8 +144,8 @@ class _RegisterProfessional3WidgetState
                                         MediaQuery.sizeOf(context).height * 0.7,
                                   ),
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFFFFEFE),
-                                    borderRadius: const BorderRadius.only(
+                                    color: Color(0xFFFFFEFE),
+                                    borderRadius: BorderRadius.only(
                                       bottomLeft: Radius.circular(24.0),
                                       bottomRight: Radius.circular(24.0),
                                       topLeft: Radius.circular(24.0),
@@ -166,20 +170,20 @@ class _RegisterProfessional3WidgetState
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.9,
-                                            constraints: const BoxConstraints(
+                                            constraints: BoxConstraints(
                                               minHeight: 250.0,
                                               maxHeight: 270.0,
                                             ),
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.5, 0.0, 10.5, 0.0),
                                                 child: FlutterFlowRadioButton(
-                                                  key: const ValueKey('question'),
+                                                  key: ValueKey('question'),
                                                   options: [
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -233,7 +237,7 @@ class _RegisterProfessional3WidgetState
                                                       RadioButtonPosition.left,
                                                   direction: Axis.vertical,
                                                   radioButtonColor:
-                                                      const Color(0xFF1D69D7),
+                                                      Color(0xFF1D69D7),
                                                   inactiveRadioButtonColor:
                                                       FlutterFlowTheme.of(
                                                               context)
@@ -256,11 +260,11 @@ class _RegisterProfessional3WidgetState
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -0.84, -0.73),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 12.0,
                                                                 16.0,
@@ -291,13 +295,13 @@ class _RegisterProfessional3WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Material(
                                                     color: Colors.transparent,
                                                     elevation: 1.0,
                                                     shape:
-                                                        const RoundedRectangleBorder(
+                                                        RoundedRectangleBorder(
                                                       borderRadius:
                                                           BorderRadius.only(
                                                         bottomLeft:
@@ -323,7 +327,7 @@ class _RegisterProfessional3WidgetState
                                                       decoration: BoxDecoration(
                                                         color: Colors.white,
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -344,18 +348,18 @@ class _RegisterProfessional3WidgetState
                                                                         .verifyForm
                                                                         .dropdown ==
                                                                     true
-                                                                ? const Color(
+                                                                ? Color(
                                                                     0xFF1D69D7)
-                                                                : const Color(
+                                                                : Color(
                                                                     0xFFFF5963),
-                                                            const Color(0xFF1D69D7),
+                                                            Color(0xFF1D69D7),
                                                           ),
                                                           width: 1.0,
                                                         ),
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, -1.0),
                                                         child: StreamBuilder<
                                                             List<UsersRecord>>(
@@ -399,7 +403,7 @@ class _RegisterProfessional3WidgetState
 
                                                             return FlutterFlowDropDown<
                                                                 String>(
-                                                              key: const ValueKey(
+                                                              key: ValueKey(
                                                                   'company'),
                                                               controller: _model
                                                                       .companyValueController ??=
@@ -413,6 +417,8 @@ class _RegisterProfessional3WidgetState
                                                                       e.comapny)
                                                                   .toList()
                                                                   .where((e) =>
+                                                                      e !=
+                                                                          null &&
                                                                       e != '')
                                                                   .toList()
                                                                   .sortedList(
@@ -421,7 +427,7 @@ class _RegisterProfessional3WidgetState
                                                                               e,
                                                                       desc:
                                                                           false)),
-                                                              optionLabels: const <String>[],
+                                                              optionLabels: <String>[],
                                                               onChanged: (val) =>
                                                                   safeSetState(() =>
                                                                       _model.companyValue =
@@ -454,7 +460,7 @@ class _RegisterProfessional3WidgetState
                                                                       .getText(
                                                                 '84bdr1m1' /* Company name */,
                                                               ),
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons
                                                                     .keyboard_arrow_down_rounded,
                                                                 color: Colors
@@ -470,7 +476,7 @@ class _RegisterProfessional3WidgetState
                                                               borderRadius:
                                                                   40.0,
                                                               margin:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -493,11 +499,11 @@ class _RegisterProfessional3WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -0.84, -0.73),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 16.0,
                                                                 16.0,
@@ -528,16 +534,16 @@ class _RegisterProfessional3WidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Container(
                                                     height: 78.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 0.0),
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width:
                                                             MediaQuery.sizeOf(
                                                                         context)
@@ -545,17 +551,17 @@ class _RegisterProfessional3WidgetState
                                                                 0.8,
                                                         child: Stack(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, -1.0),
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       0.0,
                                                                       -1.0),
                                                               child:
                                                                   TextFormField(
-                                                                key: const ValueKey(
+                                                                key: ValueKey(
                                                                     'code'),
                                                                 controller: _model
                                                                     .codeTextController,
@@ -614,7 +620,7 @@ class _RegisterProfessional3WidgetState
                                                                   enabledBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFF1D69D7),
                                                                       width:
@@ -627,7 +633,7 @@ class _RegisterProfessional3WidgetState
                                                                   focusedBorder:
                                                                       OutlineInputBorder(
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Color(
                                                                           0xFF1D69D7),
                                                                       width:
@@ -699,13 +705,13 @@ class _RegisterProfessional3WidgetState
                                             ),
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.01, 0.7),
+                                                AlignmentDirectional(0.01, 0.7),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 10.0),
                                               child: FFButtonWidget(
-                                                key: const ValueKey('continue'),
+                                                key: ValueKey('continue'),
                                                 onPressed: () async {
                                                   if (_model.formKey
                                                               .currentState ==
@@ -763,7 +769,7 @@ class _RegisterProfessional3WidgetState
                                                         if (_model
                                                                 .newBusi
                                                                 ?.professionals
-                                                                .length ==
+                                                                ?.length ==
                                                             10) {
                                                           ScaffoldMessenger.of(
                                                                   context)
@@ -782,11 +788,11 @@ class _RegisterProfessional3WidgetState
                                                                       .primaryText,
                                                                 ),
                                                               ),
-                                                              duration: const Duration(
+                                                              duration: Duration(
                                                                   milliseconds:
                                                                       4000),
                                                               backgroundColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0xFFD239D1),
                                                             ),
                                                           );
@@ -834,11 +840,11 @@ class _RegisterProfessional3WidgetState
                                                                     .primaryText,
                                                               ),
                                                             ),
-                                                            duration: const Duration(
+                                                            duration: Duration(
                                                                 milliseconds:
                                                                     4000),
                                                             backgroundColor:
-                                                                const Color(
+                                                                Color(
                                                                     0xFF4963C9),
                                                           ),
                                                         );
@@ -861,11 +867,11 @@ class _RegisterProfessional3WidgetState
                                                                   .primaryText,
                                                             ),
                                                           ),
-                                                          duration: const Duration(
+                                                          duration: Duration(
                                                               milliseconds:
                                                                   4000),
                                                           backgroundColor:
-                                                              const Color(0xFF4963C9),
+                                                              Color(0xFF4963C9),
                                                         ),
                                                       );
                                                     }
@@ -881,14 +887,14 @@ class _RegisterProfessional3WidgetState
                                                 options: FFButtonOptions(
                                                   width: 275.0,
                                                   height: 45.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
-                                                  color: const Color(0xFF4963C9),
+                                                  color: Color(0xFF4963C9),
                                                   textStyle: FlutterFlowTheme
                                                           .of(context)
                                                       .titleSmall
@@ -900,7 +906,7 @@ class _RegisterProfessional3WidgetState
                                                         useGoogleFonts: false,
                                                       ),
                                                   elevation: 5.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -911,7 +917,7 @@ class _RegisterProfessional3WidgetState
                                               ),
                                             ),
                                           ),
-                                        ].addToStart(const SizedBox(height: 20.0)),
+                                        ].addToStart(SizedBox(height: 20.0)),
                                       ),
                                     ),
                                   ),
