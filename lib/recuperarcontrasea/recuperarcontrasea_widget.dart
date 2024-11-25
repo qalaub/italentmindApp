@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'recuperarcontrasea_model.dart';
 export 'recuperarcontrasea_model.dart';
 
@@ -48,7 +46,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -66,16 +64,16 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 230.0, 0.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.96,
                             height: 234.0,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(24.0),
                                 bottomRight: Radius.circular(24.0),
                                 topLeft: Radius.circular(24.0),
@@ -90,7 +88,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
@@ -107,7 +105,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                         ),
                                   ),
                                 ),
-                                Divider(
+                                const Divider(
                                   height: 23.0,
                                   thickness: 2.0,
                                   color: Color(0xFF4963C9),
@@ -116,7 +114,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                   key: _model.formKey,
                                   autovalidateMode: AutovalidateMode.disabled,
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 0.0),
                                     child: TextFormField(
                                       controller: _model.emailTextController,
@@ -139,7 +137,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF1D69D7),
                                             width: 2.0,
                                           ),
@@ -147,7 +145,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF1D69D7),
                                             width: 2.0,
                                           ),
@@ -155,7 +153,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFFDA0000),
                                             width: 2.0,
                                           ),
@@ -163,7 +161,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                               BorderRadius.circular(12.0),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFFDA0000),
                                             width: 2.0,
                                           ),
@@ -185,7 +183,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 32.0, 0.0, 16.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
@@ -198,7 +196,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                           .emailTextController.text.isEmpty) {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
-                                          SnackBar(
+                                          const SnackBar(
                                             content: Text(
                                               'Email required!',
                                             ),
@@ -219,12 +217,12 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                     options: FFButtonOptions(
                                       width: 279.0,
                                       height: 45.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFF4963C9),
+                                      color: const Color(0xFF4963C9),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -234,7 +232,7 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                                             useGoogleFonts: false,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(24.0),
@@ -249,10 +247,10 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, -0.9),
+                    alignment: const AlignmentDirectional(0.0, -0.9),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
@@ -265,13 +263,13 @@ class _RecuperarcontraseaWidgetState extends State<RecuperarcontraseaWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-0.91, -0.96),
+                    alignment: const AlignmentDirectional(-0.91, -0.96),
                     child: FlutterFlowIconButton(
                       borderColor: Colors.transparent,
                       borderRadius: 20.0,
                       borderWidth: 1.0,
                       buttonSize: 40.0,
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back_ios_new,
                         color: Colors.black,
                         size: 24.0,

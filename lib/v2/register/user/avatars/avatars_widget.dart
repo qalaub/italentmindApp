@@ -1,17 +1,13 @@
-import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/avatar_component_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'avatars_model.dart';
 export 'avatars_model.dart';
@@ -20,7 +16,7 @@ class AvatarsWidget extends StatefulWidget {
   const AvatarsWidget({
     super.key,
     bool? isUpdate,
-  }) : this.isUpdate = isUpdate ?? false;
+  }) : isUpdate = isUpdate ?? false;
 
   final bool isUpdate;
 
@@ -64,14 +60,14 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Color(0xFF1D69D7),
+          backgroundColor: const Color(0xFF1D69D7),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.angleLeft,
               color: Colors.white,
               size: 30.0,
@@ -93,7 +89,7 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                   useGoogleFonts: false,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -111,20 +107,20 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Builder(
                       builder: (context) {
                         final avatar = FFAppConstants.avatars.toList();
 
                         return GridView.builder(
-                          padding: EdgeInsets.fromLTRB(
+                          padding: const EdgeInsets.fromLTRB(
                             0,
                             20.0,
                             0,
                             0,
                           ),
                           gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
+                              const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 3,
                             crossAxisSpacing: 10.0,
                             mainAxisSpacing: 10.0,
@@ -159,14 +155,14 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 1.0),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
                     child: Container(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 60.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(12.0),
                           bottomRight: Radius.circular(12.0),
@@ -175,12 +171,12 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                         ),
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: FFButtonWidget(
-                            key: ValueKey('continue'),
+                            key: const ValueKey('continue'),
                             onPressed: () async {
                               FFAppState().updateRegisterProviderFormStruct(
                                 (e) => e
@@ -189,7 +185,7 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                                   ),
                               );
                               safeSetState(() {});
-                              if (widget!.isUpdate) {
+                              if (widget.isUpdate) {
                                 await currentUserReference!
                                     .update(createUsersRecordData(
                                   photoUrl: _model.selectImage,
@@ -248,9 +244,7 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                                         FFAppState().registerProviderForm.plan,
                                     photoUrl: FFAppState()
                                                 .registerProviderForm
-                                                .images
-                                                .length >
-                                            0
+                                                .images.isNotEmpty
                                         ? FFAppState()
                                             .registerProviderForm
                                             .images
@@ -288,7 +282,7 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                                   'HomeSearch',
                                   context.mounted,
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
+                                    kTransitionInfoKey: const TransitionInfo(
                                       hasTransition: true,
                                       transitionType: PageTransitionType.fade,
                                       duration: Duration(milliseconds: 200),
@@ -303,11 +297,11 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                             options: FFButtonOptions(
                               width: 275.0,
                               height: 45.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF4963C9),
+                              color: const Color(0xFF4963C9),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -318,7 +312,7 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                                     useGoogleFonts: false,
                                   ),
                               elevation: 5.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -330,7 +324,7 @@ class _AvatarsWidgetState extends State<AvatarsWidget> {
                     ),
                   ),
                 ),
-              ].addToEnd(SizedBox(height: 38.0)),
+              ].addToEnd(const SizedBox(height: 38.0)),
             ),
           ),
         ),

@@ -1,8 +1,5 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'editarlas6imagens_model.dart';
 export 'editarlas6imagens_model.dart';
 
@@ -44,32 +41,32 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, -1.0),
+      alignment: const AlignmentDirectional(0.0, -1.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 0.9,
         height: 225.0,
         decoration: BoxDecoration(
-          color: Color(0xFFABCAF8),
-          borderRadius: BorderRadius.only(
+          color: const Color(0xFFABCAF8),
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(12.0),
             bottomRight: Radius.circular(12.0),
             topLeft: Radius.circular(12.0),
             topRight: Radius.circular(12.0),
           ),
           border: Border.all(
-            color: Color(0xFFD9D9D9),
+            color: const Color(0xFFD9D9D9),
             width: 1.0,
           ),
         ),
         child: Builder(
           builder: (context) {
-            if (widget!.img == ' ') {
+            if (widget.img == ' ') {
               return Container(
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
@@ -80,7 +77,7 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                         ),
                       ),
                     ),
-                    Align(
+                    const Align(
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Icon(
                         Icons.camera_alt_outlined,
@@ -89,7 +86,7 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(
@@ -105,16 +102,16 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
               );
             } else {
               return Container(
-                decoration: BoxDecoration(),
+                decoration: const BoxDecoration(),
                 child: Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-0.9, -0.9),
+                      alignment: const AlignmentDirectional(-0.9, -0.9),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget!.img,
+                            widget.img,
                             'https://i.ibb.co/2qkDLKb/Frame-74.png',
                           ),
                           width: 90.0,
@@ -124,12 +121,12 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, -0.9),
+                      alignment: const AlignmentDirectional(0.0, -0.9),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget!.img,
+                            widget.img,
                             'https://i.ibb.co/2qkDLKb/Frame-74.png',
                           ),
                           width: 90.0,
@@ -139,12 +136,12 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.9, -0.9),
+                      alignment: const AlignmentDirectional(0.9, -0.9),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget!.img,
+                            widget.img,
                             'https://i.ibb.co/2qkDLKb/Frame-74.png',
                           ),
                           width: 90.0,
@@ -154,12 +151,12 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-0.9, 0.9),
+                      alignment: const AlignmentDirectional(-0.9, 0.9),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget!.img,
+                            widget.img,
                             'https://i.ibb.co/2qkDLKb/Frame-74.png',
                           ),
                           width: 90.0,
@@ -169,12 +166,12 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.9),
+                      alignment: const AlignmentDirectional(0.0, 0.9),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget!.img,
+                            widget.img,
                             'https://i.ibb.co/2qkDLKb/Frame-74.png',
                           ),
                           width: 90.0,
@@ -184,12 +181,12 @@ class _Editarlas6imagensWidgetState extends State<Editarlas6imagensWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.9, 0.9),
+                      alignment: const AlignmentDirectional(0.9, 0.9),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image.network(
                           valueOrDefault<String>(
-                            widget!.img,
+                            widget.img,
                             'https://i.ibb.co/2qkDLKb/Frame-74.png',
                           ),
                           width: 90.0,

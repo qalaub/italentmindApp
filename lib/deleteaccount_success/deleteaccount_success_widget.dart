@@ -1,10 +1,8 @@
 import '/components/eliminar_mensaje_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'deleteaccount_success_model.dart';
 export 'deleteaccount_success_model.dart';
@@ -57,7 +55,7 @@ class _DeleteaccountSuccessWidgetState
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -75,16 +73,16 @@ class _DeleteaccountSuccessWidgetState
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 230.0, 0.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.96,
                             height: 254.0,
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(24.0),
                                 bottomRight: Radius.circular(24.0),
                                 topLeft: Radius.circular(24.0),
@@ -97,7 +95,7 @@ class _DeleteaccountSuccessWidgetState
                             child: wrapWithModel(
                               model: _model.eliminarMensajeModel,
                               updateCallback: () => safeSetState(() {}),
-                              child: EliminarMensajeWidget(),
+                              child: const EliminarMensajeWidget(),
                             ),
                           ),
                         ),
@@ -105,10 +103,10 @@ class _DeleteaccountSuccessWidgetState
                     ],
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, -0.9),
+                    alignment: const AlignmentDirectional(0.0, -0.9),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: Image.asset(

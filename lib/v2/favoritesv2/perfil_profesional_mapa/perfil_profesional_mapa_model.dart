@@ -1,15 +1,8 @@
-import '/auth/base_auth_user_provider.dart';
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/v2/favoritesv2/add_favorites/add_favorites_widget.dart';
 import '/v2/menbresiav2/membresia_logo/membresia_logo_widget.dart';
 import 'perfil_profesional_mapa_widget.dart' show PerfilProfesionalMapaWidget;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class PerfilProfesionalMapaModel
     extends FlutterFlowModel<PerfilProfesionalMapaWidget> {

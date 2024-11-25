@@ -7,12 +7,9 @@ import '/v2/menbresiav2/membresia_logo/membresia_logo_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'tinderv2_c0_model.dart';
 export 'tinderv2_c0_model.dart';
 
@@ -45,7 +42,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       _model.apiResultipr = await GetNamePlaceCall.call(
-        lat: functions.latLngToString(widget!.professional!.suburb!),
+        lat: functions.latLngToString(widget.professional!.suburb!),
       );
 
       if ((_model.apiResultipr?.succeeded ?? true)) {
@@ -70,11 +67,11 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Material(
         color: Colors.transparent,
         elevation: 10.0,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(20.0),
             bottomRight: Radius.circular(20.0),
@@ -89,52 +86,52 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
             maxHeight: MediaQuery.sizeOf(context).height * 0.65,
           ),
           decoration: BoxDecoration(
-            gradient: LinearGradient(
+            gradient: const LinearGradient(
               colors: [Color(0xFFA39C9C), Colors.white],
               stops: [0.0, 0.5],
               begin: AlignmentDirectional(0.0, -1.0),
               end: AlignmentDirectional(0, 1.0),
             ),
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(20.0),
               bottomRight: Radius.circular(20.0),
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),
             ),
             border: Border.all(
-              color: Color(0xFF1D69D7),
+              color: const Color(0xFF1D69D7),
               width: 3.0,
             ),
           ),
-          alignment: AlignmentDirectional(0.0, -1.0),
+          alignment: const AlignmentDirectional(0.0, -1.0),
           child: Align(
-            alignment: AlignmentDirectional(0.0, -1.0),
+            alignment: const AlignmentDirectional(0.0, -1.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 0.465,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Builder(
                             builder: (context) {
-                              final imagesProfessional = widget!
+                              final imagesProfessional = widget
                                       .professional?.images
-                                      ?.map((e) => e)
+                                      .map((e) => e)
                                       .toList()
-                                      ?.where((e) => e != '')
+                                      .where((e) => e != '')
                                       .toList()
-                                      ?.toList() ??
+                                      .toList() ??
                                   [];
 
-                              return Container(
+                              return SizedBox(
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height * 1.0,
                                 child: PageView.builder(
@@ -161,12 +158,12 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                       onTap: () async {
                                         await _model.pageViewController
                                             ?.nextPage(
-                                          duration: Duration(milliseconds: 300),
+                                          duration: const Duration(milliseconds: 300),
                                           curve: Curves.ease,
                                         );
                                       },
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(0.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(20.0),
@@ -174,9 +171,9 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                         ),
                                         child: CachedNetworkImage(
                                           fadeInDuration:
-                                              Duration(milliseconds: 600),
+                                              const Duration(milliseconds: 600),
                                           fadeOutDuration:
-                                              Duration(milliseconds: 600),
+                                              const Duration(milliseconds: 600),
                                           imageUrl: valueOrDefault<String>(
                                             imagesProfessionalItem,
                                             'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
@@ -198,12 +195,12 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                           ),
                         ),
                         if (valueOrDefault<bool>(
-                          (widget!.professional?.business != null) ||
-                              (widget!.professional?.rol == Roles.business),
+                          (widget.professional?.business != null) ||
+                              (widget.professional?.rol == Roles.business),
                           false,
                         ))
                           Align(
-                            alignment: AlignmentDirectional(0.95, 0.95),
+                            alignment: const AlignmentDirectional(0.95, 0.95),
                             child: Container(
                               width: 50.0,
                               height: 50.0,
@@ -212,11 +209,11 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                               ),
                               child: Builder(
                                 builder: (context) {
-                                  if (widget!.professional?.rol ==
+                                  if (widget.professional?.rol ==
                                       Roles.profesional) {
                                     return FutureBuilder<UsersRecord>(
                                       future: UsersRecord.getDocumentOnce(
-                                          widget!.professional!.business!),
+                                          widget.professional!.business!),
                                       builder: (context, snapshot) {
                                         // Customize what your widget looks like when it's loading.
                                         if (!snapshot.hasData) {
@@ -254,7 +251,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                     return ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.network(
-                                        widget!.professional!.photoUrl,
+                                        widget.professional!.photoUrl,
                                         width: 200.0,
                                         height: 200.0,
                                         fit: BoxFit.fill,
@@ -271,7 +268,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                 ),
                 Container(
                   height: 183.0,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -282,9 +279,9 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 4.0),
                               child: Container(
                                 constraints: BoxConstraints(
@@ -293,9 +290,9 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                   maxHeight:
                                       MediaQuery.sizeOf(context).height * 0.12,
                                 ),
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -308,7 +305,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                           Text(
                                             functions.upperCaseFirstLetter(
                                                 valueOrDefault<String>(
-                                              widget!.professional?.firtsName,
+                                              widget.professional?.firtsName,
                                               'sandra',
                                             )),
                                             style: FlutterFlowTheme.of(context)
@@ -325,7 +322,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Icon(
+                                          const Icon(
                                             Icons.location_on,
                                             color: Color(0xFF1D69D7),
                                             size: 14.0,
@@ -341,7 +338,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(width: 4.0)),
+                                        ].divide(const SizedBox(width: 4.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -351,7 +348,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                     .width *
                                                 0.4,
                                             height: 30.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFF4D87DA),
                                               borderRadius: BorderRadius.only(
                                                 bottomLeft:
@@ -363,13 +360,13 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: AutoSizeText(
                                                 valueOrDefault<String>(
                                                   functions
                                                       .changeServiceLanguge(
-                                                          widget!
+                                                          widget
                                                               .professional!
                                                               .serviceType
                                                               .first,
@@ -400,7 +397,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                     .width *
                                                 0.29,
                                             height: 30.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFF4D87DA),
                                               borderRadius: BorderRadius.only(
                                                 bottomLeft:
@@ -412,7 +409,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: RichText(
                                                 textScaler:
@@ -423,9 +420,9 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                     TextSpan(
                                                       text: valueOrDefault<
                                                           String>(
-                                                        widget!
+                                                        widget
                                                             .professional?.years
-                                                            ?.toString(),
+                                                            .toString(),
                                                         '4',
                                                       ),
                                                       style: FlutterFlowTheme
@@ -447,7 +444,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                           .getText(
                                                         'sumldv79' /*  years of Exp */,
                                                       ),
-                                                      style: TextStyle(),
+                                                      style: const TextStyle(),
                                                     )
                                                   ],
                                                   style: FlutterFlowTheme.of(
@@ -465,27 +462,27 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 4.0)),
+                                        ].divide(const SizedBox(width: 4.0)),
                                       ),
                                     ]
-                                        .divide(SizedBox(height: 5.0))
-                                        .addToStart(SizedBox(height: 3.0)),
+                                        .divide(const SizedBox(height: 5.0))
+                                        .addToStart(const SizedBox(height: 3.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: StreamBuilder<List<ReviewsRecord>>(
                                 stream: queryReviewsRecord(
                                   queryBuilder: (reviewsRecord) =>
                                       reviewsRecord.where(
                                     'professional',
-                                    isEqualTo: widget!.professional?.reference,
+                                    isEqualTo: widget.professional?.reference,
                                   ),
                                 ),
                                 builder: (context, snapshot) {
@@ -514,18 +511,18 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                         MediaQuery.sizeOf(context).width * 0.55,
                                     height: MediaQuery.sizeOf(context).height *
                                         0.045,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(0.0, -1.0),
+                                          const AlignmentDirectional(0.0, -1.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 0.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, -1.0),
                                               child: Text(
                                                 valueOrDefault<String>(
@@ -555,11 +552,11 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, -0.8),
                                               child: RatingBarIndicator(
                                                 itemBuilder: (context, index) =>
-                                                    Icon(
+                                                    const Icon(
                                                   Icons.star_rounded,
                                                   color: Color(0xFFF9BF11),
                                                 ),
@@ -572,13 +569,13 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                       .toDouble(),
                                                   3.0,
                                                 ),
-                                                unratedColor: Color(0x4D040202),
+                                                unratedColor: const Color(0x4D040202),
                                                 itemCount: 5,
                                                 itemSize: 20.0,
                                               ),
                                             ),
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, -0.7),
                                               child: Text(
                                                 valueOrDefault<String>(
@@ -602,7 +599,7 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                                                         ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 4.0)),
+                                          ].divide(const SizedBox(width: 4.0)),
                                         ),
                                       ),
                                     ),
@@ -614,9 +611,9 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                         ],
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1.0, -0.7),
+                        alignment: const AlignmentDirectional(1.0, -0.7),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 8.0, 0.0),
                           child: wrapWithModel(
                             model: _model.membresiaLogoModel,
@@ -624,12 +621,12 @@ class _Tinderv2C0WidgetState extends State<Tinderv2C0Widget> {
                             child: MembresiaLogoWidget(
                               width: 60,
                               heigth: 60,
-                              professional: widget!.professional!.reference,
+                              professional: widget.professional!.reference,
                             ),
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 2.0)),
+                    ].divide(const SizedBox(width: 2.0)),
                   ),
                 ),
               ],

@@ -3,14 +3,10 @@ import '/backend/schema/enums/enums.dart';
 import '/components/listofcollaborators_p_e_r_f_i_l_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'listofcollaborators_model.dart';
 export 'listofcollaborators_model.dart';
 
@@ -51,7 +47,7 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
           top: true,
           child: Container(
             decoration: BoxDecoration(
-              color: Color(0xFF4963C9),
+              color: const Color(0xFF4963C9),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: Image.asset(
@@ -66,21 +62,21 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                   child: Container(
                     width: double.infinity,
                     height: double.infinity,
-                    decoration: BoxDecoration(),
+                    decoration: const BoxDecoration(),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 100.0,
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Stack(
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(0.0),
                                       child: Image.asset(
@@ -92,7 +88,7 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'ne4o1aq8' /* List Of Collaborators */,
@@ -114,13 +110,13 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.88, -0.7),
+                            alignment: const AlignmentDirectional(0.88, -0.7),
                             child: AuthUserStreamWidget(
                               builder: (context) => Text(
                                 valueOrDefault<String>(
                                   functions.concatStrings(
                                       (currentUserDocument?.professionals
-                                                  ?.toList() ??
+                                                  .toList() ??
                                               [])
                                           .length
                                           .toString(),
@@ -140,17 +136,17 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.1),
+                            alignment: const AlignmentDirectional(0.0, 1.1),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 0.86,
                               height: MediaQuery.sizeOf(context).height * 0.76,
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: AuthUserStreamWidget(
                                 builder: (context) => Builder(
                                   builder: (context) {
                                     final colaborators = (currentUserDocument
                                                 ?.professionals
-                                                ?.toList() ??
+                                                .toList() ??
                                             [])
                                         .toList();
 
@@ -176,10 +172,10 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.01),
+                            alignment: const AlignmentDirectional(0.0, 1.01),
                             child: Container(
                               height: 73.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xFF1D69D7),
                               ),
                               child: Builder(
@@ -189,13 +185,13 @@ class _ListofcollaboratorsWidgetState extends State<ListofcollaboratorsWidget> {
                                     return wrapWithModel(
                                       model: _model.navbarModel,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: NavbarWidget(),
+                                      child: const NavbarWidget(),
                                     );
                                   } else {
                                     return wrapWithModel(
                                       model: _model.navbarPremiunModel,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: NavbarPremiunWidget(),
+                                      child: const NavbarPremiunWidget(),
                                     );
                                   }
                                 },

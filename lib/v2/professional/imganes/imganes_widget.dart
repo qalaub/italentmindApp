@@ -1,10 +1,7 @@
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'imganes_model.dart';
 export 'imganes_model.dart';
 
@@ -60,16 +57,16 @@ class _ImganesWidgetState extends State<ImganesWidget> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6.0),
         ),
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Expanded(
               child: Builder(
                 builder: (context) {
-                  final imgs = widget!.professional!.toList();
+                  final imgs = widget.professional!.toList();
 
-                  return Container(
+                  return SizedBox(
                     width: double.infinity,
                     height: 500.0,
                     child: Stack(
@@ -98,9 +95,9 @@ class _ImganesWidgetState extends State<ImganesWidget> {
                           },
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: smooth_page_indicator.SmoothPageIndicator(
                               controller: _model.pageViewController ??=
@@ -112,12 +109,12 @@ class _ImganesWidgetState extends State<ImganesWidget> {
                               onDotClicked: (i) async {
                                 await _model.pageViewController!.animateToPage(
                                   i,
-                                  duration: Duration(milliseconds: 500),
+                                  duration: const Duration(milliseconds: 500),
                                   curve: Curves.ease,
                                 );
                                 safeSetState(() {});
                               },
-                              effect: smooth_page_indicator.SlideEffect(
+                              effect: const smooth_page_indicator.SlideEffect(
                                 spacing: 8.0,
                                 radius: 8.0,
                                 dotWidth: 25.0,

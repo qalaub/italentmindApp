@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'descripcion_user_model.dart';
 export 'descripcion_user_model.dart';
 
@@ -48,37 +46,37 @@ class _DescripcionUserWidgetState extends State<DescripcionUserWidget> {
       mainAxisSize: MainAxisSize.max,
       children: [
         Align(
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
             child: Container(
               width: MediaQuery.sizeOf(context).width * 1.0,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.0, -1.0),
+                    alignment: const AlignmentDirectional(-1.0, -1.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'qi6cj2f5' /* Description */,
                       ),
                       style: FlutterFlowTheme.of(context).displaySmall.override(
                             fontFamily: 'Montserrat',
-                            color: Color(0xFFC14BBC),
+                            color: const Color(0xFFC14BBC),
                             fontSize: 16.0,
                             letterSpacing: 0.0,
                           ),
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-0.01, -0.69),
+                    alignment: const AlignmentDirectional(-0.01, -0.69),
                     child: Container(
                       width: double.infinity,
                       height: 100.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFFFFFEFE),
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(0.0),
@@ -92,12 +90,12 @@ class _DescripcionUserWidgetState extends State<DescripcionUserWidget> {
                         children: [
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(-1.0, -1.0),
+                              alignment: const AlignmentDirectional(-1.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     2.0, 2.0, 0.0, 0.0),
                                 child: Text(
-                                  widget!.parameter1!,
+                                  widget.parameter1!,
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -116,12 +114,12 @@ class _DescripcionUserWidgetState extends State<DescripcionUserWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(height: 16.0)),
+                ].divide(const SizedBox(height: 16.0)),
               ),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 353.0,
           child: Divider(
             thickness: 1.0,
@@ -129,13 +127,13 @@ class _DescripcionUserWidgetState extends State<DescripcionUserWidget> {
           ),
         ),
         Align(
-          alignment: AlignmentDirectional(-1.0, -1.0),
+          alignment: const AlignmentDirectional(-1.0, -1.0),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
             child: Container(
               width: double.infinity,
               height: 486.0,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
               ),
               child: ClipRRect(

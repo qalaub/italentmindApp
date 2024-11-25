@@ -2,10 +2,7 @@ import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'membresia_logo_model.dart';
 export 'membresia_logo_model.dart';
 
@@ -15,8 +12,8 @@ class MembresiaLogoWidget extends StatefulWidget {
     required this.professional,
     int? width,
     int? heigth,
-  })  : this.width = width ?? 32,
-        this.heigth = heigth ?? 32;
+  })  : width = width ?? 32,
+        heigth = heigth ?? 32;
 
   final DocumentReference? professional;
   final int width;
@@ -51,11 +48,11 @@ class _MembresiaLogoWidgetState extends State<MembresiaLogoWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget!.width.toDouble(),
-      height: widget!.heigth.toDouble(),
-      decoration: BoxDecoration(),
+      width: widget.width.toDouble(),
+      height: widget.heigth.toDouble(),
+      decoration: const BoxDecoration(),
       child: StreamBuilder<UsersRecord>(
-        stream: UsersRecord.getDocument(widget!.professional!),
+        stream: UsersRecord.getDocument(widget.professional!),
         builder: (context, snapshot) {
           // Customize what your widget looks like when it's loading.
           if (!snapshot.hasData) {
@@ -79,26 +76,26 @@ class _MembresiaLogoWidgetState extends State<MembresiaLogoWidget> {
             children: [
               if (columnUsersRecord.plan == Plan.basic)
                 Align(
-                  alignment: AlignmentDirectional(0.67, -0.63),
+                  alignment: const AlignmentDirectional(0.67, -0.63),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       'assets/images/basicV2.png',
-                      width: widget!.width.toDouble(),
-                      height: widget!.heigth.toDouble(),
+                      width: widget.width.toDouble(),
+                      height: widget.heigth.toDouble(),
                       fit: BoxFit.contain,
                     ),
                   ),
                 ),
               if (columnUsersRecord.plan == Plan.standar)
                 Align(
-                  alignment: AlignmentDirectional(0.67, -0.63),
+                  alignment: const AlignmentDirectional(0.67, -0.63),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       'assets/images/standarV2.png',
-                      width: widget!.width.toDouble(),
-                      height: widget!.heigth.toDouble(),
+                      width: widget.width.toDouble(),
+                      height: widget.heigth.toDouble(),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -106,13 +103,13 @@ class _MembresiaLogoWidgetState extends State<MembresiaLogoWidget> {
               if ((columnUsersRecord.plan == Plan.premiun) &&
                   (columnUsersRecord.business != null))
                 Align(
-                  alignment: AlignmentDirectional(0.67, -0.63),
+                  alignment: const AlignmentDirectional(0.67, -0.63),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       'assets/images/premiunV2.png',
-                      width: widget!.width.toDouble(),
-                      height: widget!.heigth.toDouble(),
+                      width: widget.width.toDouble(),
+                      height: widget.heigth.toDouble(),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -120,13 +117,13 @@ class _MembresiaLogoWidgetState extends State<MembresiaLogoWidget> {
               if ((columnUsersRecord.plan == Plan.premiun) &&
                   (columnUsersRecord.business == null))
                 Align(
-                  alignment: AlignmentDirectional(0.67, -0.63),
+                  alignment: const AlignmentDirectional(0.67, -0.63),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       'assets/images/premiunV2.png',
-                      width: widget!.width.toDouble(),
-                      height: widget!.heigth.toDouble(),
+                      width: widget.width.toDouble(),
+                      height: widget.heigth.toDouble(),
                       fit: BoxFit.contain,
                     ),
                   ),

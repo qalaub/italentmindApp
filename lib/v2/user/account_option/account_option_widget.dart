@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'account_option_model.dart';
 export 'account_option_model.dart';
 
@@ -48,8 +46,8 @@ class _AccountOptionWidgetState extends State<AccountOptionWidget> {
       width: MediaQuery.sizeOf(context).width * 0.9,
       height: 52.0,
       decoration: BoxDecoration(
-        color: Color(0xFFF3F3F3),
-        boxShadow: [
+        color: const Color(0xFFF3F3F3),
+        boxShadow: const [
           BoxShadow(
             blurRadius: 4.0,
             color: Color(0x33000000),
@@ -65,13 +63,13 @@ class _AccountOptionWidgetState extends State<AccountOptionWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          widget!.icon!,
+          widget.icon!,
           Container(
             width: MediaQuery.sizeOf(context).width * 0.5,
-            decoration: BoxDecoration(),
+            decoration: const BoxDecoration(),
             child: Text(
               valueOrDefault<String>(
-                widget!.text,
+                widget.text,
                 'text',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(

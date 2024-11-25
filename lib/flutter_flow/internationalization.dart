@@ -388,11 +388,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },
-    '9fbw1som': {
+    '3soztuhj': {
       'en': 'Field is required',
       'es': 'Campo necesario',
     },
-    'g5929gef': {
+    '1oes541e': {
       'en': 'Please choose an option from the dropdown',
       'es': 'Por favor selecciona una opción',
     },

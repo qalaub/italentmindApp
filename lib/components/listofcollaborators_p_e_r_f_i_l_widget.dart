@@ -4,9 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'listofcollaborators_p_e_r_f_i_l_model.dart';
 export 'listofcollaborators_p_e_r_f_i_l_model.dart';
@@ -52,11 +50,11 @@ class _ListofcollaboratorsPERFILWidgetState
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
         child: StreamBuilder<UsersRecord>(
-          stream: UsersRecord.getDocument(widget!.professional!),
+          stream: UsersRecord.getDocument(widget.professional!),
           builder: (context, snapshot) {
             // Customize what your widget looks like when it's loading.
             if (!snapshot.hasData) {
@@ -88,7 +86,7 @@ class _ListofcollaboratorsPERFILWidgetState
                     'ProfileInfo',
                     queryParameters: {
                       'professional': serializeParam(
-                        widget!.professional,
+                        widget.professional,
                         ParamType.DocumentReference,
                       ),
                     }.withoutNulls,
@@ -98,7 +96,7 @@ class _ListofcollaboratorsPERFILWidgetState
               child: Material(
                 color: Colors.transparent,
                 elevation: 10.0,
-                shape: RoundedRectangleBorder(
+                shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(12.0),
                     bottomRight: Radius.circular(12.0),
@@ -109,7 +107,7 @@ class _ListofcollaboratorsPERFILWidgetState
                 child: Container(
                   width: 285.0,
                   height: 160.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF1D69D7),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(12.0),
@@ -119,7 +117,7 @@ class _ListofcollaboratorsPERFILWidgetState
                     ),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(-1.0, -1.0),
+                    alignment: const AlignmentDirectional(-1.0, -1.0),
                     child: Stack(
                       children: [
                         Row(
@@ -129,36 +127,36 @@ class _ListofcollaboratorsPERFILWidgetState
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, -1.0),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         10.0, 15.0, 0.0, 0.0),
                                     child: Container(
                                       width: 61.0,
                                       height: 61.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0xFFD9D9D9),
-                                        borderRadius: BorderRadius.only(
+                                        color: const Color(0xFFD9D9D9),
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(12.0),
                                           bottomRight: Radius.circular(12.0),
                                           topLeft: Radius.circular(12.0),
                                           topRight: Radius.circular(12.0),
                                         ),
                                         border: Border.all(
-                                          color: Color(0xFFD9D9D9),
+                                          color: const Color(0xFFD9D9D9),
                                         ),
                                       ),
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 1.0),
+                                            const AlignmentDirectional(-1.0, 1.0),
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                           child: CachedNetworkImage(
                                             fadeInDuration:
-                                                Duration(milliseconds: 500),
+                                                const Duration(milliseconds: 500),
                                             fadeOutDuration:
-                                                Duration(milliseconds: 500),
+                                                const Duration(milliseconds: 500),
                                             imageUrl: valueOrDefault<String>(
                                               containerUsersRecord.photoUrl,
                                               'https://i.ibb.co/b7TBHQJ/imagen-defecto.png',
@@ -179,11 +177,11 @@ class _ListofcollaboratorsPERFILWidgetState
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.06, -1.23),
+                                  alignment: const AlignmentDirectional(0.06, -1.23),
                                   child: Container(
                                     width: 143.0,
                                     height: 42.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Text(
                                       functions.upperCaseFirstLetter(
                                           containerUsersRecord.firtsName),
@@ -201,11 +199,11 @@ class _ListofcollaboratorsPERFILWidgetState
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.05, -0.19),
+                                  alignment: const AlignmentDirectional(0.05, -0.19),
                                   child: Container(
                                     width: 139.0,
                                     height: 30.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Text(
                                       functions.changeServiceLanguge(
                                           containerUsersRecord
@@ -226,21 +224,21 @@ class _ListofcollaboratorsPERFILWidgetState
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.09, -0.02),
+                                  alignment: const AlignmentDirectional(0.09, -0.02),
                                   child: Container(
                                     width: 150.0,
                                     height: 1.0,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors.white,
                                     ),
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.09, 0.52),
+                                  alignment: const AlignmentDirectional(0.09, 0.52),
                                   child: Container(
                                     width: 150.0,
                                     height: 50.0,
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -248,14 +246,14 @@ class _ListofcollaboratorsPERFILWidgetState
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: 150.0,
                                             height: 16.0,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Stack(
                                               children: [
-                                                Align(
+                                                const Align(
                                                   alignment:
                                                       AlignmentDirectional(
                                                           -1.0, 0.0),
@@ -268,11 +266,11 @@ class _ListofcollaboratorsPERFILWidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(20.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -305,14 +303,14 @@ class _ListofcollaboratorsPERFILWidgetState
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Container(
                                               width: 150.0,
-                                              decoration: BoxDecoration(),
+                                              decoration: const BoxDecoration(),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 mainAxisAlignment:
@@ -320,7 +318,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.center,
                                                 children: [
-                                                  Align(
+                                                  const Align(
                                                     alignment:
                                                         AlignmentDirectional(
                                                             -1.0, 0.0),
@@ -332,14 +330,14 @@ class _ListofcollaboratorsPERFILWidgetState
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     7.0,
                                                                     0.0,
@@ -377,25 +375,25 @@ class _ListofcollaboratorsPERFILWidgetState
                                             ),
                                           ),
                                         ),
-                                      ].addToStart(SizedBox(height: 7.0)),
+                                      ].addToStart(const SizedBox(height: 7.0)),
                                     ),
                                   ),
                                 ),
                               ]
-                                  .divide(SizedBox(height: 4.0))
-                                  .addToStart(SizedBox(height: 18.0)),
+                                  .divide(const SizedBox(height: 4.0))
+                                  .addToStart(const SizedBox(height: 18.0)),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.74, -0.67),
+                              alignment: const AlignmentDirectional(0.74, -0.67),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     2.0, 0.0, 0.0, 0.0),
                                 child: StreamBuilder<List<UsersRecord>>(
                                   stream: queryUsersRecord(
                                     queryBuilder: (usersRecord) =>
                                         usersRecord.where(
                                       'uid',
-                                      isEqualTo: widget!.professional?.id,
+                                      isEqualTo: widget.professional?.id,
                                     ),
                                     singleRecord: true,
                                   ),
@@ -444,7 +442,7 @@ class _ListofcollaboratorsPERFILWidgetState
                                 ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 8.0)),
+                          ].divide(const SizedBox(width: 8.0)),
                         ),
                       ],
                     ),

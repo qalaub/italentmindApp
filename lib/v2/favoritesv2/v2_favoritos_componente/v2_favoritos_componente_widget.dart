@@ -3,10 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'v2_favoritos_componente_model.dart';
 export 'v2_favoritos_componente_model.dart';
 
@@ -49,12 +46,12 @@ class _V2FavoritosComponenteWidgetState
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, -0.9),
+      alignment: const AlignmentDirectional(0.0, -0.9),
       child: StreamBuilder<List<UsersRecord>>(
         stream: queryUsersRecord(
           queryBuilder: (usersRecord) => usersRecord.where(
             'uid',
-            isEqualTo: widget!.professionalRef?.id,
+            isEqualTo: widget.professionalRef?.id,
           ),
           singleRecord: true,
         ),
@@ -86,7 +83,7 @@ class _V2FavoritosComponenteWidgetState
             width: MediaQuery.sizeOf(context).width * 0.92,
             height: 105.0,
             decoration: BoxDecoration(
-              color: Color(0xFF4963C9),
+              color: const Color(0xFF4963C9),
               borderRadius: BorderRadius.circular(22.0),
               shape: BoxShape.rectangle,
             ),
@@ -96,15 +93,15 @@ class _V2FavoritosComponenteWidgetState
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: CachedNetworkImage(
-                            fadeInDuration: Duration(milliseconds: 500),
-                            fadeOutDuration: Duration(milliseconds: 500),
+                            fadeInDuration: const Duration(milliseconds: 500),
+                            fadeOutDuration: const Duration(milliseconds: 500),
                             imageUrl:
                                 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/italentmind-fog8iw/assets/stx0cdmjoua0/italentLogo.png',
                             width: MediaQuery.sizeOf(context).width * 0.18,
@@ -116,15 +113,15 @@ class _V2FavoritosComponenteWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.5,
                         height: 100.0,
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
@@ -132,7 +129,7 @@ class _V2FavoritosComponenteWidgetState
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, -0.1),
+                                    alignment: const AlignmentDirectional(0.0, -0.1),
                                     child: Text(
                                       functions.upperCaseFirstLetter(
                                           valueOrDefault<String>(
@@ -157,15 +154,15 @@ class _V2FavoritosComponenteWidgetState
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-1.0, 1.0),
+                              alignment: const AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 32.0),
                                 child: Container(
                                   width:
                                       MediaQuery.sizeOf(context).width * 0.56,
                                   height: 1.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                 ),
@@ -176,10 +173,10 @@ class _V2FavoritosComponenteWidgetState
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.81, -0.05),
+                      alignment: const AlignmentDirectional(0.81, -0.05),
                       child: Container(
-                        decoration: BoxDecoration(),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        decoration: const BoxDecoration(),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                       ),
                     ),
                   ],

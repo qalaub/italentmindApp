@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/v2/block_list/user_unlock_confirm/user_unlock_confirm_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'user_block_options_model.dart';
 export 'user_block_options_model.dart';
 
@@ -45,13 +42,13 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(1.0, -1.0),
+      alignment: const AlignmentDirectional(1.0, -1.0),
       child: Container(
         width: 208.0,
         height: 100.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 4.0,
               color: Color(0x33000000),
@@ -61,7 +58,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
               ),
             )
           ],
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(0.0),
@@ -71,7 +68,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
             color: Colors.black,
           ),
         ),
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -92,7 +89,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                     return Padding(
                       padding: MediaQuery.viewInsetsOf(context),
                       child: UserUnlockConfirmWidget(
-                        userRef: widget!.userRef!,
+                        userRef: widget.userRef!,
                       ),
                     );
                   },
@@ -108,7 +105,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'pintanga',
-                          color: Color(0xFF0F0E0F),
+                          color: const Color(0xFF0F0E0F),
                           fontSize: 16.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
@@ -116,11 +113,11 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                         ),
                   ),
                 ]
-                    .addToStart(SizedBox(width: 16.0))
-                    .addToEnd(SizedBox(width: 16.0)),
+                    .addToStart(const SizedBox(width: 16.0))
+                    .addToEnd(const SizedBox(width: 16.0)),
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 1.0,
               color: Color(0xFFBDBDBD),
             ),
@@ -134,7 +131,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                   'ProfileInfo',
                   queryParameters: {
                     'professional': serializeParam(
-                      widget!.userRef,
+                      widget.userRef,
                       ParamType.DocumentReference,
                     ),
                   }.withoutNulls,
@@ -150,7 +147,7 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'pintanga',
-                          color: Color(0xFF0F0E0F),
+                          color: const Color(0xFF0F0E0F),
                           fontSize: 16.0,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
@@ -158,11 +155,11 @@ class _UserBlockOptionsWidgetState extends State<UserBlockOptionsWidget> {
                         ),
                   ),
                 ]
-                    .addToStart(SizedBox(width: 16.0))
-                    .addToEnd(SizedBox(width: 16.0)),
+                    .addToStart(const SizedBox(width: 16.0))
+                    .addToEnd(const SizedBox(width: 16.0)),
               ),
             ),
-          ].addToStart(SizedBox(height: 16.0)),
+          ].addToStart(const SizedBox(height: 16.0)),
         ),
       ),
     );

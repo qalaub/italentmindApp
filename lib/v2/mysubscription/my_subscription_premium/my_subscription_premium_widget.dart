@@ -4,11 +4,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'my_subscription_premium_model.dart';
 export 'my_subscription_premium_model.dart';
 
@@ -47,14 +45,14 @@ class _MySubscriptionPremiumWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Color(0xFF4963C9),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.angleLeft,
               color: Colors.white,
               size: 30.0,
@@ -76,7 +74,7 @@ class _MySubscriptionPremiumWidgetState
                   useGoogleFonts: false,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -88,7 +86,7 @@ class _MySubscriptionPremiumWidgetState
               children: [
                 Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [Color(0xFFEFB810), Color(0xFFA97F0D)],
                       stops: [0.0, 0.899],
@@ -101,9 +99,9 @@ class _MySubscriptionPremiumWidgetState
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'eqdjf3ce' /* Premium Account */,
@@ -122,7 +120,7 @@ class _MySubscriptionPremiumWidgetState
                         ),
                       ),
                       Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'fedbmksi' /* Business profile suitable for ... */,
@@ -131,14 +129,14 @@ class _MySubscriptionPremiumWidgetState
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'pintanga',
-                                    color: Color(0xF8FFFFFF),
+                                    color: const Color(0xF8FFFFFF),
                                     letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
                       ),
                       Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: RichText(
                           textScaler: MediaQuery.of(context).textScaler,
                           text: TextSpan(
@@ -158,11 +156,11 @@ class _MySubscriptionPremiumWidgetState
                               ),
                               TextSpan(
                                 text: FFLocalizations.of(context).getText(
-                                  'sv3tisho' /* 28.99 / monthly  */,
+                                  'sv3tisho' /* 28.99  monthly  */,
                                 ),
                                 style: GoogleFonts.getFont(
                                   'Inter',
-                                  color: Color(0xFFECE7E7),
+                                  color: const Color(0xFFECE7E7),
                                   fontWeight: FontWeight.normal,
                                 ),
                               )
@@ -179,14 +177,14 @@ class _MySubscriptionPremiumWidgetState
                           ),
                         ),
                       ),
-                      Container(
+                      SizedBox(
                         height: 110.0,
                         child: Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(-0.9, -0.2),
+                              alignment: const AlignmentDirectional(-0.9, -0.2),
                               child: Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -198,7 +196,7 @@ class _MySubscriptionPremiumWidgetState
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'pintanga',
-                                            color: Color(0xFFF9C532),
+                                            color: const Color(0xFFF9C532),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
@@ -229,9 +227,9 @@ class _MySubscriptionPremiumWidgetState
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.6),
+                              alignment: const AlignmentDirectional(0.0, 0.6),
                               child: Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -275,7 +273,7 @@ class _MySubscriptionPremiumWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'pintanga',
-                                              color: Color(0xFFF9C532),
+                                              color: const Color(0xFFF9C532),
                                               fontSize: 21.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
@@ -288,9 +286,9 @@ class _MySubscriptionPremiumWidgetState
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.9, -0.2),
+                              alignment: const AlignmentDirectional(0.9, -0.2),
                               child: Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
@@ -302,7 +300,7 @@ class _MySubscriptionPremiumWidgetState
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'pintanga',
-                                            color: Color(0xFFF9C532),
+                                            color: const Color(0xFFF9C532),
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
@@ -346,15 +344,15 @@ class _MySubscriptionPremiumWidgetState
                         ),
                       ),
                     ]
-                        .divide(SizedBox(height: 8.0))
-                        .addToStart(SizedBox(height: 16.0)),
+                        .divide(const SizedBox(height: 8.0))
+                        .addToStart(const SizedBox(height: 16.0)),
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -371,7 +369,7 @@ class _MySubscriptionPremiumWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'pintanga',
-                                    color: Color(0xFF1D69D7),
+                                    color: const Color(0xFF1D69D7),
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -381,7 +379,7 @@ class _MySubscriptionPremiumWidgetState
                           ],
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -395,7 +393,7 @@ class _MySubscriptionPremiumWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '6kjg63vd' /* List multiple staff members, i... */,
@@ -417,15 +415,15 @@ class _MySubscriptionPremiumWidgetState
                             ],
                           ),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -442,7 +440,7 @@ class _MySubscriptionPremiumWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'v2 pitanga',
-                                    color: Color(0xFF1D69D7),
+                                    color: const Color(0xFF1D69D7),
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -452,7 +450,7 @@ class _MySubscriptionPremiumWidgetState
                           ],
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -466,7 +464,7 @@ class _MySubscriptionPremiumWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '072wajnm' /* Be seen quicker as you placed ... */,
@@ -488,15 +486,15 @@ class _MySubscriptionPremiumWidgetState
                             ],
                           ),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -513,7 +511,7 @@ class _MySubscriptionPremiumWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'pintanga',
-                                    color: Color(0xFF1D69D7),
+                                    color: const Color(0xFF1D69D7),
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
@@ -523,7 +521,7 @@ class _MySubscriptionPremiumWidgetState
                           ],
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -537,7 +535,7 @@ class _MySubscriptionPremiumWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'w0w3w27g' /* Receive notifications when par... */,
@@ -559,17 +557,17 @@ class _MySubscriptionPremiumWidgetState
                             ],
                           ),
                         ),
-                      ].divide(SizedBox(height: 8.0)),
+                      ].divide(const SizedBox(height: 8.0)),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.01, 0.7),
+                  alignment: const AlignmentDirectional(0.01, 0.7),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                     child: FFButtonWidget(
-                      key: ValueKey('return'),
+                      key: const ValueKey('return'),
                       onPressed: () async {
                         context.pushNamed('userprofile');
                       },
@@ -579,11 +577,11 @@ class _MySubscriptionPremiumWidgetState
                       options: FFButtonOptions(
                         width: 275.0,
                         height: 45.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF4963C9),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFF4963C9),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'pintanga',
@@ -593,7 +591,7 @@ class _MySubscriptionPremiumWidgetState
                                   useGoogleFonts: false,
                                 ),
                         elevation: 5.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),
@@ -602,7 +600,7 @@ class _MySubscriptionPremiumWidgetState
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 26.0)).addToEnd(SizedBox(height: 32.0)),
+              ].divide(const SizedBox(height: 26.0)).addToEnd(const SizedBox(height: 32.0)),
             ),
           ),
         ),

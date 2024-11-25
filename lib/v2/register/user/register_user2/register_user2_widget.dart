@@ -8,12 +8,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'register_user2_model.dart';
 export 'register_user2_model.dart';
@@ -55,8 +52,8 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -11.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -11.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -67,8 +64,8 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -11.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -11.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -79,8 +76,8 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -11.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -11.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -104,11 +101,11 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(0.0),
+          preferredSize: const Size.fromHeight(0.0),
           child: AppBar(
-            backgroundColor: Color(0xFFFFFEFE),
+            backgroundColor: const Color(0xFFFFFEFE),
             automaticallyImplyLeading: false,
-            actions: [],
+            actions: const [],
             centerTitle: false,
             toolbarHeight: 0.0,
             elevation: 0.0,
@@ -133,7 +130,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                         child: Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
                                 child: Image.asset(
@@ -145,12 +142,12 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.91, -0.96),
+                              alignment: const AlignmentDirectional(-0.91, -0.96),
                               child: FlutterFlowIconButton(
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 40.0,
-                                icon: Icon(
+                                icon: const Icon(
                                   Icons.arrow_back_ios_new,
                                   color: Colors.black,
                                   size: 24.0,
@@ -161,9 +158,9 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 6.0, 0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
@@ -177,13 +174,13 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.3),
+                              alignment: const AlignmentDirectional(0.0, 0.3),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.96,
                                 height: MediaQuery.sizeOf(context).height * 0.7,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFFFFEFE),
-                                  borderRadius: BorderRadius.only(
+                                  color: const Color(0xFFFFFEFE),
+                                  borderRadius: const BorderRadius.only(
                                     bottomLeft: Radius.circular(24.0),
                                     bottomRight: Radius.circular(24.0),
                                     topLeft: Radius.circular(24.0),
@@ -208,10 +205,10 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, -1.0),
+                                              const AlignmentDirectional(0.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -224,7 +221,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'pintanga',
-                                                    color: Color(0xFF1D69D7),
+                                                    color: const Color(0xFF1D69D7),
                                                     fontSize: 20.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
@@ -235,24 +232,24 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: 327.0,
                                             height: 1.0,
                                             decoration: BoxDecoration(
-                                              color: Color(0xFF718CD4),
+                                              color: const Color(0xFF718CD4),
                                               border: Border.all(
-                                                color: Color(0xFF718CD4),
+                                                color: const Color(0xFF718CD4),
                                               ),
                                             ),
                                           ),
                                         ),
                                         if (_model.ndisShow)
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -0.84, -0.73),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 15.0, 0.0, 15.0),
                                               child: Text(
@@ -276,14 +273,14 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                           ),
                                         if (_model.ndisShow)
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -0.01, -0.69),
                                             child: Container(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.8,
                                               height: 70.0,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 color: Color(0xFFFFFEFE),
                                                 borderRadius: BorderRadius.only(
                                                   bottomLeft:
@@ -297,10 +294,10 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                 ),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, -1.0),
                                                 child: TextFormField(
-                                                  key: ValueKey('ndis'),
+                                                  key: const ValueKey('ndis'),
                                                   controller:
                                                       _model.ndisTextController,
                                                   focusNode:
@@ -348,7 +345,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                         ),
                                                     enabledBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Color(0xFF1D69D7),
                                                         width: 0.0,
@@ -359,7 +356,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                     ),
                                                     focusedBorder:
                                                         OutlineInputBorder(
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Color(0xFF1D69D7),
                                                         width: 0.0,
@@ -416,11 +413,11 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                             ),
                                           ),
                                         Align(
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                               -0.84, -0.73),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -442,20 +439,20 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             height: 90.0,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, -1.0),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, -1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, -1.0),
                                                     child: Container(
                                                       width: MediaQuery.sizeOf(
@@ -466,7 +463,7 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                       decoration: BoxDecoration(
                                                         color: Colors.white,
                                                         borderRadius:
-                                                            BorderRadius.only(
+                                                            const BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   12.0),
@@ -487,22 +484,22 @@ class _RegisterUser2WidgetState extends State<RegisterUser2Widget>
                                                                         .verifyForm
                                                                         .dropdown ==
                                                                     true
-                                                                ? Color(
+                                                                ? const Color(
                                                                     0xFF1D69D7)
-                                                                : Color(
+                                                                : const Color(
                                                                     0xFFFF5963),
-                                                            Color(0xFF1D69D7),
+                                                            const Color(0xFF1D69D7),
                                                           ),
                                                         ),
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child:
                                                             FlutterFlowDropDown<
                                                                 String>(
-                                                          key: ValueKey(
+                                                          key: const ValueKey(
                                                               'disability'),
                                                           multiSelectController: _model
                                                                   .dropDownValueController ??=
@@ -534,7 +531,7 @@ Early Intervention */
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'djcup6o5' /* Intellectual/Development */,
+                                                              'djcup6o5' /* IntellectualDevelopment */,
                                                             ),
                                                             FFLocalizations.of(
                                                                     context)
@@ -549,7 +546,7 @@ Early Intervention */
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'v5qqg86z' /* Psychosocial/Mental Health */,
+                                                              'v5qqg86z' /* PsychosocialMental Health */,
                                                             ),
                                                             FFLocalizations.of(
                                                                     context)
@@ -579,7 +576,7 @@ Early Intervention */
                                                                   .getText(
                                                             'n4k1lf5s' /* Type of disability */,
                                                           ),
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             Icons
                                                                 .keyboard_arrow_down_rounded,
                                                             color: Colors.black,
@@ -593,7 +590,7 @@ Early Intervention */
                                                           borderWidth: 0.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   0.0),
                                                           hidesUnderline: true,
                                                           isOverButton: true,
@@ -610,7 +607,7 @@ Early Intervention */
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -622,10 +619,10 @@ Early Intervention */
                                                                 2)) {
                                                           return Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -0.62, 0.7),
                                                             child: Text(
-                                                              key: ValueKey(
+                                                              key: const ValueKey(
                                                                   'disabilityRequired'),
                                                               FFLocalizations.of(
                                                                       context)
@@ -638,7 +635,7 @@ Early Intervention */
                                                                   .override(
                                                                     fontFamily:
                                                                         'pintanga',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
                                                                         0.0,
@@ -681,11 +678,11 @@ Early Intervention */
                                           ),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                               -0.84, -0.73),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -707,26 +704,26 @@ Early Intervention */
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.8,
                                             height: 90.0,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, -1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, -1.0),
                                                     child: TextFormField(
-                                                      key: ValueKey('password'),
+                                                      key: const ValueKey('password'),
                                                       controller: _model
                                                           .passwordTextController,
                                                       focusNode: _model
@@ -789,7 +786,7 @@ Early Intervention */
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFF1D69D7),
                                                             width: 0.0,
@@ -802,7 +799,7 @@ Early Intervention */
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFF1D69D7),
                                                             width: 0.0,
@@ -857,7 +854,7 @@ Early Intervention */
                                                                     .visibility_outlined
                                                                 : Icons
                                                                     .visibility_off_outlined,
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF6D6D6D),
                                                             size: 18.0,
                                                           ),
@@ -887,7 +884,7 @@ Early Intervention */
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -903,10 +900,10 @@ Early Intervention */
                                                                 2)) {
                                                           return Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -0.82, 0.5),
                                                             child: Text(
-                                                              key: ValueKey(
+                                                              key: const ValueKey(
                                                                   'passwordVerify'),
                                                               !FFAppState()
                                                                           .verifyForm
@@ -927,7 +924,7 @@ Early Intervention */
                                                                   .override(
                                                                     fontFamily:
                                                                         'pintanga',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
                                                                         0.0,
@@ -968,11 +965,11 @@ Early Intervention */
                                           ),
                                         ),
                                         Align(
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                               -0.84, -0.73),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 15.0, 0.0, 15.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -994,26 +991,26 @@ Early Intervention */
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.8,
                                             height: 90.0,
-                                            decoration: BoxDecoration(),
+                                            decoration: const BoxDecoration(),
                                             child: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, -1.0),
                                               child: Stack(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, -1.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, -1.0),
                                                     child: TextFormField(
-                                                      key: ValueKey(
+                                                      key: const ValueKey(
                                                           'confirmPassword'),
                                                       controller: _model
                                                           .confirmPasswordTextController,
@@ -1075,7 +1072,7 @@ Early Intervention */
                                                         enabledBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFF1D69D7),
                                                             width: 0.0,
@@ -1088,7 +1085,7 @@ Early Intervention */
                                                         focusedBorder:
                                                             OutlineInputBorder(
                                                           borderSide:
-                                                              BorderSide(
+                                                              const BorderSide(
                                                             color: Color(
                                                                 0xFF1D69D7),
                                                             width: 0.0,
@@ -1143,7 +1140,7 @@ Early Intervention */
                                                                     .visibility_outlined
                                                                 : Icons
                                                                     .visibility_off_outlined,
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF6D6D6D),
                                                             size: 18.0,
                                                           ),
@@ -1173,7 +1170,7 @@ Early Intervention */
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -1189,10 +1186,10 @@ Early Intervention */
                                                                 2)) {
                                                           return Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -0.82, 0.6),
                                                             child: Text(
-                                                              key: ValueKey(
+                                                              key: const ValueKey(
                                                                   'confirmPasswordVerify'),
                                                               !FFAppState()
                                                                           .verifyForm
@@ -1213,7 +1210,7 @@ Early Intervention */
                                                                   .override(
                                                                     fontFamily:
                                                                         'pintanga',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFFF5963),
                                                                     letterSpacing:
                                                                         0.0,
@@ -1255,16 +1252,16 @@ Early Intervention */
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 0.0, 15.0),
                                             child: Container(
                                               width: 282.0,
                                               height: 114.0,
                                               decoration: BoxDecoration(
-                                                color: Color(0x80D9D9D9),
+                                                color: const Color(0x80D9D9D9),
                                                 borderRadius:
                                                     BorderRadius.circular(4.0),
                                               ),
@@ -1278,11 +1275,11 @@ Early Intervention */
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       30.0,
                                                                       0.0,
@@ -1318,7 +1315,7 @@ Early Intervention */
                                                                   .override(
                                                                     fontFamily:
                                                                         'pintanga',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF1D69D7),
                                                                     fontSize:
                                                                         11.0,
@@ -1336,7 +1333,7 @@ Early Intervention */
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 -0.98, -0.03),
                                                         child: Theme(
                                                           data: ThemeData(
@@ -1362,7 +1359,7 @@ Early Intervention */
                                                                     .secondaryText,
                                                           ),
                                                           child: Checkbox(
-                                                            key: ValueKey(
+                                                            key: const ValueKey(
                                                                 'terms'),
                                                             value: _model
                                                                     .legalValue ??=
@@ -1379,7 +1376,7 @@ Early Intervention */
                                                                       .of(context)
                                                                   .secondaryText,
                                                             ),
-                                                            activeColor: Color(
+                                                            activeColor: const Color(
                                                                 0xFF1D69D7),
                                                             checkColor:
                                                                 FlutterFlowTheme.of(
@@ -1394,11 +1391,11 @@ Early Intervention */
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       30.0,
                                                                       0.0,
@@ -1434,7 +1431,7 @@ Early Intervention */
                                                                   .override(
                                                                     fontFamily:
                                                                         'pintanga',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFF1D69D7),
                                                                     fontSize:
                                                                         11.0,
@@ -1452,7 +1449,7 @@ Early Intervention */
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 -0.98, -0.03),
                                                         child: Theme(
                                                           data: ThemeData(
@@ -1478,7 +1475,7 @@ Early Intervention */
                                                                     .secondaryText,
                                                           ),
                                                           child: Checkbox(
-                                                            key: ValueKey(
+                                                            key: const ValueKey(
                                                                 'terms'),
                                                             value: _model
                                                                     .termsValue ??=
@@ -1495,7 +1492,7 @@ Early Intervention */
                                                                       .of(context)
                                                                   .secondaryText,
                                                             ),
-                                                            activeColor: Color(
+                                                            activeColor: const Color(
                                                                 0xFF1D69D7),
                                                             checkColor:
                                                                 FlutterFlowTheme.of(
@@ -1514,9 +1511,9 @@ Early Intervention */
                                         if (!_model.termAccept)
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.8),
+                                                const AlignmentDirectional(0.0, 0.8),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 0.0, 0.0),
                                               child: Text(
@@ -1529,7 +1526,7 @@ Early Intervention */
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'pintanga',
-                                                      color: Color(0xFFFF5963),
+                                                      color: const Color(0xFFFF5963),
                                                       fontSize: 11.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
@@ -1541,18 +1538,18 @@ Early Intervention */
                                           ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Container(
                                               width: 327.0,
                                               height: 1.0,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFF718CD4),
+                                                color: const Color(0xFF718CD4),
                                                 border: Border.all(
-                                                  color: Color(0xFF718CD4),
+                                                  color: const Color(0xFF718CD4),
                                                 ),
                                               ),
                                             ),
@@ -1560,10 +1557,10 @@ Early Intervention */
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 10.0),
                                           child: FFButtonWidget(
-                                            key: ValueKey('create'),
+                                            key: const ValueKey('create'),
                                             onPressed: () async {
                                               FFAppState()
                                                   .updateVerifyFormStruct(
@@ -1573,22 +1570,12 @@ Early Intervention */
                                                               null &&
                                                           (_model.dropDownValue)!
                                                               .isNotEmpty
-                                                      ? (_model.dropDownValue!
-                                                              .length >
-                                                          0)
+                                                      ? (_model.dropDownValue!.isNotEmpty)
                                                       : false
-                                                  ..confirm1 = _model
-                                                              .passwordTextController
-                                                              .text !=
-                                                          null &&
-                                                      _model.passwordTextController
+                                                  ..confirm1 = _model.passwordTextController
                                                               .text !=
                                                           ''
-                                                  ..confirm2 = _model
-                                                              .confirmPasswordTextController
-                                                              .text !=
-                                                          null &&
-                                                      _model.confirmPasswordTextController
+                                                  ..confirm2 = _model.confirmPasswordTextController
                                                               .text !=
                                                           ''
                                                   ..same = _model
@@ -1651,7 +1638,7 @@ Early Intervention */
                                                   'avatars',
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
-                                                        TransitionInfo(
+                                                        const TransitionInfo(
                                                       hasTransition: true,
                                                       transitionType:
                                                           PageTransitionType
@@ -1664,7 +1651,7 @@ Early Intervention */
                                               } else {
                                                 await _model.formC?.animateTo(
                                                   0,
-                                                  duration: Duration(
+                                                  duration: const Duration(
                                                       milliseconds: 300),
                                                   curve: Curves.ease,
                                                 );
@@ -1679,12 +1666,12 @@ Early Intervention */
                                             options: FFButtonOptions(
                                               width: 275.0,
                                               height: 45.0,
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       24.0, 0.0, 24.0, 0.0),
-                                              iconPadding: EdgeInsetsDirectional
+                                              iconPadding: const EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              color: Color(0xFF4963C9),
+                                              color: const Color(0xFF4963C9),
                                               textStyle:
                                                   FlutterFlowTheme.of(context)
                                                       .titleSmall
@@ -1696,7 +1683,7 @@ Early Intervention */
                                                         useGoogleFonts: false,
                                                       ),
                                               elevation: 3.0,
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),

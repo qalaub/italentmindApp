@@ -1,24 +1,18 @@
-import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_swipeable_stack.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/v2/n_e_w_spremiun/navbar/navbar_widget.dart';
 import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import '/v2/professional/mensage_tinder/mensage_tinder_widget.dart';
 import '/v2/professional/tinderv2_c0/tinderv2_c0_widget.dart';
 import 'dart:async';
 import '/flutter_flow/random_data_util.dart' as random_data;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'tinderv2_c1_model.dart';
 export 'tinderv2_c1_model.dart';
@@ -51,10 +45,10 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
       if (loggedIn) {
         _model.professionals = _model.professional!
             .where((e) =>
-                ((currentUserDocument?.dontShow?.toList() ?? [])
+                ((currentUserDocument?.dontShow.toList() ?? [])
                         .contains(e.reference) ==
                     false) &&
-                ((currentUserDocument?.favorites?.toList() ?? [])
+                ((currentUserDocument?.favorites.toList() ?? [])
                         .contains(e.reference) ==
                     false))
             .toList()
@@ -99,11 +93,11 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 60.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFFFDFDFD),
                     boxShadow: [
                       BoxShadow(
@@ -144,7 +138,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: GradientText(
                                 FFLocalizations.of(context).getText(
                                   'ege5y2c8' /* View Profile */,
@@ -153,12 +147,12 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Poppins',
-                                      color: Color(0xFF8D0684),
+                                      color: const Color(0xFF8D0684),
                                       fontSize: 20.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                     ),
-                                colors: [Color(0xFF4B39EF), Color(0xFF243163)],
+                                colors: const [Color(0xFF4B39EF), Color(0xFF243163)],
                                 gradientDirection: GradientDirection.ttb,
                                 gradientType: GradientType.linear,
                               ),
@@ -167,7 +161,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.9, 0.0),
+                        alignment: const AlignmentDirectional(0.9, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -215,10 +209,10 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   height: MediaQuery.sizeOf(context).height * 0.75,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -226,10 +220,10 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                     children: [
                       Builder(
                         builder: (context) {
-                          if ((_model.professionals.length <= 0) ||
+                          if ((_model.professionals.isEmpty) ||
                               _model.showMessage) {
                             return Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 constraints: BoxConstraints(
                                   maxWidth:
@@ -237,17 +231,17 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                   maxHeight:
                                       MediaQuery.sizeOf(context).height * 0.65,
                                 ),
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: wrapWithModel(
                                   model: _model.mensageTinderModel,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: MensageTinderWidget(),
+                                  child: const MensageTinderWidget(),
                                 ),
                               ),
                             );
                           } else {
                             return Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 constraints: BoxConstraints(
                                   maxWidth:
@@ -255,7 +249,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                   maxHeight:
                                       MediaQuery.sizeOf(context).height * 0.65,
                                 ),
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Builder(
                                   builder: (context) {
                                     final newData =
@@ -361,7 +355,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                                 .reference);
                                             if (_model.chats?.reference != null
                                                 ? (_model.chats?.users
-                                                        ?.contains(_model
+                                                        .contains(_model
                                                             .currentProfessional
                                                             ?.reference) ==
                                                     true)
@@ -484,7 +478,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                             newData[newDataIndex];
                                         return Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Tinderv2C0Widget(
                                             key: Key(
                                                 'Keyx4t_${newDataIndex}_of_${newData.length}'),
@@ -499,7 +493,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                       cardDisplayCount: 1,
                                       scale: 0.9,
                                       cardPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       backCardOffset: const Offset(1.0, 1.0),
                                     );
@@ -512,7 +506,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -526,15 +520,15 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                 _model.swipeableStackController.swipeLeft();
                               },
                               child: Container(
-                                key: ValueKey('dislike'),
+                                key: const ValueKey('dislike'),
                                 width: MediaQuery.sizeOf(context).width * 0.18,
                                 height: MediaQuery.sizeOf(context).width * 0.18,
                                 clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
-                                  key: ValueKey('dislike'),
+                                  key: const ValueKey('dislike'),
                                   'assets/images/ggy9g_x.png',
                                   fit: BoxFit.cover,
                                 ),
@@ -543,9 +537,9 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                             Stack(
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: const AlignmentDirectional(0.0, 1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 16.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -560,7 +554,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                         }
                                       },
                                       child: Container(
-                                        key: ValueKey('like'),
+                                        key: const ValueKey('like'),
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 0.13,
@@ -568,11 +562,11 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                             MediaQuery.sizeOf(context).width *
                                                 0.13,
                                         clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                         ),
                                         child: Image.asset(
-                                          key: ValueKey('like'),
+                                          key: const ValueKey('like'),
                                           'assets/images/Group_100-2_(1).png',
                                           fit: BoxFit.cover,
                                         ),
@@ -595,32 +589,32 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                 }
                               },
                               child: Container(
-                                key: ValueKey('like'),
+                                key: const ValueKey('like'),
                                 width: MediaQuery.sizeOf(context).width * 0.18,
                                 height: MediaQuery.sizeOf(context).width * 0.18,
                                 clipBehavior: Clip.antiAlias,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                 ),
                                 child: Image.asset(
-                                  key: ValueKey('like'),
+                                  key: const ValueKey('like'),
                                   'assets/images/ME-GUSTA.png',
                                   fit: BoxFit.cover,
                                 ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 30.0)),
+                          ].divide(const SizedBox(width: 30.0)),
                         ),
                       ),
-                    ].divide(SizedBox(height: 2.0)),
+                    ].divide(const SizedBox(height: 2.0)),
                   ),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Container(
                   height: 73.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
@@ -629,13 +623,13 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                         return wrapWithModel(
                           model: _model.navbarModel,
                           updateCallback: () => safeSetState(() {}),
-                          child: NavbarWidget(),
+                          child: const NavbarWidget(),
                         );
                       } else {
                         return wrapWithModel(
                           model: _model.navbarPremiunModel,
                           updateCallback: () => safeSetState(() {}),
-                          child: NavbarPremiunWidget(),
+                          child: const NavbarPremiunWidget(),
                         );
                       }
                     },
@@ -644,11 +638,11 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
               ),
               if (_model.showLanguagues)
                 Align(
-                  alignment: AlignmentDirectional(1.0, -0.85),
+                  alignment: const AlignmentDirectional(1.0, -0.85),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 0.3,
                     height: 76.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
@@ -686,7 +680,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30.0),
                                   child: Image.asset(
@@ -698,7 +692,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                 ),
                               ),
                               Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Text(
                                   () {
                                     if (FFLocalizations.of(context)
@@ -741,7 +735,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30.0),
                                   child: Image.asset(
@@ -753,7 +747,7 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                                 ),
                               ),
                               Container(
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Text(
                                   () {
                                     if (FFLocalizations.of(context)
@@ -782,9 +776,9 @@ class _Tinderv2C1WidgetState extends State<Tinderv2C1Widget> {
                           ),
                         ),
                       ]
-                          .divide(SizedBox(height: 8.0))
-                          .addToStart(SizedBox(height: 4.0))
-                          .addToEnd(SizedBox(height: 4.0)),
+                          .divide(const SizedBox(height: 8.0))
+                          .addToStart(const SizedBox(height: 4.0))
+                          .addToEnd(const SizedBox(height: 4.0)),
                     ),
                   ),
                 ),

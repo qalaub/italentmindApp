@@ -11,8 +11,6 @@ import '/v2/n_e_w_spremiun/navbar_premiun/navbar_premiun_widget.dart';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'peoplewhoputyouinfavorite_basic_model.dart';
 export 'peoplewhoputyouinfavorite_basic_model.dart';
 
@@ -51,14 +49,14 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Color(0xFF4963C9),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.angleLeft,
               color: Colors.white,
               size: 30.0,
@@ -73,13 +71,13 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Montserrat',
-                  color: Color(0xFFEFECF3),
+                  color: const Color(0xFFEFECF3),
                   fontSize: 25.0,
                   letterSpacing: 0.0,
                   fontWeight: FontWeight.bold,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -101,11 +99,11 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                     ),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: ClipRect(
                             child: ImageFiltered(
                               imageFilter: ImageFilter.blur(
@@ -115,7 +113,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                               child: Container(
                                 width: 390.0,
                                 height: 580.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: StreamBuilder<List<UsersRecord>>(
                                   stream: queryUsersRecord(
                                     queryBuilder: (usersRecord) =>
@@ -149,7 +147,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                                             .toList();
 
                                     return ListView.separated(
-                                      padding: EdgeInsets.fromLTRB(
+                                      padding: const EdgeInsets.fromLTRB(
                                         0,
                                         26.0,
                                         0,
@@ -159,7 +157,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                                       scrollDirection: Axis.vertical,
                                       itemCount: listViewUsersRecordList.length,
                                       separatorBuilder: (_, __) =>
-                                          SizedBox(height: 10.0),
+                                          const SizedBox(height: 10.0),
                                       itemBuilder: (context, listViewIndex) {
                                         final listViewUsersRecord =
                                             listViewUsersRecordList[
@@ -179,16 +177,16 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                         Container(
                           width: double.infinity,
                           height: double.infinity,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0x7FFFFFFF),
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, -0.5),
+                          alignment: const AlignmentDirectional(0.0, -0.5),
                           child: Container(
                             width: 315.0,
                             height: 297.0,
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -226,9 +224,9 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.15),
+                          alignment: const AlignmentDirectional(0.0, 0.15),
                           child: Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 '9vqrypg5' /* No new likes */,
@@ -237,7 +235,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Poppins',
-                                    color: Color(0xFF1D69D7),
+                                    color: const Color(0xFF1D69D7),
                                     fontSize: 25.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
@@ -246,9 +244,9 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.4),
+                          alignment: const AlignmentDirectional(0.0, 0.4),
                           child: Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'fn62mw5p' /* When someone likes your profil... */,
@@ -265,7 +263,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.7),
+                          alignment: const AlignmentDirectional(0.0, 0.7),
                           child: FFButtonWidget(
                             onPressed: () async {
                               context.pushNamed(
@@ -292,11 +290,11 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                             options: FFButtonOptions(
                               width: 150.0,
                               height: 45.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF4963C9),
+                              color: const Color(0xFF4963C9),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -305,7 +303,7 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                                     letterSpacing: 0.0,
                                   ),
                               elevation: 5.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.white,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
@@ -318,10 +316,10 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.01),
+                alignment: const AlignmentDirectional(0.0, 1.01),
                 child: Container(
                   height: 73.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF1D69D7),
                   ),
                   child: Builder(
@@ -330,13 +328,13 @@ class _PeoplewhoputyouinfavoriteBasicWidgetState
                         return wrapWithModel(
                           model: _model.navbarModel,
                           updateCallback: () => safeSetState(() {}),
-                          child: NavbarWidget(),
+                          child: const NavbarWidget(),
                         );
                       } else {
                         return wrapWithModel(
                           model: _model.navbarPremiunModel,
                           updateCallback: () => safeSetState(() {}),
-                          child: NavbarPremiunWidget(),
+                          child: const NavbarPremiunWidget(),
                         );
                       }
                     },

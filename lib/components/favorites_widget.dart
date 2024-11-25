@@ -3,10 +3,7 @@ import '/backend/schema/enums/enums.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'favorites_model.dart';
 export 'favorites_model.dart';
 
@@ -47,7 +44,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<UsersRecord>(
-      stream: UsersRecord.getDocument(widget!.userRef!),
+      stream: UsersRecord.getDocument(widget.userRef!),
       builder: (context, snapshot) {
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
@@ -69,7 +66,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
         return Material(
           color: Colors.transparent,
           elevation: 3.0,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(25.0),
               bottomRight: Radius.circular(25.0),
@@ -80,7 +77,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
           child: Container(
             width: MediaQuery.sizeOf(context).width * 1.0,
             height: 98.0,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(25.0),
                 bottomRight: Radius.circular(25.0),
@@ -91,7 +88,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
             child: Stack(
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(24.0),
                     child: Image.asset(
@@ -108,15 +105,15 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             15.0, 0.0, 10.0, 0.0),
                         child: Container(
                           width: 61.0,
                           height: 61.0,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(12.0),
                               bottomRight: Radius.circular(12.0),
                               topLeft: Radius.circular(12.0),
@@ -128,7 +125,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(16.0),
                               child: Image.network(
@@ -143,12 +140,12 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.1, 0.12),
+                      alignment: const AlignmentDirectional(0.1, 0.12),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 0.6,
                         height: 68.0,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(12.0),
                             bottomRight: Radius.circular(12.0),
                             topLeft: Radius.circular(12.0),
@@ -163,23 +160,23 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 1.0, 0.0, 0.0),
                               child: Stack(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 children: [
                                   Align(
                                     alignment:
-                                        AlignmentDirectional(0.58, -0.71),
+                                        const AlignmentDirectional(0.58, -0.71),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           2.0, 0.0, 0.0, 1.0),
                                       child: StreamBuilder<List<UsersRecord>>(
                                         stream: queryUsersRecord(
                                           queryBuilder: (usersRecord) =>
                                               usersRecord.where(
                                             'uid',
-                                            isEqualTo: widget!.userRef?.id,
+                                            isEqualTo: widget.userRef?.id,
                                           ),
                                           singleRecord: true,
                                         ),
@@ -218,7 +215,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                                             Icons.check_circle_sharp,
                                             color: iconUsersRecord?.plan ==
                                                     Plan.premiun
-                                                ? Color(0xFFC325DD)
+                                                ? const Color(0xFFC325DD)
                                                 : Colors.white,
                                             size: 16.0,
                                           );
@@ -227,13 +224,13 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, -1.0),
+                                    alignment: const AlignmentDirectional(-1.0, -1.0),
                                     child: Container(
                                       width: 161.0,
                                       height: 36.0,
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             8.0, 8.0, 0.0, 0.0),
                                         child: Text(
                                           containerUsersRecord.firtsName,
@@ -253,14 +250,14 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 0.0, 8.0),
                                 child: Container(
                                   width: 139.0,
                                   height: 18.0,
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Text(
                                     containerUsersRecord.serviceType.first,
                                     style: FlutterFlowTheme.of(context)
@@ -277,14 +274,14 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-1.0, 1.0),
+                              alignment: const AlignmentDirectional(-1.0, 1.0),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 2.0),
                                 child: Container(
                                   width: 250.0,
                                   height: 1.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                 ),
@@ -295,15 +292,15 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.81, -0.05),
+                      alignment: const AlignmentDirectional(0.81, -0.05),
                       child: Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Align(
+                            const Align(
                               alignment: AlignmentDirectional(0.95, -0.82),
                               child: Icon(
                                 Icons.favorite_sharp,
@@ -316,7 +313,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                               borderWidth: 1.0,
                               buttonSize:
                                   MediaQuery.sizeOf(context).width * 0.116,
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.arrow_forward_ios_rounded,
                                 color: Colors.white,
                                 size: 34.0,

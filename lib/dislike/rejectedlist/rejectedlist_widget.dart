@@ -3,12 +3,8 @@ import '/dislike/user_skyp/user_skyp_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'rejectedlist_model.dart';
 export 'rejectedlist_model.dart';
 
@@ -45,14 +41,14 @@ class _RejectedlistWidgetState extends State<RejectedlistWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: Color(0xFF4963C9),
+          backgroundColor: const Color(0xFF4963C9),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.angleLeft,
               color: Colors.white,
               size: 30.0,
@@ -74,7 +70,7 @@ class _RejectedlistWidgetState extends State<RejectedlistWidget> {
                   useGoogleFonts: false,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -82,23 +78,23 @@ class _RejectedlistWidgetState extends State<RejectedlistWidget> {
           top: true,
           child: Stack(
             children: [
-              if ((currentUserDocument?.dontShow?.toList() ?? []).length > 0)
+              if ((currentUserDocument?.dontShow.toList() ?? []).isNotEmpty)
                 AuthUserStreamWidget(
                   builder: (context) => Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
                     child: Builder(
                       builder: (context) {
                         final noShow =
-                            (currentUserDocument?.dontShow?.toList() ?? [])
+                            (currentUserDocument?.dontShow.toList() ?? [])
                                 .toList();
 
                         return ListView.separated(
                           padding: EdgeInsets.zero,
                           scrollDirection: Axis.vertical,
                           itemCount: noShow.length,
-                          separatorBuilder: (_, __) => SizedBox(height: 2.0),
+                          separatorBuilder: (_, __) => const SizedBox(height: 2.0),
                           itemBuilder: (context, noShowIndex) {
                             final noShowItem = noShow[noShowIndex];
                             return UserSkypWidget(

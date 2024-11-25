@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profesional_view_model.dart';
 export 'profesional_view_model.dart';
 
@@ -38,11 +36,11 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Material(
         color: Colors.transparent,
         elevation: 10.0,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(12.0),
             bottomRight: Radius.circular(12.0),
@@ -53,7 +51,7 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
         child: Container(
           width: 321.0,
           height: 210.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFFFFCCF9),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(12.0),
@@ -63,27 +61,27 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
             ),
           ),
           child: Align(
-            alignment: AlignmentDirectional(-1.0, -1.0),
+            alignment: const AlignmentDirectional(-1.0, -1.0),
             child: Stack(
               children: [
                 Align(
-                  alignment: AlignmentDirectional(-1.0, -1.0),
+                  alignment: const AlignmentDirectional(-1.0, -1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 15.0, 0.0, 0.0),
                     child: Container(
                       width: 61.0,
                       height: 61.0,
                       decoration: BoxDecoration(
-                        color: Color(0xFFD9D9D9),
-                        borderRadius: BorderRadius.only(
+                        color: const Color(0xFFD9D9D9),
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(12.0),
                           bottomRight: Radius.circular(12.0),
                           topLeft: Radius.circular(12.0),
                           topRight: Radius.circular(12.0),
                         ),
                         border: Border.all(
-                          color: Color(0xFFD9D9D9),
+                          color: const Color(0xFFD9D9D9),
                         ),
                       ),
                       child: ClipRRect(
@@ -99,14 +97,14 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.06, -1.23),
+                  alignment: const AlignmentDirectional(0.06, -1.23),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                     child: Container(
                       width: 139.0,
                       height: 30.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFFFFCCF9),
                       ),
                       child: Text(
@@ -124,16 +122,16 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.06, -0.32),
+                  alignment: const AlignmentDirectional(0.06, -0.32),
                   child: Container(
                     width: 139.0,
                     height: 18.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFFCCF9),
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'dwydsl0d' /* 32 years */,
@@ -149,14 +147,14 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.6),
+                  alignment: const AlignmentDirectional(0.0, 0.6),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: Container(
                       width: double.infinity,
                       height: 90.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFFFFCCF9),
                       ),
                       child: Column(
@@ -164,7 +162,7 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                         children: [
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(-1.0, -1.0),
+                              alignment: const AlignmentDirectional(-1.0, -1.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'p1ftiuqd' /* I met Dylan and I understood t... */,
@@ -186,11 +184,11 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.06, -0.52),
+                  alignment: const AlignmentDirectional(0.06, -0.52),
                   child: Container(
                     width: 139.0,
                     height: 18.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFFCCF9),
                     ),
                     child: Text(
@@ -207,16 +205,16 @@ class _ProfesionalViewWidgetState extends State<ProfesionalViewWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(-0.88, 0.85),
+                  alignment: const AlignmentDirectional(-0.88, 0.85),
                   child: Container(
                     width: 139.0,
                     height: 18.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFFFCCF9),
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '1u04gdol' /* MARCH 1, 2024 */,
